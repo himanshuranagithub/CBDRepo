@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <lightning-progress-indicator current-step={currentStep} variant="base" type="path" onclick={handleStepClick} class={deploymentStepClass}>
+            <lightning-progress-step label="Create Package" value="1" data-step="1">
+            </lightning-progress-step>
+            <lightning-progress-step label="Select Metadata" value="2" data-step="2">
+            </lightning-progress-step>
+            <lightning-progress-step label="Deployment Activities" value="3" data-step="3">
+            </lightning-progress-step>        
+        </lightning-progress-indicator>
+    </lightning-card>
+</template>
