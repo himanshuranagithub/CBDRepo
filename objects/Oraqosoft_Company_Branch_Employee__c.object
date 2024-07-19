@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Non_Technical</fullName>
+        <active>true</active>
+        <label>Non-Technical</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Technical_Employee</fullName>
+        <active>true</active>
+        <label>Technical Employee</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Temporary_Employee</fullName>
+        <active>true</active>
+        <label>Temporary Employee</label>
+    </recordTypes>
+    <validationRules>
+        <fullName>Restrict_Numeric_Value_in_Name</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNUMBER( Name )</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Name Should be Contain Alphabet only</errorMessage>
+    </validationRules>
+</CustomObject>

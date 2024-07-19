@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Update Facility site name lookup field with the older one Facility Site record, Facility of that record and contract Id from related Account where Contract type is equal to Securus and the older one if there is more than two contract with same contract type.</description>
+    <environments>Default</environments>
+    <interviewLabel>Update Facility Site and Contract Id {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Facility Site and Contract Id</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update Facility Site Name lookup field on Install Integration Form record</description>
+        <name>Update_Facility_Site_Name</name>
+        <label>Update Facility Site Name</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>Facility_Site__c</field>
+            <value>
+                <elementReference>$Record.Facility_Site__r.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Facility_Site_Name</targetReference>
+        </connector>
+        <object>Install_Integration_Form__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Resource__c</baseObject>
+    <category>opportunities</category>
+    <deployed>false</deployed>
+    <description>All profiles share will be visible in this report</description>
+    <label>Profile Share of Resources</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Resource_Profile__c</field>
+            <table>Resource__c</table>
+        </columns>
+        <masterLabel>profiles share</masterLabel>
+    </sections>
+</ReportType>

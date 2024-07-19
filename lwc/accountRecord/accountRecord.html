@@ -1,0 +1,38 @@
+<template>
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <div class="slds-checkbox">
+                        <input type="checkbox" id="selectAll" onchange={handleSelectAll}></input>
+                        <label class="slds-checkbox__label" for="selectAll">
+                            <span class="slds-checkbox_faux"></span>
+                            <!--<span class="slds-form-element__label">Select All</span>-->
+                        </label>
+                    </div>
+                </th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={accountList} for:item="account">
+                <tr key={account.Id}>
+                    <td>
+                        <div class="slds-checkbox">
+                            <input type="checkbox" data-id={account.Id} onchange={handleCheckboxChange}></input>
+                            <label class="slds-checkbox__label" for={account.Id}>
+                                <span class="slds-checkbox_faux"></span>
+                            </label>
+                        </div>
+                    </td>
+                    <td>{account.Name}</td>
+                    <td>{account.Email__c}</td>
+                    <td>{account.Phone}</td>
+
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>
