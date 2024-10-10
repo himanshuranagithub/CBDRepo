@@ -7,6 +7,6 @@ public class Movie {
     @AuraEnabled public String genre { get; set; }
     @AuraEnabled public String plot { get; set; }
     @AuraEnabled public String country { get; set; }
-    //System.debug('Test4');
+    //System.debug('Test5');
 
 }
