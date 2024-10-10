@@ -1,0 +1,26 @@
+public class Demo_Subs {
+    public integer a;
+    public integer b;
+    public integer c;
+    
+    public integer subt(){
+        c=a-b; 
+       	system.debug('Test 4');
+        system.debug('the result is7'+c);
+        system.debug('the result is6'+c);
+        system.debug('the result is5'+c);
+        system.debug('the result is2'+c);
+       system.debug('the result is'+c);
+        system.debug('the result is'+c);
+        system.debug('the result is'+c);
+        system.debug('the result is'+c);
+        return c;
+    }
+    
+    public Integer divt(){
+        c=a/b;
+        system.debug('the result is'+c);
+        return c;
+    }   
+    
+}
