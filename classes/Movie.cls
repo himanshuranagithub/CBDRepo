@@ -9,5 +9,6 @@ public class Movie {
     @AuraEnabled public String country { get; set; }
     //System.debug('this is test 5');
     ////System.debug('this is test 6');
+    //  ////System.debug('this is test 7');
 
 }
