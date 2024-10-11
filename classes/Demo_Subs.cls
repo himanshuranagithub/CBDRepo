@@ -5,7 +5,7 @@ public class Demo_Subs {
     
     public integer subt(){
         c=a-b; 
-        System.debug('this is test 2');
+        System.debug('this is test 3');
        	system.debug('Test 2');
         
         system.debug('the result is7'+c);
