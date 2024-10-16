@@ -4,6 +4,5 @@ public class as2 {
     // test 
     // // test for rollback commit new
     // // // test for rollback commit new2
-    // // // // test for rollback commit new3
 
 }
