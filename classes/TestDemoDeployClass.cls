@@ -5,6 +5,8 @@ public class TestDemoDeployClass {
         System.debug('test2');
         //
          System.debug('test3');
+        //
+       System.debug('test4');
        
         
     }
