@@ -7,5 +7,4 @@ public class DailyDataCleanupJob implements Schedulable {
     
     //test for revert commit
     //test for revert commit 2
-    //test for revert commit 3
 }
