@@ -9,9 +9,11 @@ public class Demo_Subs {
         System.debug('this is test 4');
        	system.debug('Test 2');
         
+        
+        
+        
         system.debug('the result is7'+c);
         system.debug('the result is8'+c);
-        system.debug('the result is6'+c);
         system.debug('the result is5'+c);
         system.debug('the result is2'+c);
        system.debug('the result is'+c);
