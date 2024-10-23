@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>surya.semykolon@gmail.com</contactEmail>
+    <label>Account Platform Event App</label>
+    <oauthConfig>
+        <callbackUrl>https://oraqosoftitserviceprivatedl-dev-ed.develop.my.salesforce.com/oauth2/callback</callbackUrl>
+        <consumerKey>3MVG9pRzvMkjMb6m.qsItpU0c6zXad0.raEUrZ51mh2ylbp.aPtxqz_TjMJa1Fr3za1.Q3MdSVTHiU9ioJtRc</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>SFAP</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

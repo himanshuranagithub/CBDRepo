@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PlatformEventChannelMember xmlns="http://soap.sforce.com/2006/04/metadata">
+    <eventChannel>CDC_Channel__chn</eventChannel>
+    <filterExpression>Industry = &apos;Agriculture&apos;</filterExpression>
+    <selectedEntity>AccountChangeEvent</selectedEntity>
+</PlatformEventChannelMember>
