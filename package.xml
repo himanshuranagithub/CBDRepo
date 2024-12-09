@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>AccountHandlerTestclass</members>
+        <members>AccountHandlerclass</members>
+        <members>AccountTriggerHandler</members>
+        <members>Add_Demo</members>
+        <members>AuthorizedOrgManager</members>
+        <members>DailyDataCleanupJob</members>
+        <members>Day11Soap_example</members>
+        <members>Day1AsynFuturemethod</members>
+        <members>Demo</members>
+        <members>DemoAccountInsert</members>
+        <members>DemoAccountInsertTest</members>
+        <members>DemoClass</members>
+        <members>DemoSubTest</members>
+        <members>Demo_Subs</members>
+        <members>FirstSchedulableClass</members>
+        <members>IMDB_controller</members>
+        <members>LeadTriggerHandler</members>
+        <members>LoremIpsum</members>
+        <members>MapDemo</members>
+        <members>Movie</members>
+        <members>OpportunityHandlerTestclass</members>
+        <members>OpportunityHandlerclass</members>
+        <members>PlatformEventSubscriber</members>
+        <members>Practice21</members>
+        <members>QueueableDay_3</members>
+        <members>RestCallout</members>
+        <members>SecondSchedulableClass</members>
+        <members>SiteLoginController</members>
+        <members>SiteLoginControllerTest</members>
+        <members>TaskTriggerHandler</members>
+        <members>TestBackupClass</members>
+        <members>TestDemoDeployClass</members>
+        <members>Testforcbd</members>
+        <members>as2</members>
+        <members>getkeyprefix</members>
+        <members>opportunityHandlerTrigger</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Testcomponent</members>
+        <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>Testpage</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>AccountTrigger</members>
+        <members>CaseAggregateRollupTrigger</members>
+        <members>CaseDay5354Trigger</members>
+        <members>LeadTrigger</members>
+        <members>NullAccount</members>
+        <members>OpportunityTrigger</members>
+        <members>TaskTrigger</members>
+        <members>nullAccD6Tr</members>
+        <members>nullAccTrg</members>
+        <members>nullAcctgr</members>
+        <members>nullOpp53D1Tgr</members>
+        <members>nullOppD5Tr</members>
+        <members>nullPhnocopyAcc</members>
+        <members>nullopp</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Case.Standard</members>
+        <members>Lead.Standard</members>
+        <name>AssignmentRule</name>
+    </types>
+    <types>
+        <members>AuraInputSelect</members>
+        <members>popUp</members>
+        <members>setStartUrl</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Internal Zone</members>
+        <name>Community</name>
+    </types>
+    <types>
+        <members>Position__c.Position_Compact_Layout</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>Recruitment</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>AccountHandler5timesError</members>
+        <members>Opp_Error_Msg</members>
+        <members>Welcomemessage</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>Candidate__c</members>
+        <members>Position__c</members>
+        <members>Sales_order_Item__c</members>
+        <members>salesorder__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Account.Standard_Account_Duplicate_Rule</members>
+        <members>Contact.Standard_Contact_Duplicate_Rule</members>
+        <members>Lead.Standard_Lead_Duplicate_Rule</members>
+        <name>DuplicateRule</name>
+    </types>
+    <types>
+        <members>Case.Standard</members>
+        <name>EscalationRule</name>
+    </types>
+    <types>
+        <members>Test</members>
+        <name>ExternalCredential</name>
+    </types>
+    <types>
+        <members>Account_Record_Page</members>
+        <members>ContactCenter_UtilityBar</members>
+        <members>CrisisCenter_UtilityBar</members>
+        <members>FlowsApp_UtilityBar</members>
+        <members>LightningSalesConsole_UtilityBar</members>
+        <members>LightningSales_UtilityBar</members>
+        <members>LightningService_UtilityBar</members>
+        <members>Opportunity_Record_Page</members>
+        <members>Recruitment_UtilityBar</members>
+        <members>SalesCloudMobile_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Account_rating_to_cold</members>
+        <members>Basic_Assignment_element</members>
+        <members>Basic_elements_day3</members>
+        <members>Count_5_times</members>
+        <members>Create_Contact</members>
+        <members>Create_a_A_C_Record</members>
+        <members>Create_opportunity_on_the_account_details_page_using_recordID</members>
+        <members>DAy_4_DIY_Another_type</members>
+        <members>Day4_DIY_Create_task_for_opportunity</members>
+        <members>Day4_class_video</members>
+        <members>Day_5_Class_video</members>
+        <members>Decision_element_Ex_2</members>
+        <members>Delete_related_opportunity_to_account</members>
+        <members>Display_name</members>
+        <members>Loop_and_Assignment_example_2</members>
+        <members>Loop_and_assignment_flow</members>
+        <members>Practice_all_basics</members>
+        <members>Record_Choice_set</members>
+        <members>Trigger_Flow_Decision</members>
+        <members>create_opportunity_line_item</members>
+        <members>update_field_using_assignment_element_before_save_flow_only</members>
+        <members>update_the_Task_records_related_to_the_account_id</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Account_rating_to_cold</members>
+        <members>Basic_Assignment_element</members>
+        <members>Basic_elements_day3</members>
+        <members>Count_5_times</members>
+        <members>Create_Contact</members>
+        <members>Create_a_A_C_Record</members>
+        <members>Create_opportunity_on_the_account_details_page_using_recordID</members>
+        <members>DAy_4_DIY_Another_type</members>
+        <members>Day4_DIY_Create_task_for_opportunity</members>
+        <members>Day4_class_video</members>
+        <members>Day_5_Class_video</members>
+        <members>Decision_element_Ex_2</members>
+        <members>Delete_related_opportunity_to_account</members>
+        <members>Display_name</members>
+        <members>Loop_and_Assignment_example_2</members>
+        <members>Loop_and_assignment_flow</members>
+        <members>Practice_all_basics</members>
+        <members>Record_Choice_set</members>
+        <members>Trigger_Flow_Decision</members>
+        <members>create_opportunity_line_item</members>
+        <members>update_field_using_assignment_element_before_save_flow_only</members>
+        <members>update_the_Task_records_related_to_the_account_id</members>
+        <name>FlowDefinition</name>
+    </types>
+    <types>
+        <members>Branch_Managers</members>
+        <name>Group</name>
+    </types>
+    <types>
+        <members>DE Default</members>
+        <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>as2</members>
+        <members>childCompLwcRef</members>
+        <members>lightningProgressIndicator</members>
+        <members>parentCompLwcRef</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Account.Standard_Account_Match_Rule_v1_0</members>
+        <members>Contact.Standard_Contact_Match_Rule_v1_1</members>
+        <members>Lead.Standard_Lead_Match_Rule_v1_0</members>
+        <name>MatchingRule</name>
+    </types>
+    <types>
+        <members>Experience_Profile_Manager</members>
+        <members>Price_value_Access</members>
+        <members>Salesorder_price</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Special_Permission_Groups</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
+        <members>Analytics Cloud Security User</members>
+        <members>Authenticated Website</members>
+        <members>B2B Reordering Portal Buyer Profile</members>
+        <members>Branch Manager</members>
+        <members>CBD Test</members>
+        <members>CEO</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>ContractManager</members>
+        <members>Cross Org Data Proxy User</members>
+        <members>Custom%3A Marketing Profile</members>
+        <members>Custom%3A Sales Profile</members>
+        <members>Custom%3A Support Profile</members>
+        <members>Customer Community Login User</members>
+        <members>Customer Community Plus Login User</members>
+        <members>Customer Community Plus User</members>
+        <members>Customer Community User</members>
+        <members>Customer Portal Manager Custom</members>
+        <members>Customer Portal Manager Standard</members>
+        <members>External Apps Login User</members>
+        <members>External Identity User</members>
+        <members>Force%2Ecom - App Subscription User</members>
+        <members>Force%2Ecom - Free User</members>
+        <members>Gold Partner User</members>
+        <members>High Volume Customer Portal User</members>
+        <members>HighVolumePortal</members>
+        <members>Identity User</members>
+        <members>Managing Director</members>
+        <members>MarketingProfile</members>
+        <members>Minimum Access - API Only Integrations</members>
+        <members>Minimum Access - Salesforce</members>
+        <members>Partner App Subscription User</members>
+        <members>Partner Community Login User</members>
+        <members>Partner Community User</members>
+        <members>PlatformPortal</members>
+        <members>Read Only</members>
+        <members>Sales Executive</members>
+        <members>Sales Manager</members>
+        <members>Salesforce API Only System Integrations</members>
+        <members>Service Executive</members>
+        <members>Service Manager</members>
+        <members>Silver Partner User</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>StandardAul</members>
+        <members>Work%2Ecom Only User</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Branch_Manager_profilePasswordPolicy1660805953405</members>
+        <members>Identity_User_profilePasswordPolicy1729625098665</members>
+        <members>Managing_Director_profilePasswordPolicy1660804462498</members>
+        <members>Sales_Executive_profilePasswordPolicy1660881388439</members>
+        <members>Sales_Manager_profilePasswordPolicy1660821630385</members>
+        <members>Service_Executive_profilePasswordPolicy1660822201536</members>
+        <members>Service_Manager_profilePasswordPolicy1660824887409</members>
+        <name>ProfilePasswordPolicy</name>
+    </types>
+    <types>
+        <members>Branch_Manager_profileSessionSetting1660805953491</members>
+        <members>Identity_User_profileSessionSetting1729625098760</members>
+        <members>Managing_Director_profileSessionSetting1660804462598</members>
+        <members>Sales_Executive_profileSessionSetting1660881388565</members>
+        <members>Sales_Manager_profileSessionSetting1660821630473</members>
+        <members>Service_Executive_profileSessionSetting1660822201649</members>
+        <members>Service_Manager_profileSessionSetting1660824887520</members>
+        <name>ProfileSessionSetting</name>
+    </types>
+    <types>
+        <members>Account.Quick_Contact</members>
+        <members>Case.LogACall</members>
+        <members>Case.NewChildCase</members>
+        <members>CollaborationGroup.NewGroupMember</members>
+        <members>CollaborationGroup.NewGroupRecord</members>
+        <members>FeedItem.NewTaskFromFeedItem</members>
+        <members>LogACall</members>
+        <members>NewAccount</members>
+        <members>NewCase</members>
+        <members>NewContact</members>
+        <members>NewEvent</members>
+        <members>NewGroup</members>
+        <members>NewLead</members>
+        <members>NewNote</members>
+        <members>NewOpportunity</members>
+        <members>NewTask</members>
+        <members>SendEmail</members>
+        <members>Task.Defer</members>
+        <members>Task.EditDescription</members>
+        <members>Task.UpdatePriority</members>
+        <members>Task.UpdateStatus</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Case.Commercial_Loan_Closing_Doc_QCA</members>
+        <members>Case.Commercial_QCA_Key_Fields</members>
+        <members>Case.Master</members>
+        <members>Metric.Completion</members>
+        <members>Metric.Progress</members>
+        <members>Position__c.Master_Position</members>
+        <members>Position__c.Non_Technical_Position</members>
+        <members>Position__c.Technical_Position</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>ApexDevNet</members>
+        <members>PlatformMainOrg</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>EBotR_v3</members>
+        <members>EBotR_v4</members>
+        <members>EBotR_v5</members>
+        <members>EinsteinBotReports</members>
+        <members>EinsteinBotReports_v2</members>
+        <name>ReportFolder</name>
+    </types>
+    <types>
+        <members>flow_orchestration_log_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_stage_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_step_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_work_item_ootb_crt_two_four_eight</members>
+        <members>screen_flows_prebuilt_crt</members>
+        <name>ReportType</name>
+    </types>
+    <types>
+        <members>CEO</members>
+        <members>CFO</members>
+        <members>COO</members>
+        <members>ChannelSalesTeam</members>
+        <members>CustomerSupportInternational</members>
+        <members>CustomerSupportNorthAmerica</members>
+        <members>DirectorChannelSales</members>
+        <members>DirectorDirectSales</members>
+        <members>EasternSalesTeam</members>
+        <members>InstallationRepairServices</members>
+        <members>Managing_Director</members>
+        <members>MarketingTeam</members>
+        <members>Mexico_Branch_Manager</members>
+        <members>Mexico_Sales_Executive</members>
+        <members>Mexico_Sales_Manager</members>
+        <members>Mexico_Service_Executive</members>
+        <members>Mexico_Service_Manager</members>
+        <members>New_york_Branch_Manager</members>
+        <members>New_york_Sales_Executive</members>
+        <members>New_york_Sales_Manager</members>
+        <members>New_york_Service_Executive</members>
+        <members>New_york_Service_Manager</members>
+        <members>SVPCustomerServiceSupport</members>
+        <members>SVPHumanResources</members>
+        <members>SVPSalesMarketing</members>
+        <members>VPInternationalSales</members>
+        <members>VPMarketing</members>
+        <members>VPNorthAmericanSales</members>
+        <members>WesternSalesTeam</members>
+        <name>Role</name>
+    </types>
+    <types>
+        <members>Candidate__c</members>
+        <members>Position__c</members>
+        <members>Sales_order_Item__c</members>
+        <name>SharingRules</name>
+    </types>
+    <types>
+        <members>Position__c.Close_Date_To_Specify_if_Status_is_close</members>
+        <members>Position__c.Min_Pay_Max_Pay</members>
+        <name>ValidationRule</name>
+    </types>
+    <types>
+        <members>Opportunity.Close_Date</members>
+        <members>Opportunity.Notify_Mgr_on_the_high_value_Opportunity</members>
+        <name>WorkflowAlert</name>
+    </types>
+    <types>
+        <members>Case.ChangePriorityToHigh</members>
+        <members>Opportunity.Type</members>
+        <name>WorkflowFieldUpdate</name>
+    </types>
+    <types>
+        <members>Opportunity.Notify Mgr on the high value Opportunity</members>
+        <name>WorkflowRule</name>
+    </types>
+    <version>56.0</version>
+</Package>
