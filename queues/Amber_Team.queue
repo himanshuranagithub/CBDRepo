@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Amber Team</name>
+    <queueMembers>
+        <users>
+            <user>dionela.35@usa.teleperformance.com</user>
+            <user>cajucom.30@usa.teleperformance.com</user>
+            <user>nido.18@usa.teleperformance.com</user>
+            <user>montilla.91@usa.teleperformance.com</user>
+            <user>sobrepena.13@usa.teleperformance.com</user>
+            <user>caranguian.16@usa.teleperformance.com</user>
+            <user>bauzon.14@usa.teleperformance.com</user>
+            <user>gravador.25@usa.teleperformance.com</user>
+            <user>cruz.4798@usa.teleperformance.com</user>
+            <user>alegre.118@usa.teleperformance.com</user>
+            <user>reyes.2542@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

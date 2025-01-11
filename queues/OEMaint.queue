@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>OEMaint</name>
+    <queueMembers>
+        <users>
+            <user>angela.ferrara@kooziegroup.com</user>
+            <user>annette.soles@kooziegroup.com</user>
+            <user>dawn.sword@kooziegroup.com</user>
+            <user>holly.mandel@kooziegroup.com</user>
+            <user>jamie.vandergroef@kooziegroup.com</user>
+            <user>jasmina.resic@kooziegroup.com</user>
+            <user>jennifer.delgrosso@kooziegroup.com</user>
+            <user>jessica.ludewig@kooziegroup.com</user>
+            <user>lori.reiter@kooziegroup.com</user>
+            <user>melissa.martin@kooziegroup.com</user>
+            <user>pam.jeffers@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

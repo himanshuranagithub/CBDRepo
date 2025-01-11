@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>no@email.com.invalid</email>
+    <name>Claims &amp; Resolution</name>
+    <queueMembers>
+        <users>
+            <user>bridget.lang@kooziegroup.com</user>
+            <user>deborah.stover@kooziegroup.com</user>
+            <user>eleishakyla.capada@teleperformance.com</user>
+            <user>felma.viloria@teleperformance.com</user>
+            <user>ludgen.fresco@teleperformance.com</user>
+            <user>orlan.base@teleperformance.com</user>
+            <user>rogermichael.joguilon@teleperformance.com</user>
+            <user>virginia.finstad@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Claims_Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

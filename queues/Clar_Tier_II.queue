@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Clar Tier II</name>
+    <queueMembers>
+        <users>
+            <user>jhoy.estor@teleperformance.com</user>
+            <user>johnadrian.padua@teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Clarifications</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

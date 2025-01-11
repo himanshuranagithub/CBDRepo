@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>All CS Supervisors</name>
+    <queueMembers>
+        <users>
+            <user>barb.tschida@kooziegroup.com</user>
+            <user>elizabeth.mcentegart@kooziegroup.com</user>
+            <user>faith.gorres@kooziegroup.com</user>
+            <user>gayla.williams@kooziegroup.com</user>
+            <user>mary.oneill@kooziegroup.com</user>
+            <user>stephanie.helland@kooziegroup.com</user>
+            <user>steven.snodgrass@kooziegroup.com</user>
+            <user>whitney.raphael@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

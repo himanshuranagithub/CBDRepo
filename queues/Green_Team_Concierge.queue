@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Green Team Concierge</name>
+    <queueMembers>
+        <users>
+            <user>jessica.ludewig@kooziegroup.com</user>
+            <user>joseph.tanner@kooziegroup.com</user>
+            <user>justin.kudelko@kooziegroup.com</user>
+            <user>michelle.bartlett@kooziegroup.com</user>
+            <user>talitha.reynolds@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

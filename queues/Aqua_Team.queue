@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Aqua Team</name>
+    <queueMembers>
+        <users>
+            <user>sumbrano.5@usa.teleperformance.com</user>
+            <user>benis.6@usa.teleperformance.com</user>
+            <user>caranguian.16@usa.teleperformance.com</user>
+            <user>labrador.185@usa.teleperformance.com</user>
+            <user>santiago.1022@usa.teleperformance.com</user>
+            <user>ibanez.90@usa.teleperformance.com</user>
+            <user>esteves.117@usa.teleperformance.com</user>
+            <user>alegre.118@usa.teleperformance.com</user>
+            <user>santillan.168@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Synergetics</name>
+    <queueMembers>
+        <users>
+            <user>john.harrisold@bicgraphic.com</user>
+            <user>john.harris@kooziegroup.com</user>
+            <user>luigi.frascarelli@kooziegroup.com</user>
+            <user>sfmcadmin@kooziegroup.com</user>
+            <user>patrick@bicgraphic.com</user>
+            <user>patrick.achey@bicgraphic.com</user>
+            <user>steven@bicgraphic.com</user>
+            <user>victor@bicgraphic.com</user>
+            <user>victor.rosado@bicgraphic.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

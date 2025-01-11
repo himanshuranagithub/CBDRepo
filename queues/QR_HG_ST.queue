@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>QR - HG_ST</name>
+    <queueMembers>
+        <users>
+            <user>andrea.powers@kooziegroup.com</user>
+            <user>lynn.hoffmann@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Quote_Request__c</sobjectType>
+    </queueSobject>
+</Queue>
