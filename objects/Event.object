@@ -1,173 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <recordTypes>
-        <fullName>IBEvent</fullName>
-        <active>true</active>
-        <compactLayoutAssignment>IBEventCompactLayout</compactLayoutAssignment>
-        <description>This is the standard record type for IB events</description>
-        <label>IB Event</label>
-        <picklistValues>
-            <picklist>Subject</picklist>
-            <values>
-                <fullName>1%3A1 customer Teams meeting or phone call</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Business Review - In Person</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Business Review - Virtual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IB internal meeting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting - In Person</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting - Virtual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tradeshow - In Person</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tradeshow - Virtual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Video Creation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar Customer Presentation</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>1%3A1 customer Teams meeting or phone call</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Business Review - In Person</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Business Review - Virtual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>IB internal meeting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting - In Person</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting - Virtual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tradeshow - In Person</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tradeshow - Virtual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Video Creation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar Customer Presentation</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>KGEvent</fullName>
-        <active>true</active>
-        <description>This is the standard record type for KG events</description>
-        <label>KG Event</label>
-        <picklistValues>
-            <picklist>Subject</picklist>
-            <values>
-                <fullName>Call</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Send Letter%2FQuote</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Call</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Meeting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>KG_Sales_Event</fullName>
-        <active>true</active>
-        <compactLayoutAssignment>KG_Sales_Event_Compact</compactLayoutAssignment>
-        <description>KG Sales Event</description>
-        <label>KG Sales Event</label>
-        <picklistValues>
-            <picklist>Subject</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
+    <compactLayouts>
+        <fullName>IBEventCompactLayout</fullName>
+        <fields>Subject</fields>
+        <fields>Type</fields>
+        <fields>WhatId</fields>
+        <fields>StartDateTime</fields>
+        <fields>EndDateTime</fields>
+        <fields>OwnerId</fields>
+        <label>IB Event Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>KG_Sales_Event_Compact</fullName>
+        <fields>Sales_Activity_Type__c</fields>
+        <fields>Subject</fields>
+        <fields>StartDateTime</fields>
+        <fields>EndDateTime</fields>
+        <fields>IsReminderSet</fields>
+        <label>KG Sales Event Compact</label>
+    </compactLayouts>
 </CustomObject>
