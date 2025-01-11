@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Freight_Quote_Request</fullName>
+        <active>true</active>
+        <description>Use this form when a freight quote is required from the Logistics Team</description>
+        <label>Freight Quote Request</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Lead_Time_In_House</fullName>
+        <active>true</active>
+        <description>Use this form when the customer is asking for an expedited ship date (less than standard production) for an order that has been placed and is on our system.</description>
+        <label>Lead Time : In House</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Lead_Time_Overdue_no_backorder_date</fullName>
+        <active>true</active>
+        <description>Use this form when the order has a past due date and no backorder reason code</description>
+        <label>Lead Time : Overdue, no backorder date</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Lead_Time_Pre_Order</fullName>
+        <active>true</active>
+        <description>Use this form ONLY on requests for an expedited ship date or a large order ship date where there is NOT an order in the system. Use the *** NEW *** &apos;Create VLT CASE&apos; button on your CASE (upper R-corner of your CASE) for VLT / FACTORY DIRECT requests.</description>
+        <label>Lead Time : Pre-Order *** NOT FOR VLT/FACTORY DIRECT***</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MLT_Change_Request</fullName>
+        <active>true</active>
+        <description>Use the *** NEW ***  &apos;Create MLT CASE&apos;  button on your CASE (upper R-corner of your CASE)</description>
+        <label>MLT Change Request ***DO NOT USE***</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Pre_Production_Order_Status</fullName>
+        <active>true</active>
+        <description>Use this form for a change request for an order that is in the system, but not in production yet.</description>
+        <label>Pre-Production Order Status</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Virtual_Form</fullName>
+        <active>true</active>
+        <description>All virtual requests are pre-sales; they are not tied to an actual order in house.  A visual layout of an imprint on a product.</description>
+        <label>Virtual Form</label>
+    </recordTypes>
+</CustomObject>

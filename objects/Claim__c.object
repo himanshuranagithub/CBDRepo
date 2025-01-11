@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Customer_Accomodation</fullName>
+        <active>true</active>
+        <label>Customer Accomodation</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_Concession</fullName>
+        <active>true</active>
+        <label>Sales Concession</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard</fullName>
+        <active>false</active>
+        <description>July 2023 - Obsolete - Do Not Use</description>
+        <label>xStandard</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard_Claim</fullName>
+        <active>true</active>
+        <label>Standard Claim</label>
+    </recordTypes>
+</CustomObject>

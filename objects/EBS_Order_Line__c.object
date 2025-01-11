@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>EBSOrderLine</fullName>
+        <active>true</active>
+        <description>Record type for EBS order lines</description>
+        <label>EBS Order Line</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SytelineOrderLine</fullName>
+        <active>true</active>
+        <description>This is the record type for Syteline Order Lines</description>
+        <label>Syteline Order Line</label>
+    </recordTypes>
+</CustomObject>
