@@ -1,81 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Agentforce_Chat</members>
-        <members>All_CS_Supervisors</members>
-        <members>Amber_Team</members>
-        <members>Amber_Team_Concierge</members>
-        <members>Anchor_Wallace</members>
-        <members>Aqua_Team</members>
-        <members>Aqua_Team_Concierge</members>
-        <members>Blue_Team</members>
-        <members>Blue_Team_Concierge</members>
-        <members>CSR_Tier_1</members>
-        <members>CSR_Tier_2</members>
-        <members>Calendar_Coop_Center</members>
-        <members>Chat</members>
-        <members>Claims_Res_Manager</members>
-        <members>Claims_Res_Supervisor</members>
-        <members>Claims_Resolution</members>
-        <members>Clar_Tier_I</members>
-        <members>Clar_Tier_II</members>
-        <members>Clarification_Pending</members>
-        <members>Clarification_Validation</members>
-        <members>Color_Pod_Chat</members>
-        <members>Default_User</members>
-        <members>Delayed_Order_Pending</members>
-        <members>Duplicate_Cases</members>
-        <members>Elite_CLAR_FLWP</members>
-        <members>Elite_Chat</members>
-        <members>Elite_Portal_Team</members>
-        <members>Elite_Team</members>
-        <members>Elite_Team_Tier_II</members>
-        <members>Email_Exceptions</members>
-        <members>General_Chat</members>
-        <members>Green_Team</members>
-        <members>Green_Team_Concierge</members>
-        <members>HG_Custom</members>
-        <members>Hotel</members>
-        <members>Inside_Sales_Emails</members>
-        <members>KoozieGroup_SFDC_Support</members>
-        <members>Koozie_Web_Chat</members>
-        <members>Large_Orders</members>
-        <members>MCM_Brands</members>
-        <members>MLT_Queue</members>
-        <members>Marketing_Queue</members>
-        <members>New_Accounts_Team</members>
-        <members>Non_Elite_Chat</members>
-        <members>OEMaint</members>
-        <members>OmniChannel_Bounce_Queue</members>
-        <members>Orange_Team</members>
-        <members>Orange_Team_Concierge</members>
-        <members>Order_Verification</members>
-        <members>PB_Custom</members>
-        <members>Peach_Team</members>
-        <members>Peach_Team_Concierge</members>
-        <members>Pink_Team</members>
-        <members>Pink_Team_Concierge</members>
-        <members>Purple_Team</members>
-        <members>Purple_Team_Clar</members>
-        <members>Purple_Team_Concierge</members>
-        <members>Purple_Team_Tier_II</members>
-        <members>QR_Calendars</members>
-        <members>QR_HG_ST</members>
-        <members>Quote_Request</members>
-        <members>Red_Team</members>
-        <members>Red_Team_Concierge</members>
-        <members>SFDC_Admin_Team</members>
-        <members>Sales_Support_Queue</members>
-        <members>Service_Case</members>
-        <members>Survey</members>
-        <members>Synergetics</members>
-        <members>System_Automated_Closures</members>
-        <members>TAX</members>
-        <members>VLT_Queue</members>
-        <members>Voice_of_Customer</members>
-        <members>Yellow_Team</members>
-        <members>Yellow_Team_Concierge</members>
-        <name>Queue</name>
+        <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
+        <members>Analytics Cloud Security User</members>
+        <members>BIC API Read Only</members>
+        <members>BIC Executive</members>
+        <members>BIC JIRA Integration</members>
+        <members>BIC Manager - Account Executive</members>
+        <members>BIC Manager - Credit</members>
+        <members>BIC Manager - Customer Service</members>
+        <members>BIC Manager - Field Sales</members>
+        <members>BIC Manager - Inside Sales</members>
+        <members>BIC Manager - Marketing</members>
+        <members>BIC Manager - National Sales</members>
+        <members>BIC Standard User - Account Executive</members>
+        <members>BIC Standard User - Claims</members>
+        <members>BIC Standard User - Credit</members>
+        <members>BIC Standard User - Customer Service</members>
+        <members>BIC Standard User - Field Sales</members>
+        <members>BIC Standard User - Human Resources</members>
+        <members>BIC Standard User - Marketing</members>
+        <members>BIC Standard User - National Account Rep</members>
+        <members>BIC Standard User - Quoting</members>
+        <members>BIC Standard User- Inside Sales Rep</members>
+        <members>Bic API Only</members>
+        <members>CPQ Integration User</members>
+        <members>Care Krew Collaboration Profile</members>
+        <members>Chat Setup Flow Site Profile</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>ContractManager</members>
+        <members>Customer Community User</members>
+        <members>ESW_Agentforce_Chat_1735548895867 Profile</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496 Profile</members>
+        <members>Einstein Agent User</members>
+        <members>Email Survey Response Profile</members>
+        <members>External Apps Login User</members>
+        <members>Guest License User</members>
+        <members>IB - Account Management</members>
+        <members>IB - Sales</members>
+        <members>IB - Syteline Integration</members>
+        <members>Identity User</members>
+        <members>KG Inside Sales</members>
+        <members>Kooziegroup Answers Profile</members>
+        <members>MarketingProfile</members>
+        <members>MarketingProject Profile</members>
+        <members>Minimum Access - API Only Integrations</members>
+        <members>Minimum Access - Salesforce</members>
+        <members>Read Only1</members>
+        <members>Sales Insights Integration User</members>
+        <members>Salesforce API Only System Integrations</members>
+        <members>SalesforceIQ Integration User</members>
+        <members>Service Agent</members>
+        <members>Service Supervisor</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>Website API Only</members>
+        <members>xAnalytics%2FReports Developer</members>
+        <members>xBIC Director - Marketing</members>
+        <members>xBIC Executive - CFO</members>
+        <members>xBIC Executive - CMO</members>
+        <members>xBIC Executive - COO</members>
+        <members>xBIC Executive Manager - Customer Service</members>
+        <members>xBIC IT</members>
+        <members>xBIC Manager - Claims</members>
+        <members>xBIC Manager - Human Resources</members>
+        <members>xBIC Manager - Quoting %26 Pricing</members>
+        <members>xBIC Manager - Special Markets</members>
+        <members>xBIC Standard User - Clarification</members>
+        <members>xBIC Standard User- Temporary Claims</members>
+        <members>xBic Manager - Clarification</members>
+        <members>xRead Only</members>
+        <name>Profile</name>
     </types>
     <version>56.0</version>
 </Package>
