@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set grants the quote analyst permission to view/edit the &apos;Valid Through Date&apos;.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Quote_Request__c.Valid_Through__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Quote Expiration Date Permission Set</label>
+    <license>Salesforce</license>
+</PermissionSet>

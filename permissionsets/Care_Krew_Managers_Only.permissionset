@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Clarification Start Date Edit</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Clarification_Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Care Krew Managers Only</label>
+    <license>Salesforce</license>
+</PermissionSet>

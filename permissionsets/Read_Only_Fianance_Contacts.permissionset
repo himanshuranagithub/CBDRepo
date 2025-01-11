@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Read only access to KG Finance contacts for sales and service users</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Read Only Fianance Contacts</label>
+    <license>Salesforce</license>
+    <recordTypeVisibilities>
+        <recordType>Contact.Finance_Contact</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

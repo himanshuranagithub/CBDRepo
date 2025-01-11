@@ -1,79 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Admin</members>
-        <members>Analytics Cloud Integration User</members>
-        <members>Analytics Cloud Security User</members>
-        <members>BIC API Read Only</members>
-        <members>BIC Executive</members>
-        <members>BIC JIRA Integration</members>
-        <members>BIC Manager - Account Executive</members>
-        <members>BIC Manager - Credit</members>
-        <members>BIC Manager - Customer Service</members>
-        <members>BIC Manager - Field Sales</members>
-        <members>BIC Manager - Inside Sales</members>
-        <members>BIC Manager - Marketing</members>
-        <members>BIC Manager - National Sales</members>
-        <members>BIC Standard User - Account Executive</members>
-        <members>BIC Standard User - Claims</members>
-        <members>BIC Standard User - Credit</members>
-        <members>BIC Standard User - Customer Service</members>
-        <members>BIC Standard User - Field Sales</members>
-        <members>BIC Standard User - Human Resources</members>
-        <members>BIC Standard User - Marketing</members>
-        <members>BIC Standard User - National Account Rep</members>
-        <members>BIC Standard User - Quoting</members>
-        <members>BIC Standard User- Inside Sales Rep</members>
-        <members>Bic API Only</members>
-        <members>CPQ Integration User</members>
-        <members>Care Krew Collaboration Profile</members>
-        <members>Chat Setup Flow Site Profile</members>
-        <members>Chatter External User</members>
-        <members>Chatter Free User</members>
-        <members>Chatter Moderator User</members>
-        <members>ContractManager</members>
-        <members>Customer Community User</members>
-        <members>ESW_Agentforce_Chat_1735548895867 Profile</members>
-        <members>ESW_Koozie_Web_Chat_1735035965496 Profile</members>
-        <members>Einstein Agent User</members>
-        <members>Email Survey Response Profile</members>
-        <members>External Apps Login User</members>
-        <members>Guest License User</members>
-        <members>IB - Account Management</members>
-        <members>IB - Sales</members>
-        <members>IB - Syteline Integration</members>
-        <members>Identity User</members>
-        <members>KG Inside Sales</members>
-        <members>Kooziegroup Answers Profile</members>
-        <members>MarketingProfile</members>
-        <members>MarketingProject Profile</members>
-        <members>Minimum Access - API Only Integrations</members>
-        <members>Minimum Access - Salesforce</members>
-        <members>Read Only1</members>
-        <members>Sales Insights Integration User</members>
-        <members>Salesforce API Only System Integrations</members>
-        <members>SalesforceIQ Integration User</members>
-        <members>Service Agent</members>
-        <members>Service Supervisor</members>
-        <members>SolutionManager</members>
-        <members>Standard</members>
-        <members>Website API Only</members>
-        <members>xAnalytics%2FReports Developer</members>
-        <members>xBIC Director - Marketing</members>
-        <members>xBIC Executive - CFO</members>
-        <members>xBIC Executive - CMO</members>
-        <members>xBIC Executive - COO</members>
-        <members>xBIC Executive Manager - Customer Service</members>
-        <members>xBIC IT</members>
-        <members>xBIC Manager - Claims</members>
-        <members>xBIC Manager - Human Resources</members>
-        <members>xBIC Manager - Quoting %26 Pricing</members>
-        <members>xBIC Manager - Special Markets</members>
-        <members>xBIC Standard User - Clarification</members>
-        <members>xBIC Standard User- Temporary Claims</members>
-        <members>xBic Manager - Clarification</members>
-        <members>xRead Only</members>
-        <name>Profile</name>
+        <members>ACCOUNT_Maintenence</members>
+        <members>AW_Marketing_Customer_Service</members>
+        <members>Acc_Comm_Preference_Edit_Permission</members>
+        <members>Access_Change</members>
+        <members>Assign_Permission_to_Create_Care_Krew_SF_Request</members>
+        <members>Audit_Permission</members>
+        <members>Bulk_API_Hard_Delete</members>
+        <members>Bypass_verification</members>
+        <members>Cadence_Dates_Modification</members>
+        <members>Campaign_Permissions</members>
+        <members>Care_Krew_Managers_Only</members>
+        <members>Care_Krew_Request_Case</members>
+        <members>Case_Record_Types</members>
+        <members>Chat_Transcript</members>
+        <members>Chatter_Permisson</members>
+        <members>Classic_UI_Switch_Permisson</members>
+        <members>Contact_History_Tracker_Edit</members>
+        <members>Contact_List_Import_from_Mobile_Device</members>
+        <members>Contact_status_Change</members>
+        <members>Contacts_Create_edit_and_delete</members>
+        <members>Content_Permissons</members>
+        <members>Create_Finance_Contacts_VP_of_sales</members>
+        <members>Create_edit_and_delete_events_and_tasks</members>
+        <members>Custom_Report_Type_CreateEditDelete</members>
+        <members>Custom_Settings</members>
+        <members>Customer_Notes</members>
+        <members>Dashboard_Create_Edit</members>
+        <members>Edit_Access_to_Lightning_Email_Templates</members>
+        <members>Edit_EBS_Order</members>
+        <members>Elevated_Survey_Responsibility</members>
+        <members>Elevated_Survey_Responsibility_Survey_Only</members>
+        <members>Enable_List_View_Management</members>
+        <members>Export_Articles</members>
+        <members>Finance_CONTACTs_Maintenance</members>
+        <members>General_Support_Presence_Statuses</members>
+        <members>Global_Header</members>
+        <members>IB_ACCOUNT_Maintenance</members>
+        <members>IB_Product_Management</members>
+        <members>Knowledge_Article_Archiving</members>
+        <members>Knowledge_LSF_Permission_Set</members>
+        <members>Knowledge_View_Only</members>
+        <members>Koozie_Messaging</members>
+        <members>List_View</members>
+        <members>Live_Agent_Setup_Flow</members>
+        <members>Login_As_and_Admin_Layout</members>
+        <members>MLT_Representative</members>
+        <members>MLT_VLT_Manager_Supervisor</members>
+        <members>ManageUnlisted_Chatter_Groups</members>
+        <members>Marketing_Project_Modify_all</members>
+        <members>Marketing_Projects_Edit_Permisson</members>
+        <members>Mis_Merge_Visability</members>
+        <members>Mobile_app</members>
+        <members>Modify_All</members>
+        <members>Object_Permission</members>
+        <members>OmniSupervisor_non_service</members>
+        <members>Omni_Supervisor</members>
+        <members>Opportunity_Quote_Request</members>
+        <members>Outlook_Configurations</members>
+        <members>PNE</members>
+        <members>Permisson_sets_for_Omni_Supervisor</members>
+        <members>Plan_document_edit</members>
+        <members>Quote_Expiration_Date_Permission_Set</members>
+        <members>Read_Only_Fianance_Contacts</members>
+        <members>Report_Dashboard_Admin</members>
+        <members>Restrict_Pricing_Flag_Edit_Rights</members>
+        <members>Robust_Analyst_Permissions</members>
+        <members>Sales_Console_App_access</members>
+        <members>Sales_Service_Access</members>
+        <members>Sales_User</members>
+        <members>Salesforce_Admin_CASEs</members>
+        <members>Team_Lead_Tracker</members>
+        <members>Templates_Manage_Public_Classic_Lightning</members>
+        <members>Tier_II_Escalations</members>
+        <members>Transfer_Records</members>
+        <members>VLT_Representative</members>
+        <members>VOC_CASE_Visibility</members>
+        <members>VaronisDAC</members>
+        <members>Veza_Integration_permission</members>
+        <members>Website_Edit_Permission</members>
+        <members>sfdc_aiplanner_service_permset</members>
+        <members>sfdc_chatbot_service_permset</members>
+        <name>PermissionSet</name>
     </types>
     <version>56.0</version>
 </Package>
