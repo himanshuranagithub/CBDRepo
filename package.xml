@@ -1,102 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.Account_on_Credit_Hold</members>
-        <members>Campaign.New_Trade_Show_Notification</members>
-        <members>Campaign.Notify_Campaign_Owner_to_Proceed_with_Trade_Show</members>
-        <members>Campaign.Payment_Approved_Email</members>
-        <members>Campaign.TradeShow_VP_of_Sales_Approval</members>
-        <members>Campaign.Trade_Show_Approved</members>
-        <members>Campaign.Trade_Show_Marketing_Approval_for_Payment</members>
-        <members>Campaign.Trade_Show_Marketing_Rejetion_for_Payment</members>
-        <members>Campaign.Trade_Show_Payment_Processed</members>
-        <members>Campaign.Trade_Show_Rejected</members>
-        <members>Case.AW_Case_Auto_Response</members>
-        <members>Case.CCC_Case_Auto_Response</members>
-        <members>Case.Case_Auto_Response</members>
-        <members>Case.Clarification_Email</members>
-        <members>Case.Clarification_Email_2</members>
-        <members>Case.Greater_than_5k_Email_Alert</members>
-        <members>Case.ProofEmail</members>
-        <members>Case.Proof_Email_2</members>
-        <members>Case.Send_reminder_for_large_orders</members>
-        <members>Case_Escalation__c.Case_Escalation_Closed</members>
-        <members>Change_Request__c.SFDC_Show_Stopper_Change_Request_Alert</members>
-        <members>Check_Credit_Memo_Request__c.New_Credit_Memo_Check_Request</members>
-        <members>Claim__c.CLAIM_Art_related_issue_flag_art_as_Do_Not_Use</members>
-        <members>Clarification_Question__c.New_Notification</members>
-        <members>Clarification_Question__c.Notification_Email</members>
-        <members>Clarification_Question__c.X4Imprint_New_Notification</members>
-        <members>Coaching__c.Opportunity_Coaching</members>
-        <members>Coaching__c.Skills_Coaching</members>
-        <members>Knowledge__kav.When_Articles_are_created_or_edited</members>
-        <members>Marketing_Projects__c.Alert_when_marketing_project_is_approved</members>
-        <members>Marketing_Projects__c.Designer_has_been_assigned</members>
-        <members>Marketing_Projects__c.Email_Alert_New_Project_Submitted</members>
-        <members>Marketing_Projects__c.MP_is_recalled_by_creator</members>
-        <members>Marketing_Projects__c.MP_request_is_rejected</members>
-        <members>Marketing_Projects__c.Marketing_Project_Completed</members>
-        <members>Marketing_Projects__c.Notification_to_Approver_for_Incoming_Requests</members>
-        <members>Marketing_Projects__c.Please_approve_the_MP_request</members>
-        <members>Marketing_Projects__c.Project_Request_Approved_Lead_Time</members>
-        <members>Marketing_Projects__c.Project_Request_Rejected_Lead_Time</members>
-        <members>Marketing_Projects__c.SE_CREATIVE</members>
-        <members>Marketing_Projects__c.Self_Notification_that_record_is_gone_for_approval</members>
-        <members>Marketing_Projects__c.Your_Project_Requires_Approval</members>
-        <members>OTE_Plan__c.OTE_Plan</members>
-        <members>Opportunity.Assign_to_AE</members>
-        <members>Opportunity.Assign_to_Estimator</members>
-        <members>Opportunity.CSR_created_Opps</members>
-        <members>Opportunity.Close_date_Expired</members>
-        <members>Opportunity.Close_date_is_today</members>
-        <members>Opportunity.New_Mktg_Halo_Oppty_created</members>
-        <members>Opportunity.New_Mktg_Oppty_created</members>
-        <members>Opportunity.New_Special_Pricing_Request</members>
-        <members>Opportunity.Opportunities_over_5k</members>
-        <members>Opportunity.Opportunity_Expired</members>
-        <members>Opportunity.Opportunity_is_expiring</members>
-        <members>Opportunity.Opportunity_is_expiring_tommorow</members>
-        <members>Opportunity.Rejection_Notice</members>
-        <members>Opportunity.Special_Price_Approval_Notice</members>
-        <members>Opportunity.Special_Price_Rejection_Notice</members>
-        <members>Quote_Request__c.Custom_Universal_Source_Quote_Request</members>
-        <members>Quote_Request__c.Notice_of_Quote_Request_Approved_Custom_Calendar</members>
-        <members>Quote_Request__c.Notice_of_Quote_Request_Approved_Hardgood</members>
-        <members>Quote_Request__c.Notice_of_Quote_Request_Approved_Hardgoods</members>
-        <members>Quote_Request__c.Notice_of_Quote_Request_Pending_Approval_Rejection_Custom_Calendar</members>
-        <members>Quote_Request__c.Notice_of_Quote_Request_Rejected_Cus_Calendar</members>
-        <members>Quote_Request__c.Notice_of_Quote_Request_Rejected_Custom_Calendar</members>
-        <members>Quote_Request__c.Notice_of_Quote_Request_Rejected_NonCalendar</members>
-        <members>Quote_Request__c.Notification_of_Quote_Expiration_for_Close_of_Opportunity</members>
-        <members>Quote_Request__c.Notify_Record_Owner_of_Approved_Quote_Request_Custom_Calendar</members>
-        <members>Quote_Request__c.Quote_Request_Assigned_To</members>
-        <members>Quote_Request__c.Quote_Request_Completed</members>
-        <members>Quote_Request__c.Quote_Request_Custom_Calendar_Approval_Process_Template</members>
-        <members>Quote_Request__c.Quote_Request_Exceeds_SLA_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Hardgoods_Approval_Process_Template</members>
-        <members>Quote_Request__c.Quote_Request_In_Progress</members>
-        <members>Quote_Request__c.Quote_Request_Mgr_Sup</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Asia_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_CS_Sales_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Customer_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Internal_Other_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Logistics_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Manager_Approval_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Production_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Purchasing_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Quote_Team_Email_Alert</members>
-        <members>Quote_Request__c.Quote_Request_Pending_Vendor_Email_Alert</members>
-        <members>Request_Form__c.Freight_Quote_Order_Status</members>
-        <members>Request_Form__c.Lead_Time_Overdue_no_backorder_date</members>
-        <members>Request_Form__c.Lead_Time_Pre_Order</members>
-        <members>Request_Form__c.Lead_Time_in_House</members>
-        <members>Request_Form__c.MLT_Change_Request</members>
-        <members>Request_Form__c.Pre_Production_Order_Status</members>
-        <members>Request_Form__c.Virtual_Form</members>
-        <members>Task.FollowUp_Task</members>
-        <members>User.Audit_Email</members>
-        <name>WorkflowAlert</name>
+        <members>Care Krew Collaboration.Block_banned_keywords</members>
+        <members>Care Krew Collaboration.Flag_banned</members>
+        <members>Care Krew Collaboration.Freeze_for_frequent_posting</members>
+        <members>Care Krew Collaboration.Replace_banned</members>
+        <members>Care Krew Collaboration.Review_the_first_post</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Block_banned_keywords</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Flag_banned</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Freeze_for_frequent_posting</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Replace_banned</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Review_the_first_post</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Block_banned_keywords</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Flag_banned</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Freeze_for_frequent_posting</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Replace_banned</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Review_the_first_post</members>
+        <members>Kooziegroup Answers.Block_banned_keywords</members>
+        <members>Kooziegroup Answers.Flag_banned</members>
+        <members>Kooziegroup Answers.Freeze_for_frequent_posting</members>
+        <members>Kooziegroup Answers.Replace_banned</members>
+        <members>Kooziegroup Answers.Review_the_first_post</members>
+        <name>ModerationRule</name>
     </types>
     <version>56.0</version>
 </Package>
