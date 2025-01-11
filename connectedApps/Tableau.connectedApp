@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>prerak.patel@kooziegroup.com</contactEmail>
+    <label>Tableau</label>
+    <oauthConfig>
+        <callbackUrl>https://tableau.kooziegroup.com/auth/add_oauth_token</callbackUrl>
+        <consumerKey>3MVG98bly0AKZIIXbXfaAkxa19O1e0CRlU6LLz0P2JQNacpkO2Url0VPhOLU4PziF.Rlh7afj7q742I7te3Ww</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

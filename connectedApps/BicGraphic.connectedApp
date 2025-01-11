@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>harrisj@synergeticsww.com</contactEmail>
+    <label>BicGraphic</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/services/oath2/callback
+https://www.getpostman.com/oauth2/callback</callbackUrl>
+        <consumerKey>3MVG98bly0AKZIIXbXfaAkxa19O1e0CRlU6LLGCM7Et1YdxGmatLb8wtpwMokh3mEtt0a.mRMXRbOISFQ1UFU</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

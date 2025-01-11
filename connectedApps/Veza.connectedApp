@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>prerak.patel@kooziegroup.com</contactEmail>
+    <label>Veza</label>
+    <oauthConfig>
+        <callbackUrl>https://localhost</callbackUrl>
+        <certificate>MIIDuTCCAqECFF4mb+1lSz4wUJ3YneED7vASBVQHMA0GCSqGSIb3DQEBCwUAMIGYMQswCQYDVQQGEwJVUzEQMA4GA1UECAwHRmxvcmlkYTETMBEGA1UEBwwKQ2xlYXJ3YXRlcjEUMBIGA1UECgwLS29vemllR3JvdXAxCzAJBgNVBAsMAklUMRIwEAYDVQQDDAlLb296aWUgSVQxKzApBgkqhkiG9w0BCQEWHHByZXJhay5wYXRlbEBrb296aWVncm91cC5jb20wHhcNMjMwNjA5MTYxNzQ4WhcNMjQwNjA4MTYxNzQ4WjCBmDELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB0Zsb3JpZGExEzARBgNVBAcMCkNsZWFyd2F0ZXIxFDASBgNVBAoMC0tvb3ppZUdyb3VwMQswCQYDVQQLDAJJVDESMBAGA1UEAwwJS29vemllIElUMSswKQYJKoZIhvcNAQkBFhxwcmVyYWsucGF0ZWxAa29vemllZ3JvdXAuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyu4tKQDs454a1xdcW4BIvvpoyC3YoAefomKievUWierJXG0jBT3ry8DuMBr1SWYgNYvkgCHIMc3NWLrK/GctIf9KbIeJQCpWo1mMdtjrcF/K4QGzoQzy+bOlCojn16AvDlFDfqpZh4gi+q/SsWqXXF0bCOAxF4UaIT3D3A0BfEWIoLLf5OLgiwvz9vJLnHO5tai/DWkBKaS9FJ7gDU9XLF4Qe9GvM2IMjhxD5nMi4ZwFQ8V4/a8aeaAlIMM5FOVkejbm8JOo84uzgK5hzF33y0qTp/MTHUPj4O+fs+0MmBlzK2LOBzY3TViF4Mvmxkj8im5YwfYRqztblZEWnSUiswIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBQ8YbaGKqUIk9sF+Nlm9Zixrkib1Y8ZLowtC65wlLXLXxMNjx4yv5ZWxKEMXX+36rpwFhLYFVpRQqIEOP/naRDpo5SBaNoSSFV7JtOfAyH9dUFFRtROVfTb1hferRN+R2UsxSO4MnWMKGHRZtrqy+L2EhB5IUFnBm6AVYcFe1xFDk37aHAaRqBGbY6a1xxxRj7H+14MAkjb7hJsOn7gMRclRqzLCaXORUrlEb5Y8yVh49TUKL2D3m6WXEf/Et2eX0WDEno7iEw4SQT4mhg31qsw9O4Zt1tgQatRxDALy5MNI9R0Sz7cw/MAJ/NyQzR7Z60u5ZCdV58ZKlQEdCw0iEI</certificate>
+        <consumerKey>3MVG98bly0AKZIIXbXfaAkxa19O1e0CRlU6LL8AYv0F70ty74ObO07AxDpFt9QMoivXG6VQrDJ58jqlsMxmNB</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS_2FACTOR</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>Veza Integration permission</permissionSetName>
+</ConnectedApp>

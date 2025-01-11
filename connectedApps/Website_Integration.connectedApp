@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>ashwath.shetty@kooziegroup.com</contactEmail>
+    <label>Website Integration</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/services/oath2/callback</callbackUrl>
+        <consumerKey>3MVG98bly0AKZIIXbXfaAkxa19Ih5GNJk7QsYY7AVMhEgMUw3NvxTrPRdSYZUp1mYOCtdxZPGLPVoj6XM3aNS</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>
