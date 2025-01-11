@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>accountAndLeadSearch</members>
-        <members>accountOrdersDataTable</members>
-        <members>chatVisitorDeatils</members>
-        <members>cloneQuoteRequest</members>
-        <members>ebsOrderEmailMessages</members>
-        <members>ebsOrderRelatedCasesShowInDataTable</members>
-        <members>marketingProjectFrom</members>
-        <members>prechat</members>
-        <members>redirectToRecord</members>
-        <members>relatedQuoteRequestList</members>
-        <name>LightningComponentBundle</name>
+        <members>Account_mapping.Bookstore</members>
+        <members>Account_mapping.Calendar_Coop</members>
+        <members>Account_mapping.Calendar_Dedicated</members>
+        <members>Account_mapping.Casino</members>
+        <members>Account_mapping.Church</members>
+        <members>Account_mapping.Default</members>
+        <members>Account_mapping.Hotel</members>
+        <members>Callout_Handler_Setting.Website_getContactRequest</members>
+        <members>Callout_Handler_Setting.contactSync</members>
+        <members>Callout_Handler_Setting.generateJSONForSingleContactInsert</members>
+        <members>Chat_Setting.Koozie_Group</members>
+        <members>Contact_And_Contact_Role_Settings.ODS_NotificationAcknowledgement</members>
+        <members>Contact_And_Contact_Role_Settings.Send_Contact_Information</members>
+        <members>Contact_And_Contact_Role_Settings.Send_Contact_Role_Information</members>
+        <members>Email_Template_Setting.Anchor_Wallace_Order_Confirmation</members>
+        <members>Email_Template_Setting.Anchor_Wallace_Shipment_Notification</members>
+        <members>Email_Template_Setting.Anchor_Wallace_Template</members>
+        <members>Email_Template_Setting.Anchor_Wallace_Template_Under_50</members>
+        <members>Email_Template_Setting.Calendar_Coop_Order_Confirmation</members>
+        <members>Email_Template_Setting.Calendar_Coop_Shipment_Notification</members>
+        <members>Email_Template_Setting.Koozie_Group_Order_Confirmation</members>
+        <members>Email_Template_Setting.Koozie_Group_Shipment_Notification</members>
+        <members>Email_Template_Setting.Koozie_Group_Template</members>
+        <members>Email_Template_Setting.Koozie_Group_Template_Under_50</members>
+        <members>Email_Template_Setting.LTA_Anchor_Wallace_Booked</members>
+        <members>Email_Template_Setting.LTA_Anchor_Wallace_on_Hold</members>
+        <members>Email_Template_Setting.LTA_Calendar_Coop_Booked</members>
+        <members>Email_Template_Setting.LTA_Calendar_Coop_on_Hold</members>
+        <members>Email_Template_Setting.LTA_Koozie_Group_Booked</members>
+        <members>Email_Template_Setting.LTA_Koozie_Group_on_Hold</members>
+        <members>Email_Template_Setting.Notification_Anchor_Wallace</members>
+        <members>Email_Template_Setting.Notification_Calendar_Coop</members>
+        <members>Email_Template_Setting.Notification_Koozie_Group</members>
+        <members>Email_Template_Setting.PO_Email_Template</members>
+        <members>Email_Template_Setting.PO_Email_Template_Under_50</members>
+        <members>GrandNode_Setting.Grand_Node_Account_Sync</members>
+        <members>GrandNode_Setting.Grand_Node_Contact_Sync</members>
+        <members>Trigger_Settings.Account</members>
+        <members>Trigger_Settings.Case</members>
+        <members>Trigger_Settings.CaseTrigger</members>
+        <members>Trigger_Settings.Contact</members>
+        <members>Trigger_Settings.ContactTrigger</members>
+        <members>Trigger_Settings.EBSOrderTrigger</members>
+        <members>Trigger_Settings.EBS_Order_Line</members>
+        <members>Trigger_Settings.EmailMessage</members>
+        <name>CustomMetadata</name>
     </types>
     <version>56.0</version>
 </Package>
