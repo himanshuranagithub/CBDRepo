@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>Custom_Calendar</fullName>
+        <fields>OwnerId</fields>
+        <fields>Name</fields>
+        <fields>Marketing_Project_Name__c</fields>
+        <fields>Product_Type__c</fields>
+        <fields>Status__c</fields>
+        <fields>Team_Requesting_Project__c</fields>
+        <fields>Link_to_Final_File__c</fields>
+        <label>Custom Calendar</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Markering_Project_Marketing</fullName>
+        <fields>OwnerId</fields>
+        <fields>Name</fields>
+        <fields>Marketing_Project_Name__c</fields>
+        <fields>Product_Type__c</fields>
+        <fields>Status__c</fields>
+        <fields>Team_Requesting_Project__c</fields>
+        <fields>Link_to_Final_File__c</fields>
+        <label>Markering Project - Marketing</label>
+    </compactLayouts>
+</CustomObject>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>IBContactCompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>Title</fields>
+        <fields>Phone</fields>
+        <fields>Email</fields>
+        <fields>Active__c</fields>
+        <fields>IBVIP__c</fields>
+        <label>IB Contact Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>KG_Contact_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>Title</fields>
+        <fields>Phone</fields>
+        <fields>Email</fields>
+        <fields>Active__c</fields>
+        <label>KG Contact Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>QuickStartLayout</fullName>
+        <fields>Name</fields>
+        <fields>Title</fields>
+        <fields>AccountId</fields>
+        <fields>Account_Queue__c</fields>
+        <fields>EBS__c</fields>
+        <fields>Account_Number__c</fields>
+        <fields>Motivator_On_Board__c</fields>
+        <fields>Phone</fields>
+        <fields>Email</fields>
+        <fields>MobilePhone</fields>
+        <label>Quick Start Layout</label>
+    </compactLayouts>
+</CustomObject>

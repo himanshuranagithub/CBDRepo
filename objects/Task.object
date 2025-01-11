@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>IBTaskCompactLayout</fullName>
+        <fields>Subject</fields>
+        <fields>Type</fields>
+        <fields>WhatId</fields>
+        <fields>ActivityDate</fields>
+        <fields>OwnerId</fields>
+        <label>IB Task Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>KG_Sales_Task_Compact</fullName>
+        <fields>Sales_Activity_Type__c</fields>
+        <fields>Subject</fields>
+        <fields>WhoId</fields>
+        <fields>ActivityDate</fields>
+        <label>KG Sales Task Compact</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Task_Compact_Layout</fullName>
+        <fields>Summary__c</fields>
+        <fields>Subject</fields>
+        <fields>ActivityDate</fields>
+        <fields>WhoId</fields>
+        <fields>Contact_Name__c</fields>
+        <label>Task Compact Layout</label>
+    </compactLayouts>
+</CustomObject>

@@ -1,8 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>IDV_Audit</members>
-        <name>BusinessProcessTypeDefinition</name>
+        <members>Account.Account_Compact_Layout</members>
+        <members>Account.IBAccountCompactLayout</members>
+        <members>Account.NTA_ACCT_Layout_Compact</members>
+        <members>Account.Vendor_Compact_Layout</members>
+        <members>Campaign.Trade_Show_Compact_Layout</members>
+        <members>Case.BIC_Case_Compact_Layout</members>
+        <members>Case.Compact_Layout_Delayed</members>
+        <members>Case.Inside_Sales_CompLayout</members>
+        <members>Case.Large_Order_Compact_Layout</members>
+        <members>Case.MLT_VLT_Compact_CASE_Page</members>
+        <members>Case.Standard_Case</members>
+        <members>Case.X4Imprint_Compact_Layout</members>
+        <members>Case_Balance__c.Custom_Compact_Layout</members>
+        <members>Case_Metrics_Aggregate__c.Custom_Compact_Layout</members>
+        <members>Case_Metrics_Raw__c.Custom_Compact_Layout</members>
+        <members>Change_Request__c.Change_Request</members>
+        <members>Check_Credit_Memo_Request__c.Credit_Memo_Check_Request</members>
+        <members>Coaching__c.Coaching_Compact_Layout</members>
+        <members>Contact.IBContactCompactLayout</members>
+        <members>Contact.KG_Contact_Compact_Layout</members>
+        <members>Contact.QuickStartLayout</members>
+        <members>EBS_Order__c.EBS_Order_Compact_Layout</members>
+        <members>Event.IBEventCompactLayout</members>
+        <members>Event.KG_Sales_Event_Compact</members>
+        <members>Inquiry__c.Price_Request</members>
+        <members>Lead.Leads_Custom_Compact_Layout</members>
+        <members>Marketing_Projects__c.Custom_Calendar</members>
+        <members>Marketing_Projects__c.Markering_Project_Marketing</members>
+        <members>Opportunity.IBOpportunityCompactLayout</members>
+        <members>Opportunity.New_Awesome_Companct_Layout</members>
+        <members>Product2.IBProductCompactLayout</members>
+        <members>Quote_Request__c.Quote_Request_Compact_Layout</members>
+        <members>Task.IBTaskCompactLayout</members>
+        <members>Task.KG_Sales_Task_Compact</members>
+        <members>Task.Task_Compact_Layout</members>
+        <members>User.User_Layout</members>
+        <name>CompactLayout</name>
     </types>
     <version>56.0</version>
 </Package>

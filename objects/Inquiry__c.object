@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>Price_Request</fullName>
+        <fields>Name</fields>
+        <fields>Contact__c</fields>
+        <fields>Product__c</fields>
+        <fields>Price__c</fields>
+        <fields>Quantity_1__c</fields>
+        <fields>Amount__c</fields>
+        <fields>Convert_to_Opportunity__c</fields>
+        <fields>Summary__c</fields>
+        <label>Price Request</label>
+    </compactLayouts>
+</CustomObject>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>BIC_Case_Compact_Layout</fullName>
+        <fields>Case_PO__c</fields>
+        <fields>EBS_PO_Number__c</fields>
+        <fields>EBS_Order__c</fields>
+        <fields>Subject</fields>
+        <fields>Account_Queue__c</fields>
+        <fields>AccountId</fields>
+        <fields>CaseNumber</fields>
+        <label>BIC Case Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Compact_Layout_Delayed</fullName>
+        <fields>Subject</fields>
+        <fields>EBS_Order__c</fields>
+        <fields>Account_Queue__c</fields>
+        <fields>EBS_PO_Number__c</fields>
+        <fields>Priority</fields>
+        <fields>Status</fields>
+        <fields>CaseNumber</fields>
+        <label>Compact Layout - Delayed</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Inside_Sales_CompLayout</fullName>
+        <fields>CaseNumber</fields>
+        <fields>AccountId</fields>
+        <fields>ContactId</fields>
+        <fields>Case_Owner_QUEUE_Name__c</fields>
+        <fields>Case_Opened_Date__c</fields>
+        <fields>Case_Record_Type__c</fields>
+        <label>Inside Sales CompLayout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Large_Order_Compact_Layout</fullName>
+        <fields>EBS_PO_Number__c</fields>
+        <fields>EBS_Order_Number__c</fields>
+        <fields>CaseNumber</fields>
+        <fields>AccountId</fields>
+        <fields>Subject</fields>
+        <fields>Order_Header_Total__c</fields>
+        <fields>Next_Task_Reminder__c</fields>
+        <label>Large Order Compact Layout</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>MLT_VLT_Compact_CASE_Page</fullName>
+        <fields>CASE_RT_Number__c</fields>
+        <fields>Subject</fields>
+        <fields>AccountId</fields>
+        <fields>EBS_Order__c</fields>
+        <fields>EBS_Order_Type__c</fields>
+        <fields>OwnerId</fields>
+        <label>MLT/VLT Compact CASE Page</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>Standard_Case</fullName>
+        <fields>Subject</fields>
+        <fields>CaseNumber</fields>
+        <fields>EBS_Order__c</fields>
+        <fields>EBS_PO_Number__c</fields>
+        <fields>Account_Queue__c</fields>
+        <fields>AccountId</fields>
+        <label>Standard Case</label>
+    </compactLayouts>
+    <compactLayouts>
+        <fullName>X4Imprint_Compact_Layout</fullName>
+        <fields>EBS_PO_Number__c</fields>
+        <fields>EBS_Order__c</fields>
+        <fields>Subject</fields>
+        <fields>AccountId</fields>
+        <fields>Account_Queue__c</fields>
+        <fields>CaseNumber</fields>
+        <label>4Imprint Compact Layout</label>
+    </compactLayouts>
+</CustomObject>

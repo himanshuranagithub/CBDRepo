@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>Custom_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Todays_Date__c</fields>
+        <fields>Account_ID__c</fields>
+        <fields>Account_Name__c</fields>
+        <fields>Open_Cases__c</fields>
+        <fields>Workable_Case__c</fields>
+        <fields>Workable_Aging__c</fields>
+        <fields>Workable_Escalations__c</fields>
+        <fields>Workable_Sales_Escalations__c</fields>
+        <fields>Clarifications__c</fields>
+        <label>Custom Compact Layout</label>
+    </compactLayouts>
+</CustomObject>
