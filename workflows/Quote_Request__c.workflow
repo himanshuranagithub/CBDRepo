@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Custom_Universal_Source_Quote_Request</fullName>
+        <ccEmails>quotes@kooziegroup.com</ccEmails>
+        <description>Custom / Universal Source Quote Request</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Custom_Universal_Source_Quote_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Notice_of_Quote_Request_Approved_Custom_Calendar</fullName>
+        <description>Notice of Quote Request Approved-Custom Calendar</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Record_Owner_of_Approved_Quote_Request_Calendar_1669402405057</template>
+    </alerts>
+    <alerts>
+        <fullName>Notice_of_Quote_Request_Approved_Hardgood</fullName>
+        <description>Notice of Quote Request Approved-NonCalendar</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Record_Owner_of_Approved_Quote_Request_Hardgoods_1669402804199</template>
+    </alerts>
+    <alerts>
+        <fullName>Notice_of_Quote_Request_Approved_Hardgoods</fullName>
+        <description>Notice of Quote Request Approved-NonCalendar</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Record_Owner_of_Approved_Quote_Request_Hardgoods_1669402804199</template>
+    </alerts>
+    <alerts>
+        <fullName>Notice_of_Quote_Request_Pending_Approval_Rejection_Custom_Calendar</fullName>
+        <description>Notice of Quote Request Pending Approval/Rejection-Custom Calendar</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Approver_of_Pending_Quote_Request_Calendar_1669402306381</template>
+    </alerts>
+    <alerts>
+        <fullName>Notice_of_Quote_Request_Rejected_Cus_Calendar</fullName>
+        <description>Notice of Quote Request Rejected-Cus Calendar</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Record_Owner_of_Rejected_Quote_Request_Calendar_1669402461851</template>
+    </alerts>
+    <alerts>
+        <fullName>Notice_of_Quote_Request_Rejected_Custom_Calendar</fullName>
+        <description>Notice of Quote Request Rejected-Custom Calendar</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Record_Owner_of_Rejected_Quote_Request_Calendar_1669402461851</template>
+    </alerts>
+    <alerts>
+        <fullName>Notice_of_Quote_Request_Rejected_NonCalendar</fullName>
+        <description>Notice of Quote Request Rejected-NonCalendar</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Record_Owner_of_Rejected_Quote_Request_Hardgoods_1669402545519</template>
+    </alerts>
+    <alerts>
+        <fullName>Notification_of_Quote_Expiration_for_Close_of_Opportunity</fullName>
+        <description>Notification of Quote Expiration for Close of Opportunity</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Sales Rep</recipient>
+            <type>opportunityTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notification_of_Quote_Expiration_for_Close_of_Opportunity_1657217856383</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_Record_Owner_of_Approved_Quote_Request_Custom_Calendar</fullName>
+        <description>Notify Record Owner of Approved Quote Request- Custom Calendar</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Record_Owner_of_Approved_Quote_Request_Calendar_1669402405057</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Assigned_To</fullName>
+        <description>Quote Request Assigned To</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <field>Assigned_To__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Quote_Request_Assigned</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Completed</fullName>
+        <ccEmails>prerak.patel@kooziegroup.com</ccEmails>
+        <description>Quote Request Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Quote_Request_Complete</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Custom_Calendar_Approval_Process_Template</fullName>
+        <description>Quote Request Custom Calendar Approval Process Template</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kylie.spencer@kooziegroup.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tim.wade@kooziegroup.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Approver_of_Pending_Quote_Request_Calendar_1669402306381</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Exceeds_SLA_Email_Alert</fullName>
+        <description>Quote Request Exceeds SLA Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>tim.wade@kooziegroup.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Quote_Request_SLA_Reminder_Email_Notification_1656684592537</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Hardgoods_Approval_Process_Template</fullName>
+        <description>Quote Request Hardgoods Approval Process Template</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>andrea.powers@kooziegroup.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kylie.spencer@kooziegroup.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tim.wade@kooziegroup.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Notify_Approver_of_Pending_Quote_Request_Hardgoods_1669576160201</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_In_Progress</fullName>
+        <description>Quote Request In Progress</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Quote_Request_In_Progress</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Mgr_Sup</fullName>
+        <description>Quote Request Mgr/Sup</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>tim.wade@kooziegroup.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Record_Owner_Manager_Supervisor__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Quote_Request_SLA_Reminder_Mgr_Sup_Email_Notification_1656703499309</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Asia_Email_Alert</fullName>
+        <description>Quote Request Pending Asia Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Asia_1656683408142</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_CS_Sales_Email_Alert</fullName>
+        <description>Quote Request Pending CS Sales Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_CS_Sales_1656683500580</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Customer_Email_Alert</fullName>
+        <description>Quote Request Pending Customer Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Customer_1656683476232</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Email_Alert</fullName>
+        <description>Quote Request Pending Art Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Art_1656683452384</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Internal_Other_Email_Alert</fullName>
+        <description>Quote Request Pending Internal Other Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Internal_Other_1656683536752</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Logistics_Email_Alert</fullName>
+        <description>Quote Request Pending Logistics Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Logistics_1656683573581</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Manager_Approval_Email_Alert</fullName>
+        <description>Quote Request Pending Manager Approval Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Manager_Approval_1656683835606</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Production_Email_Alert</fullName>
+        <description>Quote Request Pending Production Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Production_1656683610178</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Purchasing_Email_Alert</fullName>
+        <description>Quote Request Pending Purchasing Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Purchasing_1656683860973</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Quote_Team_Email_Alert</fullName>
+        <description>Quote Request Pending Quote Team Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Quote_Team_1656683808967</template>
+    </alerts>
+    <alerts>
+        <fullName>Quote_Request_Pending_Vendor_Email_Alert</fullName>
+        <description>Quote Request Pending Vendor Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>QuoteRequestEmailTemplates/Email_Notification_Pending_Vendor_1656683789435</template>
+    </alerts>
+</Workflow>

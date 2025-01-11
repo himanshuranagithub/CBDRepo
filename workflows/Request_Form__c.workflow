@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Freight_Quote_Order_Status</fullName>
+        <ccEmails>frtquotes.nal@kooziegroup.com</ccEmails>
+        <description>Freight Quote Order Status</description>
+        <protected>false</protected>
+        <senderAddress>customerservice@kooziegroup.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Freight_Request_Order_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Lead_Time_Overdue_no_backorder_date</fullName>
+        <description>Lead Time : Overdue, no backorder date</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CC_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Team_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>customerservice@kooziegroup.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Lead_Time_Overdue_no_backorder_date</template>
+    </alerts>
+    <alerts>
+        <fullName>Lead_Time_Pre_Order</fullName>
+        <description>Lead Time - Pre-Order</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CC_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Team_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>customerservice@kooziegroup.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Lead_Time_Pre_Order</template>
+    </alerts>
+    <alerts>
+        <fullName>Lead_Time_in_House</fullName>
+        <description>Lead Time - in House</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CC_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Team_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>customerservice@kooziegroup.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Lead_Time_In_House</template>
+    </alerts>
+    <alerts>
+        <fullName>MLT_Change_Request</fullName>
+        <description>MLT Change Request</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CC_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Team_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>customerservice@kooziegroup.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/MLT_Change_Form</template>
+    </alerts>
+    <alerts>
+        <fullName>Pre_Production_Order_Status</fullName>
+        <description>Pre_Production Order Status</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CC_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Team_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>customerservice@kooziegroup.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Pre_Production_Order_Status</template>
+    </alerts>
+    <alerts>
+        <fullName>Virtual_Form</fullName>
+        <description>Virtual Form</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Virtual_Form_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>customerservice@kooziegroup.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Templates/Virtual_Form_Template</template>
+    </alerts>
+</Workflow>
