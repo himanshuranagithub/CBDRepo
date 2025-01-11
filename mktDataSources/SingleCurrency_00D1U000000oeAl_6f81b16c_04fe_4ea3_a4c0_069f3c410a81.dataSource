@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>SingleCurrency_00D1U000000oeAl_6f81b16c_04fe_4ea3_a4c0_069f3c410a81</masterLabel>
+    <prefix>Sin</prefix>
+</DataSource>
