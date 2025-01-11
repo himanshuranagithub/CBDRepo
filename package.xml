@@ -1,17 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>accountAndLeadSearch</members>
-        <members>accountOrdersDataTable</members>
-        <members>chatVisitorDeatils</members>
-        <members>cloneQuoteRequest</members>
-        <members>ebsOrderEmailMessages</members>
-        <members>ebsOrderRelatedCasesShowInDataTable</members>
-        <members>marketingProjectFrom</members>
-        <members>prechat</members>
-        <members>redirectToRecord</members>
-        <members>relatedQuoteRequestList</members>
-        <name>LightningComponentBundle</name>
-    </types>
     <version>56.0</version>
 </Package>
