@@ -1,50 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AgentforceConvExplorerCluster_map_AgentforceConvExplorerCluster_1736053589323</members>
-        <members>AgentforceConvExplorerExecution_map_AgentforceConvExplorerExecution_1736053591343</members>
-        <members>AgentforceConvExplorerSubSession_map_AgentforceConvExplorerSubSession_1736053593548</members>
-        <members>AgentforceConvExplorer_map_AgentforceConvExplorer_1736053586812</members>
-        <members>BotDefinition_Home_map_BotDefinition_Home_1735201881606</members>
-        <members>ConversationDefinitionSession_Home_map_ConversationDefinitionSession_Home_1735201924377</members>
-        <members>CopilotAnalyticsCalculator_map_CopilotAnalyticsCalculator_1735201963735</members>
-        <members>CopilotEvents_map_CopilotEvents_1735201946804</members>
-        <members>CopilotForSalesforceAppsEvents_map_CopilotForSalesforceAppsEvents_1735201979290</members>
-        <members>CopilotUtteranceAnalysis_map_CopilotUtteranceAnalysis_1735276538811</members>
-        <members>GenAIAppGeneration_map_GenAIAppGeneration_1735201857417</members>
-        <members>GenAIAppGeneration_map_GenAIAppGeneration_1735201935103</members>
-        <members>GenAIContentCategory_map_GenAIContentCategory_1735201857417</members>
-        <members>GenAIContentCategory_map_GenAIContentCategory_1735201947203</members>
-        <members>GenAIContentQuality_map_GenAIContentQuality_1735201857417</members>
-        <members>GenAIContentQuality_map_GenAIContentQuality_1735201925078</members>
-        <members>GenAIEntities_map_GenAIEntities_1736026864346</members>
-        <members>GenAIFeedbackDetail_map_GenAIFeedbackDetail_1735201857417</members>
-        <members>GenAIFeedbackDetail_map_GenAIFeedbackDetail_1735201922751</members>
-        <members>GenAIFeedback_map_GenAIFeedback_1735201857417</members>
-        <members>GenAIFeedback_map_GenAIFeedback_1735201916619</members>
-        <members>GenAIGatewayRequestTag_map_GenAIGatewayRequestTag_1735201857417</members>
-        <members>GenAIGatewayRequestTag_map_GenAIGatewayRequestTag_1735201961999</members>
-        <members>GenAIGatewayRequest_map_GenAIGatewayRequest_1735201857413</members>
-        <members>GenAIGatewayRequest_map_GenAIGatewayRequest_1735201902259</members>
-        <members>GenAIGatewayResponse_map_GenAIGatewayResponse_1735201857417</members>
-        <members>GenAIGatewayResponse_map_GenAIGatewayResponse_1735201909648</members>
-        <members>GenAIGeneration_map_GenAIGeneration_1735201857417</members>
-        <members>GenAIGeneration_map_GenAIGeneration_1735201911809</members>
-        <members>GenAILLMDiagnostic_map_GenAILLMDiagnostic_1736026864347</members>
-        <members>IndividualGDPRState_map_IndividualGDPRState_1717014661430</members>
-        <members>PermissionSetAssignment_Home_map_PermissionSetAssignment_Home_1735201918180</members>
-        <members>PermissionSet_Home_map_PermissionSet_Home_1735201911848</members>
-        <members>ServiceAgentCopilotEvents_map_ServiceAgentCopilotEvents_1735201970462</members>
-        <members>ServiceAgentSessionEngagement_map_ServiceAgentSessionEngagement_1735201989968</members>
-        <members>SingleCurrency_00D1U000000oeAl_2394C2CC_map_SingleCurrency_00D1U000000oeAl_2394C2CC_1727173804756</members>
-        <members>StaticCurrencyRates_00D1U000000oeAl_map_StaticCurrencyRates_00D1U000000oeAl_1727175202319</members>
-        <members>TenantBillingUsageEvent_map_TenantBillingUsageEvent_1718441778037</members>
-        <members>TenantEntitlementTransaction_map_TenantEntitlementTransaction_1718441758731</members>
-        <members>TenantUsageTypeMultiplier_map_TenantUsageTypeMultiplier_1718441753401</members>
-        <members>UserEngagement_map_UserEngagement_1735201934982</members>
-        <members>UserEngagement_map_UserEngagement_1735201944230</members>
-        <members>User_Home_map_User_Home_1735201903650</members>
-        <name>ObjectSourceTargetMap</name>
+        <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
+        <members>Analytics Cloud Security User</members>
+        <members>BIC API Read Only</members>
+        <members>BIC Executive</members>
+        <members>BIC JIRA Integration</members>
+        <members>BIC Manager - Account Executive</members>
+        <members>BIC Manager - Credit</members>
+        <members>BIC Manager - Customer Service</members>
+        <members>BIC Manager - Field Sales</members>
+        <members>BIC Manager - Inside Sales</members>
+        <members>BIC Manager - Marketing</members>
+        <members>BIC Manager - National Sales</members>
+        <members>BIC Standard User - Account Executive</members>
+        <members>BIC Standard User - Claims</members>
+        <members>BIC Standard User - Credit</members>
+        <members>BIC Standard User - Customer Service</members>
+        <members>BIC Standard User - Field Sales</members>
+        <members>BIC Standard User - Human Resources</members>
+        <members>BIC Standard User - Marketing</members>
+        <members>BIC Standard User - National Account Rep</members>
+        <members>BIC Standard User - Quoting</members>
+        <members>BIC Standard User- Inside Sales Rep</members>
+        <members>Bic API Only</members>
+        <members>CPQ Integration User</members>
+        <members>Care Krew Collaboration Profile</members>
+        <members>Chat Setup Flow Site Profile</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>ContractManager</members>
+        <members>Customer Community User</members>
+        <members>ESW_Agentforce_Chat_1735548895867 Profile</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496 Profile</members>
+        <members>Einstein Agent User</members>
+        <members>Email Survey Response Profile</members>
+        <members>External Apps Login User</members>
+        <members>Guest License User</members>
+        <members>IB - Account Management</members>
+        <members>IB - Sales</members>
+        <members>IB - Syteline Integration</members>
+        <members>Identity User</members>
+        <members>KG Inside Sales</members>
+        <members>Kooziegroup Answers Profile</members>
+        <members>MarketingProfile</members>
+        <members>MarketingProject Profile</members>
+        <members>Minimum Access - API Only Integrations</members>
+        <members>Minimum Access - Salesforce</members>
+        <members>Read Only1</members>
+        <members>Sales Insights Integration User</members>
+        <members>Salesforce API Only System Integrations</members>
+        <members>SalesforceIQ Integration User</members>
+        <members>Service Agent</members>
+        <members>Service Supervisor</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>Website API Only</members>
+        <members>xAnalytics%2FReports Developer</members>
+        <members>xBIC Director - Marketing</members>
+        <members>xBIC Executive - CFO</members>
+        <members>xBIC Executive - CMO</members>
+        <members>xBIC Executive - COO</members>
+        <members>xBIC Executive Manager - Customer Service</members>
+        <members>xBIC IT</members>
+        <members>xBIC Manager - Claims</members>
+        <members>xBIC Manager - Human Resources</members>
+        <members>xBIC Manager - Quoting %26 Pricing</members>
+        <members>xBIC Manager - Special Markets</members>
+        <members>xBIC Standard User - Clarification</members>
+        <members>xBIC Standard User- Temporary Claims</members>
+        <members>xBic Manager - Clarification</members>
+        <members>xRead Only</members>
+        <name>Profile</name>
     </types>
     <version>56.0</version>
 </Package>
