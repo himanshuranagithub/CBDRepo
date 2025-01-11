@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>BicGraphic</members>
-        <members>CPQIntegrationUserApp</members>
-        <members>IBIntegration</members>
-        <members>N8N_Development</members>
-        <members>SFDC_Trainings</members>
-        <members>TP_Email_Ingestion</members>
-        <members>Tableau</members>
-        <members>Veza</members>
-        <members>Website_Integration</members>
-        <name>ConnectedApp</name>
+        <members>Care_Krew_Collaboration1</members>
+        <members>ESW_Agentforce_Chat_17355488958671</members>
+        <members>ESW_Koozie_Web_Chat_17350359654961</members>
+        <members>Kooziegroup_Answers1</members>
+        <name>SiteDotCom</name>
     </types>
     <version>56.0</version>
 </Package>
