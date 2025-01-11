@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>MIlestone1_Calendar_Full</members>
+        <members>Milestone1_Charts_GanttComponent</members>
+        <members>Milestone1_PopupComponent</members>
+        <members>SiteFooter</members>
+        <members>SiteHeader</members>
+        <members>SiteLogin</members>
+        <members>SitePoweredBy</members>
+        <members>TESTMIT</members>
+        <members>Tableau</members>
+        <members>VFEmailComponent</members>
+        <members>clarQuestions</members>
+        <members>clarificationQuestions</members>
+        <members>notificationQuestions</members>
+        <members>virtualForm</members>
+        <name>ApexComponent</name>
+    </types>
     <version>56.0</version>
 </Package>
