@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Campaign.Trade_Show_Payment_Request</members>
-        <members>Campaign.Trade_Show_Request</members>
-        <members>Campaign.Trade_Show_Request_All_Approvals</members>
-        <members>Check_Credit_Memo_Request__c.Check_Credit_Memo_Request_Credit_Memo_2</members>
-        <members>Check_Credit_Memo_Request__c.Credit_Memo_and_Check_Manager_Approval</members>
-        <members>Claim__c.Claims_Over_1000</members>
-        <members>Claim__c.Claims_Over_500</members>
-        <members>Claim__c.Claims_Under_500</members>
-        <members>Lead.New_Account_Request</members>
-        <members>Marketing_Projects__c.Approval_Process_MP_Storyboards</members>
-        <members>Marketing_Projects__c.Due_Date_Custom_Calendar</members>
-        <members>Marketing_Projects__c.First_Draft_Date_7</members>
-        <members>Opportunity.Opportunity_Amount_Over_5k</members>
-        <members>Opportunity.Special_Pricing_Request</members>
-        <members>Quote_Request__c.Quote_Request_Approval_Process_Calendar</members>
-        <members>Quote_Request__c.Quote_Request_Approval_Process_NonCal</members>
-        <name>ApprovalProcess</name>
+        <members>Calender_Quote</members>
+        <members>Hardgoods_Stationary_PDF_New</members>
+        <members>mytasks</members>
+        <members>tasklist</members>
+        <members>vfApp</members>
+        <members>visualforceAuraApplications</members>
+        <name>AuraDefinitionBundle</name>
     </types>
     <version>56.0</version>
 </Package>
