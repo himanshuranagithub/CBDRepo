@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Care_Krew_Collaboration1</members>
-        <members>ESW_Agentforce_Chat_17355488958671</members>
-        <members>ESW_Koozie_Web_Chat_17350359654961</members>
-        <members>Kooziegroup_Answers1</members>
-        <name>SiteDotCom</name>
+        <members>BotDefinition_Home</members>
+        <members>ConversationDefinitionSe_00DU8000002Zr1t</members>
+        <members>CopilotEvents</members>
+        <members>GenAIAppGeneration</members>
+        <members>GenAIContentCategory</members>
+        <members>GenAIContentQuality</members>
+        <members>GenAIEntities</members>
+        <members>GenAIFeedback</members>
+        <members>GenAIFeedbackDetail</members>
+        <members>GenAIGatewayRequest</members>
+        <members>GenAIGatewayRequestTag</members>
+        <members>GenAIGatewayResponse</members>
+        <members>GenAIGeneration</members>
+        <members>GenAILLMDiagnostic</members>
+        <members>PermissionSetAssignment_00DU8000002Zr1t</members>
+        <members>PermissionSet_00DU8000002Zr1t</members>
+        <members>SingleCurrency_00D1U000000oeAl_CurrencyType_2394C2CC</members>
+        <members>TenantBillingUsageEvent</members>
+        <members>TenantEntitlementTransaction</members>
+        <members>TenantUsageTypeMultiplier</members>
+        <members>UserEngagement</members>
+        <members>User_00DU8000002Zr1t</members>
+        <name>DataStreamDefinition</name>
     </types>
     <version>56.0</version>
 </Package>
