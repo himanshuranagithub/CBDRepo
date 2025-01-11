@@ -1,29 +1,737 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <compactLayouts>
-        <fullName>IBTaskCompactLayout</fullName>
-        <fields>Subject</fields>
-        <fields>Type</fields>
-        <fields>WhatId</fields>
-        <fields>ActivityDate</fields>
-        <fields>OwnerId</fields>
-        <label>IB Task Compact Layout</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>KG_Sales_Task_Compact</fullName>
-        <fields>Sales_Activity_Type__c</fields>
-        <fields>Subject</fields>
-        <fields>WhoId</fields>
-        <fields>ActivityDate</fields>
-        <label>KG Sales Task Compact</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>Task_Compact_Layout</fullName>
-        <fields>Summary__c</fields>
-        <fields>Subject</fields>
-        <fields>ActivityDate</fields>
-        <fields>WhoId</fields>
-        <fields>Contact_Name__c</fields>
-        <label>Task Compact Layout</label>
-    </compactLayouts>
+    <recordTypes>
+        <fullName>IBTask</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>IBTaskCompactLayout</compactLayoutAssignment>
+        <description>This is the standard record type for IB tasks</description>
+        <label>IB Task</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Program set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Blast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flyer Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up Project%2FOrder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gap Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idea Deck Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quotation %28Large%2FSmall%2FOverseas%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reorder follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spec%2FVirtual%2FRandom Sample Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website Assistance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Program set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Blast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flyer Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up Project%2FOrder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gap Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idea Deck Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quotation %28Large%2FSmall%2FOverseas%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reorder follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spec%2FVirtual%2FRandom Sample Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website Assistance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>IBWeeklyReport</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>IBTaskCompactLayout</compactLayoutAssignment>
+        <description>This is the record type for IB&apos;s weekly reports</description>
+        <label>IB Weekly Report</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>IB Weekly Report</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>IB Weekly Report</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>KG_Sales_Task</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>KG_Sales_Task_Compact</compactLayoutAssignment>
+        <description>Koozie Group Sales Task</description>
+        <label>KG Sales Task</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Large_Order_Tasks</fullName>
+        <active>true</active>
+        <label>Large Order Tasks</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sample Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Monthly_Report</fullName>
+        <active>true</active>
+        <label>Monthly Report</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Program set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Blast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flyer Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up Project%2FOrder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gap Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IB Weekly Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idea Deck Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly Report</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Order Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quotation %28Large%2FSmall%2FOverseas%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reorder follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spec%2FVirtual%2FRandom Sample Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website Assistance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>B WEEKLY REPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Resubscribe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Unsubscribe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Program set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Memo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Blast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Failed to send email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flyer Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up Project%2FOrder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gap Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IB Weekly Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idea Deck Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lunch %2F Dinner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quotation %28Large%2FSmall%2FOverseas%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reorder follow up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sample Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spec%2FVirtual%2FRandom Sample Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virtual Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Website Assistance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Task</fullName>
+        <active>true</active>
+        <label>Task</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Business Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Memo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Failed to send email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lunch %2F Dinner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sample Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Virtual Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Task_Service</fullName>
+        <active>true</active>
+        <description>CSR</description>
+        <label>Task (Service)</label>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Failed to send email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sample Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
 </CustomObject>

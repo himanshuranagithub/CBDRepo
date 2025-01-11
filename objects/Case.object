@@ -1,76 +1,4433 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <compactLayouts>
-        <fullName>BIC_Case_Compact_Layout</fullName>
-        <fields>Case_PO__c</fields>
-        <fields>EBS_PO_Number__c</fields>
-        <fields>EBS_Order__c</fields>
-        <fields>Subject</fields>
-        <fields>Account_Queue__c</fields>
-        <fields>AccountId</fields>
-        <fields>CaseNumber</fields>
-        <label>BIC Case Compact Layout</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>Compact_Layout_Delayed</fullName>
-        <fields>Subject</fields>
-        <fields>EBS_Order__c</fields>
-        <fields>Account_Queue__c</fields>
-        <fields>EBS_PO_Number__c</fields>
-        <fields>Priority</fields>
-        <fields>Status</fields>
-        <fields>CaseNumber</fields>
-        <label>Compact Layout - Delayed</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>Inside_Sales_CompLayout</fullName>
-        <fields>CaseNumber</fields>
-        <fields>AccountId</fields>
-        <fields>ContactId</fields>
-        <fields>Case_Owner_QUEUE_Name__c</fields>
-        <fields>Case_Opened_Date__c</fields>
-        <fields>Case_Record_Type__c</fields>
-        <label>Inside Sales CompLayout</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>Large_Order_Compact_Layout</fullName>
-        <fields>EBS_PO_Number__c</fields>
-        <fields>EBS_Order_Number__c</fields>
-        <fields>CaseNumber</fields>
-        <fields>AccountId</fields>
-        <fields>Subject</fields>
-        <fields>Order_Header_Total__c</fields>
-        <fields>Next_Task_Reminder__c</fields>
-        <label>Large Order Compact Layout</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>MLT_VLT_Compact_CASE_Page</fullName>
-        <fields>CASE_RT_Number__c</fields>
-        <fields>Subject</fields>
-        <fields>AccountId</fields>
-        <fields>EBS_Order__c</fields>
-        <fields>EBS_Order_Type__c</fields>
-        <fields>OwnerId</fields>
-        <label>MLT/VLT Compact CASE Page</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>Standard_Case</fullName>
-        <fields>Subject</fields>
-        <fields>CaseNumber</fields>
-        <fields>EBS_Order__c</fields>
-        <fields>EBS_PO_Number__c</fields>
-        <fields>Account_Queue__c</fields>
-        <fields>AccountId</fields>
-        <label>Standard Case</label>
-    </compactLayouts>
-    <compactLayouts>
-        <fullName>X4Imprint_Compact_Layout</fullName>
-        <fields>EBS_PO_Number__c</fields>
-        <fields>EBS_Order__c</fields>
-        <fields>Subject</fields>
-        <fields>AccountId</fields>
-        <fields>Account_Queue__c</fields>
-        <fields>CaseNumber</fields>
-        <label>4Imprint Compact Layout</label>
-    </compactLayouts>
+    <recordTypes>
+        <fullName>Care_Krew_SF_Request</fullName>
+        <active>true</active>
+        <businessProcess>Care Krew SF Process</businessProcess>
+        <description>RT for internal salesforce cases</description>
+        <label>Care Krew SF Request</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sprint Assignment - Jira</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teams</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TechForce INC</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Zoom Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>AR FAILURE-Invoice Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR %28BARREL%2FTRIM%2FCARTRIDGE%2FINK COLOR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Cartridge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component%2FOptional part</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Trim Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BRAND SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGE%2FLOST%2FMISSHIPPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Carrier Damage%2FLost%2Fdeliver to wrong location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Declared Value%2FInsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO-OP ADVERTISING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONFIGURATOR ERROR-Configurator%2F Job Traveler Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION %28no fault of BIC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - MADE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - PURCHASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT -Defective Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DISTRIBUTOR POLICY-Distributor Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER RECEIVED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER-Duplicate Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-PMS Color match off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-Wrong Color%2FPMS Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Crooked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation Set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint Clarity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint completely Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Delamination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Transfers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing Special Packing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing portions of imprint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Multicolor Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Smears</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Account Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Altered Cust Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Art minimums violated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Incomplete Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Typo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Saved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Previous Pulled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES-Shipping Charges Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Change Not Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Missed Proof</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Order Not Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Proof not Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong imprint method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong or Missed Packing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT PROGRAM ERROR-Split Shipment Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FEQP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FExtra Charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FKits-Kats</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FQuote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSetup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSpecial%2FPromos%2FCoupons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Pricing Coop%2F Sales Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proof%2F Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY - MFG Shipped wrong amount%2F Short Shipped MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY - OM entered%2Fupdated wrong amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY-Shipment Delay MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY-Shipment Delay OM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY-Shipment Early MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY-Shipment Early OM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR%2FMETHOD%2FPACKAGING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Damaged Packaging</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Lost Order%2F PRE-Ship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Mishipped MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misshipped OE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Return Order%2F Product Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Ship Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Shipping Method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX_EXEMPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRADE INCENTIVES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Exempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Incentive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WRONG ART USED</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Change Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job Run%2FMaintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report %2F Dashboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Security Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Case</fullName>
+        <active>true</active>
+        <businessProcess>Case</businessProcess>
+        <compactLayoutAssignment>BIC_Case_Compact_Layout</compactLayoutAssignment>
+        <label>Case</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>All CS Supervisors Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Large Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Change_Request</fullName>
+        <active>false</active>
+        <businessProcess>Change Request</businessProcess>
+        <compactLayoutAssignment>Standard_Case</compactLayoutAssignment>
+        <description>To submit an addition or change.</description>
+        <label>xChange Request</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teams</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TechForce INC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zoom Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report %2F Dashboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sandbox Refresh</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Set Up or Inactivation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Chat</fullName>
+        <active>true</active>
+        <businessProcess>Case</businessProcess>
+        <compactLayoutAssignment>Standard_Case</compactLayoutAssignment>
+        <label>Chat</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Claims</fullName>
+        <active>true</active>
+        <businessProcess>Claims</businessProcess>
+        <compactLayoutAssignment>BIC_Case_Compact_Layout</compactLayoutAssignment>
+        <label>Claims</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>AR FAILURE-Invoice Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Cartridge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component%2FOptional part</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Missing Component%2FOptional part</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Trim Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Carrier Damage%2FLost%2Fdeliver to wrong location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Declared Value%2FInsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONFIGURATOR ERROR-Configurator%2F Job Traveler Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION %E2%80%93 Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT -Defective Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DISTRIBUTOR POLICY-Distributor Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER-Duplicate Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Debit- Left over inventory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fraudulent Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-PMS Color match off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-Wrong Color%2FPMS Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Crooked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation Set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint Clarity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint completely Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Delamination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Transfers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing Special Packing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing portions of imprint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Multicolor Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Smears</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Account Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Altered Cust Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Art minimums violated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Incomplete Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Typo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Saved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Previous Pulled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES-Shipping Charges Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Change Not Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Missed Proof</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Order Not Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Proof not Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong imprint method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong or Missed Packing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT PROGRAM ERROR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT PROGRAM ERROR-Split Shipment Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FEQP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FExtra Charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FKits-Kats</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FQuote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSetup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSpecial%2FPromos%2FCoupons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Pricing Coop%2F Sales Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY - MFG Shipped wrong amount%2F Short Shipped MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY - OM entered%2Fupdated wrong amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REBILL - Rebill for a clean invoice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY-Shipment Delay MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY-Shipment Delay OM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY-Shipment Early MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY-Shipment Early OM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Damaged Packaging</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Lost Order%2F PRE-Ship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Mishipped MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misshipped OE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Return Order%2F Product Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Ship Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Shipping Method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Exempt</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Claim</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Clarification</fullName>
+        <active>true</active>
+        <businessProcess>Clarification</businessProcess>
+        <compactLayoutAssignment>BIC_Case_Compact_Layout</compactLayoutAssignment>
+        <label>Clarification</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proof%2F Clarification</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Clarification</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>EPROOF</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Credit</fullName>
+        <active>false</active>
+        <businessProcess>Claims</businessProcess>
+        <compactLayoutAssignment>Standard_Case</compactLayoutAssignment>
+        <label>xCredit</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>ASSEMBLY ERROR %28BARREL%2FTRIM%2FCARTRIDGE%2FINK COLOR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BRAND SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGE%2FLOST%2FMISSHIPPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO-OP ADVERTISING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION %28no fault of BIC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - MADE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - PURCHASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER RECEIVED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR%2FMETHOD%2FPACKAGING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX_EXEMPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRADE INCENTIVES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WRONG ART USED</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Custom_HG_PB_Inquiry</fullName>
+        <active>true</active>
+        <businessProcess>Preproduction Custom</businessProcess>
+        <label>Custom HG/PB Inquiry</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>ASI Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sage Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Large Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Delayed_Order</fullName>
+        <active>true</active>
+        <businessProcess>Delayed Order</businessProcess>
+        <compactLayoutAssignment>BIC_Case_Compact_Layout</compactLayoutAssignment>
+        <label>Delayed Order</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS - Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>ASSEMBLY ERROR %28BARREL%2FTRIM%2FCARTRIDGE%2FINK COLOR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BRAND SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGE%2FLOST%2FMISSHIPPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO-OP ADVERTISING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION %28no fault of BIC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - MADE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - PURCHASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER RECEIVED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR%2FMETHOD%2FPACKAGING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX_EXEMPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRADE INCENTIVES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WRONG ART USED</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Forms</fullName>
+        <active>false</active>
+        <businessProcess>Case</businessProcess>
+        <compactLayoutAssignment>Standard_Case</compactLayoutAssignment>
+        <label>xForms</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zoom Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Question</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Inside_Sales_Case</fullName>
+        <active>true</active>
+        <businessProcess>Inside Sales Case</businessProcess>
+        <compactLayoutAssignment>Inside_Sales_CompLayout</compactLayoutAssignment>
+        <description>Inside Sales Case path</description>
+        <label>Inside Sales Case</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>All CS Supervisors Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Large Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Large_Orders</fullName>
+        <active>true</active>
+        <businessProcess>Large Orders Support</businessProcess>
+        <compactLayoutAssignment>Large_Order_Compact_Layout</compactLayoutAssignment>
+        <label>Large Orders</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS - Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zoom Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>AR FAILURE-Invoice Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR %28BARREL%2FTRIM%2FCARTRIDGE%2FINK COLOR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Cartridge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Trim Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BRAND SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGE%2FLOST%2FMISSHIPPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Declared Value%2FInsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO-OP ADVERTISING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONFIGURATOR ERROR-Configurator%2F Job Traveler Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION %28no fault of BIC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - MADE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - PURCHASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT -Defective Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DISTRIBUTOR POLICY-Distributor Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER RECEIVED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER-Duplicate Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-PMS Color match off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Crooked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation Set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint Clarity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint completely Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Delamination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Transfers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing portions of imprint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Multicolor Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Smears</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Account Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Altered Cust Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Art minimums violated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Incomplete Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Typo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Saved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Previous Pulled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES-Shipping Charges Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Change Not Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Missed Proof</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Order Not Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Proof not Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong imprint method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT PROGRAM ERROR-Split Shipment Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FEQP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FExtra Charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FKits-Kats</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FQuote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSetup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSpecial%2FPromos%2FCoupons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proof%2F Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR%2FMETHOD%2FPACKAGING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Damaged Packaging</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Mishipped MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misshipped OE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Ship Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Shipping Method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX_EXEMPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRADE INCENTIVES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Exempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Incentive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WRONG ART USED</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Large Order</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>MLT_Mfg_Liaison_Case</fullName>
+        <active>true</active>
+        <businessProcess>MLT Case Process</businessProcess>
+        <compactLayoutAssignment>MLT_VLT_Compact_CASE_Page</compactLayoutAssignment>
+        <label>MLT Mfg Liaison Case</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>ASI Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sage Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>MLT</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Message</fullName>
+        <active>true</active>
+        <businessProcess>Case</businessProcess>
+        <label>Message</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>All CS Supervisors Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Text Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Large Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PreProduction_Change</fullName>
+        <active>true</active>
+        <businessProcess>Preproduction Custom</businessProcess>
+        <label>PreProduction Change</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>All CS Supervisors Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Large Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OEM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PPC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Purchase_Order</fullName>
+        <active>true</active>
+        <businessProcess>Case</businessProcess>
+        <label>Purchase Order</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS - Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zoom Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>AR FAILURE-Invoice Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR %28BARREL%2FTRIM%2FCARTRIDGE%2FINK COLOR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Cartridge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component%2FOptional part</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Trim Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BRAND SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGE%2FLOST%2FMISSHIPPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Carrier Damage%2FLost%2Fdeliver to wrong location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Declared Value%2FInsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO-OP ADVERTISING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONFIGURATOR ERROR-Configurator%2F Job Traveler Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION %28no fault of BIC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - MADE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - PURCHASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT -Defective Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DISTRIBUTOR POLICY-Distributor Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER RECEIVED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER-Duplicate Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-PMS Color match off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-Wrong Color%2FPMS Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Crooked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation Set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint Clarity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint completely Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Delamination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Transfers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing Special Packing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing portions of imprint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Multicolor Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Smears</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Account Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Altered Cust Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Art minimums violated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Incomplete Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Typo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Saved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Previous Pulled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES-Shipping Charges Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Change Not Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Missed Proof</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Order Not Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Proof not Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong imprint method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong or Missed Packing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT PROGRAM ERROR-Split Shipment Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FEQP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FExtra Charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FKits-Kats</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FQuote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSetup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSpecial%2FPromos%2FCoupons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Pricing Coop%2F Sales Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proof%2F Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY - OM entered%2Fupdated wrong amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR%2FMETHOD%2FPACKAGING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Damaged Packaging</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Lost Order%2F PRE-Ship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Mishipped MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misshipped OE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Return Order%2F Product Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Ship Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Shipping Method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX_EXEMPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRADE INCENTIVES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Exempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Incentive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WRONG ART USED</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPROOF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report %2F Dashboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sandbox Refresh</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Set Up or Inactivation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SF_Maintenance_Data_Request</fullName>
+        <active>true</active>
+        <businessProcess>SFDC Maint %26 Data Rqsts</businessProcess>
+        <description>Salesforce Maintenance, Data loads and other misc requests</description>
+        <label>SF Maintenance/Data/Request</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Sprint Assignment - Jira</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teams</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TechForce INC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zoom Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>AR FAILURE-Invoice Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR %28BARREL%2FTRIM%2FCARTRIDGE%2FINK COLOR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Cartridge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Trim Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BRAND SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGE%2FLOST%2FMISSHIPPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Declared Value%2FInsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO-OP ADVERTISING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONFIGURATOR ERROR-Configurator%2F Job Traveler Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION %28no fault of BIC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - MADE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - PURCHASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT -Defective Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DISTRIBUTOR POLICY-Distributor Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER RECEIVED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER-Duplicate Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-PMS Color match off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Crooked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation Set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint Clarity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint completely Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Delamination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Transfers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing portions of imprint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Multicolor Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Smears</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Account Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Altered Cust Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Art minimums violated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Incomplete Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Typo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Saved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Previous Pulled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES-Shipping Charges Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Change Not Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Missed Proof</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Order Not Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Proof not Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong imprint method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT PROGRAM ERROR-Split Shipment Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FEQP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FExtra Charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FKits-Kats</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FQuote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSetup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSpecial%2FPromos%2FCoupons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Pricing Coop%2F Sales Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proof%2F Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY - OM entered%2Fupdated wrong amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR%2FMETHOD%2FPACKAGING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Damaged Packaging</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Lost Order%2F PRE-Ship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Mishipped MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misshipped OE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Return Order%2F Product Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Ship Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Shipping Method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX_EXEMPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRADE INCENTIVES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Exempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Incentive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WRONG ART USED</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Change Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Code Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Cleanup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Job Run%2FMaintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report %2F Dashboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Security Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Update</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Service_Request</fullName>
+        <active>false</active>
+        <businessProcess>Service Request</businessProcess>
+        <compactLayoutAssignment>Standard_Case</compactLayoutAssignment>
+        <description>To submit an issue that needs to be resolved.</description>
+        <label>xService Request</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Survey</fullName>
+        <active>true</active>
+        <businessProcess>Case</businessProcess>
+        <compactLayoutAssignment>BIC_Case_Compact_Layout</compactLayoutAssignment>
+        <label>Survey</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS - Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zoom Meeting</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>AR FAILURE-Invoice Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR %28BARREL%2FTRIM%2FCARTRIDGE%2FINK COLOR%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Cartridge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Component%2FOptional part</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Incorrect Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSEMBLY ERROR-Trim Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BRAND SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGE%2FLOST%2FMISSHIPPED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Carrier Damage%2FLost%2Fdeliver to wrong location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CARRIER DAMAGED-Declared Value%2FInsurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CO-OP ADVERTISING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONFIGURATOR ERROR-Configurator%2F Job Traveler Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION %28no fault of BIC%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Accommodation - Distributor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Concession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CUSTOMER RETENTION-Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - MADE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT - PURCHASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEFECTIVE PRODUCT -Defective Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DISTRIBUTOR POLICY-Distributor Policy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER RECEIVED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DUPLICATE ORDER-Duplicate Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-PMS Color match off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT COLOR-Wrong Color%2FPMS Color</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Crooked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Imprint Location Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT POSITION-Orientation Set up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint Clarity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Imprint completely Missing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Delamination</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Ink Transfers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing Special Packing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Missing portions of imprint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Multicolor Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IMPRINT QUALITY-Smears</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Account Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ACCOUNT INFO-Currency</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Altered Cust Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Art minimums violated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Incomplete Art</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Typo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Printed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Art Saved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT ART-Wrong Previous Pulled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INCORRECT SHIPPING CHARGES-Shipping Charges Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Change Not Made</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Missed Proof</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Order Not Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Proof not Selected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong imprint method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSTRUCTIONS NOT FOLLOWED-Wrong or Missed Packing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IT PROGRAM ERROR-Split Shipment Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FEQP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FExtra Charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FKits-Kats</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FQuote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSetup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Price%2FSpecial%2FPromos%2FCoupons</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRICE-Pricing Coop%2F Sales Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proof%2F Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QUANTITY - OM entered%2Fupdated wrong amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPMENT DELAY%2FEARLY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR%2FMETHOD%2FPACKAGING</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Damaged Packaging</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Lost Order%2F PRE-Ship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Mishipped MFG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Misshipped OE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Return Order%2F Product Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Ship Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SHIPPING ERROR-Shipping Method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategy Change - Long Term Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX_EXEMPT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TRADE INCENTIVES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tactical Change - Work Around an established process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Exempt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Incentive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WRONG ART USED</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Claim</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delayed Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPROOF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report %2F Dashboard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sandbox Refresh</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Set Up or Inactivation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>VLT_Vendor_Liaison_Case</fullName>
+        <active>true</active>
+        <businessProcess>VLT Case Process</businessProcess>
+        <compactLayoutAssignment>MLT_VLT_Compact_CASE_Page</compactLayoutAssignment>
+        <description>Vendor Liaison CASES</description>
+        <label>VLT Vendor Liaison Case</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>ASI Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sage Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>VLT</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Voice_of_Customer</fullName>
+        <active>true</active>
+        <businessProcess>Case</businessProcess>
+        <description>Rt for Voice of customer cases from Sage/ASI/direct emails from management</description>
+        <label>Voice of Customer</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>ASI Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sage Rating</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Question</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Voicemail</fullName>
+        <active>true</active>
+        <businessProcess>Case</businessProcess>
+        <compactLayoutAssignment>BIC_Case_Compact_Layout</compactLayoutAssignment>
+        <label>Voicemail</label>
+        <picklistValues>
+            <picklist>Origin</picklist>
+            <values>
+                <fullName>Distributor Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EBS Clarification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Reason</picklist>
+            <values>
+                <fullName>Bounceback</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complex functionality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Instructions not clear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New problem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User didn%27t attend training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Question</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
 </CustomObject>

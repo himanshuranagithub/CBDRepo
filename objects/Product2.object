@@ -1,13 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <compactLayouts>
-        <fullName>IBProductCompactLayout</fullName>
-        <fields>Name</fields>
-        <fields>ProductCode</fields>
-        <fields>Product_Category__c</fields>
-        <fields>Product_Sub_Category__c</fields>
-        <fields>RecordTypeId</fields>
-        <fields>IsActive</fields>
-        <label>IB Product Compact Layout</label>
-    </compactLayouts>
+    <recordTypes>
+        <fullName>IBProduct</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>IBProductCompactLayout</compactLayoutAssignment>
+        <description>This is the standard record type for IB products</description>
+        <label>IB Product</label>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>QuantityUnitOfMeasure</picklist>
+            <values>
+                <fullName>Each</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>KGProduct</fullName>
+        <active>true</active>
+        <description>This is the standard record type for KG products</description>
+        <label>KG Product</label>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>QuantityUnitOfMeasure</picklist>
+            <values>
+                <fullName>Each</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
 </CustomObject>

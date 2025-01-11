@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <compactLayouts>
-        <fullName>EBS_Order_Compact_Layout</fullName>
-        <fields>Name</fields>
-        <fields>Account_Name__c</fields>
-        <fields>Account_Queue__c</fields>
-        <fields>EBS_Order_Number__c</fields>
-        <fields>Effective_Date__c</fields>
-        <label>EBS Order Compact Layout</label>
-    </compactLayouts>
+    <recordTypes>
+        <fullName>IBSytelineOrder</fullName>
+        <active>true</active>
+        <description>This is the record type for IB orders</description>
+        <label>IB Syteline Order</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>KGEBSOrder</fullName>
+        <active>true</active>
+        <description>This is the record type for KG orders</description>
+        <label>KG EBS Order</label>
+    </recordTypes>
 </CustomObject>
