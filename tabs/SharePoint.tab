@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>600</frameHeight>
+    <hasSidebar>true</hasSidebar>
+    <label>SharePoint</label>
+    <motif>Custom57: Building Block</motif>
+    <url>https://bicgraphic.sharepoint.com/departments/Marketing/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fdepartments%2FMarketing%2FShared%20Documents%2FNATISIN&amp;FolderCTID=0x012000CD8F8A9A1F5C7043A9B7AD78EF9DE884</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>
