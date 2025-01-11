@@ -17,13 +17,13 @@
         <members>GenAILLMDiagnostic</members>
         <members>PermissionSetAssignment_Home</members>
         <members>PermissionSet_Home</members>
-        <members>SingleCurrency_00D1U000000oeAl_2394C2CC_dll</members>
+        <members>SingleCurrency_00D1U000000oeAl_2394C2CC</members>
         <members>TenantBillingUsageEvent</members>
         <members>TenantEntitlementTransaction</members>
         <members>TenantUsageTypeMultiplier</members>
         <members>UserEngagement</members>
         <members>User_Home</members>
-        <name>DataSourceObject</name>
+        <name>MktDataTranObject</name>
     </types>
     <version>56.0</version>
 </Package>
