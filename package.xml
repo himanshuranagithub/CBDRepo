@@ -1,45 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>BIC_API_Read_Only_profileSessionSetting1602690246192</members>
-        <members>BIC_Manager_Account_Executive_profileSessionSetting1556746884512</members>
-        <members>BIC_Standard_User_Account_Executive_profileSessionSetting1558557881906</members>
-        <members>PT1_profileSessionSetting1487029411398</members>
-        <members>PT2_profileSessionSetting1539989544703</members>
-        <members>null_profileSessionSetting1544565549149</members>
-        <members>null_profileSessionSetting1546464466278</members>
-        <members>null_profileSessionSetting1546464539546</members>
-        <members>null_profileSessionSetting1546464697410</members>
-        <members>null_profileSessionSetting1546464708764</members>
-        <members>null_profileSessionSetting1546464880725</members>
-        <members>null_profileSessionSetting1546464898996</members>
-        <members>null_profileSessionSetting1546465405223</members>
-        <members>null_profileSessionSetting1546465426367</members>
-        <members>null_profileSessionSetting1546465671088</members>
-        <members>null_profileSessionSetting1546523391183</members>
-        <members>null_profileSessionSetting1546531989550</members>
-        <members>null_profileSessionSetting1546532725958</members>
-        <members>null_profileSessionSetting1546532753670</members>
-        <members>null_profileSessionSetting1549568573745</members>
-        <members>null_profileSessionSetting1551909630016</members>
-        <members>null_profileSessionSetting1554319556613</members>
-        <members>null_profileSessionSetting1555714985195</members>
-        <members>null_profileSessionSetting1555715811143</members>
-        <members>null_profileSessionSetting1555715847474</members>
-        <members>null_profileSessionSetting1559164171411</members>
-        <members>null_profileSessionSetting1561387878776</members>
-        <members>null_profileSessionSetting1564076778829</members>
-        <members>null_profileSessionSetting1564076843783</members>
-        <members>null_profileSessionSetting1564602863739</members>
-        <members>null_profileSessionSetting1588612596934</members>
-        <members>null_profileSessionSetting1607028537553</members>
-        <members>null_profileSessionSetting1607028600672</members>
-        <members>null_profileSessionSetting1607545996853</members>
-        <members>null_profileSessionSetting1607606564315</members>
-        <members>null_profileSessionSetting1610652977075</members>
-        <members>null_profileSessionSetting1634560908011</members>
-        <members>null_profileSessionSetting1671600450984</members>
-        <name>ProfileSessionSetting</name>
+        <members>accountAndLeadSearch</members>
+        <members>accountOrdersDataTable</members>
+        <members>chatVisitorDeatils</members>
+        <members>cloneQuoteRequest</members>
+        <members>ebsOrderEmailMessages</members>
+        <members>ebsOrderRelatedCasesShowInDataTable</members>
+        <members>marketingProjectFrom</members>
+        <members>prechat</members>
+        <members>redirectToRecord</members>
+        <members>relatedQuoteRequestList</members>
+        <name>LightningComponentBundle</name>
     </types>
     <version>56.0</version>
 </Package>
