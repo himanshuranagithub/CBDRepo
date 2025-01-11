@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Application_Type__c</field>
+        <field>Company</field>
+        <field>Website</field>
+        <field>Industry_Association_Number__c</field>
+        <field>Business_with_Other_Suppliers__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>laura.davis@kooziegroup.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>michael.oreilly@kooziegroup.com</name>
+                <type>user</type>
+            </approver>
+            <approver>
+                <name>prerak.patel@kooziegroup.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Step 1</label>
+        <name>Step_1</name>
+        <rejectionActions>
+            <action>
+                <name>Lead_Rejected</name>
+                <type>FieldUpdate</type>
+            </action>
+        </rejectionActions>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 AND ( 2 OR 3 )</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>Working</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Application_Type__c</field>
+            <operation>equals</operation>
+            <value>Partner Application</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Application_Type__c</field>
+            <operation>equals</operation>
+            <value>Contact Me Application</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>Awaiting_Approval</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Lead_owner_to_New_Accounts_Team</name>
+            <type>FieldUpdate</type>
+        </action>
+    </initialSubmissionActions>
+    <label>New Account Request</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>
