@@ -9,14 +9,4 @@
         <senderType>OrgWideEmailAddress</senderType>
         <template>unfiled$public/CLAIM_Art_Issue_Email_template</template>
     </alerts>
-    <fieldUpdates>
-        <fullName>Complete_Claim</fullName>
-        <field>Status__c</field>
-        <literalValue>Completed</literalValue>
-        <name>Complete Claim</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
 </Workflow>
