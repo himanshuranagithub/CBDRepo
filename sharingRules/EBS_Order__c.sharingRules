@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>EBS_ORDER_share_by_EBSOrderNumber</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>EBS ORDER share by EBSOrderNumber</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>KGBusinessUnitCSuite</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>EBS_Order_Number__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>EBS_ORDER_shared_to_all_KG</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>EBS ORDER shared to all KG</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>KGBusinessUnitCSuite</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>KG EBS Order</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>IBSytelineOrders</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share all the Syteline orders among IB users</description>
+        <label>IB - Syteline Orders</label>
+        <sharedTo>
+            <group>IBBusinessUnit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>IB Syteline Order</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>KG_EBS_Orders</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>KG - EBS Orders</label>
+        <sharedTo>
+            <group>KoozieBusinessUnit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>KG EBS Order</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

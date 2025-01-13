@@ -1,47 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>CLZV6BP__Clarizen_Milestone__c.clz_f4604699-838b-4580-927f-ae3ca9a8c305</members>
-        <members>CLZV6BP__Clarizen_Project__c.clz_4e363bd7-d0d5-45eb-a918-49e219c0bf62</members>
-        <members>Campaign.New Trade Show Notification</members>
-        <members>Campaign.Payment Approved</members>
-        <members>Campaign.Payment Method is AMEX card</members>
-        <members>Case.Case Orange Tier II escalation</members>
-        <members>Case.Case VOC Record type</members>
-        <members>Case.Formula field alternative</members>
-        <members>Case.Reminder Action - large orders</members>
-        <members>Case.Updating Send Clarification Flag</members>
-        <members>Case.Updating send email Flag</members>
-        <members>Case.Who_Edited_Info_Case_Collaboratives</members>
-        <members>Case.name%2Etime%2Edate stamp</members>
-        <members>Check_Credit_Memo_Request__c.New Check %2F Credit Memo Request</members>
-        <members>Contact.Correct Case for Names</members>
-        <members>Contact.MKT CHK W R%2ETYPE</members>
-        <members>Contact.clz_2022a9f0-e48d-4ca0-b543-ff49f016d074</members>
-        <members>EmailMessage.Last Email Replied</members>
-        <members>Inquiry__c.Creates a Follow up Task in Account</members>
-        <members>Knowledge__kav.When Articles are created or edited</members>
-        <members>Marketing_Projects__c.Marketing Project%3A New Designer Assigned</members>
-        <members>Marketing_Projects__c.New Project Submitted</members>
-        <members>Marketing_Projects__c.Notification - Designer Assigned</members>
-        <members>Marketing_Projects__c.Page Layout Change - Marketing Project</members>
-        <members>Marketing_Projects__c.Page Layout Change - Marketing Project%092</members>
-        <members>Marketing_Projects__c.Project%3A Completed</members>
-        <members>Opportunity.Close Date Timeline</members>
-        <members>Opportunity.Set Opportunity Close Date</members>
-        <members>Opportunity.Set Opportunity Name</members>
-        <members>Opportunity.Set Summary on Opportunity</members>
-        <members>Opportunity.clz_f981dfde-4776-427a-a324-f3b5f0824905</members>
-        <members>Quote_Request__c.Item Name changed</members>
-        <members>Task.Email Sub Type</members>
-        <members>Task.Set Subject for Activity Type</members>
-        <members>Task.Set Subject for Task</members>
-        <members>Task.Set Summary to Short Description</members>
-        <members>Task.Set Task Type From Email</members>
-        <members>Task.Update Complete Date to Today</members>
-        <members>Task.Update Task Type</members>
-        <members>User.Audit Check</members>
-        <name>WorkflowRule</name>
+        <members>Case_Balance__c</members>
+        <members>Case_Metrics_Aggregate__c</members>
+        <members>Case_Metrics_Raw__c</members>
+        <members>Case_Owner_History__c</members>
+        <members>Change_Request__c</members>
+        <members>ContactHistory__c</members>
+        <members>Contact_Roles__c</members>
+        <members>Custom_Survey__c</members>
+        <members>EBS_Order__c</members>
+        <members>ErrorLog__c</members>
+        <members>Holidays_2__c</members>
+        <members>Milestone1_Milestone__c</members>
+        <members>Milestone1_Nag__c</members>
+        <members>Milestone1_Project__c</members>
+        <members>OTP__c</members>
+        <members>POD_Meeting_Issue_Tracker__c</members>
+        <members>Project_Snapshot__c</members>
+        <members>Sales_Agreements__c</members>
+        <members>Storage_Notification__c</members>
+        <members>Team_Lead_Tracker__c</members>
+        <members>Territory__c</members>
+        <members>Virtual_Form_Item__c</members>
+        <name>SharingRules</name>
     </types>
     <version>56.0</version>
 </Package>
