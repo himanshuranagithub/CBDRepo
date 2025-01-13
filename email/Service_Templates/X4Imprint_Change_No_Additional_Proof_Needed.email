@@ -1,0 +1,40 @@
+<html style="overflow-y:hidden">
+<head>
+<title></title>
+</head>
+<style>
+body {font-family: 'source sans pro';}
+</style>
+
+<span style="font-size:8px;"><img src="https://kooziegroup--c.documentforce.com/servlet/servlet.ImageServer?id=0153p000003Puwa&oid=00DU8000002Zr1t&lastMod=1605184005000" style="max-width: 840.197px; width: 140.998px; height: 25.9981px;" title="Koozie Group Logo" /></span><br />
+&nbsp;&nbsp;<span style="font-size:15px;"><b><span style="color:#009faa;"><span style="text-decoration: none; font-family: &quot;Source Sans Pro Black;, sans-serif;&quot;;">keep</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#da9122;">the</span>&nbsp;<b><span style="color:#94bd4c;"><span style="text-decoration: none; font-family: Source Sans Pro;, sans-serif;&quot;;">good</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#92278a;">going<span style="text-decoration: none; font-family: &quot;Source Sans Pro Black&quot;, sans-serif;">&reg;</span></span></span><br />
+<br />
+Thanks for ordering from Koozie Group! We are working on the proof changes you requested for order # {!Clarification_Question__c.EBS_Order_Number__c}.<br />
+<br />
+
+PO Number: {!Clarification_Question__c.PO_Number__c}</br>
+Case Number: {!Clarification_Question__c.Case_Number__c}</br>
+Order Number: {!Clarification_Question__c.EBS_Order_Number__c}<br />
+Approver First Name: {!Clarification_Question__c.Authorization_First_Name__c}</br>
+Approver Last Name: {!Clarification_Question__c.Authorization_Last_Name__c}</br>
+Company Name: {!Clarification_Question__c.Authorization_Organization__c}</br></br></span>
+Once this change is made, we’ll move this order into production.</br></br>
+<p>All the best, <br/>
+The Koozie Group Customer Care Krew<br/></p>
+
+<a href="https://www.kooziegroup.com/US/" style="text-decoration:none;color:#456FB2;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">kooziegroup.com</a><br /><br /><br />
+
+
+
+
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address&nbsp;above.</span> </span>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

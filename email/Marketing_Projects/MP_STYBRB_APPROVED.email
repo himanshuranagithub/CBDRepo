@@ -1,0 +1,5 @@
+This project is approved by your manager
+
+Approved on: {!Marketing_Projects__c.LastModifiedDate}
+
+Please click this link {!Marketing_Projects__c.Link} for Salesforce record

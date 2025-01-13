@@ -1,0 +1,96 @@
+<messaging:emailTemplate subject="Koozie Group PO# {!relatedTo.EBS_PO_Number__c} Notice of Cancellation. Order# {!relatedTo.EBS_Order_Number__c}, {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+
+<style>
+body {font-family: 'source sans pro';}
+</style>
+
+<span style="font-size:8px;"><img src="https://kooziegroup--c.documentforce.com/servlet/servlet.ImageServer?id=0153p000003Puwa&oid=00D1U000000oeAl&lastMod=1605490999000" style="max-width: 840.197px; width: 140.998px; height: 25.9981px;" title="Koozie Group Logo" /></span><br />
+&nbsp;&nbsp;<span style="font-size:15px;"><b><span style="color:#009faa;"><span style="text-decoration: none; font-family: &quot;Source Sans Pro Black;, sans-serif;&quot;;">keep</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#da9122;">the</span>&nbsp;<b><span style="color:#94bd4c;"><span style="text-decoration: none; font-family: Source Sans Pro;, sans-serif;&quot;;">good</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#92278a;">going<span style="text-decoration: none; font-family: &quot;Source Sans Pro Black&quot;, sans-serif;">&reg;</span></span></span><br />
+<br />
+
+
+<p>Thanks for ordering from Koozie Group! Unfortunately, your order remains on hold.</p>
+
+ <p><b>We are still waiting on clarification regarding issues with your order and have not received a response. We hope to get this resolved soon, but if we don’t hear back from you within the next 24 hours, we will have to cancel this order.</b></p>
+    
+  <li>Customer Name: {!relatedTo.Customer_Name__c}</li>
+    <li>Customer Number: {!relatedTo.EBS_Account_Number__c}</li>
+    <li>PO Number: {!relatedTo.EBS_PO_Number__c}</li>
+    <li>Order Number: {!relatedTo.EBS_Order_ID__c}</li>
+    <apex:variable var="idx" value="{!0}"/>
+
+     <apex:repeat var="cx1" value="{!relatedTo.Clarification_Questions__r}">
+     <apex:outputPanel rendered="{!if(idx==0,true,false)}">
+     <apex:outputpanel rendered="{!if(cx1.ClarAppVersion__c = '3.0',true,false)}">
+    
+    <p>All you need to do now is <b>click the link below</b> to respond to any clarifications needed to be able to proceed with your order.</p>  
+   <li>Link: <a href="{!relatedTo.Clar_Link__c}"> {!relatedTo.Clar_Link__c}</a> </li>
+    </apex:outputpanel>
+    </apex:outputpanel>
+        <apex:variable var="idx" value="{!idx + 1}" />
+    </apex:repeat>
+    <br/>
+<!--    
+<p>All you need to do now is <b>click the link below</b> to respond to any clarifications needed to be able to proceed with your order.</p>  
+ Go To the Link : <a href="{!relatedTo.EBS_Order__r.Tracking_Link_NoPricing__c}">{!relatedTo.EBS_Order__r.Tracking_Link_No_Pricing__c}</a>
+-->
+
+<p>Please be advised that your order is <b><u>ON HOLD</u></b> until you have provided responses to each clarification.</p> 
+
+    <li><b>PO Number: {!relatedTo.EBS_PO_Number__c}</b></li>
+    <li><b>Order Number: {!relatedTo.EBS_Order_ID__c}</b></li>
+
+<!--  
+<p><b>You must follow the link below to view what is needed to proceed with your order.</b>Please do not reply to this email. Replying to this email will not move your order into production as timely.</p>
+-->
+    
+<p>
+<apex:repeat var="cx" value="{!relatedTo.Clarification_Questions__r}">
+
+<apex:outputPanel rendered="{!if((cx.Status__c != 'Closed' && cx.Status__c != 'Answered' && cx.Status__c != 'Canceled') && cx.recordtype.name=='ClarificationQuestion' ,true,false)}">
+
+<tr >
+ <td>Product Number: &nbsp;{!cx.Product_Number__c}</td><br/>
+ <td>Line Number: &nbsp;{!cx.Line_Number__c}</td><br/>
+ <td>Message Text: &nbsp;{!cx.Message_Text__c}</td><br/>
+ <br/>
+</tr>
+</apex:outputPanel>
+</apex:repeat>
+</p> 
+
+<!--
+  <p><b>If clicking this link results in an error, please copy and paste the address into your internet browser.</b></p>  
+-->
+
+
+<p>All the best, <br/>
+The Koozie Group Customer Care Krew<br/></p>
+
+
+
+<a href="https://www.kooziegroup.com/US/" style="text-decoration:none;color:#456FB2;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">kooziegroup.com</a><br />
+<span style="font-size:11px"><span style="color:black"><span style="line-height:.8;font-family:&quot;Source Sans Pro&quot;,sans-serif">You can check order status and inventory, estimate shipping, create a virtual sample or access case studies, test reports, images and templates. It&rsquo;s all there!</span></span></span>
+
+
+<p style="font-family:Source Sans Pro ;,sans-serif"><span style="color:#456fb2;"><b><span style="font-size:18px;">send orders to:</span></b></span><br />
+<span style="color:#ffc107"><span style="font-size:11px"><span style="color:#ffc107"><span style="font-size:11px"><span style="color:black"><b>24 Hour Orders:</b>&nbsp;<b style="color: rgb(69, 111, 178);"><a href="mailto: 24hour@kooziegroup.com" style="color:#456FB2">24hour@kooziegroup.com</a></b><br />
+<b>Standard&nbsp;Production Orders:</b>&nbsp;<a href="mailto: orders@kooziegroup.com" style="color:#456FB2"><b>orders@kooziegroup.com</b></a><br />
+<b>Random Samples and Marketing Collateral Orders:</b>&nbsp;<a href="mailto: samples@kooziegroup.com" style="color:#456FB2"><b>samples@kooziegroup.com</b></a> <span style="color:#ffc107"> <span style="font-size:11px"> <span style="color:#ffc107"><span style="font-size:11px"><span style="color:black"> </span></span></span> </span> </span> </span></span></span></span></span></p>
+    
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address&nbsp;above.</span> </span>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

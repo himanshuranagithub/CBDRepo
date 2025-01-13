@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <available>true</available>
+    <description>Sending email to the Customer for providing feedback</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Customer Survey Template</name>
+    <style>none</style>
+    <subject>Kooziegroup Feedback Rating</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,37 @@
+<messaging:emailTemplate subject="Kooziegroup Feedback Rating" recipientType="User" relatedToType="Case">
+
+<messaging:htmlEmailBody >
+<html>
+
+<style>
+body {font-family: 'source sans pro';}
+</style>
+
+<span style="font-size:8px;"><img src="https://kooziegroup--c.documentforce.com/servlet/servlet.ImageServer?id=0153p000003Puwa&oid=00DU8000002Zr1t&lastMod=1605490999000" style="max-width: 840.197px; width: 140.998px; height: 25.9981px;" title="Koozie Group Logo" /></span><br />
+&nbsp;&nbsp;<span style="font-size:15px;"><b><span style="color:#009faa;"><span style="text-decoration: none; font-family: &quot;Source Sans Pro Black;, sans-serif;&quot;;">keep</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#da9122;">the</span>&nbsp;<b><span style="color:#94bd4c;"><span style="text-decoration: none; font-family: Source Sans Pro;, sans-serif;&quot;;">good</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#92278a;">going<span style="text-decoration: none; font-family: &quot;Source Sans Pro Black&quot;, sans-serif;">&reg;</span></span></span><br />
+<br />
+
+<p>Hi {!relatedTo.Contact.LastName},</p>
+
+<span>Thanks for choosing kooziegroup for your purchases. We welcome you to our Kooziegroup Family.<br/>
+Please select your rating below for the case - {!relatedTo.CaseNumber}.</span><br/><br/>
+
+    <a href="https://bicgraphicchat.secure.force.com/?caseId={!relatedTo.Id}&feedback=Super" >
+    <img src="https://c.NA149.content.force.com/servlet/servlet.ImageServer?id=0154w000024riJv&oid=00DU8000002Zr1t" alt="Super" width="100" height="100"/>
+    </a>
+    <a href="https://bicgraphicchat.secure.force.com/?caseId={!relatedTo.Id}&feedback=Good" >
+    <img src="https://c.NA149.content.force.com/servlet/servlet.ImageServer?id=0154w000024riK0&oid=00DU8000002Zr1t" alt="Good" width="100" height="100"/>
+    </a>
+    <a href="https://bicgraphicchat.secure.force.com/?caseId={!relatedTo.Id}&feedback=Fair" >
+    <img src="https://c.NA149.content.force.com/servlet/servlet.ImageServer?id=0154w000024riJl&oid=00DU8000002Zr1t" alt="Fair" width="100" height="100"/>
+    </a>
+    <a href="https://bicgraphicchat.secure.force.com/?caseId={!relatedTo.Id}&feedback=Poor" >
+    <img src="https://c.NA149.content.force.com/servlet/servlet.ImageServer?id=0154w000024riJq&oid=00DU8000002Zr1t" alt="Poor" width="100" height="100"/>
+    </a>
+
+<p>Regards,<br/>
+Customer Service Manager<br/></p>
+
+</html>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

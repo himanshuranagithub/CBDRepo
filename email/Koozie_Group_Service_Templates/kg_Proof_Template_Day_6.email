@@ -1,0 +1,81 @@
+<messaging:emailTemplate subject="Reminder Koozie Group PO# {!relatedTo.EBS_PO_Number__c} Order Pending Cancellation.SO# {!relatedTo.EBS_Order_Number__c}, {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+
+<style>
+body {font-family: 'source sans pro';}
+</style>
+
+<span style="font-size:8px;"><img src="https://kooziegroup--c.documentforce.com/servlet/servlet.ImageServer?id=0153p000003Puwa&oid=00D1U000000oeAl&lastMod=1605490999000" style="max-width: 840.197px; width: 140.998px; height: 25.9981px;" title="Koozie Group Logo" /></span><br />
+&nbsp;&nbsp;<span style="font-size:15px;"><b><span style="color:#009faa;"><span style="text-decoration: none; font-family: &quot;Source Sans Pro Black;, sans-serif;&quot;;">keep</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#da9122;">the</span>&nbsp;<b><span style="color:#94bd4c;"><span style="text-decoration: none; font-family: Source Sans Pro;, sans-serif;&quot;;">good</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#92278a;">going<span style="text-decoration: none; font-family: &quot;Source Sans Pro Black&quot;, sans-serif;">&reg;</span></span></span><br />
+<br />
+<p align="left" style="text-align:left"><b>Thanks for ordering from Koozie Group!</b><br/><br/>All you need to do now is <b>click the link below</b> to review your proof.</p>
+
+<p align="left" style="text-align:left">Please be advised that your order is still <u><b>ON HOLD</b></u> until your proof is approved. Your order will remain on hold until you follow the link below, then click one of the proof approval options.</p>
+    
+    <p><b>PO Number:</b> {!relatedTo.EBS_PO_Number__c}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <b>Order Number:</b> {!relatedTo.EBS_Order_ID__c}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+<p><b>You must follow the link below to view your proof and then click approved, approved with changes or not approved.</b> Please do not reply to this email. Replying to this email will not move your order into production.</p>
+
+<p>
+<br/><c:clarQuestions rcaseID="{!relatedTo}"/>
+</p>
+
+<p><b>If clicking this link results in an error, please copy and paste the address into your internet browser.</b></p>
+     
+    
+    <p>This proof approval process allows you to clearly view proofs on any mobile device, print, download, email or save the proof as a PDF. Plus, with just two clicks your proof can be approved faster than ever before, and we will begin production as soon as we get your go-ahead. </p>
+    
+
+
+Please carefully review for the following:<br/>
+
+<ul><li>Typographical Errors</li>
+     <li>Valid Color Separation</li>
+    <li>Correct Imprint Position and Size</li>
+    <li>Correct Imprinting Colors</li>
+    <li>Missing Type/Copy/Logos</li>
+    <li>Correct Layout</li>
+</ul>  
+
+
+<p><b>Additional action needed for this order</b><br/>
+<apex:outputText value="{!IF(AND(NOT(ISBLANK(relatedTo.Count_Open_Clarification_Questions__c)), 
+relatedTo.Count_Open_Clarification_Questions__c > 0 && relatedTo.Count_Open_EProof_Questions__c > 0), relatedTo.Proof_Clar_Link_URL__c, '')}" escape="false"/><br/>
+
+<br/>
+</p>
+
+______________________________________________________________________<br/>
+
+
+<p>You can continue to track this order right on our website! It’s quick and easy when you <a href="https://www.kooziegroup.com/US/login">log in</a>  to your account or <a href="https://www.bicgraphic.com/US/RegisterCustomerAccount">create a login</a> at <a href="https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fwww.bicgraphic.com&amp;c=E,1,RSHyRGRSU_HM5UwVlcvcLAvN46Oi2USrS1x_vOlFPyA1ub67wthQhaxFnltmUfMEkBiyy_SfDlmhvN2rw1E9xbIn3vH7Wz7XqIgRclBx50yAfPncCE3sn6CQ9uE,&amp;typo=1">www.kooziegroup.com</a>.</p>
+
+<p>All the best, <br/>
+The Koozie Group Customer Care Krew<br/></p>
+
+
+
+<a href="https://www.kooziegroup.com/US/" style="text-decoration:none;color:#456FB2;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">kooziegroup.com</a><br />
+<span style="font-size:11px"><span style="color:black"><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif">You can check order status and inventory, estimate shipping, create a virtual sample or access case studies, test reports, images and templates. It&rsquo;s all there!</span></span></span>
+
+
+<p style="font-family:Source Sans Pro ;,sans-serif"><span style="color:#456fb2;"><b><span style="font-size:18px;">send orders to:</span></b></span><br />
+<span style="color:#ffc107"><span style="font-size:11px"><span style="color:#ffc107"><span style="font-size:11px"><span style="color:black"><b>24 Hour Orders:</b>&nbsp;<b style="color: rgb(69, 111, 178);"><a href="mailto: 24hour@kooziegroup.com" style="color:#456FB2">24hour@kooziegroup.com</a></b><br />
+<b>Standard&nbsp;Production Orders:</b>&nbsp;<a href="mailto: orders@kooziegroup.com" style="color:#456FB2"><b>orders@kooziegroup.com</b></a><br />
+<b>Random Samples and Marketing Collateral Orders:</b>&nbsp;<a href="mailto: samples@kooziegroup.com" style="color:#456FB2"><b>samples@kooziegroup.com</b></a> <span style="color:#ffc107"> <span style="font-size:11px"> <span style="color:#ffc107"><span style="font-size:11px"><span style="color:black"> </span></span></span> </span> </span> </span></span></span></span></span></p>
+    
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address&nbsp;above.</span> </span>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

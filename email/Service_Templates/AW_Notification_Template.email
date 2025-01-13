@@ -1,0 +1,46 @@
+<messaging:emailTemplate subject="Anchor Wallace Order Notification. PO: {!relatedTo.EBS_PO_Number__c} ORDER: {!relatedTo.EBS_Order_ID__c}:, {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+
+<body style="font-family:source sans pro">
+
+<span><img src="https://kooziegroup--c.documentforce.com/servlet/servlet.ImageServer?id=0154w000024rRrQ&oid=00DU8000002Zr1t&lastMod=1650037233000" title="Anchor Wallace Logo" /></span><br />
+
+<p>Thank you for your order.</p>
+ <p><b>NOTIFICATION ONLY: WE ARE PROCEEDING WITH YOUR ORDER WITH THE FOLLOWING INFORMATION.</b></p>
+    
+   <li> Customer Name: {!relatedTo.SuppliedCompany}</li>
+    
+
+    <li>Customer Number: {!relatedTo.EBS_Account_Number__c}</li>
+    <li>PO Number: {!relatedTo.EBS_PO_Number__c}</li>
+     <li>Order Number: {!relatedTo.EBS_Order_ID__c}</li>
+     <li>Date: {!relatedTo.Clarification_Start_Date__c}</li>
+     <li>Contact: {!relatedTo.Contact.name}</li>
+     <li>Phone: {!relatedTo.ContactPhone}</li>
+     <li>Ship to:<!--donot see any field ship to in case?--></li>
+     
+     <br/><br/><br/><c:notificationQuestions rcaseID="{!relatedTo}"/>  
+
+
+<p>All the best, <br/>
+The Anchor Wallace Krew<br/></p>
+
+<br/><br/>
+
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual<br />
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible<br />
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication<br />
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and<br />
+return the original message to us at the address&nbsp;above.</span> </span>
+
+</body>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>
