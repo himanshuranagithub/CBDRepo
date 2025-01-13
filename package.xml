@@ -1,29 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>GenAIAppGeneration_generationUpdateId_map_GenAIFeedback_generationUpdateId_1735201973072</members>
-        <members>GenAIContentCategory_parent_map_GenAIContentQuality_id_1735201967548</members>
-        <members>GenAIContentQuality_parent_map_GenAIGatewayRequest_gatewayRequestId_1735201964166</members>
-        <members>GenAIContentQuality_parent_map_GenAIGeneration_generationId_1735201972012</members>
-        <members>GenAIFeedbackDetail_parent_map_GenAIFeedback_feedbackId_1735201970910</members>
-        <members>GenAIFeedback_generationId_map_GenAIGeneration_generationId_1735201969734</members>
-        <members>GenAIGatewayRequestTag_parent_map_GenAIGatewayRequest_gatewayRequestId_1735201966396</members>
-        <members>GenAIGatewayResponse_generationRequestId_map_GenAIGatewayRequest_gatewayRequestId_1735201965337</members>
-        <members>GenAIGeneration_generationResponseId_map_GenAIGatewayResponse_generationResponseId_1735201968664</members>
-        <members>template_feedback_feedback_map_GenAIFeedback_feedback_1735201977379</members>
-        <members>template_feedback_prompt_template_map_GenAIGatewayRequest_promptTemplateDevName_1735201977052</members>
-        <members>template_feedback_reasons_app_feedback_map_GenAIFeedbackDetail_appFeedback_1735201982525</members>
-        <members>template_feedback_reasons_feedback_map_GenAIFeedback_feedback_1735201983057</members>
-        <members>template_feedback_reasons_prompt_template_map_GenAIGatewayRequest_promptTemplateDevName_1735201982780</members>
-        <members>template_generation_count_prompt_template_map_GenAIGatewayRequest_promptTemplateDevName_1735201996100</members>
-        <members>template_version_feedback_feedback_map_GenAIFeedback_feedback_1735201988006</members>
-        <members>template_version_feedback_prompt_template_map_GenAIGatewayRequest_promptTemplateDevName_1735201987480</members>
-        <members>template_version_feedback_prompt_template_version_map_GenAIGatewayRequest_promptTemplateVersionNo_1735201987763</members>
-        <members>template_version_feedback_reasons_app_feedback_map_GenAIFeedbackDetail_appFeedback_1735201992776</members>
-        <members>template_version_feedback_reasons_feedback_map_GenAIFeedback_feedback_1735201993622</members>
-        <members>template_version_feedback_reasons_prompt_template_map_GenAIGatewayRequest_promptTemplateDevName_1735201993049</members>
-        <members>template_version_feedback_reasons_prompt_template_version_map_GenAIGatewayRequest_promptTemplateVersionNo_1735201993340</members>
-        <name>FieldSrcTrgtRelationship</name>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__appPage/mainAppPage</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__brandingSet/esw_template_frame_branding</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__languageSettings/languages</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__mobilePublisherConfig/mobilePublisherConfig</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__route/Error</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__route/Home</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__route/News_Detail__c</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__route/Service_Not_Available</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__site/ESW_Agentforce_Chat_17355488958671</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__theme/Embedded_Service_for_Web_LWR</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__themeLayout/frame</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__themeLayout/snaThemeLayout</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__trustedSites/trustedSites</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__view/error</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__view/home</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__view/newsDetail</members>
+        <members>site/ESW_Agentforce_Chat_17355488958671.sfdc_cms__view/serviceNotAvailable</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__appPage/mainAppPage</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__brandingSet/esw_template_frame_branding</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__languageSettings/languages</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__mobilePublisherConfig/mobilePublisherConfig</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__route/Error</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__route/Home</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__route/News_Detail__c</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__route/Service_Not_Available</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__site/ESW_Koozie_Web_Chat_17350359654961</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__theme/Embedded_Service_for_Web_LWR</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__themeLayout/frame</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__themeLayout/snaThemeLayout</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__trustedSites/trustedSites</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__view/error</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__view/home</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__view/newsDetail</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961.sfdc_cms__view/serviceNotAvailable</members>
+        <name>DigitalExperience</name>
     </types>
     <version>56.0</version>
 </Package>
