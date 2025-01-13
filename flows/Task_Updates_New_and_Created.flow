@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <description>SF-912 Dev: Workflows to Flows</description>
+        <name>Email_Sub_Type_WF</name>
+        <label>Email Sub Type - WF</label>
+        <locationX>182</locationX>
+        <locationY>1223</locationY>
+        <defaultConnector>
+            <targetReference>Update_Task_Type_WF</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_Sub_Type_TRUE</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TaskSubtype</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.TaskSubtype</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ListEmail</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Activity_type</targetReference>
+            </connector>
+            <label>Email Sub Type - TRUE</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>SF - 352 Dev: Move case PB to Flows - Rest / PB-Task to Case Update</description>
+        <name>Failed_to_Send_Email_Task_to_Case_Update</name>
+        <label>Failed to Send Email - Task to Case Update</label>
+        <locationX>182</locationX>
+        <locationY>1823</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Failed_to_Send_Email_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject_2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Failed to send email</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case</targetReference>
+            </connector>
+            <label>Failed to Send Email - True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>SF-912 Dev: Workflows to Flows
+Migrated from the: &quot;Set Subject for Activity Type&quot; workflow rule
+Workflow rule description: Set Subject for Task on Mobil App by using the Activity Type Option&quot;
+
+When Created
+012Su0000001FLBIA2 = New Monthly Report</description>
+        <name>Set_Subject_for_Activity_Type_WF_NEW</name>
+        <label>Set Subject for Activity Type -WF - NEW</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <defaultConnector>
+            <targetReference>Set_Task_Type_From_Email_WF</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Set_Subject_for_Activity_Type_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Activity_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>012Su0000001FLBIA2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>IsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Task_Subject_02</targetReference>
+            </connector>
+            <label>Set Subject for Activity Type - True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>The subject will mirror the type / 	Sets the subject for task based on the task type.</description>
+        <name>Set_Subject_for_Task_WF</name>
+        <label>Set Subject for Task - WF</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Set_Subject_for_Activity_Type_WF_NEW</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Subject_for_Task_1</name>
+            <conditionLogic>NOT(1) AND NOT(2) AND NOT(3) AND NOT(4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$UserRole.DeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>IB</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>012UR000000nHHRYA2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject_2__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Failedtosendemail</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Update_Task_Subject</targetReference>
+            </connector>
+            <label>Subject for Task_1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Workflow to flow / Set task type when subject contains email.</description>
+        <name>Set_Task_Type_From_Email_WF</name>
+        <label>Set Task Type From Email - WF</label>
+        <locationX>182</locationX>
+        <locationY>923</locationY>
+        <defaultConnector>
+            <targetReference>Email_Sub_Type_WF</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Condition_for_Set_Task_Type_From_Email_TRUE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TaskSubtype</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Email</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Task_Type_Email</targetReference>
+            </connector>
+            <label>Condition for Set Task Type From Email - TRUE</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>SF-912 Dev: Workflows to Flows
+Migrated from the: Update Task Type workflow rule
+Workflow rule description: Update the &quot;Task Type&quot; field based on activity type.&quot;</description>
+        <name>Update_Task_Type_WF</name>
+        <label>Update Task Type - WF</label>
+        <locationX>182</locationX>
+        <locationY>1523</locationY>
+        <defaultConnector>
+            <targetReference>Failed_to_Send_Email_Task_to_Case_Update</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Outcome_1_of_Update_Task_Type_02</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Activity_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Task_02</targetReference>
+            </connector>
+            <label>Outcome 1 of Update Task Type 02</label>
+        </rules>
+    </decisions>
+    <description>SF-912 Dev: Workflows to Flows
+Merged 2 Workflow rules
+Set Summary to Short Description
+Set Subject for Task
+
+Migrated from the: Set Subject for Activity Type workflow rule
+Workflow rule description: Set Subject for Task on Mobil App by using the Activity Type Option&quot;
+
+Migrated from the: Update Task Type workflow rule
+Workflow rule description: Update the &quot;Task Type&quot; field based on activity type.&quot;</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Description_Char_Count</name>
+        <dataType>Number</dataType>
+        <expression>LEN({!$Record.Description})</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>entryCondition1</name>
+        <dataType>Boolean</dataType>
+        <expression>AND({!$Record.Description}&lt;&gt; null , 
+NOT(CONTAINS({!$UserRole.DeveloperName}, &apos;IB&apos;)))</expression>
+    </formulas>
+    <formulas>
+        <name>entryCondition2</name>
+        <dataType>Boolean</dataType>
+        <expression>AND( 
+NOT(ISPICKVAL({!$Record.Type},&apos; &apos; )), 
+NOT(CONTAINS({!$UserRole.DeveloperName}, &apos;IB&apos;)),
+NOT(CONTAINS({!$Record.RecordTypeId}, &apos;012UR000000nHHRYA2&apos;)),
+NOT(CONTAINS({!$Record.Subject_2__c}, &apos;Failed to send email&apos;))
+)</expression>
+    </formulas>
+    <formulas>
+        <description>New Record</description>
+        <name>IsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>Set_Subject_Task_Formula</name>
+        <dataType>String</dataType>
+        <expression>LEFT(TEXT( $Record.Activity_Type__c),60)</expression>
+    </formulas>
+    <formulas>
+        <name>taskSubject</name>
+        <dataType>String</dataType>
+        <expression>LEFT(TEXT( {!$Record.Type} ),50)</expression>
+    </formulas>
+    <formulas>
+        <name>taskSummary</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.Description},100)&amp;&apos;...&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>Update_Task_TypeFormula</name>
+        <dataType>String</dataType>
+        <expression>IF(
+   ISBLANK(LEFT(TEXT($Record.Type ),50))=TRUE,
+           LEFT(TEXT( $Record.Activity_Type__c),50),
+           LEFT(TEXT($Record.Type ),50)
+)</expression>
+    </formulas>
+    <interviewLabel>Task Updates (New and Created) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Task Updates (New and Created)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Activity_type</name>
+        <label>Activity type</label>
+        <locationX>50</locationX>
+        <locationY>1331</locationY>
+        <connector>
+            <targetReference>Update_Task_Type_WF</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Activity_Type__c</field>
+            <value>
+                <stringValue>E-mail</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Failed to Send in subject of the task</description>
+        <name>Update_Case</name>
+        <label>Update Case</label>
+        <locationX>50</locationX>
+        <locationY>1931</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Email_Bounced__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhatId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Email_Bounced__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Task_02</name>
+        <label>Update Task 02</label>
+        <locationX>50</locationX>
+        <locationY>1631</locationY>
+        <connector>
+            <targetReference>Failed_to_Send_Email_Task_to_Case_Update</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Task_Type__c</field>
+            <value>
+                <elementReference>Update_Task_TypeFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Task_Subject</name>
+        <label>Update Task Subject</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Set_Subject_for_Activity_Type_WF_NEW</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>taskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Copy the value of activity type</description>
+        <name>Update_Task_Subject_02</name>
+        <label>Update Task Subject 02</label>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
+        <connector>
+            <targetReference>Set_Task_Type_From_Email_WF</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Subject</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Failed to send email</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Subject_2__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Failed to send email</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>Set_Subject_Task_Formula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update task type to Email</description>
+        <name>Update_Task_Type_Email</name>
+        <label>Update Task Type - Email</label>
+        <locationX>50</locationX>
+        <locationY>1031</locationY>
+        <connector>
+            <targetReference>Email_Sub_Type_WF</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Task_Type__c</field>
+            <value>
+                <stringValue>Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Subject_for_Task_WF</targetReference>
+        </connector>
+        <object>Task</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Failed to send email variable</description>
+        <name>Failedtosendemail</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Failed to send email</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>FailToSend</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Failed to send email</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>IB</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>IB</stringValue>
+        </value>
+    </variables>
+</Flow>

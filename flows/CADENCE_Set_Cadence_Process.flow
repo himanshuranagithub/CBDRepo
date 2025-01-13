@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <constants>
+        <name>AWEmail</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>anchorwallace@anchorwallace.com</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>If case status is in Customer Response</description>
+        <name>Customer_Response_Dec</name>
+        <label>Customer Response Dec</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case_in_Customer_Response</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Response</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_for_Standard_Cadence_CR_pt_1</targetReference>
+            </connector>
+            <label>Case in Customer Response</label>
+        </rules>
+        <rules>
+            <name>Not_in_CR_Status</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Response</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_for_Standard_Cadence_pt_1</targetReference>
+            </connector>
+            <label>Not in CR Status</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>If case status is in Customer Response</description>
+        <name>Customer_Response_Dec_24_Hr</name>
+        <label>Customer Response Dec - 24 Hr</label>
+        <locationX>1106</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case_in_Customer_Response_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Response</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_for_24_hour_Cadence_CR_pt_1</targetReference>
+            </connector>
+            <label>Case in Customer Response</label>
+        </rules>
+        <rules>
+            <name>Not_in_CR_Status_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Response</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_for_24_hour_Cadence_pt_1</targetReference>
+            </connector>
+            <label>Not in CR Status</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Initial_Case_Setup</name>
+        <label>Initial Case Setup</label>
+        <locationX>1568</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Initial_Standard_and_24_Hour</name>
+            <conditionLogic>(2 OR 3 OR 4 OR 5 ) AND 1</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Case_Record_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Clarification</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>ISNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ReOpen_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Clarification_Created_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Proof_Created_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Initial_Standard_and_24_Hour_Cadence</targetReference>
+            </connector>
+            <label>Initial - Standard and 24 Hour</label>
+        </rules>
+        <rules>
+            <name>Customer_Specified_Date_Changed</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Customer_Specified_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Cadence_Shipping_Priority__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Standard Cadence</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Cadence_Shipping_Priority__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>24 Hour Cadence</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_based_on_Customer_Specified_Date_change</targetReference>
+            </connector>
+            <label>Customer Specified Date Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Initial_Standard_and_24_Hour_Cadence</name>
+        <label>Initial - Standard and 24 Hour Cadence</label>
+        <locationX>974</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Initial_Standard_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Cadence_Shipping_Priority__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Standard Cadence</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Customer_Response_Dec</targetReference>
+            </connector>
+            <label>Initial - Standard</label>
+        </rules>
+        <rules>
+            <name>Initial_24_Hour_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Cadence_Shipping_Priority__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>24 Hour Cadence</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Customer_Response_Dec_24_Hr</targetReference>
+            </connector>
+            <label>Initial - 24 Hour</label>
+        </rules>
+    </decisions>
+    <description>Added reopen filters - SF-840 / Removed Closed Filter on Entry Criteria due basing new CQ logic off Last Clarification or Last Proof created. / ADDED MESSAGE TYPE FILTER / ADDED REOPEN DATE IS CHANGE ENTRY CRITERIA / Removed Clar Start date from 1st Node</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>This is the cancellation date when Cadence is 24 hour Cadence</description>
+        <name>cancellationDate_24hrCad</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 13 + CEILING((13)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(13&gt;0,1,0) + 13 + CEILING((13)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is the cancellation date based on 5k reminder</description>
+        <name>cancellationDate_5kRem</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+   MOD( DATEVALUE({!$Record.Customer_Contact_Date_Email__c}) - DATE( 1900, 1, 7 ), 7 ),		
+0, ({!$Record.Customer_Contact_Date_Email__c}) + 9 + FLOOR((9-1)/5)*2,
+1, ({!$Record.Customer_Contact_Date_Email__c}) + 9 + FLOOR((9)/5)*2,
+2, ({!$Record.Customer_Contact_Date_Email__c}) + 9 + FLOOR((9+1)/5)*2,
+3, ({!$Record.Customer_Contact_Date_Email__c}) + 9 + FLOOR((9+2)/5)*2,
+4, ({!$Record.Customer_Contact_Date_Email__c}) + 9 + FLOOR((9+3)/5)*2,
+5, ({!$Record.Customer_Contact_Date_Email__c}) + 9 + CEILING((9)/5)*2,
+6, ({!$Record.Customer_Contact_Date_Email__c}) - IF(9&gt;0,1,0) + 9 + CEILING((9)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is the Cancellation date when Cadence is Standard Cadence</description>
+        <name>cancellationDate_IntStand</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 15 + FLOOR((15-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 15 + FLOOR((15)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 15 + FLOOR((15+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 15 + FLOOR((15+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 15 + FLOOR((15+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 15 + CEILING((15)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(15&gt;0,1,0) + 15 + CEILING((15)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is cancellation date based on Specified Date</description>
+        <name>cancellationDate_SpecifiedDate</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Customer_Specified_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, ({!$Record.Customer_Specified_Date__c}) + 8 + FLOOR((8-1)/5)*2,
+1, ({!$Record.Customer_Specified_Date__c}) + 8 + FLOOR((8)/5)*2,
+2, ({!$Record.Customer_Specified_Date__c}) + 8 + FLOOR((8+1)/5)*2,
+3, ({!$Record.Customer_Specified_Date__c}) + 8 + FLOOR((8+2)/5)*2,
+4, ({!$Record.Customer_Specified_Date__c}) + 8 + FLOOR((8+3)/5)*2,
+5, ({!$Record.Customer_Specified_Date__c}) + 8 + CEILING((8)/5)*2,
+6, ({!$Record.Customer_Specified_Date__c}) - IF(8&gt;0,1,0) + 8 + CEILING((8)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is cancellation final notice when Cadence is 24 hour Cadence</description>
+        <name>cancellationFinalNotice_24hrCad</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 11 + CEILING((11)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(11&gt;0,1,0) + 11 + CEILING((11)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is cancellation final notice based on 5k reminder</description>
+        <name>cancellationFinalNotice_5kRem</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Customer_Contact_Date_Email__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, ({!$Record.Customer_Contact_Date_Email__c}) + 7 + FLOOR((7-1)/5)*2,
+1, ({!$Record.Customer_Contact_Date_Email__c}) + 7 + FLOOR((7)/5)*2,
+2, ({!$Record.Customer_Contact_Date_Email__c}) + 7 + FLOOR((7+1)/5)*2,
+3, ({!$Record.Customer_Contact_Date_Email__c}) + 7 + FLOOR((7+2)/5)*2,
+4, ({!$Record.Customer_Contact_Date_Email__c}) + 7 + FLOOR((7+3)/5)*2,
+5, ({!$Record.Customer_Contact_Date_Email__c}) + 7 + CEILING((7)/5)*2,
+6, ({!$Record.Customer_Contact_Date_Email__c}) - IF(7&gt;0,1,0) + 7 + CEILING((7)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This Formula is for the Initial standard where the cadence is Standard Cadence</description>
+        <name>cancellationFinalNotice_IntStand</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 13 + FLOOR((13+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 13 + CEILING((13)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(13&gt;0,1,0) + 13 + CEILING((13)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is cancellation final notice based on Customer Specified Date</description>
+        <name>cancellationFinalNotice_SpecifiedDate</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Customer_Specified_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, ({!$Record.Customer_Specified_Date__c}) + 6 + FLOOR((6-1)/5)*2,
+1, ({!$Record.Customer_Specified_Date__c}) + 6 + FLOOR((6)/5)*2,
+2, ({!$Record.Customer_Specified_Date__c}) + 6 + FLOOR((6+1)/5)*2,
+3, ({!$Record.Customer_Specified_Date__c}) + 6 + FLOOR((6+2)/5)*2,
+4, ({!$Record.Customer_Specified_Date__c}) + 6 + FLOOR((6+3)/5)*2,
+5, ({!$Record.Customer_Specified_Date__c}) + 6 + CEILING((6)/5)*2,
+6, ({!$Record.Customer_Specified_Date__c}) - IF(6&gt;0,1,0) + 6 + CEILING((6)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is cancellation first notice when Cadence is 24 hour Cadence</description>
+        <name>cancellationFirstNotice_24hrCad</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 9 + FLOOR((9-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 9 + FLOOR((9)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 9 + FLOOR((9+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 9 + FLOOR((9+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 9 + FLOOR((9+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 9 + CEILING((9)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(9&gt;0,1,0) + 9 + CEILING((9)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is cancellation first notice based on 5k reminder</description>
+        <name>cancellationFirstNotice_5kRem</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Customer_Contact_Date_Email__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, ({!$Record.Customer_Contact_Date_Email__c}) + 5 + FLOOR((5-1)/5)*2,
+1, ({!$Record.Customer_Contact_Date_Email__c}) + 5 + FLOOR((5)/5)*2,
+2, ({!$Record.Customer_Contact_Date_Email__c}) + 5 + FLOOR((5+1)/5)*2,
+3, ({!$Record.Customer_Contact_Date_Email__c}) + 5 + FLOOR((5+2)/5)*2,
+4, ({!$Record.Customer_Contact_Date_Email__c}) + 5 + FLOOR((5+3)/5)*2,
+5, ({!$Record.Customer_Contact_Date_Email__c}) + 5 + CEILING((5)/5)*2,
+6, ({!$Record.Customer_Contact_Date_Email__c}) - IF(5&gt;0,1,0) + 5 + CEILING((5)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is cancellation first notice when Cadence is Standard Cadence</description>
+        <name>cancellationFirstNotice_IntStand</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 11 + FLOOR((11+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 11 + CEILING((11)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(11&gt;0,1,0) + 11 + CEILING((11)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is cancellation first notice based on the specified date</description>
+        <name>cancellationFirstNotice_SpecifiedDate</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Customer_Specified_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, ({!$Record.Customer_Specified_Date__c}) + 4 + FLOOR((4-1)/5)*2,
+1, ({!$Record.Customer_Specified_Date__c}) + 4 + FLOOR((4)/5)*2,
+2, ({!$Record.Customer_Specified_Date__c}) + 4 + FLOOR((4+1)/5)*2,
+3, ({!$Record.Customer_Specified_Date__c}) + 4 + FLOOR((4+2)/5)*2,
+4, ({!$Record.Customer_Specified_Date__c}) + 4 + FLOOR((4+3)/5)*2,
+5, ({!$Record.Customer_Specified_Date__c}) + 4 + CEILING((4)/5)*2,
+6, ({!$Record.Customer_Specified_Date__c}) - IF(4&gt;0,1,0) + 4 + CEILING((4)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is clarification start date when Cadence is 24 hour Cadence</description>
+        <name>clarificationStartDate_24hrCad</name>
+        <dataType>DateTime</dataType>
+        <expression>IF
+(
+	{!$Record.Clarification_Start_Date__c} = null, 
+	NOW(),
+	{!$Record.Clarification_Start_Date__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <description>This is the customer contact date email when Cadence is 24 hour Cadence</description>
+        <name>customerContactDateEmail_24hrCad</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 4 + FLOOR((4-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 4 + FLOOR((4)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 4 + FLOOR((4+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 4 + FLOOR((4+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 4 + FLOOR((4+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 4 + CEILING((4)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(4&gt;0,1,0) + 4 + CEILING((4)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is a customer contact date email based on 5k reminder</description>
+        <name>customerContactDateEmail_5kRem</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Day_3_Reminder_Call__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, ({!$Record.Day_3_Reminder_Call__c} ) + 3 + FLOOR((3-1)/5)*2,
+1, ({!$Record.Day_3_Reminder_Call__c} ) + 3 + FLOOR((3)/5)*2,
+2, ({!$Record.Day_3_Reminder_Call__c} ) + 3 + FLOOR((3+1)/5)*2,
+3, ({!$Record.Day_3_Reminder_Call__c} ) + 3 + FLOOR((3+2)/5)*2,
+4, ({!$Record.Day_3_Reminder_Call__c} ) + 3 + FLOOR((3+3)/5)*2,
+5, ({!$Record.Day_3_Reminder_Call__c} ) + 3 + CEILING((3)/5)*2,
+6, ({!$Record.Day_3_Reminder_Call__c} ) - IF(3&gt;0,1,0) + 3 + CEILING((3)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is Customer Contact Date Email when Cadence is Standard Cadence</description>
+        <name>customerContactDateEmail_IntStand</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 6 + CEILING((6)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(6&gt;0,1,0) + 6 + CEILING((6)/5)*2,
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is Customer Contact Date Email based on Customer Specified Date</description>
+        <name>customerContactDateEmail_SpecifiedDate</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.Customer_Specified_Date__c} -
+CASE(
+WEEKDAY(DATEVALUE({!$Record.Customer_Specified_Date__c})),
+1, 2,
+2, 3,
+3, 1,
+4, 1,
+5, 1,
+6, 1,
+7, 1,
+0)</expression>
+    </formulas>
+    <formulas>
+        <name>DateTimeNull</name>
+        <dataType>DateTime</dataType>
+        <expression>Null</expression>
+    </formulas>
+    <formulas>
+        <description>This is day 1 24 hour turn when Cadence is 24 hour Cadence</description>
+        <name>day124hourturn_24hrCad</name>
+        <dataType>DateTime</dataType>
+        <expression>{!$Record.Clarification_Start_Date__c} + 
+ CASE( 
+  WEEKDAY(DATEVALUE({!$Record.Clarification_Start_Date__c})), 
+   1, 1,
+   2, 1,
+   3, 1,
+   4, 1,
+   5, 1,
+   6, 3,
+   7, 2,
+ 0)</expression>
+    </formulas>
+    <formulas>
+        <description>This is day 3 reminder call based on 5k reminder</description>
+        <name>day3ReminderCall_5kRem</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+		MOD( Today() - DATE( 1900, 1, 7 ), 7 ),
+			3, {!$Record.Clarification_Start_Date__c} + 2 + 3,
+			4, {!$Record.Clarification_Start_Date__c} + 2 + 3,
+			5, {!$Record.Clarification_Start_Date__c} + 2 + 3,
+			6, {!$Record.Clarification_Start_Date__c} + 1 + 3,
+			{!$Record.Clarification_Start_Date__c} + 3
+	)</expression>
+    </formulas>
+    <formulas>
+        <description>This is Day 3 Reminder Call when Cadence is Standard Cadence</description>
+        <name>day3ReminderCall_IntStand</name>
+        <dataType>DateTime</dataType>
+        <expression>CASE(
+		MOD( Today() - DATE( 1900, 1, 7 ), 7 ),
+			3, {!$Record.Clarification_Start_Date__c} + 2 + 3,
+			4, {!$Record.Clarification_Start_Date__c} + 2 + 3,
+			5, {!$Record.Clarification_Start_Date__c} + 2 + 3,
+			6, {!$Record.Clarification_Start_Date__c} + 1 + 3,
+			{!$Record.Clarification_Start_Date__c} + 3
+	)</expression>
+    </formulas>
+    <formulas>
+        <name>GreaterThan5kReminder_IntStand</name>
+        <dataType>DateTime</dataType>
+        <expression>IF ({!$Record.EBS_Order__r.Order_Header_Total__c} &gt;= 5000,
+(
+CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 8 + FLOOR((8-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 8 + FLOOR((8)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 8 + FLOOR((8+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 8 + FLOOR((8+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 8 + FLOOR((8+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 8 + CEILING((8)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(8&gt;0,1,0) + 8 + CEILING((8)/5)*2,
+null)
+),
+null)</expression>
+    </formulas>
+    <formulas>
+        <description>This is greater than 5K reminder based on Specified Date</description>
+        <name>greaterThan5KReminder_SpecifiedDate</name>
+        <dataType>DateTime</dataType>
+        <expression>IF ({!$Record.EBS_Order__r.Order_Header_Total__c} &gt;= 5000,
+(
+{!$Record.Customer_Specified_Date__c} + 
+ CASE( 
+  WEEKDAY(DATEVALUE({!$Record.Customer_Specified_Date__c})), 
+   1, 1,
+   2, 1,
+   3, 1,
+   4, 1,
+   5, 1,
+   6, 3,
+   7, 2,
+ 0)
+),
+null)</expression>
+    </formulas>
+    <formulas>
+        <name>GreaterThank5kReminder_24Hc</name>
+        <dataType>DateTime</dataType>
+        <expression>IF ({!$Record.EBS_Order__r.Order_Header_Total__c} &gt;= 5000,
+(
+CASE(
+	MOD( DATEVALUE({!$Record.Clarification_Start_Date__c}) - DATE( 1900, 1, 7 ), 7 ),
+0, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6-1)/5)*2,
+1, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6)/5)*2,
+2, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6+1)/5)*2,
+3, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6+2)/5)*2,
+4, {!$Record.Clarification_Start_Date__c} + 6 + FLOOR((6+3)/5)*2,
+5, {!$Record.Clarification_Start_Date__c} + 6 + CEILING((6)/5)*2,
+6, {!$Record.Clarification_Start_Date__c} - IF(6&gt;0,1,0) + 6 + CEILING((6)/5)*2,
+null)
+),
+null)</expression>
+    </formulas>
+    <formulas>
+        <name>ISNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <description>This is a common variable for the current date &amp; time.</description>
+        <name>now</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <formulas>
+        <description>Now plus 1 minute</description>
+        <name>NowPlus1</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()+(1/1440)</expression>
+    </formulas>
+    <interviewLabel>CADENCE {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CADENCE - Set Cadence Process - Dates Revised</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Case_based_on_Customer_Specified_Date_change</name>
+        <label>Update Case based on Customer Specified Date change</label>
+        <locationX>1898</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Cancellation_Date_Email__c</field>
+            <value>
+                <elementReference>cancellationFinalNotice_SpecifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Date__c</field>
+            <value>
+                <elementReference>cancellationDate_SpecifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Notice__c</field>
+            <value>
+                <elementReference>cancellationFirstNotice_SpecifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Sent__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Contact_Date_Email__c</field>
+            <value>
+                <elementReference>customerContactDateEmail_SpecifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Contact_Date__c</field>
+            <value>
+                <elementReference>greaterThan5KReminder_SpecifiedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>In_Cadence__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Next_Process__c</field>
+            <value>
+                <stringValue>Customer Contact Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_24_hour_Cadence_CR_pt_1</name>
+        <label>Update Case for 24 hour Cadence - CR - pt 1</label>
+        <locationX>842</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Update_Case_for_24_hour_Cadence_CR_pt_2</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Cancellation_Sent__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Clarification_Start_Date__c</field>
+            <value>
+                <elementReference>clarificationStartDate_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_Process__c</field>
+            <value>
+                <stringValue>Initial Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>In_Cadence__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Initial_Email__c</field>
+            <value>
+                <elementReference>now</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Next_Process__c</field>
+            <value>
+                <stringValue>Confirmation/Reminder Call - 24 Hr</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Restart_24_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Restart_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Customer Response</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X24_Hour_Turn__c</field>
+            <value>
+                <elementReference>day124hourturn_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_24_hour_Cadence_CR_pt_2</name>
+        <label>Update Case for 24 hour Cadence - CR - pt 2</label>
+        <locationX>842</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>Update_Case_for_24_hour_Cadence_CR_pt_3</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Customer_Contact_Date_Email__c</field>
+            <value>
+                <elementReference>customerContactDateEmail_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Contact_Date__c</field>
+            <value>
+                <elementReference>GreaterThank5kReminder_24Hc</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Specified_Date__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Day_3_Reminder_Call__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_24_hour_Cadence_CR_pt_3</name>
+        <label>Update Case for 24 hour Cadence - CR - pt 3</label>
+        <locationX>842</locationX>
+        <locationY>863</locationY>
+        <inputAssignments>
+            <field>Cancellation_Date_Email__c</field>
+            <value>
+                <elementReference>cancellationFinalNotice_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Date__c</field>
+            <value>
+                <elementReference>cancellationDate_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Notice__c</field>
+            <value>
+                <elementReference>cancellationFirstNotice_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_24_hour_Cadence_pt_1</name>
+        <label>Update Case for 24 hour Cadence - pt 1</label>
+        <locationX>1106</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Update_Case_for_24_hour_Cadence_pt_2</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Cancellation_Sent__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Clarification_Start_Date__c</field>
+            <value>
+                <elementReference>clarificationStartDate_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_Process__c</field>
+            <value>
+                <stringValue>Initial Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>In_Cadence__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Initial_Email__c</field>
+            <value>
+                <elementReference>now</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Next_Process__c</field>
+            <value>
+                <stringValue>Confirmation/Reminder Call - 24 Hr</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Restart_24_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Restart_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Awaiting Clarification Response</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X24_Hour_Turn__c</field>
+            <value>
+                <elementReference>day124hourturn_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_24_hour_Cadence_pt_2</name>
+        <label>Update Case for 24 hour Cadence - pt 2</label>
+        <locationX>1106</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>Update_Case_for_24_hour_Cadence_pt_3</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Customer_Contact_Date_Email__c</field>
+            <value>
+                <elementReference>customerContactDateEmail_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Contact_Date__c</field>
+            <value>
+                <elementReference>GreaterThank5kReminder_24Hc</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Specified_Date__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Day_3_Reminder_Call__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_24_hour_Cadence_pt_3</name>
+        <label>Update Case for 24 hour Cadence - pt 3</label>
+        <locationX>1106</locationX>
+        <locationY>863</locationY>
+        <inputAssignments>
+            <field>Cancellation_Date_Email__c</field>
+            <value>
+                <elementReference>cancellationFinalNotice_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Date__c</field>
+            <value>
+                <elementReference>cancellationDate_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Notice__c</field>
+            <value>
+                <elementReference>cancellationFirstNotice_24hrCad</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates similar fields as other update but does not change case status.</description>
+        <name>Update_Case_for_Standard_Cadence_CR_pt_1</name>
+        <label>Update Case for Standard Cadence - CR - pt 1</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Update_Case_for_Standard_Cadence_CR_pt_2</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Cadence_Intialized__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Sent__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Clarification_Start_Date__c</field>
+            <value>
+                <elementReference>now</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_Process__c</field>
+            <value>
+                <stringValue>Initial Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>In_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Initial_Email__c</field>
+            <value>
+                <elementReference>now</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Next_Process__c</field>
+            <value>
+                <stringValue>Day 3 Reminder Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Restart_24_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Restart_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Customer Response</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X24_Hour_Turn__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates similar fields as other update but does not change case status.</description>
+        <name>Update_Case_for_Standard_Cadence_CR_pt_2</name>
+        <label>Update Case for Standard Cadence - CR - pt 2</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>Update_Case_for_Standard_Cadence_CR_pt_3</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Customer_Contact_Date_Email__c</field>
+            <value>
+                <elementReference>customerContactDateEmail_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Contact_Date__c</field>
+            <value>
+                <elementReference>GreaterThan5kReminder_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Specified_Date__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Day_3_Reminder_Call__c</field>
+            <value>
+                <elementReference>day3ReminderCall_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates similar fields as other update but does not change case status.</description>
+        <name>Update_Case_for_Standard_Cadence_CR_pt_3</name>
+        <label>Update Case for Standard Cadence - CR - pt 3</label>
+        <locationX>50</locationX>
+        <locationY>863</locationY>
+        <inputAssignments>
+            <field>Cancellation_Date_Email__c</field>
+            <value>
+                <elementReference>cancellationFinalNotice_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Date__c</field>
+            <value>
+                <elementReference>cancellationDate_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Notice__c</field>
+            <value>
+                <elementReference>cancellationFirstNotice_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_Standard_Cadence_pt_1</name>
+        <label>Update Case for Standard Cadence pt 1</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Update_Case_for_Standard_Cadence_pt_2</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Cadence_Intialized__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Sent__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Clarification_Start_Date__c</field>
+            <value>
+                <elementReference>now</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Current_Process__c</field>
+            <value>
+                <stringValue>Initial Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>In_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Initial_Email__c</field>
+            <value>
+                <elementReference>now</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Next_Process__c</field>
+            <value>
+                <stringValue>Day 3 Reminder Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Restart_24_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Restart_Cadence__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Awaiting Clarification Response</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>X24_Hour_Turn__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_Standard_Cadence_pt_2</name>
+        <label>Update Case for Standard Cadence pt 2</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>Update_Case_for_Standard_Cadence_pt_3</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Customer_Contact_Date_Email__c</field>
+            <value>
+                <elementReference>customerContactDateEmail_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Contact_Date__c</field>
+            <value>
+                <elementReference>GreaterThan5kReminder_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Customer_Specified_Date__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Day_3_Reminder_Call__c</field>
+            <value>
+                <elementReference>day3ReminderCall_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_for_Standard_Cadence_pt_3</name>
+        <label>Update Case for Standard Cadence pt 3</label>
+        <locationX>314</locationX>
+        <locationY>863</locationY>
+        <inputAssignments>
+            <field>Cancellation_Date_Email__c</field>
+            <value>
+                <elementReference>cancellationFinalNotice_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Date__c</field>
+            <value>
+                <elementReference>cancellationDate_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Cancellation_Notice__c</field>
+            <value>
+                <elementReference>cancellationFirstNotice_IntStand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>1442</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Initial_Case_Setup</targetReference>
+        </connector>
+        <filterLogic>(1 AND 2 AND (3 OR 4) AND 5)</filterLogic>
+        <filters>
+            <field>Case_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Clarification</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Merged - Duplicate</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Cadence_Shipping_Priority__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>24 Hour Cadence</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Cadence_Shipping_Priority__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Standard Cadence</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Message_Type_Case__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>60</triggerOrder>
+</Flow>

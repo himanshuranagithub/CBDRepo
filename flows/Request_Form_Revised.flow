@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Lead_Time_Overdue_Email</name>
+        <label>Lead Time: Overdue Email</label>
+        <locationX>1106</locationX>
+        <locationY>1703</locationY>
+        <actionName>Request_Form__c.Lead_Time_Overdue_no_backorder_date</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email</name>
+        <label>Send Email</label>
+        <locationX>50</locationX>
+        <locationY>1271</locationY>
+        <actionName>Request_Form__c.Lead_Time_in_House</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email1</name>
+        <label>Send Email1</label>
+        <locationX>314</locationX>
+        <locationY>1379</locationY>
+        <actionName>Request_Form__c.Lead_Time_Pre_Order</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email3</name>
+        <label>Send Email3</label>
+        <locationX>578</locationX>
+        <locationY>1487</locationY>
+        <actionName>Request_Form__c.Pre_Production_Order_Status</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email4</name>
+        <label>Send Email4</label>
+        <locationX>842</locationX>
+        <locationY>1595</locationY>
+        <actionName>Request_Form__c.Virtual_Form</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_6</name>
+        <label>Send Email 6</label>
+        <locationX>1370</locationX>
+        <locationY>1811</locationY>
+        <actionName>Request_Form__c.Freight_Quote_Order_Status</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Freight_Quote_Request_Status</name>
+        <label>Freight Quote Request Status</label>
+        <locationX>1502</locationX>
+        <locationY>1703</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Freight_Quote_Request_Status_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Freight_Quote_Request</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_6</targetReference>
+            </connector>
+            <label>Freight Quote Request Status True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Added email fields used in email alert.</description>
+        <name>Lead_Time_In_House</name>
+        <label>Lead Time - In House</label>
+        <locationX>309</locationX>
+        <locationY>1163</locationY>
+        <defaultConnector>
+            <targetReference>Lead_Time_Pre_Order</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Lead Time - In House</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Lead_Time_In_House</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (1 AND 2 AND 3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead Time : In House</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Team_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CC_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>TRUE_Lead Time - In House</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Added email fields used in email alert.</description>
+        <name>Lead_Time_Overdue_no_backorder_date</name>
+        <label>Lead Time : Overdue, no backorder date</label>
+        <locationX>1304</locationX>
+        <locationY>1595</locationY>
+        <defaultConnector>
+            <targetReference>Freight_Quote_Request_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Lead Time : Overdue, no backorder date</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Lead_Time_Overdue_no_backorder_date</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (1 AND 2 AND 3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Lead Time : Overdue, no backorder date</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Team_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CC_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Time_Overdue_Email</targetReference>
+            </connector>
+            <label>TRUE_Lead Time : Overdue, no backorder date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Added email fields used in email alert.</description>
+        <name>Lead_Time_Pre_Order</name>
+        <label>Lead Time : Pre-Order</label>
+        <locationX>569</locationX>
+        <locationY>1271</locationY>
+        <defaultConnector>
+            <targetReference>Pre_Production_Order_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Lead Time : Pre-Order</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Lead_Time_Pre_Order</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (1 AND 2 AND 3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0123p000000l2lkAAA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Team_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CC_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email1</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>TRUE_Lead Time : Pre-Order</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Lead_Time_Pre_Order_Clear_CC</name>
+        <label>Lead Time - Pre-Order Clear CC</label>
+        <locationX>309</locationX>
+        <locationY>863</locationY>
+        <defaultConnector>
+            <targetReference>Lead_Time_In_House</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Lead Time - Pre-Order Clear CC</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Lead_Time_Pre_Order_Clear_CC</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Priority__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Priority 1</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Lead Time : Pre-Order</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_CC</targetReference>
+            </connector>
+            <label>TRUE_Lead Time - Pre-Order Clear CC</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Added email fields used in email alert.</description>
+        <name>Pre_Production_Order_Status</name>
+        <label>Pre-Production Order Status</label>
+        <locationX>825</locationX>
+        <locationY>1379</locationY>
+        <defaultConnector>
+            <targetReference>Request_Form</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Pre-Production Order Status</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Pre_Production_Order_Status</name>
+            <conditionLogic>(1 AND 2 AND 3) OR (1 AND 2 AND 3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pre-Production Order Status</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Team_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CC_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email3</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>TRUE_Pre-Production Order Status</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Added email fields used in email alert.</description>
+        <name>Request_Form</name>
+        <label>Request Form - Virtual Form</label>
+        <locationX>1073</locationX>
+        <locationY>1487</locationY>
+        <defaultConnector>
+            <targetReference>Lead_Time_Overdue_no_backorder_date</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Request Form</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Request_Form</name>
+            <conditionLogic>1 AND 2 AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Virtual Form</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submitted</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Virtual_Form_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email4</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>TRUE_Request Form</label>
+        </rules>
+    </decisions>
+    <description>SF - 352 Dev: Move case PB to Flows - Rest
+Migrated from the PB - Request Form 20220110 process using multiple criteria.
+Adding 1 Hour Inactive node to scheduled action flow (Request Form - Scheduled Action)
+Added email fields used in email alert to nodes</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formulaCompanyName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Case__r.AccountId}</expression>
+    </formulas>
+    <formulas>
+        <name>formulaDate</name>
+        <dataType>Date</dataType>
+        <expression>DATEVALUE({!$Record.CreatedDate} )</expression>
+    </formulas>
+    <formulas>
+        <name>formulaEmail</name>
+        <dataType>String</dataType>
+        <expression>TEXT({!$Record.Site_Emails__c})</expression>
+    </formulas>
+    <interviewLabel>Request Form - Revised {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Request Form - Revised 010424</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Collect_ACCOUNT_Name</name>
+        <label>Collect ACCOUNT Name</label>
+        <locationX>309</locationX>
+        <locationY>647</locationY>
+        <connector>
+            <targetReference>Collect_SO_EBS_Order_from_CASE</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Company_Name__c</field>
+            <value>
+                <elementReference>formulaCompanyName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Collect_EBS_ORDER_from_CASE</name>
+        <label>Collect EBS ORDER from CASE</label>
+        <locationX>309</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Update_Todays_Date</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>EBS_Order_RF__c</field>
+            <value>
+                <elementReference>$Record.Case__r.EBS_Order__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Collect_SO_EBS_Order_from_CASE</name>
+        <label>Collect SO#/EBS Order# from CASE</label>
+        <locationX>309</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>Lead_Time_Pre_Order_Clear_CC</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Sales_Order_Number__c</field>
+            <value>
+                <elementReference>$Record.Case__r.EBS_Order_Number__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_CC</name>
+        <label>Update CC</label>
+        <locationX>177</locationX>
+        <locationY>971</locationY>
+        <connector>
+            <targetReference>Lead_Time_In_House</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>CC_Email__c</field>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Email</name>
+        <label>Update Email</label>
+        <locationX>309</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Collect_EBS_ORDER_from_CASE</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Team_Email__c</field>
+            <value>
+                <elementReference>formulaEmail</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Todays_Date</name>
+        <label>Update Todays Date</label>
+        <locationX>309</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Collect_ACCOUNT_Name</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Today_s_Date__c</field>
+            <value>
+                <elementReference>formulaDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>183</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Email</targetReference>
+        </connector>
+        <object>Request_Form__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

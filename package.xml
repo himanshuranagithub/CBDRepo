@@ -326,7 +326,7 @@
         <members>customer_note_v2</members>
         <members>customer_satisfaction</members>
         <members>net_promoter_score</members>
-        <name>FlowDefinition</name>
+        <name>Flow</name>
     </types>
     <version>56.0</version>
 </Package>
