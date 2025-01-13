@@ -1,0 +1,48 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false" docType="html-5.0">  
+    
+    <div>
+        <h1>Web Chat </h1>
+    </div> 
+    <script type='text/javascript'>
+    function initEmbeddedMessaging() {
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+            window.addEventListener("onEmbeddedMessagingReady", e => {
+                embeddedservice_bootstrap.prechatAPI.setVisiblePrechatFields({
+                // List the pre-chat field names with the value and whether
+                // it's editable in the pre-chat form.
+                "_firstName": {
+                    "value": "Ritesh",
+                    "isEditableByEndUser": false
+                },
+                "_lastName": {
+                    "value": "Kumar",
+                    "isEditableByEndUser": false
+                },
+                "_email": {
+                    "value": "riteshkumar_54@hotmail.com",
+                    "isEditableByEndUser": false
+                },
+                "Account_Number": {
+                    "value": "012345",
+                    "isEditableByEndUser": false
+                } 
+            });
+        });
+        
+        embeddedservice_bootstrap.init(
+            '00DU8000002Zr1t',
+            'Koozie_Web_Chat',
+            'https://kooziegroup--full.sandbox.my.site.com/ESWKoozieWebChat1735035965496',
+            {
+                scrt2URL: 'https://kooziegroup--full.sandbox.my.salesforce-scrt.com'
+            }
+        );
+    } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+    }
+    };
+    </script>
+    <script type='text/javascript' src='https://kooziegroup--full.sandbox.my.site.com/ESWKoozieWebChat1735035965496/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    
+    </apex:page>
