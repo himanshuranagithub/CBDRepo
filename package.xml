@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>EmbeddedServiceLiveAgent_Parent04I3p000000k9bSEAQ_1717f58874c</members>
-        <members>Non_Elite_Chat</members>
-        <name>EmbeddedServiceLiveAgent</name>
+        <members>ISE_IDVAudit</members>
+        <name>ExplainabilityActionVersion</name>
     </types>
     <version>56.0</version>
 </Package>
