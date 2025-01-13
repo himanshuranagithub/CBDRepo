@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Case Escalation Closed</name>
+    <style>none</style>
+    <subject>Case Escalation is closed: {!Case_Escalation__c.Name} - {!Case_Escalation__c.Case_Reference__c}.</subject>
+    <textOnly>Case Escalation, {!Case_Escalation__c.Name}, has been closed. You can find the details below:  
+
+Escalation Reason: {!Case_Escalation__c.Escalation_Reason__c} 
+Request Date: {!Case_Escalation__c.Request_Date__c} 
+Case: {!Case_Escalation__c.Case_Numter__c} 
+Order: {!Case_Escalation__c.Sales_Order__c} 
+
+Request: {!Case_Escalation__c.Request_Details__c}
+
+ Response: {!Case_Escalation__c.Response_Details__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

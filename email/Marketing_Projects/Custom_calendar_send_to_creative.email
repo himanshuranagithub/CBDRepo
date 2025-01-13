@@ -1,0 +1,8 @@
+Marketing Project Name: {!Marketing_Projects__c.Marketing_Project_Name__c}
+Number: {!Marketing_Projects__c.Name}
+Status:{!Marketing_Projects__c.Status__c}
+Created Date:{!Marketing_Projects__c.CreatedDate} 
+Due Date: {!Marketing_Projects__c.Due_Date__c}
+Days until due date: {!Marketing_Projects__c.Days_until_due_date__c}
+Project Owner: {!Marketing_Projects__c.OwnerFullName}
+Salesforce Link: {!Marketing_Projects__c.Link}

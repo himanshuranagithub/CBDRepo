@@ -1,0 +1,13 @@
+Case Escalation, {!Case_Escalation__c.Name}, has been closed. You can find the details below: 
+</br></br>
+
+Account: {!Case_Escalation__c.Account_Name__c}</br>
+Contact: {!Case_Escalation__c.Contact__c}</br>
+Escalation Reason: {!Case_Escalation__c.Escalation_Reason__c}</br>
+Request Date: {!Case_Escalation__c.Request_Date__c}</br>
+Case: {!Case_Escalation__c.Case_Numter__c}</br>
+Order: {!Case_Escalation__c.Sales_Order__c}</br></br>
+
+Request: {!Case_Escalation__c.Request_Details__c}</br></br>
+
+Response: {!Case_Escalation__c.Response_Details__c}

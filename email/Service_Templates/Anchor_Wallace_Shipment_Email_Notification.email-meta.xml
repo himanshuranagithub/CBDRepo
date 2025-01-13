@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Anchor_Wallace_Header</letterhead>
+    <name>Anchor Wallace Shipment Email Notification</name>
+    <style>freeForm</style>
+    <subject>Shipment Notification - Order# {!EBS_Order__c.EBS_Order_Number__c} &amp; PO # {!EBS_Order__c.Customer_PO__c} [Anchor Wallace]</subject>
+    <textOnly>Hi {!EBS_Order__c.PO_Contact__c},
+
+Account: {!EBS_Order__c.Account_Name__c}
+Purchase Order: {!EBS_Order__c.Customer_PO__c}
+Sales Order:{!EBS_Order__c.EBS_Order_Number__c}
+
+
+Hello! One or more (if applicable) items on your order have shipped. To view tracking and all order details, use this link: {!EBS_Order__c.Tracking_Link_NoPricing__c}
+
+
+
+If the link doesn’t work, copy and paste the above URL into your browser:
+
+
+
+
+
+Please share your feedback on your order experience with us by completing this survey: Feedback
+
+
+Thank you for your order! If you have any questions regarding this order, please reply to this email
+
+
+
+
+All the best,
+Anchor Wallace Customer Support</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

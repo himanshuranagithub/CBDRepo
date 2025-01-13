@@ -1,0 +1,29 @@
+<messaging:emailTemplate subject="PO# {!relatedTo.EBS_PO_Number__c}, SO# {!relatedTo.EBS_Order_ID__c} Order Hold Clarification Resolved. {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+
+<body style="font-family:source sans pro">
+
+
+
+<p align="center" style="text-align:left">Thank you for ordering from The Calendar Coop Center.<br/></p>
+ <p><b>We have the necessary information and will reach out if more details are needed to process your order.</b></p>
+
+
+
+<p>Sincerely,  <br/><br/>
+The Calendar Coop Center Customer Care Team<br/>
+<a href="mailto:csinfo@calendarcs.com"> csinfo@calendarcs.com</a><br/>
+1-800-833-8136 Option 3<br/></p>
+
+
+
+</body>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

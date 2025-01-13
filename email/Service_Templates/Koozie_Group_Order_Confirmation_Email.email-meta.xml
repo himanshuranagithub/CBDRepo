@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Koozie_Group_Header</letterhead>
+    <name>Koozie Group - Order Confirmation Email</name>
+    <style>freeForm</style>
+    <subject>Order Confirmation - Order# {!EBS_Order__c.EBS_Order_Number__c} &amp; PO # {!EBS_Order__c.Customer_PO__c} [Koozie Group]</subject>
+    <textOnly>Hi {!EBS_Order__c.PO_Contact__c},
+Account: {!EBS_Order__c.Account_Name__c}
+Purchase Order:{!EBS_Order__c.Customer_PO__c}
+Sales Order:{!EBS_Order__c.EBS_Order_Number__c}
+
+This email confirms that one or more of your order lines have been verified as complete, including artwork (if applicable) and has been released into our production queue.
+
+
+
+To view your order status and order details by line, use this link: {!EBS_Order__c.Tracking_Link_Formula__c}
+
+
+
+If the link doesn’t work, copy and paste above URL into your browser.
+
+
+Should you have any questions about your order, please reply to this email.
+
+
+
+All the best,
+The Koozie Group Customer Care Krew
+
+kooziegroup.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

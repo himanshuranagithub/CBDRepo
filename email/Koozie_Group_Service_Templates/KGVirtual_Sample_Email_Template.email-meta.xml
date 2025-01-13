@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>1st Batch Review</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>KG Virtual Sample Email Template</name>
+    <style>none</style>
+    <subject>Virtual Sample Request Attached: Case - {!Case.CaseNumber}</subject>
+    <textOnly>keep the good going®
+
+The virtual sample you requested is attached, and that is one good-looking promotional product!
+
+Your virtual will remain open for thirty (30) days so if you have any revisions please be sure to send them over within 30 days from the original received date. We do our best to ensure virtuals are as exact as possible, but proportions, precise placement and colors may not be a 100% accurate representation of the final product.
+
+If you would like a revised virtual sample, please attach the previous version. If that is not available, including the file name will help with accuracy and turn time.
+
+Let us know if there’s anything else you need to close this order. When an order does result from this virtual sample, please send your purchase order and include the virtual sample that was created for you to orders@kooziegroup.com.
+
+All the best,
+The Koozie Group Customer Care Krew
+
+Please Note:
+1-5 virtual sample requests will be available within 24-48 hours, 6+ requests may incur additional time
+Some requests may not be available due to “Ship From” status
+
+
+kooziegroup.com
+You can check order status and inventory, estimate shipping, create a virtual sample or access case studies, test reports, images and templates. It’s all there!
+
+send orders to:
+24 Hour Orders: 24hour@kooziegroup.com
+Standard Production Orders: orders@kooziegroup.com
+Random Samples and Marketing Collateral Orders: samples@kooziegroup.com
+
+CONFIDENTIALITY NOTICE
+
+This electronic message is confidential and may contain legally privileged information intended only for the use of the individual or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible to deliver it to the intended recipient, you are hereby notified  that any dissemination, distribution or copying of this communication is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and return the original message to us at the address above.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

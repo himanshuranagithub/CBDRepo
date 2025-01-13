@@ -1,0 +1,19 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="background-color: rgb(255, 255, 255);">Hi {!Contact.Name},</span><br style=""><br style=""><font style="">Account: {!EBS_Order__c.Account_Name__c}</font></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif">Purchase Order:&nbsp;{!EBS_Order_Line__c.Purchase_Order__c}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif">Sales Order:&nbsp;{!EBS_Order_Line__c.Sales_Order__c}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style=""><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">This email confirms that one or more of your
+order lines have been verified as production ready, including artwork (if applicable)
+and has been released into our production queue. <o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US"><br></span></p>
+
+<p class="MsoNormal" style=""><span lang="EN-US" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">To view your order status and order details
+by line, use this link:&nbsp; &nbsp;</span><font face="arial"><b><u>{!EBS_Order__c.Tracking_Link_Formula__c}</u></b></font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><b><u><span lang="EN-US"><br></span></u></b></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US"><b>If the link doesn? work, copy and paste
+above URL into your browser.</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 12pt;">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">Should you have any questions about your
+order, please reply to this email.</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></p></div><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="Arial, sans-serif" style="">All the best,<br>Calendar Coop Customer Support</font></p>]]></td>
+</tr>
+</table>
