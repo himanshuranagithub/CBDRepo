@@ -1,79 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Admin</members>
-        <members>Analytics Cloud Integration User</members>
-        <members>Analytics Cloud Security User</members>
-        <members>BIC API Read Only</members>
-        <members>BIC Executive</members>
-        <members>BIC JIRA Integration</members>
-        <members>BIC Manager - Account Executive</members>
-        <members>BIC Manager - Credit</members>
-        <members>BIC Manager - Customer Service</members>
-        <members>BIC Manager - Field Sales</members>
-        <members>BIC Manager - Inside Sales</members>
-        <members>BIC Manager - Marketing</members>
-        <members>BIC Manager - National Sales</members>
-        <members>BIC Standard User - Account Executive</members>
-        <members>BIC Standard User - Claims</members>
-        <members>BIC Standard User - Credit</members>
-        <members>BIC Standard User - Customer Service</members>
-        <members>BIC Standard User - Field Sales</members>
-        <members>BIC Standard User - Human Resources</members>
-        <members>BIC Standard User - Marketing</members>
-        <members>BIC Standard User - National Account Rep</members>
-        <members>BIC Standard User - Quoting</members>
-        <members>BIC Standard User- Inside Sales Rep</members>
-        <members>Bic API Only</members>
-        <members>CPQ Integration User</members>
-        <members>Care Krew Collaboration Profile</members>
-        <members>Chat Setup Flow Site Profile</members>
-        <members>Chatter External User</members>
-        <members>Chatter Free User</members>
-        <members>Chatter Moderator User</members>
-        <members>ContractManager</members>
-        <members>Customer Community User</members>
-        <members>ESW_Agentforce_Chat_1735548895867 Profile</members>
-        <members>ESW_Koozie_Web_Chat_1735035965496 Profile</members>
-        <members>Einstein Agent User</members>
-        <members>Email Survey Response Profile</members>
-        <members>External Apps Login User</members>
-        <members>Guest License User</members>
-        <members>IB - Account Management</members>
-        <members>IB - Sales</members>
-        <members>IB - Syteline Integration</members>
-        <members>Identity User</members>
-        <members>KG Inside Sales</members>
-        <members>Kooziegroup Answers Profile</members>
-        <members>MarketingProfile</members>
-        <members>MarketingProject Profile</members>
-        <members>Minimum Access - API Only Integrations</members>
-        <members>Minimum Access - Salesforce</members>
-        <members>Read Only1</members>
-        <members>Sales Insights Integration User</members>
-        <members>Salesforce API Only System Integrations</members>
-        <members>SalesforceIQ Integration User</members>
-        <members>Service Agent</members>
-        <members>Service Supervisor</members>
-        <members>SolutionManager</members>
-        <members>Standard</members>
-        <members>Website API Only</members>
-        <members>xAnalytics%2FReports Developer</members>
-        <members>xBIC Director - Marketing</members>
-        <members>xBIC Executive - CFO</members>
-        <members>xBIC Executive - CMO</members>
-        <members>xBIC Executive - COO</members>
-        <members>xBIC Executive Manager - Customer Service</members>
-        <members>xBIC IT</members>
-        <members>xBIC Manager - Claims</members>
-        <members>xBIC Manager - Human Resources</members>
-        <members>xBIC Manager - Quoting %26 Pricing</members>
-        <members>xBIC Manager - Special Markets</members>
-        <members>xBIC Standard User - Clarification</members>
-        <members>xBIC Standard User- Temporary Claims</members>
-        <members>xBic Manager - Clarification</members>
-        <members>xRead Only</members>
-        <name>Profile</name>
+        <members>Account_Executive_Manager</members>
+        <members>Account_Executive_Rep</members>
+        <members>CEO</members>
+        <members>CFO</members>
+        <members>CIO</members>
+        <members>CMO</members>
+        <members>COO</members>
+        <members>Claims_Manager</members>
+        <members>Claims_Rep</members>
+        <members>Clarification_Manager</members>
+        <members>Clarification_Rep</members>
+        <members>Credit_Manager</members>
+        <members>Credit_User</members>
+        <members>Customer_Service_Manager</members>
+        <members>Customer_Service_Rep</members>
+        <members>Director_Customer_Experience</members>
+        <members>Director_of_Sales</members>
+        <members>Field_Sales_Manager</members>
+        <members>Field_Sales_Manager_Canada</members>
+        <members>Field_Sales_Manager_Central</members>
+        <members>Field_Sales_Manager_North_East</members>
+        <members>Field_Sales_Manager_South_East</members>
+        <members>Field_Sales_Manager_West</members>
+        <members>Field_Sales_Rep</members>
+        <members>Field_Sales_Rep_Canada</members>
+        <members>Field_Sales_Rep_Central</members>
+        <members>Field_Sales_Rep_North_East</members>
+        <members>Field_Sales_Rep_South_East</members>
+        <members>Field_Sales_Rep_West</members>
+        <members>Finance_Manager</members>
+        <members>Finance_User</members>
+        <members>Human_Resources</members>
+        <members>Human_Resources_Manager</members>
+        <members>IBNamNsm</members>
+        <members>IBRegionalSalesManager</members>
+        <members>IBVPSales</members>
+        <members>Inside_Sales_Manager</members>
+        <members>Inside_Sales_Rep</members>
+        <members>KGBusinessUnitCSuite</members>
+        <members>Logistics_Manager</members>
+        <members>Marketing_Designer</members>
+        <members>Marketing_Manager</members>
+        <members>Marketing_Rep</members>
+        <members>National_Account_Manager</members>
+        <members>National_Account_Representative</members>
+        <members>Quoting_Manager</members>
+        <members>Quoting_Rep</members>
+        <members>SVP_Supply_Chain</members>
+        <members>System_Admin</members>
+        <members>System_Admin_IT</members>
+        <members>VP_of_Customer_Service</members>
+        <members>VP_of_Sales</members>
+        <name>Role</name>
     </types>
     <version>56.0</version>
 </Package>
