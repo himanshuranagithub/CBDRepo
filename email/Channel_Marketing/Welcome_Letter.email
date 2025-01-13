@@ -1,0 +1,30 @@
+Dear {!Contact.FirstName},<br/><br/>
+
+Welcome to BIC Graphic! My name is Danielle Steinberger and I am your new Account Manager. I am very excited about the opportunity to work together. In the interim, look for our essential selling tools online at bicgraphic.com<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fbicgraphic.com%2fcs%2fbg%2findex&c=E,1,zdUnG6eN8YecpXdvAmleCxN_RS6HED3_7rvZ3JTAro8qoJrOz7M6ljhGJAyjoPz20twhTa494oQbUzUx3YsWNHA1BX67KedoQONklHf9ez6H8yY,&typo=1> or through the links below to assist you in getting started, as well as to gain access to downloadable flyers, the latest promotions, iCatalogs, product videos, and more!<br/><br/>
+
+Guide to Industry Pricing - The attached informative sheet explains industry profit codes and discount calculations.<br/><br/>
+
+Distributor Reference Guide<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fonline.bicgraphic.com%2fumcontent%2fcatalogs%2f2019_US_DistributorRefGuide.pdf&c=E,1,u-Uk2HibfFF-_mYGrQQSUvndrfEWlt2I_Uk6vePkgceq78kFBG0Xp1Wpco8n3Lk4kG6ASt7RB0FhDEGvHCLTHyijlv4YSKBS8sjN0uPscQ,,&typo=1> - This handy guide provides you with everything a distributor needs to know about BIC Graphic. Inside you'll find important factory numbers and email contacts as well as details regarding distributor self-promotions, company policies and other essential information!<br/><br/>
+
+Promotional Flyers<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fonline.bicgraphic.com%2fumcontent%2fcyclepromos%2fcontent%2fC119_US.pdf&c=E,1,Phd_G0j8jLIb8cbzmZgXMmI9wCtccIQQUMz-6mDlIDkAOqkvDs31WRZNFpEzjIQYkif8h59QX1Yr-208wWQin6Az-PiDzl5z_gNcwBZNCh2B6rshaLW1pEiFtoE,&typo=1> - BIC Graphic offers aggressive promotions on best sellers and seasonally relevant products twice a year. Each BIC Graphic Cycle Promotion flyer is valid for six months and features a variety of popular products at prices your customers won't be able to resist.<br/><br/>
+
+New Products Brochure<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fonline.bicgraphic.com%2fumcontent%2fcyclepromos%2fcontent%2f2019_New_Products_Book.pdf&c=E,1,k_f8dSj4tOZGvA7jvKqphmZuPY5t2AscWQbGFavHKKZH-GixafA-SNy6zdenebQYYM9HBdZrWED48T5yAmKIcWKRMsrHI0yCh1oMS28WrH1TfOAh&typo=1> - Features the latest exclusive new products as well as hottest trends to share with your customers.<br/><br/>
+
+Vertical Markets Guide<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fonline.bicgraphic.com%2fumcontent%2fcatalogs%2fVerticalMarketsGuide2019.pdf&c=E,1,G7BFCCI1fZJ-0PafMvaZejo8EZAK2plSAOtlQf7hpoTyqyXND_OcXChkkBmEehM1bJIhRBKGG-kAI2wSPPMK7OCoyoZ-Z9XzVg_WbTlH1Ag,&typo=1> - This guide includes the top sellers and trends best suited for a specific industry, demographic or niche. Featuring innovative products from several well-known brands and retail partners, we're confident this resource will help grow your business!<br/><br/>
+
+Product Categories and Brands Guide<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fonline.bicgraphic.com%2fumcontent%2fcyclepromos%2fcontent%2f2019_New_Categories_Book.pdf&c=E,1,MPwRMC27ztPgc45d7yaIAm8EXN8ZRZEiWtUYjB6ebEK4rAINvQL4M3l4NHsJ_qpC1d51v1tYBV2gqEsN-Vd4VoVt2neCbmcObpd1pKsr1b_r_iTtVeo,&typo=1> - This educational booklet provides specific facts and advantages for every product category we offer, along with brand stories and a selection of best-selling products.<br/><br/>
+
+BIC Graphic wants to make it easy for you to do business with us. I would like to schedule time with you to better understand your needs. Please email or call me with a time when it would be convenient to discuss. Looking forward to work closely with you and help build your business!<br/><br/>
+
+Best regards,<br/>
+{!User.FirstName}<br/><br/><br/>
+
+
+{!User.Name}<br/>
+{!User.Title}<br/>
+BIC Graphic<br/>
+Tel. {!User.Phone}<br/>
+E-Mail {!User.Email}<br/><br/>
+
+www.bicgraphic.com
+<https://linkprotect.cudasvc.com/url?a=http%3a%2f%2fwww.bicgraphic.com&c=E,1,HQxL_DUpE2ZhXCzeiK0u1rYlOVA9fYvj6cYHV8QmCnpN_rF7Y6h3-DyJF5DuJuY7D-0OGS1ORHChmq_w10KPaIgkiRPoODohgOIIZXlTSPD6lPBjE-Rr&typo=1>

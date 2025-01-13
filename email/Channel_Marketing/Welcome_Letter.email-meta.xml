@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Welcome Letter</name>
+    <style>none</style>
+    <subject>Welcome to Bic Graphic!</subject>
+    <textOnly>Dear {!Contact.FirstName},  
+
+Welcome to BIC Graphic! My name is Danielle Steinberger and I am your new Account Manager. I am very excited about the opportunity to work together. In the interim, look for our essential selling tools online at bicgraphic.com or through the links below to assist you in getting started, as well as to gain access to downloadable flyers, the latest promotions, iCatalogs, product videos, and more!
+
+Guide to Industry Pricing - The attached informative sheet explains industry profit codes and discount calculations.
+
+Distributor Reference Guide - This handy guide provides you with everything a distributor needs to know about BIC Graphic. Inside you&apos;ll find important factory numbers and email contacts as well as details regarding distributor self-promotions, company policies and other essential information!
+
+Promotional Flyers - BIC Graphic offers aggressive promotions on best sellers and seasonally relevant products twice a year. Each BIC Graphic Cycle Promotion flyer is valid for six months and features a variety of popular products at prices your customers won&apos;t be able to resist.
+
+New Products Brochure - Features the latest exclusive new products as well as hottest trends to share with your customers.
+
+Vertical Markets Guide - This guide includes the top sellers and trends best suited for a specific industry, demographic or niche. Featuring innovative products from several well-known brands and retail partners, we&apos;re confident this resource will help grow your business!
+
+Product Categories and Brands Guide - This educational booklet provides specific facts and advantages for every product category we offer, along with brand stories and a selection of best-selling products.
+
+BIC Graphic wants to make it easy for you to do business with us. I would like to schedule time with you to better understand your needs. Please email or call me with a time when it would be convenient to discuss. Looking forward to work closely with you and help build your business!
+
+Best regards,
+{!User.FirstName}   
+
+
+{!User.Name} {!User.Title} 
+BIC Graphic 
+Tel. {!User.Phone} 
+E-Mail {!User.Email}  
+www.bicgraphic.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

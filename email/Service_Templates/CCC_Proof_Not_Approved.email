@@ -1,0 +1,37 @@
+<html style="overflow-y:hidden">
+<head>
+<title></title>
+</head>
+<style>
+body {font-family: 'source sans pro';}
+</style>
+<body style="height:auto;min-height:auto">
+<b>Calendar Coop Center</b><br/><br/>
+
+
+Thanks for ordering from Calendar Coop Center! Let’s try that again! We are working on the proof changes you requested for order # {!Clarification_Question__c.EBS_Order_Number__c}.<br/><br/>
+
+PO Number: {!Clarification_Question__c.PO_Number__c}</br>
+Case Number: {!Clarification_Question__c.Case_Number__c}</br>
+Order Number: {!Clarification_Question__c.EBS_Order_Number__c}<br />
+Approver First Name: {!Clarification_Question__c.Authorization_First_Name__c}</br>
+Approver Last Name: {!Clarification_Question__c.Authorization_Last_Name__c}</br>
+Company Name: {!Clarification_Question__c.Authorization_Organization__c}</br></br>
+
+Keep an eye out for your revised proof. Once you think everything  looks good and we have your approval, we’ll move this order to production.<br/><br/>
+
+All the best,<br/>
+The Calendar Coop Customer Care Team<br/><br/><br/>
+
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual<br />
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible<br />
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication<br />
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and<br />
+return the original message to us at the address&nbsp;above.</span> </span>
+
+
+
+</body>
+</html>
+</span> </span>

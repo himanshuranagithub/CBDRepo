@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Change, not additional Proof Needed (CCC)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Change, not additional Proof Needed (CCC)</name>
+    <style>none</style>
+    <subject>Your proof for P.O. {!Clarification_Question__c.PO_Number__c} has been approved with changes</subject>
+    <textOnly>Thank you for your order. We have received the requested changes for order # {!Clarification_Question__c.EBS_Order_Number__c} and are updating
+the proof. Once complete, it will move straight into production because no additional proof was
+requested.
+
+PO Number: {!Clarification_Question__c.PO_Number__c} Case Number: {!Clarification_Question__c.Case_Number__c} Order Number: {!Clarification_Question__c.EBS_Order_Number__c}
+Approver First Name: {!Clarification_Question__c.Authorization_First_Name__c} Approver Last Name: {!Clarification_Question__c.Authorization_Last_Name__c} Company Name: {!Clarification_Question__c.Authorization_Organization__c} Sincerely,
+The Calendar Coop Customer Care Team
+csinfo@calendarcs.com
+1-800-833-8136 Option 3</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

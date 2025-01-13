@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Calendar Coop OE No Touch less then 50</name>
+    <style>freeForm</style>
+    <subject>Order# {!EBS_Order__c.EBS_Order_Number__c} [Calendar Coop] - Less then 50</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
