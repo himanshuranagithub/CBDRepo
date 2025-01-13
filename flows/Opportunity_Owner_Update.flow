@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <description>Triggers for a new opportunity record where the primary team member is Active Rec Type: Programs, Quote Request, Programs</description>
+        <name>Active_Primary_Team_Member</name>
+        <label>Active Primary Team Member</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Inactive_Primary_Sales_Member</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Update Oppty Owner</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Update_Oppty_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Primary_Team_Member2__r.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opportunity_Owner</targetReference>
+            </connector>
+            <label>TRUE_Update Oppty Owner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>New Opportunity record when the Primary Team Member is INACTIVE</description>
+        <name>Inactive_Primary_Sales_Member</name>
+        <label>Inactive Primary Sales Member</label>
+        <locationX>182</locationX>
+        <locationY>731</locationY>
+        <defaultConnector>
+            <targetReference>No_Primary_sales_member</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Inactive Primary Sales Member</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_Inactive_Primary_Sales_Member</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Primary_Team_Member2__r.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_owner_to_Manager</targetReference>
+            </connector>
+            <label>TRUE_Inactive Primary Sales Member</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Triggers on new opportunity record</description>
+        <name>No_Primary_sales_member</name>
+        <label>No Primary sales member</label>
+        <locationX>182</locationX>
+        <locationY>1031</locationY>
+        <defaultConnectorLabel>FALSE_No Primary sales member</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_No_Primary_sales_member</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Primary_Team_Member2__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Inactive</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Owner_to_IS</targetReference>
+            </connector>
+            <label>TRUE_No Primary sales member</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>New Opportunity record and customer service and sales rep profile</description>
+        <name>RecordType</name>
+        <label>Record Type</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Outcome_Sales_or_Customer_Service</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Programs</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Standard</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Quote Request</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Active_Primary_Team_Member</targetReference>
+            </connector>
+            <label>Outcome - Sales or Customer Service</label>
+        </rules>
+    </decisions>
+    <description>Active Primary Team Member/ Inactive Primary Sales Member / No Primary Sales Member</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formulaOwnerOrofileID6</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.BIC_Standard_User_Customer_Service_Profile_ID}</expression>
+    </formulas>
+    <formulas>
+        <name>formulaOwnerProfileID1</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.BIC_Manager_Customer_Service_Profile_ID}</expression>
+    </formulas>
+    <formulas>
+        <name>formulaOwnerProfileID2</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.BIC_Standard_User_Customer_Service_Profile_ID}</expression>
+    </formulas>
+    <formulas>
+        <name>formulaOwnerProfileID3</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.BIC_Manager_Customer_Service_Profile_ID}</expression>
+    </formulas>
+    <formulas>
+        <name>formulaOwnerProfileID4</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.BIC_Standard_User_Customer_Service_Profile_ID}</expression>
+    </formulas>
+    <formulas>
+        <name>formulaOwnerProfileID5</name>
+        <dataType>String</dataType>
+        <expression>{!$Label.BIC_Manager_Customer_Service_Profile_ID}</expression>
+    </formulas>
+    <formulas>
+        <name>ISNEW</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>Set_Opportunity_NameFormula</name>
+        <dataType>String</dataType>
+        <expression>$Record.Account.Name &amp; &quot;-&quot; &amp; TEXT(DATEVALUE($Record.CreatedDate))&amp; &quot;-&quot; &amp; $Record.Project__c</expression>
+    </formulas>
+    <interviewLabel>Opportunity Owner Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Owner Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Opportunity_Owner</name>
+        <label>Update Opportunity Owner</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Inactive_Primary_Sales_Member</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.Primary_Team_Member2__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Owner_to_IS</name>
+        <label>Update Owner to IS</label>
+        <locationX>50</locationX>
+        <locationY>1139</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>0051U000004RIMlQAO</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_owner_to_Manager</name>
+        <label>Update owner to Manager</label>
+        <locationX>50</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>No_Primary_sales_member</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Account.Primary_Team_Member2__r.ManagerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>RecordType</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Created_by_Profile__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Customer Service</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <description>Clears field value &quot;Initial Email Manually Sent&quot; field.</description>
+        <name>Case_Closed_Clear_IEMS_Field</name>
+        <label>Case Closed - Clear IEMS Field</label>
+        <locationX>182</locationX>
+        <locationY>1127</locationY>
+        <defaultConnector>
+            <targetReference>Regular_Accounts</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case_Is_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Clear_IEMS_field</targetReference>
+            </connector>
+            <label>Case Is Closed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Case_PO</name>
+        <label>Case #/ PO</label>
+        <locationX>380</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Change_Request_LOE_Assignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case_PO_2_Decision</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.EBS_Order__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Case_PO__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_PO_2</targetReference>
+            </connector>
+            <label>Case # / PO 2 Decision</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>When email to case receives a change request, the LOE will be assign with this Flow</description>
+        <name>Change_Request_LOE_Assignment</name>
+        <label>Change Request LOE Assignment</label>
+        <locationX>380</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>Clarification_Cases</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New_case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ISNEW</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_LOE</targetReference>
+            </connector>
+            <label>New case</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Clarification_Cases</name>
+        <label>Clarification Cases</label>
+        <locationX>380</locationX>
+        <locationY>1007</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Clarification_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Clarification</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_Closed_Clear_IEMS_Field</targetReference>
+            </connector>
+            <label>Clarification Case</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Regular_Accounts</name>
+        <label>Regular Accounts</label>
+        <locationX>182</locationX>
+        <locationY>1463</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Regular_Account_Outcome</name>
+            <conditionLogic>(1 AND 2 AND 5 AND 6 AND (3 OR 4))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Times_Reopened__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>2.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Response</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Follow-up Needed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Owner:Group.Id</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <elementReference>GroupIDStart</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Parent.EBS_Num__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>CCCPartentEBS</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_Owner</targetReference>
+            </connector>
+            <label>Regular Account Outcome</label>
+        </rules>
+    </decisions>
+    <description>Added Logic for Closed Case (Initial Email Manually Sent) / Case 01897998</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Null the Date Time field</description>
+        <name>DateTimeNull</name>
+        <dataType>DateTime</dataType>
+        <expression>Null</expression>
+    </formulas>
+    <formulas>
+        <name>ISNEW</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>CASE - Clar Tier II - LOE Assignment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CASE - Clar Tier II - LOE Assignment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Clears Initial Email Manually Sent field</description>
+        <name>Clear_IEMS_field</name>
+        <label>Clear IEMS field</label>
+        <locationX>50</locationX>
+        <locationY>1247</locationY>
+        <connector>
+            <targetReference>Regular_Accounts</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Initial_Email_Manually_Sent__c</field>
+            <value>
+                <elementReference>DateTimeNull</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_Owner</name>
+        <label>Update Case Owner</label>
+        <locationX>50</locationX>
+        <locationY>1583</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account_Queue__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Elite 802 4Imprint</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Account_Queue__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Elite 818 Brand Centric Proforma</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Account_Queue__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Elite 816 Zorch</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Account_Queue__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>AW Cal</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>ClarTierII_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Case_PO_2</name>
+        <label>Update Case #/PO 2</label>
+        <locationX>248</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>Change_Request_LOE_Assignment</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Case_PO_2__c</field>
+            <value>
+                <elementReference>$Record.Case_PO__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_LOE</name>
+        <label>Update LOE</label>
+        <locationX>248</locationX>
+        <locationY>791</locationY>
+        <connector>
+            <targetReference>Clarification_Cases</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Complexity__c</field>
+            <value>
+                <stringValue>Low</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Criticality__c</field>
+            <value>
+                <stringValue>Nice to have</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Case_PO</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <description>Calendar Corp parent EBS #</description>
+        <name>CCCPartentEBS</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>741016</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>ClarificationID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>0121U000000DnRWQA0</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>ClarTierII_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>00G4w0000071REDEA2</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Queue Id&apos;s begin with 00G.   This will help with assigning the clarification case owner when the prev value was a different queue</description>
+        <name>GroupIDStart</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>00G</stringValue>
+        </value>
+    </variables>
+</Flow>

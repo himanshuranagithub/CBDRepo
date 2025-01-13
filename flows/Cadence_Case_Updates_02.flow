@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <description>PB - Case Notifications</description>
+        <name>Clarification_Case_From_New</name>
+        <label>Clarification Case From New</label>
+        <locationX>182</locationX>
+        <locationY>731</locationY>
+        <defaultConnectorLabel>FALSE_Clarification Case From New</defaultConnectorLabel>
+        <rules>
+            <name>New_Clarification_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Awaiting Clarification Response</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Clarification_Hold__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Clarification_Pending_02</targetReference>
+            </connector>
+            <label>New Clarification Case</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>PB - Case Notifications</description>
+        <name>myRule_4</name>
+        <label>Case Status Change</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Clarification_Case_From_New</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>FALSE_Case Status Change - Start Entitlement</defaultConnectorLabel>
+        <rules>
+            <name>TRUE_myRule_4</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsStopped</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Awaiting Clarification Response</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Clarification_Hold__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Clarification_Pending</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>TRUE_Case Status Change</label>
+        </rules>
+    </decisions>
+    <description>Migrated from the PB - Case Notifications (Mit) process using multiple criteria.
+Added conditions for Elite Portal Team</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_TRUE_myRule_6</name>
+        <dataType>Boolean</dataType>
+        <expression>IF
+(
+	OR
+	(
+		AND
+		(
+			ISNEW(), 
+			ISPICKVAL({!$Record.Status} , &apos;NEW&apos;),
+			{!$Record.RecordType.Name} = &apos;Clarification&apos;
+		),
+		AND
+		(
+			ISPICKVAL(PRIORVALUE({!$Record.Status} ), &apos;CLOSED&apos;) , 
+			ISPICKVAL({!$Record.Status} , &apos;NEW&apos;),
+			{!$Record.RecordType.Name} = &apos;Clarification&apos;
+		), 
+		AND
+		(
+			TEXT({!$Record.Status}) = &apos;Awaiting Clarification Response&apos;,
+			{!$Record.RecordType.Name} = &apos;Clarification&apos;,
+                        {!$Record.Clarification_Hold__c} != TRUE
+		)
+	),
+	TRUE, 
+	FALSE
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Is New</description>
+        <name>ISNEW</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Cadence - Case Updates - 02 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CADENCE - Case Updates - 02</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Clarification_Pending</name>
+        <label>Get Clarification Pending</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>myRule_4_A1</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Clarification_Pending</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Clarification_Pending_02</name>
+        <label>Get Clarification Pending 02</label>
+        <locationX>50</locationX>
+        <locationY>839</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Owner_to_Clarification_Pending</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Clarification_Pending</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>myRule_4_A1</name>
+        <label>Update Stopped</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Clarification_Case_From_New</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>IsStopped</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_Clarification_Pending.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Exclude National Pen and Cimpress</description>
+        <name>Update_Owner_to_Clarification_Pending</name>
+        <label>Update Owner to Clarification Pending</label>
+        <locationX>50</locationX>
+        <locationY>947</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Clarification_Hold_Queue__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>ElitePortalTeam</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_Clarification_Pending_02.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>myRule_4</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Case_Record_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Clarification</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Cimpress account</description>
+        <name>Cimpress</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>720984</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>ElitePortalTeam</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Elite Portal Team</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>NationalPen</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>46097</stringValue>
+        </value>
+    </variables>
+</Flow>

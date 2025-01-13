@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>AssignCasesUsingAssignmentRulesPB</name>
+        <label>AssignCasesUsingAssignmentRulesPB</label>
+        <locationX>50</locationX>
+        <locationY>1031</locationY>
+        <actionName>AssignCasesUsingAssignmentRulesPB</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>CaseIds</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <description>From PB - Case Thread ID FK</description>
+        <name>Empty_FK_ID</name>
+        <label>Empty FK ID</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Field_for_Close_Case</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Empty_FK_ID_True</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ThreadID_FK__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ThreadID_FK__c</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>[ref:_00</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_ThreadID_Field</targetReference>
+            </connector>
+            <label>Empty FK ID - True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>From PB - Delayed Order Case</description>
+        <name>Field_for_Close_Case</name>
+        <label>Field for Close Case</label>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
+        <defaultConnector>
+            <targetReference>New_Case</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Field_for_Close_Case_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Notified Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Delayed_Order_Notice_Field</targetReference>
+            </connector>
+            <label>Field for Close Case - True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>From PB - Delayed Order Case</description>
+        <name>New_Case</name>
+        <label>New Case</label>
+        <locationX>182</locationX>
+        <locationY>923</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>New_Case_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>NewCaseFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignCasesUsingAssignmentRulesPB</targetReference>
+            </connector>
+            <label>New Case - True</label>
+        </rules>
+    </decisions>
+    <description>PB - Delayed Order Case ( Field for close case, New Case) / PB - Case Thread ID FK (Empty FK ID)</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>DelayedOrderFormula</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW() + (61/1440)</expression>
+    </formulas>
+    <formulas>
+        <name>NewCaseFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+     ISNEW(),  
+OR(
+   {!$Record.RecordType.Id} != &apos;0124w000001h0Hp&apos;, 
+   {!$Record.RecordType.Id} != &apos;0124w000001UVsVAAW&apos;
+) )</expression>
+    </formulas>
+    <formulas>
+        <name>ThreadID_FK_Formula</name>
+        <dataType>String</dataType>
+        <expression>&quot;[ref:!&quot; &amp; LEFT({!$Organization.Id},6) 
+&amp; RIGHT({!$Organization.Id},4)&amp; &quot;.!&quot; 
+&amp; LEFT({!$Record.Id},6) 
+&amp; SUBSTITUTE(Left(RIGHT(Left({!$Record.Id}, 15),10), 5), &quot;0&quot;, &quot;&quot;) 
+&amp; RIGHT(LEFT({!$Record.Id}, 15),5) &amp; &quot;:ref]&quot;</expression>
+    </formulas>
+    <interviewLabel>CASE - Non-Clar ( {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CASE - Non-Clar Process (CREATED) - 02</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Delayed_Order_Notice_Field</name>
+        <label>Update Delayed Order Notice Field</label>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
+        <connector>
+            <targetReference>New_Case</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Delayed_Order_Notice_Test__c</field>
+            <value>
+                <elementReference>DelayedOrderFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_ThreadID_Field</name>
+        <label>Update ThreadID Field</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Field_for_Close_Case</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>ThreadID_FK__c</field>
+            <value>
+                <elementReference>ThreadID_FK_Formula</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Empty_FK_ID</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>
