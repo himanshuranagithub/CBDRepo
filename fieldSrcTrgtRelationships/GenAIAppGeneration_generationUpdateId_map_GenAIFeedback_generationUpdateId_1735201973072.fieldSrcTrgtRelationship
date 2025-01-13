@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Custom</definitionCreationType>
+    <masterLabel>GenAIAppGeneration_generationUpdateId_map_GenAIFeedback_generationUpdateId_1735201973072</masterLabel>
+    <relationshipCardinality>OneToOne</relationshipCardinality>
+    <sourceFieldName>GenAIAppGeneration__dlm.generationUpdateId__c</sourceFieldName>
+    <targetFieldName>GenAIFeedback__dlm.generationUpdateId__c</targetFieldName>
+</FieldSrcTrgtRelationship>

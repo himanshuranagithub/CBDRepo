@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Custom</definitionCreationType>
+    <masterLabel>GenAIGeneration_generationResponseId_map_GenAIGatewayResponse_generationResponseId_1735201968664</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>GenAIGeneration__dlm.generationResponseId__c</sourceFieldName>
+    <targetFieldName>GenAIGatewayResponse__dlm.generationResponseId__c</targetFieldName>
+</FieldSrcTrgtRelationship>

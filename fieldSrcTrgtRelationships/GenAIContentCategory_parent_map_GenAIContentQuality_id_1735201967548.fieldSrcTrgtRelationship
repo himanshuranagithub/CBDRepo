@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Custom</definitionCreationType>
+    <masterLabel>GenAIContentCategory_parent_map_GenAIContentQuality_id_1735201967548</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>GenAIContentCategory__dlm.parent__c</sourceFieldName>
+    <targetFieldName>GenAIContentQuality__dlm.id__c</targetFieldName>
+</FieldSrcTrgtRelationship>

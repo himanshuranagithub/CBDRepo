@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSrcTrgtRelationship xmlns="http://soap.sforce.com/2006/04/metadata">
+    <definitionCreationType>Calculated_Insight</definitionCreationType>
+    <masterLabel>template_version_feedback_prompt_template_map_GenAIGatewayRequest_promptTemplateDevName_1735201987480</masterLabel>
+    <relationshipCardinality>ManyToOne</relationshipCardinality>
+    <sourceFieldName>template_version_feedback__cio.prompt_template__c</sourceFieldName>
+    <targetFieldName>GenAIGatewayRequest__dlm.promptTemplateDevName__c</targetFieldName>
+</FieldSrcTrgtRelationship>
