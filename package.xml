@@ -1,121 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.Associations</members>
-        <members>Account.Customers</members>
-        <members>Account.Eloqua_Migration</members>
-        <members>Account.IBAccount</members>
-        <members>Account.NTA_National_Tracking_ACCOUNT</members>
-        <members>Account.Suppliers</members>
-        <members>Account.VendorAccount</members>
-        <members>Campaign.Adestra_Campaign</members>
-        <members>Campaign.Newsletter</members>
-        <members>Campaign.Promotion</members>
-        <members>Campaign.Standard_Campaign</members>
-        <members>Campaign.Trade_Show</members>
-        <members>Case.Care_Krew_SF_Request</members>
-        <members>Case.Case</members>
-        <members>Case.Change_Request</members>
-        <members>Case.Chat</members>
-        <members>Case.Claims</members>
-        <members>Case.Clarification</members>
-        <members>Case.Credit</members>
-        <members>Case.Custom_HG_PB_Inquiry</members>
-        <members>Case.Delayed_Order</members>
-        <members>Case.Forms</members>
-        <members>Case.Inside_Sales_Case</members>
-        <members>Case.Large_Orders</members>
-        <members>Case.MLT_Mfg_Liaison_Case</members>
-        <members>Case.Message</members>
-        <members>Case.PreProduction_Change</members>
-        <members>Case.Purchase_Order</members>
-        <members>Case.SF_Maintenance_Data_Request</members>
-        <members>Case.Service_Request</members>
-        <members>Case.Survey</members>
-        <members>Case.VLT_Vendor_Liaison_Case</members>
-        <members>Case.Voice_of_Customer</members>
-        <members>Case.Voicemail</members>
-        <members>Case_Escalation__c.Standard</members>
-        <members>Case_Owner_History__c.Case_Owner_History</members>
-        <members>Case_Owner_History__c.Case_Status_History</members>
-        <members>Claim__c.Customer_Accomodation</members>
-        <members>Claim__c.Sales_Concession</members>
-        <members>Claim__c.Standard</members>
-        <members>Claim__c.Standard_Claim</members>
-        <members>Clarification_Question__c.ClarificationQuestion</members>
-        <members>Clarification_Question__c.NotificationQuestion</members>
-        <members>Clarification_Question__c.ProofQuestion</members>
-        <members>Coaching__c.Opportunity_Coaching</members>
-        <members>Coaching__c.Sales_Coaching</members>
-        <members>Coaching__c.Skills_Coaching</members>
-        <members>Contact.Amish_Contact</members>
-        <members>Contact.CRM_Contact</members>
-        <members>Contact.Clarification_Contact</members>
-        <members>Contact.Finance_Contact</members>
-        <members>Contact.IBContact</members>
-        <members>Contact.Other_Contact</members>
-        <members>Contact.Vendor_Contact</members>
-        <members>Contact.Website_Contact</members>
-        <members>EBS_Order_Line__c.EBSOrderLine</members>
-        <members>EBS_Order_Line__c.SytelineOrderLine</members>
-        <members>EBS_Order__c.IBSytelineOrder</members>
-        <members>EBS_Order__c.KGEBSOrder</members>
-        <members>EBS_Replacement_Order_Line__c.Standard</members>
-        <members>Event.IBEvent</members>
-        <members>Event.KGEvent</members>
-        <members>Event.KG_Sales_Event</members>
-        <members>Inquiry__c.Inquiry_Editable</members>
-        <members>Inquiry__c.Inquiry_Read_Only</members>
-        <members>Knowledge__kav.FAQ</members>
-        <members>Lead.AW_LEAD</members>
-        <members>Lead.Account_Request</members>
-        <members>Lead.KG_Tradeshow_LEAD</members>
-        <members>Marketing_Projects__c.Create_Marketing_Project</members>
-        <members>Marketing_Projects__c.Custom_Calendar_Marketing_Project</members>
-        <members>Marketing_Projects__c.Newsletter_Marketing_Project</members>
-        <members>Marketing_Projects__c.Standard_Project</members>
-        <members>Marketing_Service__c.Customer_Marketing_Services</members>
-        <members>Marketing_Service__c.Standard_Marketing_Service</members>
-        <members>Opportunity.Calendars</members>
-        <members>Opportunity.Custom_Quote</members>
-        <members>Opportunity.IBOpportunity</members>
-        <members>Opportunity.Marketing_Opportunity</members>
-        <members>Opportunity.Price_Request</members>
-        <members>Opportunity.Programs</members>
-        <members>Opportunity.Qualify_Opportunity</members>
-        <members>Opportunity.Quote_Request</members>
-        <members>Opportunity.RFP</members>
-        <members>Opportunity.Standard</members>
-        <members>Opportunity.Virtual_Spec_Sample</members>
-        <members>Product2.IBProduct</members>
-        <members>Product2.KGProduct</members>
-        <members>Quote_Product__c.Custom_Calendar</members>
-        <members>Quote_Product__c.Non_Calendar</members>
-        <members>Quote_Request__c.Apparel</members>
-        <members>Quote_Request__c.CSR_Cust_Universal_Source_Stationary_Hardgood_Default_Custom_Calendar</members>
-        <members>Quote_Request__c.CSR_Customer_Calendar</members>
-        <members>Quote_Request__c.Custom_Calendar</members>
-        <members>Quote_Request__c.Custom_Universal_Source</members>
-        <members>Quote_Request__c.Hardgoods</members>
-        <members>Quote_Request__c.Multi_category</members>
-        <members>Quote_Request__c.Non_Calendar</members>
-        <members>Quote_Request__c.Sales_Pricing_Quote</members>
-        <members>Quote_Request__c.Stationary</members>
-        <members>Request_Form__c.Freight_Quote_Request</members>
-        <members>Request_Form__c.Lead_Time_In_House</members>
-        <members>Request_Form__c.Lead_Time_Overdue_no_backorder_date</members>
-        <members>Request_Form__c.Lead_Time_Pre_Order</members>
-        <members>Request_Form__c.MLT_Change_Request</members>
-        <members>Request_Form__c.Pre_Production_Order_Status</members>
-        <members>Request_Form__c.Virtual_Form</members>
-        <members>Task.IBTask</members>
-        <members>Task.IBWeeklyReport</members>
-        <members>Task.KG_Sales_Task</members>
-        <members>Task.Large_Order_Tasks</members>
-        <members>Task.Monthly_Report</members>
-        <members>Task.Task</members>
-        <members>Task.Task_Service</members>
-        <name>RecordType</name>
+        <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
+        <members>Analytics Cloud Security User</members>
+        <members>BIC API Read Only</members>
+        <members>BIC Executive</members>
+        <members>BIC JIRA Integration</members>
+        <members>BIC Manager - Account Executive</members>
+        <members>BIC Manager - Credit</members>
+        <members>BIC Manager - Customer Service</members>
+        <members>BIC Manager - Field Sales</members>
+        <members>BIC Manager - Inside Sales</members>
+        <members>BIC Manager - Marketing</members>
+        <members>BIC Manager - National Sales</members>
+        <members>BIC Standard User - Account Executive</members>
+        <members>BIC Standard User - Claims</members>
+        <members>BIC Standard User - Credit</members>
+        <members>BIC Standard User - Customer Service</members>
+        <members>BIC Standard User - Field Sales</members>
+        <members>BIC Standard User - Human Resources</members>
+        <members>BIC Standard User - Marketing</members>
+        <members>BIC Standard User - National Account Rep</members>
+        <members>BIC Standard User - Quoting</members>
+        <members>BIC Standard User- Inside Sales Rep</members>
+        <members>Bic API Only</members>
+        <members>CPQ Integration User</members>
+        <members>Care Krew Collaboration Profile</members>
+        <members>Chat Setup Flow Site Profile</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>ContractManager</members>
+        <members>Customer Community User</members>
+        <members>ESW_Agentforce_Chat_1735548895867 Profile</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496 Profile</members>
+        <members>Einstein Agent User</members>
+        <members>Email Survey Response Profile</members>
+        <members>External Apps Login User</members>
+        <members>Guest License User</members>
+        <members>IB - Account Management</members>
+        <members>IB - Sales</members>
+        <members>IB - Syteline Integration</members>
+        <members>Identity User</members>
+        <members>KG Inside Sales</members>
+        <members>Kooziegroup Answers Profile</members>
+        <members>MarketingProfile</members>
+        <members>MarketingProject Profile</members>
+        <members>Minimum Access - API Only Integrations</members>
+        <members>Minimum Access - Salesforce</members>
+        <members>Read Only1</members>
+        <members>Sales Insights Integration User</members>
+        <members>Salesforce API Only System Integrations</members>
+        <members>SalesforceIQ Integration User</members>
+        <members>Service Agent</members>
+        <members>Service Supervisor</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>Website API Only</members>
+        <members>xAnalytics%2FReports Developer</members>
+        <members>xBIC Director - Marketing</members>
+        <members>xBIC Executive - CFO</members>
+        <members>xBIC Executive - CMO</members>
+        <members>xBIC Executive - COO</members>
+        <members>xBIC Executive Manager - Customer Service</members>
+        <members>xBIC IT</members>
+        <members>xBIC Manager - Claims</members>
+        <members>xBIC Manager - Human Resources</members>
+        <members>xBIC Manager - Quoting %26 Pricing</members>
+        <members>xBIC Manager - Special Markets</members>
+        <members>xBIC Standard User - Clarification</members>
+        <members>xBIC Standard User- Temporary Claims</members>
+        <members>xBic Manager - Clarification</members>
+        <members>xRead Only</members>
+        <name>Profile</name>
     </types>
     <version>56.0</version>
 </Package>
