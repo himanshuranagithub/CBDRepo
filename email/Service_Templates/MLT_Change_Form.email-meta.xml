@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2nd Batch review</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MLT Change Form</name>
+    <style>none</style>
+    <subject>{!Request_Form__c.Priority__c},{!Request_Form__c.Change_Requested__c},KG Case# {!Request_Form__c.Case_Number__c},Item# {!Request_Form__c.Item_Number__c},{!Request_Form__c.Case_ThreadID_FK__c}</subject>
+    <textOnly>INFORMATION
+
+Site:  {!Request_Form__c.Site__c}
+Team Email:  {!Request_Form__c.Team_Email__c}
+Extension:  {!Request_Form__c.Extension__c}
+
+ORDER DETAILS
+
+Company Name:  {!Request_Form__c.Company_Name__c}
+Order Type:  {!Request_Form__c.Order_Type__c}
+Factory Direct Product Category:  {!Request_Form__c.Factory_Direct_Product_Category__c}
+Factory Direct PO Number:  {!Request_Form__c.Factory_Direct_PO_Number__c}
+Sales Order Number:  {!Request_Form__c.Sales_Order_Number__c}
+Job Traveler Number:  {!Request_Form__c.Job_Traveler_Number__c}
+Line #:  {!Request_Form__c.Line__c}
+Scheduled Ship Date:  {!Request_Form__c.Scheduled_Ship_Date__c}
+Time Sensitive:  {!Request_Form__c.Time_Sensitive_T_F__c}
+
+CHANGE REQUEST INFORMATION
+
+Change Requested:  {!Request_Form__c.Change_Requested__c}
+Assess Change Fee:  {!Request_Form__c.Assess_Change_Fee_T_F__c}
+Log Rework: {!Request_Form__c.Log_Rework_T_F__c}
+Issue Type:  {!Request_Form__c.Issue_Type__c}
+Additional Information:  {!Request_Form__c.Additional_Information__c}
+Email Text URL:  {!Request_Form__c.Email_Text_URL__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

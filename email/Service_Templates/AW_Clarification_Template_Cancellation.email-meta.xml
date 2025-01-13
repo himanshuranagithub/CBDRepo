@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AW - Clarification Template - Cancellation</name>
+    <style>none</style>
+    <subject>Anchor Wallace PO#  Notice of Cancellation. Case #, Order #,</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

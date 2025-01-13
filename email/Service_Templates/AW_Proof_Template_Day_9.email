@@ -1,0 +1,55 @@
+<messaging:emailTemplate subject="On Hold Clarification Required – Check New Proof (PO# {!relatedTo.EBS_PO_Number__c}/Order #{!relatedTo.EBS_Order_ID__c}) {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+
+<style>
+body {font-family: 'source sans pro';}
+</style>
+
+
+<p align="center" style="text-align:left"><b>Thank you for ordering from Anchor Wallace. Your order is temporarily on hold.</b><br/></p>
+
+ <p align="center" style="text-align:left">The issues below need resolved before your order can move into production.</p>
+    
+    <p><b>PO Number:</b> {!relatedTo.EBS_PO_Number__c}<br/>
+    <b>Order Number:</b> {!relatedTo.EBS_Order_ID__c}<br/> </p>
+    <p><b>Please click the link below to view your proof.</b> If you are having issues opening the link, try to copy/paste it into your browser.</p><br/>
+     
+    <b>Product Number:</b>{!relatedTo.ProductID}<br/><br/>
+    
+    
+
+
+Be sure to carefully review the proof for the following:<br/>
+
+<ul><li>Typographical Errors</li>
+     <li>Valid Color Separation</li>
+    <li>Correct Imprint Position and Size</li>
+    <li>Correct Imprinting Colors</li>
+    <li>Missing Type/Copy/Logos</li>
+    <li>Correct Layout</li>
+</ul>  
+
+
+<p>Issues: <br/>
+<br/><c:clarQuestions rcaseID="{!relatedTo}"/>
+<br/>
+</p>
+
+______________________________________________________________________<br/>
+
+
+
+
+<p>The Anchor Wallace Customer Care Team<br/>
+<a href = "mailto:anchorwallace@anchorwallace.com">anchorwallace@anchorwallace.com</a><br/>
+1-800-533-3570 Option 3<br/><br/></p>
+
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <available>true</available>
+    <description>2nd Batch review</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>KG 4Imprint - Clarification Template - Day 6</name>
+    <style>none</style>
+    <subject>Reminder: Koozie Group PO# , Order on Hold Clarification Required. SO#,</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

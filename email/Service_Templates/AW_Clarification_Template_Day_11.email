@@ -1,0 +1,125 @@
+<messaging:emailTemplate subject="Anchor Wallace PO# {!relatedTo.EBS_PO_Number__c} Action Required Final Request. Order #{!relatedTo.EBS_Order_Number__c}, {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+<html>
+<body lang="EN-US" link="blue" vlink="purple">
+<div class="WordSection1">
+<p class="MsoNormal" style="mso-margin-top-alt:0in;margin-right:.5in;margin-bottom:0in;margin-left:.5in;margin-bottom:.0001pt">
+<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;;color:#1F497D"></span><span style="font-size:10.0pt;font-family:&quot;Helvetica&quot;,&quot;sans-serif&quot;;color:#1F497D">&nbsp;</span><span class="separator"></span></p>
+<div>
+<blockquote style="margin-top:5.0pt;margin-bottom:5.0pt">
+<table class="MsoNormalTable" border="1" cellpadding="0" width="100%" style="width:100.0%">
+<tbody>
+<tr>
+<td colspan="4" style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal" align="center" style="text-align:center">
+<em><b>A&nbsp;
+ U&nbsp; T&nbsp; O&nbsp; M&nbsp; A&nbsp; T&nbsp; I&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O&nbsp; R&nbsp; D&nbsp; E&nbsp; R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp; T&nbsp; A&nbsp; T&nbsp; U&nbsp;S</b></em> <br/>
+Thanks for ordering from Anchor Wallace! Your order is temporarily on hold. <br/>
+<br/>
+<strong>We can’t wait to send your order to production but need to talk to you first about the order below.</strong>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"><strong>Customer Name:</strong></p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal">{!relatedTo.SuppliedCompany}</p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"><strong>Date:</strong></p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal">
+    <apex:outputText value="{0, date, MMMM d','  yyyy}">
+        <apex:param value="{!NOW()}" />
+    </apex:outputText>
+</p>
+</td>
+</tr>
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"><strong>Customer Number:</strong></p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal">{!relatedTo.EBS_Account_Number__c}</p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"><strong>Contact:</strong></p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal">{!relatedTo.SuppliedName}</p>
+</td>
+</tr>
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"><strong>PO Number:</strong></p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal">{!relatedTo.EBS_PO_Number__c}</p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"><strong>Phone:</strong></p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"></p>
+</td>
+</tr>
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"><strong>Order Number:</strong></p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal">{!relatedTo.EBS_Order_ID__c}</p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"><strong>Ship To:</strong></p>
+</td>
+<td style="padding:.75pt .75pt .75pt .75pt"></td>
+</tr>
+<tr>
+<td colspan="4" style="padding:.75pt .75pt .75pt .75pt">
+<div>
+<!--
+<p class="MsoNormal">ALL - All items ordered : This order is on hold due to stock availability. The 2020 calendar # 8654 (Black) requested is no longer available for the remainder of this year. Pricing for the new item you select will apply.
+</p>
+-->
+<br/><c:clarificationQuestions rcaseID="{!relatedTo}"/>
+<p class="MsoNormal">
+</p>
+</div>
+<div>
+<p class="MsoNormal">&nbsp;</p>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="4" style="padding:.75pt .75pt .75pt .75pt">
+<p class="MsoNormal"></p>
+<div>
+<p class="MsoNormal">Signature: ______________________________&nbsp;&nbsp;&nbsp;&nbsp; Date: __________________________</p>
+</div>
+</td>>
+</tr>
+<tr>
+<td colspan="4" style="padding:.75pt .75pt .75pt .75pt"><br/>
+The Anchor Wallace Customer Care Team<br/>
+anchorwallace@anchorwallace.com<br/>
+1-800-533-3570 Option 3<br/><br/>
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+
+</div>
+</body>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

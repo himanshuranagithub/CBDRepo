@@ -1,0 +1,50 @@
+<messaging:emailTemplate subject="Third Request. Calendar Coop Center PO# {!relatedTo.EBS_PO_Number__c} Order on Hold Clarification Required. Case #{!relatedTo.CaseNumber}, Order #{!relatedTo.EBS_Order_Number__c}, {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+
+<style>
+body {font-family: 'source sans pro';}
+</style>
+
+
+
+
+<p>Thank you for ordering from The Calendar Coop Center. Your order remains on hold.</p>
+ <p><b>This is our third attempt to contact you because there is an issue with the order below that needs resolved:</b></p>
+    
+   <li> Customer Name: {!relatedTo.SuppliedCompany}</li>
+    
+
+    <li>Customer Number: {!relatedTo.EBS_Account_Number__c}</li>
+    <li>PO Number: {!relatedTo.EBS_PO_Number__c}</li>
+     <li>Order Number: {!relatedTo.EBS_Order_ID__c}</li>
+     <li>Date: {!relatedTo.Clarification_Start_Date__c}</li>
+     <li>Contact: {!relatedTo.Contact.name}</li>
+     <li>Phone: {!relatedTo.ContactPhone}</li>
+     <li>Ship to:<!--donot see any field ship to in case?--></li>
+     
+     <br/><br/><br/><c:clarificationQuestions rcaseID="{!relatedTo}"/>  
+     
+     <P>Please contact us soon to resolve this temporary hold and avoid order cancellation.</P>
+    
+   
+
+
+<p>Sincerely,  <br/><br/>
+The Calendar Coop Center Customer Care Team<br/>
+<a href="mailto:csinfo@calendarcs.com"> csinfo@calendarcs.com</a><br/>
+1-800-833-8136 Option 3<br/></p>
+
+
+
+
+
+
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

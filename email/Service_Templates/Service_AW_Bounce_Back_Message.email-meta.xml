@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Service: AW Bounce Back Message</name>
+    <style>none</style>
+    <subject>Anchor Wallace Case # {!Case.CaseNumber}:  {!Case.Subject} | [{!Case.Thread_Id}]</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thanks for contacting Anchor Wallace!
+
+Case #{!Case.CaseNumber} has been created and a Anchor Wallace Customer Care Specialist will respond to you as soon as possible.
+If you need to reach out to us again, please don’t change the subject line so we can easily reference your case number, which
+allows us to quickly access all your details together in one place.
+
+Wait! What’s a case number?
+
+We recently implemented Salesforce as our new Customer Relationship Management (CRM) system. As part of this, any questions, feedback
+or issues we receive via phone calls or emails, will now be assigned a case number. This allows us to more easily pull up all communications
+and updates associated with your requests so we can follow-up quickly.
+
+Habits can be hard to break, so don’t worry! We can still track any questions using your purchase order or sales order number.
+Your case number just gives us another way to make sure we are always providing great service.
+
+The Anchor Wallace Customer Care Team
+anchorwallace@anchorwallace.com
+1-800-533-3570 Option 3</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

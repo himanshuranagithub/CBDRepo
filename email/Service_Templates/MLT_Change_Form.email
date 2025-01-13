@@ -1,0 +1,110 @@
+<html style="overflow-y: hidden;">
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<table>
+	<tbody>
+		<tr style="height:15pt" width="231">
+			<td>
+			<p><b><span style="font-size:12.0pt;color:black">INFORMATION</span></b></p>
+			</td>
+			<td width="509">&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Site:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Site__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Team Email:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Team_Email__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Extension:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Extension__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>
+			<p><b><span style="font-size:12.0pt;color:black">ORDER DETAILS</span></b></p>
+			</td>
+			<td width="509">&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Company Name:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Company_Name__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Order Type:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Order_Type__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Factory Direct Product Category:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Factory_Direct_Product_Category__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Factory Direct PO Number:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Factory_Direct_PO_Number__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Sales Order Number:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Sales_Order_Number__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Job Traveler Number:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Job_Traveler_Number__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Line #:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Line__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Scheduled Ship Date:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Scheduled_Ship_Date__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Time Sensitive:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Time_Sensitive_T_F__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>
+			<p><b><span style="font-size:12.0pt;color:black">CHANGE REQUEST INFORMATION</span></b></p>
+			</td>
+			<td width="509">&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Change Requested:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Change_Requested__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Assess Change Fee:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Assess_Change_Fee_T_F__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Log Rework:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">
+{!Request_Form__c.Log_Rework_T_F__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Issue Type:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Issue_Type__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Additional Information:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Additional_Information__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Email Text URL:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Email_Text_URL__c}</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

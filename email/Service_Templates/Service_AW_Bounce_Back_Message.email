@@ -1,0 +1,19 @@
+<html style="overflow-y:hidden">
+<head>
+<title></title>
+</head>
+<body style="height:auto;min-height:auto">
+<p class="MsoNoSpacing"><br />
+<span style="font-size:14px"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif">
+Hi {!Contact.FirstName}, <br/><br/>
+Thanks for contacting Anchor Wallace!<br/><br/>
+Case #{!Case.CaseNumber} has been created and a Anchor Wallace Customer Care Specialist will respond to you as soon as possible.<br/> If you need to reach out to us again, please don’t change the subject line so we can easily reference your case number, which <br/>allows us to quickly access all your details together in one place.<br/><br/>
+<b>Wait! What’s a case number?</b><br/><br/>
+We recently implemented Salesforce as our new Customer Relationship Management (CRM) system. As part of this, any questions, feedback<br/> or issues we receive via phone calls or emails, will now be assigned a case number. This allows us to more easily pull up all communications <br/> and updates associated with your requests so we can follow-up quickly.<br/><br/>
+Habits can be hard to break, so don’t worry! We can still track any questions using your purchase order or sales order number. <br/>Your case number just gives us another way to make sure we are always providing great service.<br/><br/>
+
+
+
+<p>The Anchor Wallace Customer Care Team<br/>
+<a href = "mailto:anchorwallace@anchorwallace.com">anchorwallace@anchorwallace.com</a><br/>
+1-800-533-3570 Option 3<br/><br/></p>

@@ -1,0 +1,56 @@
+<messaging:emailTemplate subject="Final Request. BIC Graphic PO# {!relatedTo.EBS_PO_Number__c} Order on Hold Clarification Required. Case #{!relatedTo.CaseNumber}, Order #{!relatedTo.EBS_Order_Number__c}, {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+
+<style>
+body {font-family: 'source sans pro';}
+</style>
+
+
+<span style="font-size:8px;"><img src="https://bicgraphic--c.documentforce.com/file-asset-public/BG_Logo?oid=00DU8000002Zr1t" style="max-width: 840.197px; width: 140.998px; height: 25.9981px;" title="BIC Graphic Logo" /></span><br />
+<span style="font-size:8px"></span><b><span style="color:#ffc107"><span style="font-family: Arial, Helvetica, sans-serif;">|</span></span></b><span style="color:black"><span style="font-family: source sans pro"><span style="font-size: 12px"> The Best Brands in the Business<b>&nbsp;</b></span></span></span><b><span style="color:#ffc107"><span style="font-family: Arial, Helvetica, sans-serif;">|</span></span><span style="color:black"><span style="font-family: source sans pro, sans-serif;">&nbsp;</span></span></b>&nbsp;
+
+<br/><br/>
+
+
+<p>Thanks for ordering from BIC Graphic! Unfortunately, your order remains on hold.</p>
+ <p><b>We can take a hint, so this is the last time we will contact you about resolving the issues on the order below: </b></p>
+    
+   <li> Customer Name: {!relatedTo.SuppliedCompany}</li>
+    
+
+    <li>Customer Number: {!relatedTo.EBS_Account_Number__c}</li>
+    <li>PO Number: {!relatedTo.EBS_PO_Number__c}</li>
+     <li>Order Number: {!relatedTo.EBS_Order_ID__c}</li>
+     <li>Date: {!relatedTo.Clarification_Start_Date__c}</li>
+     <li>Contact: {!relatedTo.Contact.name}</li>
+     <li>Phone: {!relatedTo.ContactPhone}</li>
+     <li>Ship to:<!--donot see any field ship to in case?--></li>
+     
+     <br/><br/><br/><c:clarificationQuestions rcaseID="{!relatedTo}"/>  
+    
+   <p>We hope to talk to you soon to get this resolved, but if we don’t hear back within the next 24 hours, we will have to cancel this order.</p>
+
+
+<p>All the best, <br/>
+The BIC Graphic Customer Care Team<br/></p>
+
+
+
+<a href="https://www.bicgraphic.com/US/" style="text-decoration:none;color:#ffc107;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">bicgraphic.com</a><br />
+<span style="font-size:11px"><span style="color:black"><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif">You can check order status and inventory, estimate shipping, create a virtual sample or access case studies, test reports, images and templates. It&rsquo;s all there!</span></span></span>
+<p>&nbsp;</p>
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual<br />
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible<br />
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication<br />
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and<br />
+return the original message to us at the address&nbsp;above.</span> </span>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>
