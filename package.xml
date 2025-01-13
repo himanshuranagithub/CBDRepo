@@ -1,44 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Activity_sharing</members>
-        <members>All_Sales_Managers_Only</members>
-        <members>All_Users</members>
-        <members>Anchor_Wallace</members>
-        <members>Calendar_Coop</members>
-        <members>Calendar_Team</members>
-        <members>Chat_Access</members>
-        <members>Customer_Service</members>
-        <members>Finance</members>
-        <members>Finance_CONTACTs_edit</members>
-        <members>IBBusinessUnit</members>
-        <members>Inside_Sales_Canada_Territory</members>
-        <members>Inside_Sales_Central_Territory</members>
-        <members>Inside_Sales_North_East_Territory</members>
-        <members>Inside_Sales_South_East_Territory</members>
-        <members>Inside_Sales_West_Territory</members>
-        <members>KG_Executives</members>
-        <members>Kate_and_Katie</members>
-        <members>KoozieBusinessUnit</members>
-        <members>MLT_Team</members>
-        <members>Marketing_Group</members>
-        <members>Marketing_KG_IB</members>
-        <members>National_Sales_Central_Territory</members>
-        <members>National_Sales_North_East_Territory</members>
-        <members>National_Sales_South_East_Territory</members>
-        <members>Program_Managers</members>
-        <members>SFDC_Admin_Team</members>
-        <members>Sales_Group</members>
-        <members>Sales_Marketing</members>
-        <members>Super_Users</members>
-        <members>Temp_Super_User</members>
-        <members>Template_Test_Group</members>
-        <members>Tier_II_Reps</members>
-        <members>VLT_Team</members>
-        <members>VOC_Survey_CASE_Visibility</members>
-        <members>VOC_Team</members>
-        <members>X4Imprint</members>
-        <name>Group</name>
+        <members>KoozieGroupTheme</members>
+        <name>LightningExperienceTheme</name>
     </types>
     <version>56.0</version>
 </Package>
