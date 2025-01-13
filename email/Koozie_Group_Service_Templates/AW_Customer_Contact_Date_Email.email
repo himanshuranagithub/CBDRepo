@@ -1,0 +1,74 @@
+<messaging:emailTemplate subject="Reminder. Anchor Wallace PO# {!relatedTo.EBS_PO_Number__c} Order on Hold Clarification Required. SO#{!relatedTo.EBS_Order_Number__c}, {!relatedTo.ThreadID_FK__c}"
+recipientType="Contact" relatedToType="case">
+ <messaging:htmlEmailBody >
+<html>
+<span><img src="https://kooziegroup--c.documentforce.com/servlet/servlet.ImageServer?id=0154w000024rRrQ&oid=00D1U000000oeAl&lastMod=1650037233000" title="Anchor Wallace Logo" /></span><br />
+<p>Thanks for ordering from Anchor Wallace Group! Your order is temporarily on hold.</p>
+ <p>We have tried to contact you in regard to the order below:</p>
+ 
+    <li>Customer Name: {!relatedTo.Customer_Name__c}</li>
+    <li>Customer Number: {!relatedTo.EBS_Account_Number__c}</li>
+    <li>PO Number: {!relatedTo.EBS_PO_Number__c}</li>
+    <li>Order Number: {!relatedTo.EBS_Order_ID__c}</li>
+<apex:variable var="idx" value="{!0}"/>
+
+    <apex:repeat var="cx1" value="{!relatedTo.Clarification_Questions__r}">
+     <apex:outputPanel rendered="{!if(idx==0,true,false)}">
+     <apex:outputpanel rendered="{!if(cx1.ClarAppVersion__c = '3.0',true,false)}">
+    
+    <p>All you need to do now is <b>click the link below</b> to respond to any clarifications needed to be able to proceed with your order.</p>  
+   <li>Link: <a href="{!relatedTo.Clar_Link__c}"> {!relatedTo.Clar_Link__c}</a> </li>
+    </apex:outputpanel>
+    </apex:outputpanel>
+        <apex:variable var="idx" value="{!idx + 1}" />
+    </apex:repeat>
+    <br/>
+
+<!--    
+<p>All you need to do now is <b>click the link below</b> to respond to any clarifications needed to be able to proceed with your order.</p>  
+ Go To the Link : <a href="{!relatedTo.EBS_Order__r.Tracking_Link_NoPricing__c}">{!relatedTo.EBS_Order__r.Tracking_Link_No_Pricing__c}</a>
+-->
+
+<p>Please be advised that your order is <b><u>ON HOLD</u></b> until you have provided responses to each clarification.</p> 
+
+    <li><b>PO Number: {!relatedTo.EBS_PO_Number__c}</b></li>
+    <li><b>Order Number: {!relatedTo.EBS_Order_ID__c}</b></li>
+    
+
+<!--     
+<p><b>You must follow the link below to view what is needed to proceed with your order.</b>Please do not reply to this email. Replying to this email will not move your order into production as timely.</p>
+-->
+    
+<p>
+<apex:repeat var="cx" value="{!relatedTo.Clarification_Questions__r}">
+
+<apex:outputPanel rendered="{!if((cx.Status__c != 'Closed' && cx.Status__c != 'Answered' && cx.Status__c != 'Canceled') && cx.recordtype.name=='ClarificationQuestion' ,true,false)}">
+
+<tr >
+ <td>Product Number: &nbsp;{!cx.Product_Number__c}</td><br/>
+ <td>Line Number: &nbsp;{!cx.Line_Number__c}</td><br/>
+ <td>Message Text: &nbsp;{!cx.Message_Text__c}</td><br/>
+ <br/>
+</tr>
+</apex:outputPanel>
+</apex:repeat>
+</p> 
+
+<!-- 
+  <p><b>If clicking this link results in an error, please copy and paste the address into your internet browser.</b></p>      
+-->
+
+
+<p>All the best, <br/>
+The Anchor Wallace Customer Care Crew<br/></p>
+<a href="https://www.anchorwallace.com" style="text-decoration:none;color:#456FB2;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">anchorwallace.com</a><br />
+<br/>
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address&nbsp;above.</span> </span>
+</html>
+ </messaging:htmlEmailBody>
+</messaging:emailTemplate>

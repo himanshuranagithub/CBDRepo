@@ -1,0 +1,49 @@
+<messaging:emailTemplate subject="Reminder Anchor Wallace PO# {!relatedTo.EBS_PO_Number__c} Order on Hold Clarification Required. SO# {!relatedTo.EBS_Order_Number__c}, {!relatedTo.ThreadID_FK__c}"
+recipientType="Contact" relatedToType="case">
+ <messaging:htmlEmailBody >
+<html>
+<span><img src="https://kooziegroup--c.documentforce.com/servlet/servlet.ImageServer?id=0154w000024rRrQ&oid=00DU8000002Zr1t&lastMod=1650037233000" title="Anchor Wallace Logo" /></span><br />
+<br />
+<p><b>Thanks for ordering from Anchor Wallace!</b><br/><br/>All you need to do now is <b>click the link below</b> to review your proof.</p>
+<p>Please be advised that your order is still <u><b>ON HOLD</b></u> until your proof is approved. Your order will remain on hold until you follow the link below, then click one of the proof approval options.</p>
+ <p><b>PO Number:</b> {!relatedTo.EBS_PO_Number__c} <br/>
+ <b>Order Number:</b> {!relatedTo.EBS_Order_ID__c} <br/>
+ <b>Product Number:</b>{!relatedTo.ProductID} </p>
+<p><b>You must follow the link below to view your proof and then click approved, approved with changes or not approved.</b> Please do not reply to this email. Replying to this email will not move your order into production.</p>
+<p>
+<br/><c:clarQuestions rcaseID="{!relatedTo}"/>
+</p>
+<p><b>If clicking this link results in an error, please copy and paste the address into your internet browser.</b></p>
+ <p>This proof approval process allows you to clearly view proofs on any mobile device, print, download, email or save the proof as a PDF. Plus, with just two clicks your proof can be approved faster than ever before, and we will begin production as soon as we get your go-ahead. </p>
+Please carefully review for the following:<br/>
+<ul><li>Typographical Errors</li>
+ <li>Valid Color Separation</li>
+ <li>Correct Imprint Position and Size</li>
+ <li>Correct Imprinting Colors</li>
+ <li>Missing Type/Copy/Logos</li>
+ <li>Correct Layout</li>
+</ul>
+<p><b>Additional action needed for this order</b><br/>
+<apex:outputText value="{!IF(AND(NOT(ISBLANK(relatedTo.Count_Open_Clarification_Questions__c)), 
+relatedTo.Count_Open_Clarification_Questions__c > 0 && relatedTo.Count_Open_EProof_Questions__c > 0), relatedTo.Proof_Clar_Link_URL__c, '')}" escape="false"/><br/>
+<br/>
+</p>
+______________________________________________________________________<br/>
+
+
+
+
+<p>All the best, <br/>
+The Anchor Wallace Customer Care Crew<br/></p>
+<a href="https://www.anchorwallace.com" style="text-decoration:none;color:#456FB2;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">anchorwallace.com</a><br />
+<br/>
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">
+This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address&nbsp;above.</span></span>
+</html>
+ </messaging:htmlEmailBody>
+</messaging:emailTemplate>

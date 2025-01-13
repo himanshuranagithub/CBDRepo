@@ -1,0 +1,9 @@
+Your Trade show  {!Campaign.Name} has been Rejected.  
+
+Here is why:
+
+{!ApprovalRequest.Comments}
+
+
+Please go to the record and make all the necessary changes in order to resubmit and/or Cancel this Trade Show Request.
+{!Campaign.Link}

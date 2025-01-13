@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <available>true</available>
+    <description>Anchor Wallace Cancellation Final Notice C.Q. Product Number and Line number will display on output)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AW Cancellation Final Notice</name>
+    <style>none</style>
+    <subject>Anchor Wallace PO#  Order on Hold Clarification Required. Case #, Order #,</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

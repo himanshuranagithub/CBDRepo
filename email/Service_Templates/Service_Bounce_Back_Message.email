@@ -1,0 +1,38 @@
+<span style><img src="https://bicgraphic--c.documentforce.com/file-asset-public/BG_Logo?oid=00D1U000000oeAl" style="max-width:840.197px;width:140.998px;height:25.9981px" title="BIC Graphic Logo" /></span><br />
+<span style="font-size:14px"><b><span style="color:#ffc107"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif">|</span></span></b><span style="color:black"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif"> The Best Brands in the Business<b>&nbsp;</b></span></span><b><span style="color:#ffc107"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif">|</span></span><span style="color:black"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif">&nbsp;</span></span></b></span>&nbsp;<br />
+
+<html style="overflow-y:hidden">
+<head>
+<title></title>
+</head>
+<body style="height:auto;min-height:auto">
+<p class="MsoNoSpacing"><br />
+<span style="font-size:14px"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif">
+Hi {!Contact.FirstName}, <br/><br/>
+Thanks for contacting BIC Graphic!<br/><br/>
+Case #{!Case.CaseNumber} has been created and a BIC Graphic Customer Care Specialist will respond to you as soon as possible.<br/> If you need to reach out to us again, please don’t change the subject line so we can easily reference your case number, which <br/>allows us to quickly access all your details together in one place.<br/><br/>
+<b>Wait! What’s a case number?</b><br/><br/>
+We recently implemented Salesforce as our new Customer Relationship Management (CRM) system. As part of this, any questions, feedback<br/> or issues we receive via phone calls or emails, will now be assigned a case number. This allows us to more easily pull up all communications <br/> and updates associated with your requests so we can follow-up quickly.<br/><br/>
+Habits can be hard to break, so don’t worry! We can still track any questions using your purchase order or sales order number. <br/>Your case number just gives us another way to make sure we are always providing great service.<br/><br/>
+All the best,<br/><br/>
+The BIC Graphic Customer Care Team<br/>
+<a href="https://www.bicgraphic.com/US/" style="text-decoration:none;color:#ffc107;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">bicgraphic.com</a><br />
+<span style="font-size:11px"><span style="color:black"><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif">You can check order status and inventory, estimate shipping, create a virtual sample or access case studies, test reports, images and templates. It&rsquo;s all there!</span></span></span>
+<br/>
+
+<p style="font-family:Source Sans Pro ;,sans-serif"><b><span style="font-size:18px;"><span style="color:#ffc107;">Send Orders to:</span><span style="color:#f39c12;">&nbsp;</span></span></b><br />
+<span style="color:#ffc107"><span style="font-size:11px"><span style="color:#ffc107"><span style="font-size:11px"><span style="color:black"><b>24 Hour Orders:</b>&nbsp;<a href="mailto: 24hour@bicgraphic.com" style="color:#456FB2"><b>24hour@bicgraphic.com</b></a><br />
+<b>Standard Production Orders:</b>&nbsp;<a href="mailto: orders@bicgraphic.com" style="color:#456FB2"><b>orders@bicgraphic.com</b></a><br />
+<b>Random Samples and Marketing Collateral Orders:</b>&nbsp;<a href="mailto: samples@bicgraphic.com" style="color:#456FB2"><b>samples@bicgraphic.com</b></a></span></span></span></span></span></p>
+<span style="color:#ffc107"> <span style="font-size:11px"> <span style="color:#ffc107"><span style="font-size:11px"><span style="color:black"> </span></span></span> </span> </span><br />
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br /><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual<br />
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible<br />
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication<br />
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and<br />
+return the original message to us at the address&nbsp;above.</span> </span>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

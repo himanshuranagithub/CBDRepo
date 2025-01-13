@@ -1,0 +1,14 @@
+Hello,
+
+The following opportunity has been submitted for special pricing approval:
+
+Opportunity Name: {!Opportunity.Name}
+Product: {!Product2.Name} 
+Product Quantity: {!Product2.QuantityUnitOfMeasure}
+Customer Price Point: {!Opportunity.Customer_Price_Point__c}
+
+Additional Notes: {!Opportunity.Description}
+
+Opportunity Link: {!Opportunity.Link}
+
+Approval Status: {!ApprovalRequest.Status}

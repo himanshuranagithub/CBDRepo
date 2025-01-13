@@ -1,0 +1,7 @@
+The following Trade Show {!Campaign.Name} for the total amount  of {!Campaign.Total_Amount_Requested__c} has been rejected for payment for this reason:
+
+{!ApprovalRequest.Comments}
+
+Please go to Campaign to make the appropriate changes.
+
+{!Campaign.Link}

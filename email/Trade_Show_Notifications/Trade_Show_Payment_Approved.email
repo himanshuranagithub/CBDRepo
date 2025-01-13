@@ -1,0 +1,5 @@
+The following Campaign has been approved for payment to process:
+
+{!Campaign.Name}
+{!Campaign.Payment_Method__c}
+{!Campaign.Total_Amount_Requested__c}

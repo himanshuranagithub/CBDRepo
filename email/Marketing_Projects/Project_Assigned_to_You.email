@@ -1,0 +1,16 @@
+Hi  {!Marketing_Projects__c.Designer_Assigned__c},
+
+You have been assigned the following Marketing Project.  
+
+Marketing Project # {!Marketing_Projects__c.Name}
+
+Due Date: {!Marketing_Projects__c.Due_Date__c}
+
+First Draft Due Date: {!Marketing_Projects__c.First_Draft_Due_Date__c}
+
+Marketing Project Name: {!Marketing_Projects__c.Marketing_Project_Name__c}
+
+Salesforce Link: {!Marketing_Projects__c.Link}
+
+
+Thank you

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Service: Bounce Back Message</name>
+    <style>none</style>
+    <subject>{!Organization.Name} Case # {!Case.CaseNumber}:  {!Case.Subject} | [{!Case.Thread_Id}]</subject>
+    <textOnly>| The Best Brands in the Business |
+
+
+
+Hi {!Contact.FirstName},
+
+Thanks for contacting BIC Graphic!
+
+Case #{!Case.CaseNumber} has been created and a BIC Graphic Customer Care Specialist will respond to you as soon as possible.
+If you need to reach out to us again, please don’t change the subject line so we can easily reference your case number, which
+allows us to quickly access all your details together in one place.
+
+Wait! What’s a case number?
+
+We recently implemented Salesforce as our new Customer Relationship Management (CRM) system. As part of this, any questions, feedback
+or issues we receive via phone calls or emails, will now be assigned a case number. This allows us to more easily pull up all communications
+and updates associated with your requests so we can follow-up quickly.
+
+Habits can be hard to break, so don’t worry! We can still track any questions using your purchase order or sales order number.
+Your case number just gives us another way to make sure we are always providing great service.
+
+All the best,
+
+The BIC Graphic Customer Care Team
+bicgraphic.com
+You can check order status and inventory, estimate shipping, create a virtual sample or access case studies, test reports, images and templates. It’s all there!
+
+Send Orders to:
+24 Hour Orders: 24hour@bicgraphic.com
+Standard Production Orders: orders@bicgraphic.com
+Random Samples and Marketing Collateral Orders: samples@bicgraphic.com
+
+
+CONFIDENTIALITY NOTICE
+
+This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified  that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address above.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

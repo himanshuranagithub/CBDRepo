@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <available>true</available>
+    <description>Anchor Wallace Proof Template - Customer Contact Date - Proof</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>AW Proof - Customer Contact Date</name>
+    <style>none</style>
+    <subject>Koozie Group PO#  Order on Hold Clarification Required. SO# ,</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

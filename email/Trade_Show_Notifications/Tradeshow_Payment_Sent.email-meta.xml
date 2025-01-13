@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification to Campaign Owner that Tradeshow Payment has been processed/sent</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Tradeshow Payment Sent</name>
+    <style>promotionLeft</style>
+    <subject>Payment sent for {!Campaign.Name}</subject>
+    <textOnly>The following CAMPAIGN payment has been sent:
+
+
+
+{!Campaign.Name} - Link: {!Campaign.Link}
+
+{!Campaign.Payment_Method__c}
+{!Campaign.Total_Amount_Requested__c}
+----------------------------------------------------------------------
+Check or Credit Memo Issued Date:
+-  {!Campaign.Check_Issued_Date__c}
+Check or Credit Memo Number:
+-  {!Campaign.Check_Number__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
