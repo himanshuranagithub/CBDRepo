@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>template_feedback</members>
-        <members>template_feedback_reasons</members>
-        <members>template_generation_count</members>
-        <members>template_version_feedback</members>
-        <members>template_version_feedback_reasons</members>
-        <name>MktCalcInsightObjectDef</name>
+        <members>TenantBillingUsageEvent</members>
+        <name>MktDataConnection</name>
     </types>
     <version>56.0</version>
 </Package>
