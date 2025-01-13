@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Inside Sales Emails</name>
+    <queueMembers>
+        <users>
+            <user>subion.5@usa.teleperformance.com</user>
+            <user>chavez.212@usa.teleperformance.com</user>
+            <user>tangkengko.6@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

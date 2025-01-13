@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>no@email.com.invalid</email>
+    <name>Anchor Wallace</name>
+    <queueMembers>
+        <users>
+            <user>ashley.braulick@kooziegroup.com</user>
+            <user>donna.schmidt@kooziegroup.com</user>
+            <user>sheri.dowden@kooziegroup.com</user>
+            <user>tamara.campbell@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

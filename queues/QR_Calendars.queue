@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>QR - Calendars</name>
+    <queueMembers>
+        <roles>
+            <role>Quoting_Rep</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Quote_Request__c</sobjectType>
+    </queueSobject>
+</Queue>

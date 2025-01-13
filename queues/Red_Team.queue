@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Red Team</name>
+    <queueMembers>
+        <users>
+            <user>boragay.11@usa.teleperformance.com</user>
+            <user>caranguian.16@usa.teleperformance.com</user>
+            <user>lagonaso.5@usa.teleperformance.com</user>
+            <user>sheets.45@usa.teleperformance.com</user>
+            <user>torrecampo.50@usa.teleperformance.com</user>
+            <user>oquialda.5@usa.teleperformance.com</user>
+            <user>alegre.118@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

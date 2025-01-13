@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>no@email.com.invalid</email>
+    <name>Claims &amp; Res Tier II</name>
+    <queueMembers>
+        <users>
+            <user>ina.dottery@kooziegroup.com</user>
+            <user>susan.hawkins@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Claims_Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

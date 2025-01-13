@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>no@email.com.invalid</email>
+    <name>Elite Portal Team</name>
+    <queueMembers>
+        <users>
+            <user>sildo.15@usa.teleperformance.com</user>
+            <user>domingo.671@usa.teleperformance.com</user>
+            <user>nolasco.141@usa.teleperformance.com</user>
+            <user>dioso.37@usa.teleperformance.com</user>
+            <user>naquita.12@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

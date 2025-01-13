@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>no@email.com.invalid</email>
+    <name>Order Verification</name>
+    <queueMembers>
+        <users>
+            <user>castro.2263@usa.teleperformance.com</user>
+            <user>cian-sun.park@teleperformance.com</user>
+            <user>cruzat.31@usa.teleperformance.com</user>
+            <user>tabuzo.21@usa.teleperformance.com</user>
+            <user>mesina.63@usa.teleperformance.com</user>
+            <user>briones.372@usa.teleperformance.com</user>
+            <user>escleto.8@usa.teleperformance.com</user>
+            <user>banan.14@usa.teleperformance.com</user>
+            <user>cristobal.182@usa.teleperformance.com</user>
+            <user>cabildo.39@usa.teleperformance.com</user>
+            <user>guballo.5@usa.teleperformance.com</user>
+            <user>briones.511@usa.teleperformance.com</user>
+            <user>pamelacanyl.ferrer@teleperformance.com</user>
+            <user>pocholonino.rebong@teleperformance.com</user>
+            <user>baclayo.14@usa.teleperformance.com</user>
+            <user>magkilat.5@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>
