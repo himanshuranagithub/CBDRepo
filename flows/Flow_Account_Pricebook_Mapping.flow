@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Assign_Pricebook</name>
+        <label>Assign Pricebook</label>
+        <locationX>371</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>AccountRecord.Price_Book__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PricingLevelPricebook.Price_Book__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Account_Pricebook</targetReference>
+        </connector>
+    </assignments>
+    <interviewLabel>Flow - Account Pricebook Mapping {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow - Account Pricebook Mapping</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_PricingPricebook</name>
+        <label>Get PricingPricebook</label>
+        <locationX>227</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Pricebook</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Pricing_Level__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>AccountRecord.Pricing_Structure__c</elementReference>
+            </value>
+        </filters>
+        <object>Pricing_Level_Pricebook__c</object>
+        <outputReference>PricingLevelPricebook</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Price_Book__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account_Pricebook</name>
+        <label>Update Account Pricebook</label>
+        <locationX>564</locationX>
+        <locationY>50</locationY>
+        <inputReference>AccountRecord</inputReference>
+    </recordUpdates>
+    <startElementReference>Get_PricingPricebook</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>AccountRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>PricingLevelPricebook</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Pricing_Level_Pricebook__c</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>Migrated from the PB - 4Imprint Email Escalated process using Vendor Relations Email Received criteria.
+SF - 352 Dev: Move case PB to Flows - Rest</description>
+    <environments>Default</environments>
+    <interviewLabel>PB - 4Imprint Email Escalated_1 {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>4Imprint Email Escalated_1</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Case_Reassign</name>
+        <label>Case Reassign</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G3p0000048doQEAQ</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason_Escalated__c</field>
+            <value>
+                <stringValue>4Imprint Vendor Relations Email</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Parent</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Case_Reassign</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>FromAddress</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>ttullis@4imprint.com</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>FromAddress</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>emadel@4imprint.com</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>FromAddress</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>efanshaw@4imprint.com</stringValue>
+            </value>
+        </filters>
+        <object>EmailMessage</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

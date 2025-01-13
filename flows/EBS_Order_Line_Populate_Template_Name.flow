@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Set_Template_Name_Anchor_Wallace_Shipped</name>
+        <label>Set Template Name :Anchor Wallace: Shipped</label>
+        <locationX>1370</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Template_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Anchor Wallace Shipment Email Notification</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Template_Name_Cal</name>
+        <label>Set Template Name : Calendar Coop: In Production</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Template_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Calendar Coop - Order Confirmation</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Template_Name_Calendar_Coop_In_Production</name>
+        <label>Set Template Name :Anchor Wallace: In Production</label>
+        <locationX>314</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Template_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Anchor Wallace Order Confirmation Email Notification</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Template_Name_Calendar_Coop_Shipped</name>
+        <label>Set Template Name : Calendar Coop: Shipped</label>
+        <locationX>1106</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Template_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Calendar Coop Center - Shipment Notification</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Template_Name_Koozie_Group_In_Production</name>
+        <label>Set Template Name :Koozie Group: In Production</label>
+        <locationX>578</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Template_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Koozie Group - Order Confirmation Email</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Template_Name_Koozie_Group_Shipped</name>
+        <label>Set Template Name :Koozie Group: Shipped</label>
+        <locationX>1634</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Template_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Koozie Group - Shipment Email Notification</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <name>COMPLETE</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Complete</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>IN_PRODUCTION</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>In Production</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>SHIPPED</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Shipped</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Check_In_Production</name>
+        <label>Check In Production</label>
+        <locationX>1304</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_TOV_line_equal_In_Production</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TOV_Line_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>IN_PRODUCTION</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Template_Type</targetReference>
+            </connector>
+            <label>If TOV line equal In Production</label>
+        </rules>
+        <rules>
+            <name>IF_TOV_Line_Equal_Shipped</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TOV_Line_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>COMPLETE</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Template_Type_for_Shipped</targetReference>
+            </connector>
+            <label>IF TOV Line Equal Shipped</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Template_Type</name>
+        <label>Check Template Type</label>
+        <locationX>446</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_Order_is_Calendar_Coop</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order__r.Template_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Calendar Coop</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Template_Name_Cal</targetReference>
+            </connector>
+            <label>If Order is Calendar Coop</label>
+        </rules>
+        <rules>
+            <name>If_order_is_Anchor_Wallace</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order__r.Template_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Anchor Wallace</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Template_Name_Calendar_Coop_In_Production</targetReference>
+            </connector>
+            <label>If_order_is_Anchor_Wallace</label>
+        </rules>
+        <rules>
+            <name>If_Order_is_Koozie_Group</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order__r.Template_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Koozie Group</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Template_Name_Koozie_Group_In_Production</targetReference>
+            </connector>
+            <label>If_Order_is_Koozie_Group</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Template_Type_for_Shipped</name>
+        <label>Check Template Type for Shipped</label>
+        <locationX>1502</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Order_is_Calendar_Coop</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order__r.Template_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Calendar Coop</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Template_Name_Calendar_Coop_Shipped</targetReference>
+            </connector>
+            <label>Order is Calendar Coop</label>
+        </rules>
+        <rules>
+            <name>Order_is_Anchor_Wallace</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order__r.Template_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Anchor Wallace</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Template_Name_Anchor_Wallace_Shipped</targetReference>
+            </connector>
+            <label>Order_is_Anchor_Wallace</label>
+        </rules>
+        <rules>
+            <name>Order_is_Koozie_Group</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Order__r.Template_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Koozie Group</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Template_Name_Koozie_Group_Shipped</targetReference>
+            </connector>
+            <label>Order_is_Koozie_Group</label>
+        </rules>
+    </decisions>
+    <description>Populate Template Name based on TOV Line</description>
+    <environments>Default</environments>
+    <interviewLabel>EBS Order Line : Populate Template Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EBS Order Line : Populate Template Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>1178</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_In_Production</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Order__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>EBS_Order_Line__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <triggerOrder>1</triggerOrder>
+</Flow>
