@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Create_Marketing_Project</fullName>
+        <active>true</active>
+        <description>For Use to see only the records required in the general creation of a marketing project</description>
+        <label>Create - Marketing Project</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Custom_Calendar_Marketing_Project</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>Custom_Calendar</compactLayoutAssignment>
+        <label>Custom Calendar</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Newsletter_Marketing_Project</fullName>
+        <active>true</active>
+        <label>Newsletter - Marketing Project</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard_Project</fullName>
+        <active>true</active>
+        <label>Standard Project</label>
+    </recordTypes>
+</CustomObject>

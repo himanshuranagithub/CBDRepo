@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Customer_Marketing_Services</fullName>
+        <active>true</active>
+        <label>Customer Marketing Services</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard_Marketing_Service</fullName>
+        <active>true</active>
+        <label>Standard Marketing Service</label>
+    </recordTypes>
+</CustomObject>

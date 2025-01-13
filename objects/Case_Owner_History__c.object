@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Case_Owner_History</fullName>
+        <active>true</active>
+        <label>Case Owner History</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Case_Status_History</fullName>
+        <active>true</active>
+        <description>Tracks status changes of case</description>
+        <label>Case Status History</label>
+    </recordTypes>
+</CustomObject>

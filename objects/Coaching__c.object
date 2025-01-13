@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Opportunity_Coaching</fullName>
+        <active>true</active>
+        <description>Assessment of opportunity management and next steps</description>
+        <label>Opportunity Coaching</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_Coaching</fullName>
+        <active>true</active>
+        <description>Assessment of direct and indirect selling skills</description>
+        <label>Sales Coaching</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Skills_Coaching</fullName>
+        <active>true</active>
+        <description>Assessment of 3 selling skills and next steps</description>
+        <label>Skills Coaching</label>
+    </recordTypes>
+</CustomObject>

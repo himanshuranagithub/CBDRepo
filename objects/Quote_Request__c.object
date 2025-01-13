@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Apparel</fullName>
+        <active>true</active>
+        <description>Quote Requests Specifically for Apparels Printing Orders - Not in use can be deleted</description>
+        <label>Apparel</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CSR_Cust_Universal_Source_Stationary_Hardgood_Default_Custom_Calendar</fullName>
+        <active>true</active>
+        <description>2 records in here, merge with the other RT with same name</description>
+        <label>CSR Cust / Universal Source / Stationery / Hardgood (Default) ,Custom Calendar</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CSR_Customer_Calendar</fullName>
+        <active>true</active>
+        <description>No data in this RT can be deleted</description>
+        <label>CSR - Customer Calendar</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Custom_Calendar</fullName>
+        <active>true</active>
+        <description>Calendar Custom Price. For Quotes over 100,000 units - Program Manager needs to hold a pre-quote meeting</description>
+        <label>Custom Calendar</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Custom_Universal_Source</fullName>
+        <active>true</active>
+        <description>An Item Number and/or Universal Source branding (NON-Published Pricing/Options for Stockline Universal Source or Custom Products) or a mix of Non-Branded, BIC Branded, and/or Custom / Universal Source Products (Non-Published Pricing/Option)</description>
+        <label>Custom / Universal Source / Stationery / Hardgood</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Hardgoods</fullName>
+        <active>false</active>
+        <description>Hardgoods: Any NON-BIC-Branded Products with an Item Number (Non-Published Pricing/Options for Stockline or Modified Stockline Products)</description>
+        <label>Hardgoods</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Multi_category</fullName>
+        <active>false</active>
+        <description>Multi-Category: A Mix of Non-Branded, BIC Branded, and/or Custom / Universal Source Products (Non-Published Pricing/Options for Stockline or Modified Stockline Products)</description>
+        <label>Multicategory</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Non_Calendar</fullName>
+        <active>true</active>
+        <description>Non-Calendar: Any NON-BIC-Branded Products with an Item Number (Non-Published Pricing/Options for Stockline or Modified Stockline Products)</description>
+        <label>Non-Calendar</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales_Pricing_Quote</fullName>
+        <active>false</active>
+        <description>Standard Pricing, Over-Catalog Quantity Pricing, or Approval Needed for System Pricing.</description>
+        <label>Standard Pricing</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Stationary</fullName>
+        <active>false</active>
+        <description>Any BIC-Branded Products with an Item Number (Non-Published Pricing/Options for Stockline or Modified Stockline Products)</description>
+        <label>Stationery</label>
+    </recordTypes>
+</CustomObject>
