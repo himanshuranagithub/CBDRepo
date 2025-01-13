@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is used for Hard Delete.  Which permanently removes records from the database bypasses the recycle bin
+Delete records in the Bulk API without storing them in the Recycle Bin.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Bulk API Hard Delete</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>BulkApiHardDelete</name>
+    </userPermissions>
+</PermissionSet>
