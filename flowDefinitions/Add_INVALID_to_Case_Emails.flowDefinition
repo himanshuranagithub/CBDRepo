@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This flow will stay INACTIVE in production.  This will be used to update NEW case emails in the Full environment when a refresh is performed. reference case# 01259554</description>
+    <masterLabel>Add INVALID to Case Emails</masterLabel>
+</FlowDefinition>
