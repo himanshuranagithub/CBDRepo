@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Chat_Setup_Flow</members>
-        <members>live_agent_setup_flow</members>
-        <name>LiveChatDeployment</name>
+        <members>Care Krew Collaboration</members>
+        <members>ESW_Agentforce_Chat_1735548895867</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496</members>
+        <members>Kooziegroup Answers</members>
+        <name>ManagedTopics</name>
     </types>
     <version>56.0</version>
 </Package>
