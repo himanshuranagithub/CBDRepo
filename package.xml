@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>General_Chat</members>
-        <members>Logged_In_User</members>
-        <name>LiveChatButton</name>
+        <members>site/ESW_Agentforce_Chat_17355488958671</members>
+        <members>site/ESW_Koozie_Web_Chat_17350359654961</members>
+        <name>DigitalExperienceBundle</name>
     </types>
     <version>56.0</version>
 </Package>
