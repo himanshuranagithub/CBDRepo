@@ -1,63 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <recordTypes>
-        <fullName>Apparel</fullName>
+    <validationRules>
+        <fullName>Less_than_5_products_per_Quote_Request</fullName>
         <active>true</active>
-        <description>Quote Requests Specifically for Apparels Printing Orders - Not in use can be deleted</description>
-        <label>Apparel</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>CSR_Cust_Universal_Source_Stationary_Hardgood_Default_Custom_Calendar</fullName>
+        <description>Stop users from creating more than 5 Products per quote request</description>
+        <errorConditionFormula>AND( RecordTypeId = &apos;0124w000001pXNL&apos;,
+Total_Quote_Products__c &gt; 5)</errorConditionFormula>
+        <errorMessage>Do not add more than 5 products per Quote.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_QR_on_Closed_Opportunities</fullName>
         <active>true</active>
-        <description>2 records in here, merge with the other RT with same name</description>
-        <label>CSR Cust / Universal Source / Stationery / Hardgood (Default) ,Custom Calendar</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>CSR_Customer_Calendar</fullName>
-        <active>true</active>
-        <description>No data in this RT can be deleted</description>
-        <label>CSR - Customer Calendar</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Custom_Calendar</fullName>
-        <active>true</active>
-        <description>Calendar Custom Price. For Quotes over 100,000 units - Program Manager needs to hold a pre-quote meeting</description>
-        <label>Custom Calendar</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Custom_Universal_Source</fullName>
-        <active>true</active>
-        <description>An Item Number and/or Universal Source branding (NON-Published Pricing/Options for Stockline Universal Source or Custom Products) or a mix of Non-Branded, BIC Branded, and/or Custom / Universal Source Products (Non-Published Pricing/Option)</description>
-        <label>Custom / Universal Source / Stationery / Hardgood</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Hardgoods</fullName>
+        <description>Please do not create QRs on Closed Opportunities</description>
+        <errorConditionFormula>AND(
+ISNEW(),
+OR(
+TEXT(  Opportunity__r.StageName ) = &quot;Closed Won&quot;,
+TEXT(  Opportunity__r.StageName  ) = &quot;Closed Lost&quot;
+)
+)</errorConditionFormula>
+        <errorMessage>Please do not create Quote Requests on Closed Opportunities - Thank you,</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Record_Owner_Can_Update_Site_Selection</fullName>
         <active>false</active>
-        <description>Hardgoods: Any NON-BIC-Branded Products with an Item Number (Non-Published Pricing/Options for Stockline or Modified Stockline Products)</description>
-        <label>Hardgoods</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Multi_category</fullName>
-        <active>false</active>
-        <description>Multi-Category: A Mix of Non-Branded, BIC Branded, and/or Custom / Universal Source Products (Non-Published Pricing/Options for Stockline or Modified Stockline Products)</description>
-        <label>Multicategory</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Non_Calendar</fullName>
+        <description>Only the record owner or a system administrator can update the site selection field</description>
+        <errorConditionFormula>AND(ISCHANGED(  Site_Selection__c ), $User.Id &lt;&gt; OwnerId, 
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;
+       )</errorConditionFormula>
+        <errorMessage>Only the record owner can modify the &quot;Site Selection&quot; field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Request_Closed_Conditional_Values_Req</fullName>
         <active>true</active>
-        <description>Non-Calendar: Any NON-BIC-Branded Products with an Item Number (Non-Published Pricing/Options for Stockline or Modified Stockline Products)</description>
-        <label>Non-Calendar</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Sales_Pricing_Quote</fullName>
-        <active>false</active>
-        <description>Standard Pricing, Over-Catalog Quantity Pricing, or Approval Needed for System Pricing.</description>
-        <label>Standard Pricing</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Stationary</fullName>
-        <active>false</active>
-        <description>Any BIC-Branded Products with an Item Number (Non-Published Pricing/Options for Stockline or Modified Stockline Products)</description>
-        <label>Stationery</label>
-    </recordTypes>
+        <description>Ensures that when a Quote Request is saved with the stage set as &quot;Request Closed&quot;, Site Selection, Quote Amount, respective Products, and Margin fields are populated</description>
+        <errorConditionFormula>AND(
+ISPICKVAL( Stage__c , &quot;Request Closed&quot;),
+RecordType.Name = &apos;Non-Calendar&apos;,
+OR(
+ISBLANK(Quote_Amount__c),
+ISBLANK(Valid_Through__c),
+ISBLANK(TEXT(Site_Selection__c)),
+
+IF(ISBLANK( Product_1__c), 0, 1) &lt;&gt; IF(ISBLANK( Product_1_Margin__c), 0, 1),
+IF(ISBLANK( Product_2__c), 0, 1) &lt;&gt; IF(ISBLANK( Product_2_Margin__c ), 0, 1),
+IF(ISBLANK( Product_3__c), 0, 1) &lt;&gt; IF(ISBLANK( Product_3_Margin__c ), 0, 1),
+IF(ISBLANK( Product_4__c ), 0, 1) &lt;&gt; IF(ISBLANK( Product_4_Margin__c ), 0, 1),
+IF(ISBLANK( Product_5__c ), 0, 1) &lt;&gt; IF(ISBLANK( Product_5_Margin__c ), 0, 1)
+))</errorConditionFormula>
+        <errorMessage>The Quote Amount, Site Selection, Products, and Product Margin fields must be populated in order to close this quote. For example, for every Product field you&apos;ve selected, there must be respective Product Margin field populated for that entry. Thank You</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_required_for_certain_stage_values</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(OR((Text(Stage__c) )= &apos;Request in Progress&apos;,  (Text(Stage__c)) = &apos;Request Closed&apos;), ISBLANK(Text(( Status__c ))))</errorConditionFormula>
+        <errorMessage>Please select the respective Status for this stage value</errorMessage>
+    </validationRules>
 </CustomObject>

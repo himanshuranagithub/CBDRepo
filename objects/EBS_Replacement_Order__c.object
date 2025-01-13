@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Cannot_Resubmit</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF
+(
+AND
+(
+ISCHANGED(Submitted__c), 
+ISPICKVAL(PRIORVALUE(Status__c),&quot;Submitted&quot;)
+), 
+TRUE,
+FALSE
+)</errorConditionFormula>
+        <errorDisplayField>Submitted__c</errorDisplayField>
+        <errorMessage>You cannot resubmit this order once it has been submitted.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,20 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <recordTypes>
-        <fullName>ClarificationQuestion</fullName>
+    <validationRules>
+        <fullName>Cannot_Close_with_no_Response</fullName>
         <active>true</active>
-        <description>Used  For General Clarification Record Types.</description>
-        <label>ClarificationQuestion</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>NotificationQuestion</fullName>
+        <errorConditionFormula>IF
+(
+	AND
+	(
+		OR
+		(
+			RecordType.Name == &apos;ClarificationQuestion&apos;, 
+			RecordType.Name == &apos;ProofQuestion&apos;
+		),
+		TEXT(Status__c) = &apos;Closed&apos;, 
+		ISBLANK(Response__c),
+		NOT(CONTAINS($Profile.Name,&apos;API Only&apos;)),
+                NOT(CONTAINS($Profile.Name, &apos;Administrator&apos;)) 
+	),
+	TRUE, 
+	FALSE
+)</errorConditionFormula>
+        <errorDisplayField>Response__c</errorDisplayField>
+        <errorMessage>You cannot close the question without a response.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_Edits_After_Closed</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF
+(
+	AND
+	(
+		OR
+		(
+			TEXT(Status__c) = &apos;Closed&apos;,
+			TEXT(Status__c) = &apos;EBS Closed&apos;
+		),
+		NOT(ISCHANGED(Status__c))
+	),
+	TRUE,
+	FALSE
+)</errorConditionFormula>
+        <errorMessage>You cannot update a question after it is closed. Please contact your administrator if you require assistance.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_Updates_After_Closed</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND
+(
+	OR
+	(
+		TEXT(Case__r.Status) = &apos;Closed&apos;,
+		ISPICKVAL(PRIORVALUE(Status__c), &apos;EBS Closed&apos;), 
+		ISPICKVAL(PRIORVALUE(Status__c),  &apos;Closed&apos;)
+	),
+	NOT(ISNULL(Id)), 
+	OR
+	(
+		NOT(ISCHANGED(Question_Closed_Date__c)),
+		NOT(ISCHANGED(Question_Trigger__c  ))
+	),
+	NOT(CONTAINS($Profile.Name, &apos;Manager&apos;)),
+	NOT(CONTAINS($Profile.Name, &apos;Administrator&apos;)),
+	NOT(CONTAINS($Profile.Name, &apos;API&apos;))	
+)</errorConditionFormula>
+        <errorMessage>You cannot update a question after it is closed. Please contact your administrator if you require assistance.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_status_change_on_3_0_webform</fullName>
+        <active>false</active>
+        <description>If clas version is 3.0 then do not let users change status</description>
+        <errorConditionFormula>AND(
+IsChanged(Status__c),
+ClarAppVersion__c = &apos;3.0&apos;,
+NOT(CONTAINS($Profile.Name, &apos;Administrator&apos;)),
+NOT(CONTAINS($Profile.Name, &apos;API&apos;))
+)</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Please do not change the status of new clar questions</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Notification_Sent_for_Closed</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND
+(
+    OR
+    (
+        TEXT(Status__c) = &apos;Closed&apos;,
+        TEXT(Status__c) = &apos;EBS Closed&apos;
+    ), 
+    Notification_Sent__c = True,
+    RecordType.Name = &apos;NotificationQuestion&apos;
+)</errorConditionFormula>
+        <errorMessage>Please make sure the notification sent is checked before closing the question.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Proof_Close_Needs_Proof_Disposition</fullName>
         <active>true</active>
-        <label>NotificationQuestion</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>ProofQuestion</fullName>
-        <active>true</active>
-        <description>Used  For Proof Clarification Record Types.</description>
-        <label>ProofQuestion</label>
-    </recordTypes>
+        <errorConditionFormula>AND
+(
+	OR
+	(
+		TEXT(Status__c) = &apos;EBS Closed&apos;,
+		TEXT(Status__c) = &apos;Closed&apos;
+	),
+	NOT(ISPICKVAL(PRIORVALUE(Status__c), &apos;EBS Closed&apos;)),
+	NOT(ISPICKVAL(PRIORVALUE(Status__c), &apos;Closed&apos;)),
+	NOT(ISNULL(Id)),
+	RecordType.Name = &apos;ProofQuestion&apos;,
+	OR
+	(
+		TEXT(Proof_Disposition__c) = &apos;&apos;,
+		TEXT(Proof_Disposition__c) = &apos;None&apos;,
+		TEXT(Proof_Disposition__c) = &apos;Proof_Ready&apos;
+	)
+)</errorConditionFormula>
+        <errorDisplayField>Proof_Disposition__c</errorDisplayField>
+        <errorMessage>You cannot close the proof question without adding a proof disposition.</errorMessage>
+    </validationRules>
 </CustomObject>

@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <recordTypes>
-        <fullName>Standard</fullName>
+    <validationRules>
+        <fullName>Closed_CE_reopening_Restrict</fullName>
         <active>true</active>
-        <label>Standard</label>
-    </recordTypes>
+        <errorConditionFormula>AND(
+ OR(
+  /* LOCK THE RECORD IF THE LAST VALUE WAS A CLOSED STATUS */
+  TEXT( PRIORVALUE( Status__c)) == &quot;Closed&quot;),
+ 
+ /* MAKE AN EXCEPTION FOR ADMINS */
+ $Profile.Name &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+        <errorMessage>This CE is closed. Please create a new case escalation if the issue wasn’t resolved or a new issue arises</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_escalations_on_closed_cases</fullName>
+        <active>true</active>
+        <description>Restrict_escalations_on_closed_cases</description>
+        <errorConditionFormula>AND(
+ISNEW(),
+TEXT( Case1__r.Status ) = &quot;Closed&quot;
+)</errorConditionFormula>
+        <errorMessage>You are trying to escalate a closed case. Please create a new case and escalate it. Thank you.</errorMessage>
+    </validationRules>
 </CustomObject>

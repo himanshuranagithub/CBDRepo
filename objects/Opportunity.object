@@ -1,1047 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <recordTypes>
-        <fullName>Calendars</fullName>
+    <validationRules>
+        <fullName>IBClosedLostConcordance</fullName>
         <active>true</active>
-        <businessProcess>Calendar</businessProcess>
-        <description>Calendar Opportunity / Calendar Pricing</description>
-        <label>Calendars</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>External</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Internal</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Combo Sales Agreement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Contract Price Agreement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Sales Agreement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Promo Code Offer</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Stock Sales Agreement</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Custom_Quote</fullName>
-        <active>false</active>
-        <businessProcess>Standard</businessProcess>
-        <description>Applicable for all Custom / Universal Source Quotes</description>
-        <label>Custom Quote</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>IBOpportunity</fullName>
+        <description>This validation rule makes sure that when user closes an opportunity as lost, they do not fill the lost reason</description>
+        <errorConditionFormula>AND(
+    RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+    ISPICKVAL(StageName,&quot;Closed Lost&quot;),
+    NOT(ISPICKVAL(IBWonReason__c,&quot;&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>IBWonReason__c</errorDisplayField>
+        <errorMessage>Oops! If you are loosing this opportunity, you should not fill the won reason field 🥶</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IBClosedWonConcordance</fullName>
         <active>true</active>
-        <businessProcess>IB - Sales Process</businessProcess>
-        <compactLayoutAssignment>IBOpportunityCompactLayout</compactLayoutAssignment>
-        <description>Record type for IB opportunities</description>
-        <label>IB Opportunity</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>External</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Internal</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Bid</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Overseas</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Program</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Marketing_Opportunity</fullName>
+        <description>This validation rule makes sure that when user closes an opportunity as won, they do not fill the lost reason</description>
+        <errorConditionFormula>AND(
+    RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+    ISPICKVAL(StageName,&quot;Closed Won&quot;),
+    NOT(ISPICKVAL(IBLostReason__c,&quot;&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>IBLostReason__c</errorDisplayField>
+        <errorMessage>Oops! If you are winning this opportunity, you should not fill the lost reason field 😌</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IBFIllOtherSource</fullName>
         <active>true</active>
-        <businessProcess>Marketing</businessProcess>
-        <description>Marketing Opportunity</description>
-        <label>Marketing Opportunity</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Price_Request</fullName>
-        <active>false</active>
-        <businessProcess>Qualification</businessProcess>
-        <description>Any request that is : Less than $5,000.</description>
-        <label>Price Request</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Programs</fullName>
+        <description>This validation rule makes sure that users fill the text field Other Source, when Source is Other.</description>
+        <errorConditionFormula>AND(
+RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+ISPICKVAL(Source__c,&quot;Other&quot;),
+ISBLANK(IBOtherSource__c)
+)</errorConditionFormula>
+        <errorDisplayField>IBOtherSource__c</errorDisplayField>
+        <errorMessage>Oops! If you select “Other” for Source, you need to fill the Other Source field 🧐</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IBFillClosedLostReason</fullName>
         <active>true</active>
-        <businessProcess>Standard</businessProcess>
-        <description>Applicable for all distributor Programs</description>
-        <label>Programs</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Qualify_Opportunity</fullName>
-        <active>false</active>
-        <businessProcess>Qualification</businessProcess>
-        <description>Create all opportunities in this stage</description>
-        <label>Qualify Opportunity</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Quote_Request</fullName>
+        <description>This validation rule makes sure that users fill closed lost reason when closing lost an opportunity</description>
+        <errorConditionFormula>AND(
+    RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+    ISPICKVAL(StageName,&quot;Closed Lost&quot;),
+    ISPICKVAL(IBLostReason__c,&quot;&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>IBLostReason__c</errorDisplayField>
+        <errorMessage>Oops! You need to fill the lost reason in order to close this opportunity as lost 🧐</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IBFillClosedWonReason</fullName>
         <active>true</active>
-        <businessProcess>Quote Request</businessProcess>
-        <label>Quote Request</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>RFP</fullName>
+        <description>This validation rule makes sure that users fill closed won reason when closing won an opportunity</description>
+        <errorConditionFormula>AND(
+    RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+    ISPICKVAL(StageName,&quot;Closed Won&quot;),
+    ISPICKVAL(IBWonReason__c,&quot;&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>IBWonReason__c</errorDisplayField>
+        <errorMessage>Oops! You need to fill the won reason in order to close this opportunity as won 🧐</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IBFillExplainLostReason</fullName>
         <active>true</active>
-        <businessProcess>Standard</businessProcess>
-        <description>Request for proposal or bid (Government, etc).</description>
-        <label>RFP</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Standard</fullName>
+        <description>This validation rule makes sure that users fill the text field Explain Reason when Lost Reason is Other.</description>
+        <errorConditionFormula>AND(
+RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+ISPICKVAL(IBLostReason__c,&quot;Other&quot;),
+ISBLANK(Explain_Other__c)
+)</errorConditionFormula>
+        <errorDisplayField>Explain_Other__c</errorDisplayField>
+        <errorMessage>Oops! If you select “Other” for lost reason, you need to fill the explain reason field 🧐</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IBFillExplainWonReason</fullName>
         <active>true</active>
-        <businessProcess>Standard</businessProcess>
-        <description>(Only for Sales Usage) Any request that is: Greater than $5,000</description>
-        <label>Standard</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Virtual_Spec_Sample</fullName>
-        <active>false</active>
-        <businessProcess>Standard</businessProcess>
-        <description>Applicable for any virtual / Spec Sample request</description>
-        <label>Virtual/Spec Sample</label>
-        <picklistValues>
-            <picklist>ForecastCategoryName</picklist>
-            <values>
-                <fullName>Best Case</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Closed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Commit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Omitted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Pipeline</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>LeadSource</picklist>
-            <values>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer Event</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Employee Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Google AdWords</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Website</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>CO-OP</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Calendar</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Custom Manufactured</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Standard Quote</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Tailor Made</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
+        <description>This validation rule makes sure that users fill the text field Explain Reason when Won Reason is Other.</description>
+        <errorConditionFormula>AND(
+    RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+    ISPICKVAL(IBWonReason__c,&quot;Other&quot;),
+    ISBLANK(Explain_Other__c)
+)</errorConditionFormula>
+        <errorDisplayField>Explain_Other__c</errorDisplayField>
+        <errorMessage>Oops! If you select “Other” for won reason, you need to fill the explain reason field 🧐</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IBFillOtherEndCustomerIndustry</fullName>
+        <active>true</active>
+        <description>This validation rule makes sure that users fill the text field Other End Customer Industry when End Customer Indsutry is Other.</description>
+        <errorConditionFormula>AND(
+    RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+    ISPICKVAL(IBEndCustomerIndustry__c,&quot;Other&quot;),
+    ISBLANK(IBOtherEndCustomerIndustry__c)
+)</errorConditionFormula>
+        <errorDisplayField>IBOtherEndCustomerIndustry__c</errorDisplayField>
+        <errorMessage>Oops! If you select “Other” for end customer industry, you need to fill the Other End Customer Industry field 🧐</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IBFillOtherOpportunityType</fullName>
+        <active>true</active>
+        <description>This validation rule makes sure that users fill the text field Other Opportunity Type when Type is Other.</description>
+        <errorConditionFormula>AND(
+RecordType.DeveloperName=&quot;IBOpportunity&quot;,
+ISPICKVAL(Type,&quot;Other&quot;),
+ISBLANK(IBOtherOpportunityType__c)
+)</errorConditionFormula>
+        <errorDisplayField>IBOtherOpportunityType__c</errorDisplayField>
+        <errorMessage>Oops! If you select “Other” for opportunity type, you need to fill the Other Opportunity Type field 🧐</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Explain_Other_ClosedLost</fullName>
+        <active>true</active>
+        <description>This text  field is going to flag as required when closed reason is OTHER</description>
+        <errorConditionFormula>AND(
+ISPICKVAL( StageName, &quot;Closed Lost&quot;),
+ISPICKVAL( Reason__c, &quot;Other&quot;),
+ISBLANK(Explain_Other__c)
+)</errorConditionFormula>
+        <errorDisplayField>Explain_Other__c</errorDisplayField>
+        <errorMessage>oops! 😯 You need to put  the reason on &quot;Explain Reason&quot; field when choosing reason as &quot;Other&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Explain_Other_ClosedWon</fullName>
+        <active>true</active>
+        <description>This text  field is going to flag as required when closed reason is OTHER</description>
+        <errorConditionFormula>AND(
+ISPICKVAL( StageName, &quot;Closed Won&quot;),
+ISPICKVAL( Reason__c, &quot;Other&quot;),
+ISBLANK(Explain_Other__c)
+)</errorConditionFormula>
+        <errorMessage>Please further explain why you chose OTHER</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Special_Price_Request</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+        Price_Approval_Needed__c = TRUE,  
+        ISBLANK(Customer_Price_Point__c)
+)</errorConditionFormula>
+        <errorDisplayField>Customer_Price_Point__c</errorDisplayField>
+        <errorMessage>Enter the customer&apos;s target price for approval</errorMessage>
+    </validationRules>
 </CustomObject>

@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <recordTypes>
-        <fullName>Create_Marketing_Project</fullName>
+    <validationRules>
+        <fullName>Due_Date</fullName>
         <active>true</active>
-        <description>For Use to see only the records required in the general creation of a marketing project</description>
-        <label>Create - Marketing Project</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Custom_Calendar_Marketing_Project</fullName>
+        <errorConditionFormula>AND(
+NOT($User.Username = &quot;lisa.natisin@kooziegroup.com&quot;),
+NOT($User.Username = &quot;sara.rooney@kooziegroup.com&quot;),
+NOT(ISBLANK(Due_Date__c)),
+Due_Date__c &lt;= Due_Date_Project_Submission__c + 9)</errorConditionFormula>
+        <errorDisplayField>Due_Date__c</errorDisplayField>
+        <errorMessage>Date must be a minimum of 7-working days</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>If_project_type_is_Other_Field</fullName>
         <active>true</active>
-        <compactLayoutAssignment>Custom_Calendar</compactLayoutAssignment>
-        <label>Custom Calendar</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Newsletter_Marketing_Project</fullName>
+        <errorConditionFormula>ISPICKVAL( Product_Type__c , &apos;Other&apos;) &amp;&amp; ISBLANK ( Other_Type__c )</errorConditionFormula>
+        <errorDisplayField>Other_Type__c</errorDisplayField>
+        <errorMessage>Please fill the Other Type</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Marketing_Project_Validation_Rule</fullName>
         <active>true</active>
-        <label>Newsletter - Marketing Project</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Standard_Project</fullName>
+        <description>First Draft Due Date</description>
+        <errorConditionFormula>AND(
+NOT($User.Username = &quot;lisa.natisin@kooziegroup.com&quot;),
+NOT($User.Username = &quot;sara.rooney@kooziegroup.com&quot;),
+NOT(ISBLANK(First_Draft_Due_Date__c)),
+First_Draft_Due_Date__c &lt;= Due_Date_Project_Submission__c + 9
+)</errorConditionFormula>
+        <errorDisplayField>First_Draft_Due_Date__c</errorDisplayField>
+        <errorMessage>Date must be a minimum of 7-working days</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Specify_OTHER_team</fullName>
         <active>true</active>
-        <label>Standard Project</label>
-    </recordTypes>
+        <description>This validation rule will trigger when OTHER team member has been chose.</description>
+        <errorConditionFormula>ISPICKVAL( Team_Requesting_Project__c ,&quot;Other&quot;)  &amp;&amp;   ISBLANK(Requesting_Team_Specify_if_Other__c )</errorConditionFormula>
+        <errorDisplayField>Requesting_Team_Specify_if_Other__c</errorDisplayField>
+        <errorMessage>Please specify Other Team</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidationOnStatus</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+RecordType.Name = &quot;Custom Calendar&quot;,
+$UserRole.Name &lt;&gt; &quot;Marketing Designer&quot;,
+$UserRole.Name &lt;&gt; &quot;Marketing Rep&quot;,
+NOT (Project_is_Approved__c),
+ISCHANGED(Status__c),
+Days_until_due_date__c    &lt;=   (7),
+CASE(Status__c,
+&quot;Project_Assigned&quot;, 1,
+&quot;First Draft&quot;, 1,
+&quot;On-Hold&quot;, 1,
+&quot;Complete&quot;, 1,
+
+0) = 1)</errorConditionFormula>
+        <errorMessage>Please Submit the project for approval before changing the status. Thank you.</errorMessage>
+    </validationRules>
 </CustomObject>

@@ -1,256 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <recordTypes>
-        <fullName>Adestra_Campaign</fullName>
-        <active>false</active>
-        <label>xAdestra Campaign</label>
-        <picklistValues>
-            <picklist>Status</picklist>
-            <values>
-                <fullName>Aborted</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Progress</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Planned</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Eblast</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Newsletter</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unsubscribe</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>eFlyer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Newsletter</fullName>
-        <active>false</active>
-        <label>xNewsletter</label>
-        <picklistValues>
-            <picklist>Status</picklist>
-            <values>
-                <fullName>In Progress</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Eblast</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Newsletter</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Unsubscribe</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>eFlyer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Promotion</fullName>
-        <active>false</active>
-        <label>xPromotion</label>
-        <picklistValues>
-            <picklist>Status</picklist>
-            <values>
-                <fullName>Completed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Progress</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Planned</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Routing</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Submitted Mkg Services Request</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Submitted to Graphics</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Brochure</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Catalog</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Eblast</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Image</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Newsletter</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other %28Specify Below%29</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Print Ad</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Printed Flyer</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Printed Insert</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sampling</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Template</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web Ad</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web Banner Graphic</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>eFlyer</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Standard_Campaign</fullName>
+    <validationRules>
+        <fullName>Error_when_detail_reason_field_empty</fullName>
         <active>true</active>
-        <label>Standard Campaign</label>
-        <picklistValues>
-            <picklist>Status</picklist>
-            <values>
-                <fullName>Completed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>In Progress</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Planned</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Call Campaign</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Email - Trade Show</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Trade_Show</fullName>
+        <description>Error_when_detail_reason_field_empty</description>
+        <errorConditionFormula>AND(
+TEXT(  Cancellation_Reason__c  ) = &quot;Other&quot;,
+ISBLANK(  Cancellation_Reason_Detail__c  )
+)</errorConditionFormula>
+        <errorDisplayField>Cancellation_Reason_Detail__c</errorDisplayField>
+        <errorMessage>You have Chosen &quot;Other&quot; as Cancellation Reason. Please specify the details.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Trade_Show_Must_Be_Manager_Approved</fullName>
+        <active>false</active>
+        <errorConditionFormula>RecordType.DeveloperName = &quot;Trade_Show&quot;  &amp;&amp;   
+Approved_By_Manager__c = FALSE  &amp;&amp; 
+NOT( ISPICKVAL( Status  ,&quot;Planned&quot;) )</errorConditionFormula>
+        <errorMessage>The Trade Show must be submitted to your manager for approval in order to set up.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Trade_Show_Must_Be_Manager_Approved_1</fullName>
         <active>true</active>
-        <compactLayoutAssignment>Trade_Show_Compact_Layout</compactLayoutAssignment>
-        <description>Use when attending Trade Show or EME/Event</description>
-        <label>Trade Show or EME/Event</label>
-        <picklistValues>
-            <picklist>Status</picklist>
-            <values>
-                <fullName>Cancelled</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Completed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Payment Processed</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Planned</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Request Payment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sign-up</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>EME</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Event</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
+        <errorConditionFormula>AND
+(
+     RecordType.Name  = &quot;Trade_Show&quot;,
+    Approved_By_Manager__c = FALSE,
+    OR
+    (
+        ISPICKVAL( Status ,&quot;Request Payment&quot;),
+        ISPICKVAL( Status ,&quot;Payment Completed&quot;),
+        ISPICKVAL (Status , &quot;Completed&quot;)
+    )
+)</errorConditionFormula>
+        <errorMessage>The Trade Show must be submitted to your manager for approval in order to set up.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Trade_Show_Must_Be_Payment_Approved</fullName>
+        <active>false</active>
+        <errorConditionFormula>RecordType.DeveloperName = &quot;Trade_Show&quot;  &amp;&amp;   
+Payment_Approved__c  = FALSE  &amp;&amp; 
+NOT (ISPICKVAL(Payment_Method__c, &quot;Paid on AMEX&quot; )) 
+&amp;&amp; (
+ISPICKVAL( Status  ,&quot;Payment Processed&quot;)   || 
+ISPICKVAL (Status,&quot;Completed&quot;))</errorConditionFormula>
+        <errorMessage>The Trade Show must be submitted to process payment</errorMessage>
+    </validationRules>
 </CustomObject>

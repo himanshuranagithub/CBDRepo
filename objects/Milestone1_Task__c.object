@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>CannotBeBlockedIfComplete</fullName>
+        <active>true</active>
+        <errorConditionFormula>if (And ( Blocked__c == true, Complete__c == true), true, false)</errorConditionFormula>
+        <errorDisplayField>Blocked__c</errorDisplayField>
+        <errorMessage>You cannot mark a completed task as blocked.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CannotBeCompleteIfBlocked</fullName>
+        <active>true</active>
+        <errorConditionFormula>if (and ( Complete__c == true,  Blocked__c ==true), true, false)</errorConditionFormula>
+        <errorDisplayField>Complete__c</errorDisplayField>
+        <errorMessage>You cannot complete a task marked as blocked.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Due_Date_Greater_Than_Milestone_Deadline</fullName>
+        <active>false</active>
+        <errorConditionFormula>Due_Date__c &gt;  Project_Milestone__r.Deadline__c</errorConditionFormula>
+        <errorDisplayField>Due_Date__c</errorDisplayField>
+        <errorMessage>Due Date should be smaller than Milestone Deadline</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Due_Date_Smaller_Than_Milestone_Kickoff</fullName>
+        <active>false</active>
+        <errorConditionFormula>Due_Date__c &lt;  Project_Milestone__r.Kickoff__c</errorConditionFormula>
+        <errorDisplayField>Due_Date__c</errorDisplayField>
+        <errorMessage>Due Date should be greater than Milestone Kickoff Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Must_be_blank_if_not_blocked</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( and(Blocked__c == false, len( Blocked_Reason__c ) &gt; 0) , True, False)</errorConditionFormula>
+        <errorDisplayField>Blocked_Reason__c</errorDisplayField>
+        <errorMessage>Must be blank if &quot;blocked&quot; is not checked.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Must_not_be_blank_if_blocked</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( and(Blocked__c == true, len( Blocked_Reason__c ) == 0) , True, False)</errorConditionFormula>
+        <errorDisplayField>Blocked_Reason__c</errorDisplayField>
+        <errorMessage>If this task is blocked you must enter a reason.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_Date_More_Than_Due_Date</fullName>
+        <active>false</active>
+        <errorConditionFormula>if (and(!isblank(Start_Date__c), !isblank(Due_Date__c)), true, false)</errorConditionFormula>
+        <errorDisplayField>Due_Date__c</errorDisplayField>
+        <errorMessage>Due Date should be greater than Start Date</errorMessage>
+    </validationRules>
+</CustomObject>
