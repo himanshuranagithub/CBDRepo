@@ -1,0 +1,62 @@
+<messaging:emailTemplate subject="PO# {!relatedTo.EBS_PO_Number__c}, SO#{!relatedTo.EBS_Order_Number__c}, Case #{!relatedTo.CaseNumber}, {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+
+<style>
+body {font-family: 'source sans pro';}
+</style>
+
+<br />
+
+<p>Thanks for ordering from Calendar Coop Center! Your order is temporarily on hold.</p>
+ <p><b>We can’t wait to complete your order but need to talk to you first about the order below:</b></p>
+    
+   <li> Customer Name: {!relatedTo.Customer_Name__c}</li>
+    
+
+    <li>Customer Number: {!relatedTo.EBS_Account_Number__c}</li>
+    <li>PO Number: {!relatedTo.EBS_PO_Number__c}</li>
+     <li>Order Number: {!relatedTo.EBS_Order_ID__c}</li>
+     <li>Date: {!relatedTo.Clarification_Start_Date__c}</li>
+     <li>Contact: {!relatedTo.Contact.name}</li>
+     <li>Phone: {!relatedTo.ContactPhone}</li>
+     <li>Ship to:<!--donot see any field ship to in case?--></li>
+
+<!--     
+<p>
+<apex:repeat var="cx" value="{!relatedTo.Clarification_Questions__r}">
+
+<apex:outputPanel rendered="{!if(cx.Status__c!='Closed' && cx.recordtype.name=='ClarificationQuestion' ,true,false)}">
+<tr >
+ <td>Product Number: &nbsp;{!cx.Product_Number__c}</td><br/>
+ <td>Line Number: &nbsp;{!cx.Line_Number__c}</td><br/>
+ <td>Message Text: &nbsp;{!cx.Message_Text__c}</td><br/>
+ <br/>
+</tr>
+</apex:outputPanel>
+</apex:repeat>
+</p>  
+-->   
+   
+
+
+<p>The Calendar Coop Center Customer Care Team <br/>
+<a href = "mailto: csinfo@calendarcs.com">csinfo@calendarcs.com</a><br/>
+1-800-833-8136 Option 3<br/></p>
+
+
+
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address&nbsp;above.</span> </span>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

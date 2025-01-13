@@ -1,0 +1,151 @@
+<html style="overflow-y: hidden;">
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<table>
+	<tbody>
+		<tr style="height:15pt" width="231">
+			<td>
+			<p><b><span style="font-size:12.0pt;color:black">INFORMATION</span></b></p>
+			</td>
+			<td width="509">&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Site:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Site__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Today&#39;s Date:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Today_s_Date__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Over Catalog Quantity:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Over_Catalog_quantity__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Reduction in Lead Time Needed</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Reduction_in_Lead_Time_Need__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Reason for Rush</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Reason_for_Rush__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Recovery Rush Details</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Recovery_Rush_Details__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>
+			<p><b><span style="font-size:12.0pt;color:black">GENERAL NOTES</span></b></p>
+			</td>
+			<td width="509">&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Partial Shipment Acceptable:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Partial_Shipment_Acceptable__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>
+			<p><b><span style="font-size:12.0pt;color:black">ORDER DETAILS</span></b></p>
+			</td>
+			<td width="509">&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Company Name:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Company_Name__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Sales Order Number:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Sales_Order_Number__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Job Number (if available):</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Job_Number__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Item Number:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Item_Number__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Order Quantity:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Order_Quantity__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Product Name:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Product_Name__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Imprint Colors:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Imprint_Color_s__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Imprint Locations:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Imprint_Location_s__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Product Color:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Product_Color__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Special Pack:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Special_Pack__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>
+			<p><b><span style="font-size:12.0pt;color:black">SHIPPING</span></b></p>
+			</td>
+			<td width="509">&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">In Hand&#39;s Date:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.In_Hand_Date__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Requested Ship Date:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Requested_Ship_Date__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Carrier:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Carrier__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Ship Method:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt" width="509">{!Request_Form__c.Ship_Method__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Notes to Approver:</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" width="509">{!Request_Form__c.NOTES_TO_APPROVER__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt">Shipping Instructions</td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" width="509">{!Request_Form__c.Shipping_Instructions__c}</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt"><b>Is Request Approved:</b></td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt; background-color:yellow" width="509">&nbsp;</td>
+		</tr>
+		<tr style="height:15pt" width="231">
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt"><b>Approver&#39;s Notes</b></td>
+			<td style="width:173.0pt;border:solid #7F7F7F 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:15.0pt; background-color:yellow" width="509">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

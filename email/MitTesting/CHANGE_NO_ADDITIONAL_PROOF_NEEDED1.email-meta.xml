@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>CHANGE, NO ADDITIONAL PROOF NEEDED</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>CHANGE, NO ADDITIONAL PROOF NEEDED (BIC)</name>
+    <style>none</style>
+    <subject>Your proof for P.O. {!Clarification_Question__c.PO_Number__c} has been approved with changes</subject>
+    <textOnly>| The Best Brands in the Business |   Thanks for ordering from BIC Graphic! We are working on the proof changes you requested for order # {!Clarification_Question__c.EBS_Order_Number__c}:
+
+PO Number: {!Clarification_Question__c.PO_Number__c} Case Number: {!Clarification_Question__c.Case_Number__c} Order Number: {!Clarification_Question__c.EBS_Order_Number__c}
+Approver First Name: {!Clarification_Question__c.Authorization_First_Name__c} Approver Last Name: {!Clarification_Question__c.Authorization_Last_Name__c} Company Name: {!Clarification_Question__c.Authorization_Organization__c} Once this change is made your order is going straight to production because no additional proof was requested. You
+can continue to track this order right on our website! It’s quick and easy when you login to your account
+or create a login at bicgraphic.com. All the best,
+The BIC Graphic Customer Care Team
+
+bicgraphic.com
+You can check order status and inventory, estimate shipping, create a virtual sample or access case studies, test reports, images and templates. It’s all there!
+
+
+CONFIDENTIALITY NOTICE
+This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified  that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address above.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

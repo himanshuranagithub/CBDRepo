@@ -1,0 +1,43 @@
+<messaging:emailTemplate subject="Final Request. Koozie Group PO# {!relatedTo.EBS_PO_Number__c} Notice of Cancellation. SO#{!relatedTo.EBS_Order_ID__c}, {!relatedTo.ThreadID_FK__c}" 
+recipientType="Contact"  relatedToType="case">
+
+    <messaging:htmlEmailBody >
+
+<html>
+<body style="font-family:source sans pro">
+
+<span style="font-size:8px;"><img src="https://kooziegroup--c.documentforce.com/servlet/servlet.ImageServer?id=0153p000003Puwa&oid=00DU8000002Zr1t&lastMod=1605184005000" style="max-width: 840.197px; width: 140.998px; height: 25.9981px;" title="Koozie Group Logo" /></span><br />
+&nbsp;&nbsp;<span style="font-size:15px;"><b><span style="color:#009faa;"><span style="text-decoration: none; font-family: &quot;Source Sans Pro Black;, sans-serif;&quot;;">keep</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#da9122;">the</span>&nbsp;<b><span style="color:#94bd4c;"><span style="text-decoration: none; font-family: Source Sans Pro;, sans-serif;&quot;;">good</span></span><span style="text-decoration: none; color: rgb(69, 111, 178); font-family: &quot;Source Sans Pro Black;, sans-serif;">&nbsp;</span></b><span style="color:#92278a;">going<span style="text-decoration: none; font-family: &quot;Source Sans Pro Black&quot;, sans-serif;">&reg;</span></span></span><br />
+<br />
+
+ <p><b>Unfortunately we haven’t heard back despite reaching out multiple times on this order regarding issues. Because we haven’t heard from you, we are proceeding with cancelling your order.</b></p>
+    
+   <li> Customer Name: {!relatedTo.SuppliedCompany}</li>
+    <li>PO Number: {!relatedTo.EBS_PO_Number__c}</li>
+     <li>Order Number: {!relatedTo.EBS_Order_ID__c}</li>
+     <li>Date: {!relatedTo.Clarification_Start_Date__c}</li>
+     <li>Contact: {!relatedTo.Contact.name}</li>
+     <li>Ship to:<!--donot see any field ship to in case?--></li>
+     <br/><br/><br/><c:clarificationQuestions rcaseID="{!relatedTo}"/>
+    
+   
+
+
+<p>All the best, <br/>
+The Koozie Group Customer Care Krew<br/></p>
+
+
+<a href="https://www.kooziegroup.com/US/" style="text-decoration:none;color:#456FB2;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">kooziegroup.com</a><br /><br /><br />
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:Source Sans Pro;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:Source Sans Pro">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and
+return the original message to us at the address&nbsp;above.</span> </span>
+
+</body>
+
+</html>
+    </messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

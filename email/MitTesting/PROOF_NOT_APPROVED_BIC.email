@@ -1,0 +1,33 @@
+<html style="overflow-y:hidden">
+<head>
+<title></title>
+</head>
+<style>
+body {font-family: 'source sans pro';}
+</style>
+<body style="height:auto;min-height:auto">
+
+<span style="font-size:8px;"><img src="https://bicgraphic--c.documentforce.com/file-asset-public/BG_Logo?oid=00DU8000002Zr1t" style="max-width: 840.197px; width: 140.998px; height: 25.9981px;" title="BIC Graphic Logo" /></span><br />
+<span style="font-size:12px"><b><span style="color:#ffc107"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif">|</span></span></b><span style="color:black"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif"> The Best Brands in the Business<b>&nbsp;</b></span></span><b><span style="color:#ffc107"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif">|</span></span><span style="color:black"><span style="font-family:&quot;Source Sans Pro&quot;,sans-serif">&nbsp;</span></span></b></span>&nbsp;</br></br>
+Thanks for ordering from BIC Graphic. Let’s try that again! We are working on the proof changes you requested for order # {!Clarification_Question__c.EBS_Order_Number__c}:<br />
+<br />
+
+PO Number: {!Clarification_Question__c.PO_Number__c}</br>
+Case Number: {!Clarification_Question__c.Case_Number__c}</br>
+Order Number: {!Clarification_Question__c.EBS_Order_Number__c}<br />
+Approver First Name: {!Clarification_Question__c.Authorization_First_Name__c}</br>
+Approver Last Name: {!Clarification_Question__c.Authorization_Last_Name__c}</br>
+Company Name: {!Clarification_Question__c.Authorization_Organization__c}</br></br></span>
+Keep an eye out for your revised proof. Once you think everything looks great and we have your approval, we’ll move this<br/> order to production. You can also track your order right on our website! It’s quick and easy when you<a href = "https://www.bicgraphic.com/US/login"> login</a> to your account<br/> or <a href = "https://www.bicgraphic.com/US/login">create a login</a> at <a href = "https://www.bicgraphic.com/US">bicgraphic.com</a>.</br></br>
+All the best,<br/>
+The BIC Graphic Customer Care Team<br/><br/>
+
+<a href="https://www.bicgraphic.com/US/" style="text-decoration:none;color:#ffc107;font-size:18px;font-family:Source Sans Pro Black,sans-serif;">bicgraphic.com</a><br />
+<span style="font-size:11px"><span style="color:black"><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif">You can check order status and inventory, estimate shipping, create a virtual sample or access case studies, test reports, images and templates. It&rsquo;s all there!</span></span></span>
+<p>&nbsp;</p>
+<span style="font-size:11px"><b><span style="line-height:.7;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">CONFIDENTIALITY NOTICE</span></b><br />
+<span style="line-height:107%;font-family:&quot;Source Sans Pro&quot;,sans-serif;color:black">This electronic message is confidential and may contain legally privileged information intended only for the use of the individual<br />
+or company named above. If the reader of this message is not the intended recipient, or the employee or agent responsible<br />
+to deliver it to the intended recipient, you are hereby notified&nbsp; that any dissemination, distribution or copying of this communication<br />
+is strictly prohibited. If you have received this communication in error, please immediately notify us by telephone, and<br />
+return the original message to us at the address&nbsp;above.</span> </span>
