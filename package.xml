@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>KoozieGroupTheme</members>
-        <name>LightningExperienceTheme</name>
+        <members>General_Chat</members>
+        <members>Logged_In_User</members>
+        <name>LiveChatButton</name>
     </types>
     <version>56.0</version>
 </Package>
