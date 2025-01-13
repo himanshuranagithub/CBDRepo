@@ -14,16 +14,4 @@
         </criteriaItems>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
-    <tasks>
-        <fullName>Follow_Up_Required</fullName>
-        <assignedToType>owner</assignedToType>
-        <description>The following Task was generated automatically based on flagging the prices request - FOLLOW UP REQUIRED.</description>
-        <dueDateOffset>0</dueDateOffset>
-        <notifyAssignee>false</notifyAssignee>
-        <offsetFromField>Inquiry__c.Follow_Up_Date__c</offsetFromField>
-        <priority>Normal</priority>
-        <protected>false</protected>
-        <status>In Progress</status>
-        <subject>Follow Up Required</subject>
-    </tasks>
 </Workflow>

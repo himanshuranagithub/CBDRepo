@@ -1,234 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Automation_Templates</members>
-        <members>Change_Requests</members>
-        <members>Channel_Marketing</members>
-        <members>Koozie_Group_Service_Templates</members>
-        <members>Marketing_Projects</members>
-        <members>MitTesting</members>
-        <members>Notification_templates</members>
-        <members>Opportunity_Approvals</members>
-        <members>Sales_Templates</members>
-        <members>Service_Templates</members>
-        <members>System_Admin_Team</members>
-        <members>Trade_Show_Notifications</members>
-        <name>EmailFolder</name>
-    </types>
-    <types>
-        <members>Automation_Templates/CCC_Clarification</members>
-        <members>Automation_Templates/CCC_Clarification_2nd_Request</members>
-        <members>Automation_Templates/CCC_Clarification_3rd_Request</members>
-        <members>Automation_Templates/CCC_Clarification_Final_Attempt</members>
-        <members>Automation_Templates/Clarification_2nd_Request</members>
-        <members>Automation_Templates/Clarification_3rd_Request</members>
-        <members>Automation_Templates/Clarification_912020</members>
-        <members>Automation_Templates/Clarification_Final_Attempt</members>
-        <members>Automation_Templates/Greater_than_5k</members>
-        <members>Automation_Templates/Proof_Template_912020</members>
-        <members>Change_Requests/Change_Request_Created</members>
-        <members>Change_Requests/Change_Request_Forward</members>
-        <members>Change_Requests/Change_Request_Question</members>
-        <members>Change_Requests/Change_Request_Ready_for_UAT</members>
-        <members>Channel_Marketing/Welcome_Letter</members>
-        <members>Koozie_Group_Service_Templates/AW_Cancellation_Final_Notice</members>
-        <members>Koozie_Group_Service_Templates/AW_Cancellation_First_Notice</members>
-        <members>Koozie_Group_Service_Templates/AW_Customer_Contact_Date_Email</members>
-        <members>Koozie_Group_Service_Templates/AW_Initial_Clar_Hold</members>
-        <members>Koozie_Group_Service_Templates/AW_Initial_Clar_Hold_MSG_Type</members>
-        <members>Koozie_Group_Service_Templates/AW_No_reply_Misc_Call_Indv_Mail</members>
-        <members>Koozie_Group_Service_Templates/AW_Proof_Approved_new</members>
-        <members>Koozie_Group_Service_Templates/AW_Proof_Cancellation_First_Notice</members>
-        <members>Koozie_Group_Service_Templates/AW_Proof_Cancellation_Notice_v2</members>
-        <members>Koozie_Group_Service_Templates/AW_Proof_Initial_Email</members>
-        <members>Koozie_Group_Service_Templates/AW_Proof_Not_Approved_new</members>
-        <members>Koozie_Group_Service_Templates/AW_Proof_Template_Day_6_v1</members>
-        <members>Koozie_Group_Service_Templates/CCC_Misc_Call_Indv_Mail</members>
-        <members>Koozie_Group_Service_Templates/CCC_No_reply_Misc_Call_Indv_Mail</members>
-        <members>Koozie_Group_Service_Templates/KGVirtual_Sample_Email_Template</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Change_No_Additional_Proof_Needed</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Clarification_Cancellation</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Clarification_Day_11</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Clarification_Template</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Clarification_Template_Day_6</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Clarification_Template_Day_9</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Proof_Approved</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Proof_Template</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Proof_Template_Cancel</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Proof_Template_Day_11</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Proof_Template_Day_6</members>
-        <members>Koozie_Group_Service_Templates/KG_4Imprint_Proof_Template_Day_9</members>
-        <members>Koozie_Group_Service_Templates/KG_4imp_Virtual_Sample_Email_Template</members>
-        <members>Koozie_Group_Service_Templates/KG_Change_No_Additional_Proof_Needed</members>
-        <members>Koozie_Group_Service_Templates/KG_Clarification_Template</members>
-        <members>Koozie_Group_Service_Templates/KG_Clarification_Template_Cancellation</members>
-        <members>Koozie_Group_Service_Templates/KG_Clarification_Template_Day_11</members>
-        <members>Koozie_Group_Service_Templates/KG_Clarification_Template_Day_6</members>
-        <members>Koozie_Group_Service_Templates/KG_Clarification_Template_Day_9</members>
-        <members>Koozie_Group_Service_Templates/KG_Clarification_Template_MSG_Type</members>
-        <members>Koozie_Group_Service_Templates/KG_FourImprint_Proof_Not_Approved</members>
-        <members>Koozie_Group_Service_Templates/KG_Lead_Time_In_House</members>
-        <members>Koozie_Group_Service_Templates/KG_Lead_Time_Pre_Order</members>
-        <members>Koozie_Group_Service_Templates/KG_MLT_Change_Form</members>
-        <members>Koozie_Group_Service_Templates/KG_No_reply_Misc_Call_Indv_Mail</members>
-        <members>Koozie_Group_Service_Templates/KG_Proof_Approved</members>
-        <members>Koozie_Group_Service_Templates/KG_Proof_Not_Approved</members>
-        <members>Koozie_Group_Service_Templates/KG_Proof_Template</members>
-        <members>Koozie_Group_Service_Templates/KG_Proof_Template_Cancellation</members>
-        <members>Koozie_Group_Service_Templates/KG_Proof_Template_Day_11</members>
-        <members>Koozie_Group_Service_Templates/KG_Proof_Template_Day_9</members>
-        <members>Koozie_Group_Service_Templates/Order_Status_Credit_Check</members>
-        <members>Koozie_Group_Service_Templates/Order_Status_Credit_Check2</members>
-        <members>Koozie_Group_Service_Templates/kg_Proof_Template_Day_6</members>
-        <members>Marketing_Projects/Custom_calendar_send_to_creative</members>
-        <members>Marketing_Projects/MP_STYBRB_APPROVED</members>
-        <members>Marketing_Projects/New_Urgent_Marketing_Project</members>
-        <members>Marketing_Projects/Project_Assigned_to_You</members>
-        <members>Marketing_Projects/Rejected_Marketing_Project</members>
-        <members>MitTesting/CHANGE_NO_ADDITIONAL_PROOF_NEEDED1</members>
-        <members>MitTesting/Change_not_additional_Proof_Needed_AW</members>
-        <members>MitTesting/Change_not_additional_Proof_Needed_CCC</members>
-        <members>MitTesting/PROOFTESTFORBETH</members>
-        <members>MitTesting/PROOF_NOT_APPROVED_BIC</members>
-        <members>MitTesting/Proof_Approved1</members>
-        <members>MitTesting/Proof_Approved_AW</members>
-        <members>MitTesting/Proof_Approved_CCC</members>
-        <members>MitTesting/Proof_Not_Approved_AW</members>
-        <members>MitTesting/Proof_Not_Approved_ccc</members>
-        <members>MitTesting/TESTFONT</members>
-        <members>MitTesting/TESTFORBETH</members>
-        <members>MitTesting/testsupport</members>
-        <members>Notification_templates/Customer_Survey_Template</members>
-        <members>Notification_templates/KG_Notification_TemplateNEW</members>
-        <members>Notification_templates/KG_X4Imprint_Notification_Template</members>
-        <members>Opportunity_Approvals/Special_Price_Approval_Request_Notice</members>
-        <members>Opportunity_Approvals/Special_Price_Approved</members>
-        <members>Opportunity_Approvals/Special_Price_Rejected</members>
-        <members>Sales_Templates/CSR_created_Opportunity</members>
-        <members>Sales_Templates/Follow_Up_Reminder</members>
-        <members>Service_Templates/AW_Change_not_additional_Proof_Needed</members>
-        <members>Service_Templates/AW_Clarification_Cancellation_Notice</members>
-        <members>Service_Templates/AW_Clarification_Customer_Contact</members>
-        <members>Service_Templates/AW_Clarification_IS_Escalation</members>
-        <members>Service_Templates/AW_Clarification_Template</members>
-        <members>Service_Templates/AW_Clarification_Template_Cancellation</members>
-        <members>Service_Templates/AW_Clarification_Template_Day_11</members>
-        <members>Service_Templates/AW_Clarification_Template_Day_6</members>
-        <members>Service_Templates/AW_Clarification_Template_Day_9</members>
-        <members>Service_Templates/AW_Notification_Template</members>
-        <members>Service_Templates/AW_Proof_Approved</members>
-        <members>Service_Templates/AW_Proof_Cancellation_Notice</members>
-        <members>Service_Templates/AW_Proof_Customer_Contact</members>
-        <members>Service_Templates/AW_Proof_IS_Escalation</members>
-        <members>Service_Templates/AW_Proof_Not_Approved</members>
-        <members>Service_Templates/AW_Proof_Template</members>
-        <members>Service_Templates/AW_Proof_Template_Cancellation</members>
-        <members>Service_Templates/AW_Proof_Template_Day_11</members>
-        <members>Service_Templates/AW_Proof_Template_Day_6</members>
-        <members>Service_Templates/AW_Proof_Template_Day_9</members>
-        <members>Service_Templates/AW_Voided_Question</members>
-        <members>Service_Templates/Anchor_Wallace_OE_No_Touch_less_50_Notification</members>
-        <members>Service_Templates/Anchor_Wallace_Order_Confirmation_Email_Notification</members>
-        <members>Service_Templates/Anchor_Wallace_PO_Receipt_Notification_v1</members>
-        <members>Service_Templates/Anchor_Wallace_Price_Change_under_50_Notification_v1</members>
-        <members>Service_Templates/Anchor_Wallace_Shipment_Email_Notification</members>
-        <members>Service_Templates/CCC_Change_not_additional_Proof_Needed</members>
-        <members>Service_Templates/CCC_Clarification_Cancellation_Notice</members>
-        <members>Service_Templates/CCC_Clarification_Customer_Contact</members>
-        <members>Service_Templates/CCC_Clarification_IS_Escalation</members>
-        <members>Service_Templates/CCC_Clarification_Template</members>
-        <members>Service_Templates/CCC_Clarification_Template_Cancellation</members>
-        <members>Service_Templates/CCC_Clarification_Template_Day_11</members>
-        <members>Service_Templates/CCC_Clarification_Template_Day_6</members>
-        <members>Service_Templates/CCC_Clarification_Template_Day_9</members>
-        <members>Service_Templates/CCC_Proof_Approved</members>
-        <members>Service_Templates/CCC_Proof_Cancellation_Notice</members>
-        <members>Service_Templates/CCC_Proof_Customer_Contact</members>
-        <members>Service_Templates/CCC_Proof_IS_Escalation</members>
-        <members>Service_Templates/CCC_Proof_Not_Approved</members>
-        <members>Service_Templates/CCC_Proof_Template</members>
-        <members>Service_Templates/CCC_Proof_Template_Cancellation</members>
-        <members>Service_Templates/CCC_Proof_Template_Day_11</members>
-        <members>Service_Templates/CCC_Proof_Template_Day_6</members>
-        <members>Service_Templates/CCC_Proof_Template_Day_9</members>
-        <members>Service_Templates/CCC_Voided_Question</members>
-        <members>Service_Templates/Calendar_Coop_Center_Shipment_Notification</members>
-        <members>Service_Templates/Calendar_Coop_OE_No_Touch_less_then_50</members>
-        <members>Service_Templates/Calendar_Coop_OE_No_Touch_less_then_50_v1</members>
-        <members>Service_Templates/Calendar_Coop_Order_Confirmation</members>
-        <members>Service_Templates/Calendar_Coop_PO_Receipt_v1</members>
-        <members>Service_Templates/Case_Escalation_Closed</members>
-        <members>Service_Templates/Change_No_Additional_Proof_Needed</members>
-        <members>Service_Templates/Clarification_Cancellation_Notice</members>
-        <members>Service_Templates/Clarification_Customer_Contact</members>
-        <members>Service_Templates/Clarification_IS_Escalation</members>
-        <members>Service_Templates/Clarification_Template</members>
-        <members>Service_Templates/Clarification_Template_Cancellation</members>
-        <members>Service_Templates/Clarification_Template_Classic</members>
-        <members>Service_Templates/Clarification_Template_Day_11</members>
-        <members>Service_Templates/Clarification_Template_Day_6</members>
-        <members>Service_Templates/Clarification_Template_Day_9</members>
-        <members>Service_Templates/Koozie_Group_OE_No_Touch_less_50_Notification</members>
-        <members>Service_Templates/Koozie_Group_OE_No_Touch_less_50_Notification_v1</members>
-        <members>Service_Templates/Koozie_Group_Order_Confirmation_Email</members>
-        <members>Service_Templates/Koozie_Group_PO_Receipt_Email_v1</members>
-        <members>Service_Templates/Koozie_Group_Shipment_Email_Notification</members>
-        <members>Service_Templates/Lead_Time_In_House</members>
-        <members>Service_Templates/Lead_Time_Overdue_no_backorder_date</members>
-        <members>Service_Templates/Lead_Time_Pre_Order</members>
-        <members>Service_Templates/MLT_Change_Form</members>
-        <members>Service_Templates/Notification_Templates</members>
-        <members>Service_Templates/Pre_Production_Order_Status</members>
-        <members>Service_Templates/Proof_Approved</members>
-        <members>Service_Templates/Proof_Cancellation_Notice</members>
-        <members>Service_Templates/Proof_Customer_Contact</members>
-        <members>Service_Templates/Proof_IS_Escalation</members>
-        <members>Service_Templates/Proof_Not_Approved</members>
-        <members>Service_Templates/Proof_Template</members>
-        <members>Service_Templates/Proof_Template_Cancellation</members>
-        <members>Service_Templates/Proof_Template_Classic</members>
-        <members>Service_Templates/Proof_Template_Day_11</members>
-        <members>Service_Templates/Proof_Template_Day_6</members>
-        <members>Service_Templates/Proof_Template_Day_9</members>
-        <members>Service_Templates/SUPPORT_Bounce_Back_Message</members>
-        <members>Service_Templates/Service_AW_Bounce_Back_Message</members>
-        <members>Service_Templates/Service_Bounce_Back_Message</members>
-        <members>Service_Templates/Service_CCC_Bounce_Back_Message</members>
-        <members>Service_Templates/Virtual_Form_Template</members>
-        <members>Service_Templates/Virtual_Sample_Email_Template</members>
-        <members>Service_Templates/Virtual_Template</members>
-        <members>Service_Templates/Void_Question</members>
-        <members>Service_Templates/X4Imprint_Change_No_Additional_Proof_Needed</members>
-        <members>Service_Templates/X4Imprint_Clarification_Cancel_Notice</members>
-        <members>Service_Templates/X4Imprint_Clarification_Customer_Contact</members>
-        <members>Service_Templates/X4Imprint_Clarification_IS_Escalation</members>
-        <members>Service_Templates/X4Imprint_Clarification_Template</members>
-        <members>Service_Templates/X4Imprint_Clarification_Template_Cancel</members>
-        <members>Service_Templates/X4Imprint_Clarification_Template_Day_11</members>
-        <members>Service_Templates/X4Imprint_Clarification_Template_Day_6</members>
-        <members>Service_Templates/X4Imprint_Clarification_Template_Day_9</members>
-        <members>Service_Templates/X4Imprint_Notification_Template</members>
-        <members>Service_Templates/X4Imprint_Proof_Cancellation_Notice</members>
-        <members>Service_Templates/X4Imprint_Proof_Customer_Contact</members>
-        <members>Service_Templates/X4Imprint_Proof_IS_Escalation</members>
-        <members>Service_Templates/X4Imprint_Proof_Template</members>
-        <members>Service_Templates/X4Imprint_Proof_Template_Cancel</members>
-        <members>Service_Templates/X4Imprint_Proof_Template_Cancellation</members>
-        <members>Service_Templates/X4Imprint_Proof_Template_Day_11</members>
-        <members>Service_Templates/X4Imprint_Proof_Template_Day_6</members>
-        <members>Service_Templates/X4Imprint_Proof_Template_Day_9</members>
-        <members>Service_Templates/X4Imprint_Voided_Question</members>
-        <members>Service_Templates/X4imprint_Proof_Not_Approved</members>
-        <members>Service_Templates/X4imprint_Proof_approved</members>
-        <members>System_Admin_Team/Show_Stopper_Alert</members>
-        <members>Trade_Show_Notifications/Trade_Show_Approved</members>
-        <members>Trade_Show_Notifications/Trade_Show_Payment_Approved</members>
-        <members>Trade_Show_Notifications/Trade_Show_Payment_Rejected</members>
-        <members>Trade_Show_Notifications/Trade_Show_Payment_Request</members>
-        <members>Trade_Show_Notifications/Trade_Show_Rejected</members>
-        <members>Trade_Show_Notifications/Trade_Show_Request</members>
-        <members>Trade_Show_Notifications/Tradeshow_Payment_Sent</members>
-        <name>EmailTemplate</name>
+        <members>CLZV6BP__Clarizen_Milestone__c.clz_f4604699-838b-4580-927f-ae3ca9a8c305</members>
+        <members>CLZV6BP__Clarizen_Project__c.clz_4e363bd7-d0d5-45eb-a918-49e219c0bf62</members>
+        <members>Campaign.New Trade Show Notification</members>
+        <members>Campaign.Payment Approved</members>
+        <members>Campaign.Payment Method is AMEX card</members>
+        <members>Case.Case Orange Tier II escalation</members>
+        <members>Case.Case VOC Record type</members>
+        <members>Case.Formula field alternative</members>
+        <members>Case.Reminder Action - large orders</members>
+        <members>Case.Updating Send Clarification Flag</members>
+        <members>Case.Updating send email Flag</members>
+        <members>Case.Who_Edited_Info_Case_Collaboratives</members>
+        <members>Case.name%2Etime%2Edate stamp</members>
+        <members>Check_Credit_Memo_Request__c.New Check %2F Credit Memo Request</members>
+        <members>Contact.Correct Case for Names</members>
+        <members>Contact.MKT CHK W R%2ETYPE</members>
+        <members>Contact.clz_2022a9f0-e48d-4ca0-b543-ff49f016d074</members>
+        <members>EmailMessage.Last Email Replied</members>
+        <members>Inquiry__c.Creates a Follow up Task in Account</members>
+        <members>Knowledge__kav.When Articles are created or edited</members>
+        <members>Marketing_Projects__c.Marketing Project%3A New Designer Assigned</members>
+        <members>Marketing_Projects__c.New Project Submitted</members>
+        <members>Marketing_Projects__c.Notification - Designer Assigned</members>
+        <members>Marketing_Projects__c.Page Layout Change - Marketing Project</members>
+        <members>Marketing_Projects__c.Page Layout Change - Marketing Project%092</members>
+        <members>Marketing_Projects__c.Project%3A Completed</members>
+        <members>Opportunity.Close Date Timeline</members>
+        <members>Opportunity.Set Opportunity Close Date</members>
+        <members>Opportunity.Set Opportunity Name</members>
+        <members>Opportunity.Set Summary on Opportunity</members>
+        <members>Opportunity.clz_f981dfde-4776-427a-a324-f3b5f0824905</members>
+        <members>Quote_Request__c.Item Name changed</members>
+        <members>Task.Email Sub Type</members>
+        <members>Task.Set Subject for Activity Type</members>
+        <members>Task.Set Subject for Task</members>
+        <members>Task.Set Summary to Short Description</members>
+        <members>Task.Set Task Type From Email</members>
+        <members>Task.Update Complete Date to Today</members>
+        <members>Task.Update Task Type</members>
+        <members>User.Audit Check</members>
+        <name>WorkflowRule</name>
     </types>
     <version>56.0</version>
 </Package>

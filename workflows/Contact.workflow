@@ -1,36 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fieldUpdates>
-        <fullName>MKT_CHK_W_R_TYPE</fullName>
-        <field>Mkt__c</field>
-        <literalValue>1</literalValue>
-        <name>MKT CHK W R.TYPE</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>SET_LAST_NAME</fullName>
-        <field>LastName</field>
-        <formula>UPPER(LEFT( LastName , 1))+
-IF(OR(BEGINS(LOWER(LastName) , &quot;mc&quot;),BEGINS(LOWER(LastName) , &quot;o&apos;&quot;)),LOWER(MID(LastName,2,1))+UPPER(MID(LastName,3,1))+LOWER(MID(LastName,4,80)),
-IF(BEGINS(LOWER(LastName) , &quot;mac&quot;),&quot;ac&quot;+UPPER(MID(LastName,4,1))+LOWER(MID(LastName,5,80)),
- LOWER(MID(LastName, 2,80))))</formula>
-        <name>set last name</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Formula</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>first_name</fullName>
-        <field>FirstName</field>
-        <formula>UPPER(LEFT( FirstName , 1)) + LOWER(MID(FirstName, 2,80))</formula>
-        <name>first name</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Formula</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>true</reevaluateOnChange>
-    </fieldUpdates>
+    <rules>
+        <fullName>Correct Case for Names</fullName>
+        <actions>
+            <name>SET_LAST_NAME</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>first_name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Contact.FirstName</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.LastName</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Making sure that case for names are corrected to the right format : Example - BOB SMITH - Bob Smith</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>MKT CHK W R%2ETYPE</fullName>
+        <actions>
+            <name>MKT_CHK_W_R_TYPE</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(CASE(PRIORVALUE(Responsibility_Type__c),&quot;Clarifications&quot;,1,&quot;Invoice&quot;,1,&quot;Website&quot;,1,0)=1,
+TEXT( Responsibility_Type__c )=&quot;Sales_Service&quot;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>clz_2022a9f0-e48d-4ca0-b543-ff49f016d074</fullName>
+        <actions>
+            <name>clz_6349493ff00946d992ff379b9958d449</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <formula>(Account.Name&lt;&gt;null)&amp;&amp;(Email&lt;&gt;null)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
 </Workflow>
