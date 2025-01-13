@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>no@email.com.invalid</email>
+    <name>Voice of Customer</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>VOC_Team</publicGroup>
+        </publicGroups>
+        <users>
+            <user>amanda.linville@kooziegroup.com</user>
+            <user>angela.conway@kooziegroup.com</user>
+            <user>brittny.hanser@kooziegroup.com</user>
+            <user>christie.wheeler@kooziegroup.com</user>
+            <user>dawyn.wilson@kooziegroup.com</user>
+            <user>quanita.davenport@kooziegroup.com</user>
+            <user>rebecca.rhodes@kooziegroup.com</user>
+            <user>sharon.huffer@kooziegroup.com</user>
+            <user>stephanie.giattina@kooziegroup.com</user>
+            <user>tammy.prieto@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

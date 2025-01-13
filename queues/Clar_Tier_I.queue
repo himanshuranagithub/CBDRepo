@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Clar Tier I</name>
+    <queueMembers>
+        <users>
+            <user>ortaleza.16@usa.teleperformance.com</user>
+            <user>tugas.12@usa.teleperformance.com</user>
+            <user>fontanilla.120@usa.teleperformance.com</user>
+            <user>jester.bautista@teleperformance.com</user>
+            <user>farinas.9@usa.teleperformance.com</user>
+            <user>katleenjoy.5@usa.teleperformance.com</user>
+            <user>cabatug.5@usa.teleperformance.com</user>
+            <user>barrientos.291@usa.teleperformance.com</user>
+            <user>maravillas.9@usa.teleperformance.com</user>
+            <user>ocana.17@usa.teleperformance.com</user>
+            <user>maquinta.6@usa.teleperformance.com</user>
+            <user>arcinas.16@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Clarifications</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

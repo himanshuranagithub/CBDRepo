@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>no@email.com.invalid</email>
+    <name>HG Custom</name>
+    <queueMembers>
+        <users>
+            <user>emily.duden@kooziegroup.com</user>
+            <user>lynn.mcconahay@kooziegroup.com</user>
+            <user>michelle.evers@kooziegroup.com</user>
+            <user>rachel.tauer@kooziegroup.com</user>
+            <user>shelley.grimm@kooziegroup.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

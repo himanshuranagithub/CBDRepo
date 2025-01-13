@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>General Chat</name>
+    <queueMembers>
+        <users>
+            <user>apuli.14@usa.teleperformance.com</user>
+            <user>valdez.916@usa.teleperformance.com</user>
+            <user>granado.39@usa.teleperformance.com</user>
+            <user>pangan.72@usa.teleperformance.com</user>
+            <user>cordero.291@usa.teleperformance.com</user>
+            <user>reyes.4035@usa.teleperformance.com</user>
+            <user>llagas.57@usa.teleperformance.com</user>
+            <user>canete.298@usa.teleperformance.com</user>
+            <user>flores.2969@usa.teleperformance.com</user>
+            <user>futol.12@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Chat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+</Queue>

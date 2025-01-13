@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>no@email.com.invalid</email>
+    <name>Elite CLAR FLWP</name>
+    <queueMembers>
+        <users>
+            <user>layar.7@usa.teleperformance.com</user>
+            <user>convento.11@usa.teleperformance.com</user>
+            <user>conato.5@usa.teleperformance.com</user>
+            <user>manalo.441@usa.teleperformance.com</user>
+            <user>esteves.117@usa.teleperformance.com</user>
+            <user>macalanda.23@usa.teleperformance.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>
