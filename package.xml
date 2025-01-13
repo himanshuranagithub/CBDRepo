@@ -1,80 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Campaign.Payment_Approved</members>
-        <members>Campaign.Trade_Show_Activated</members>
-        <members>Campaign.Update_Approved_Manager_Flag</members>
-        <members>Campaign.Update_Opportunity_Status</members>
-        <members>Campaign.Update_Payment_Approved_Field</members>
-        <members>Case.Cadence_Owner_Change</members>
-        <members>Case.Case_RT_to_VOC</members>
-        <members>Case.Change_Status_Day_1</members>
-        <members>Case.Change_Status_Day_3</members>
-        <members>Case.Change_Status_Day_9</members>
-        <members>Case.Clarification_Cancel_Clarification</members>
-        <members>Case.Clarification_Stop_Notifications</members>
-        <members>Case.CloseDateForAgeFormula</members>
-        <members>Case.Close_Case</members>
-        <members>Case.Day_11_Final_Notice</members>
-        <members>Case.Day_12_Cancellation</members>
-        <members>Case.Day_1_Call</members>
-        <members>Case.Day_1_Change_Owner</members>
-        <members>Case.Day_3_Change_Owner</members>
-        <members>Case.Day_3_Reminder_Call</members>
-        <members>Case.Day_6_Reminder_Email</members>
-        <members>Case.Day_6_Reminder_Email_Check</members>
-        <members>Case.Day_9_Change_Owner</members>
-        <members>Case.Day_9_Escalate_to_Sales</members>
-        <members>Case.Pause_Entitlement</members>
-        <members>Case.ReOpenDateForAgeFormula</members>
-        <members>Case.StampTimeUsers</members>
-        <members>Case.Stamp_it</members>
-        <members>Case.Update_Send_Clarification_Email_Flag</members>
-        <members>Case.Update_Send_Email_Flag_to_True</members>
-        <members>Check_Credit_Memo_Request__c.Credit_Memo_Manager_Approval</members>
-        <members>Check_Credit_Memo_Request__c.Update_to_Manager_Approval_Status</members>
-        <members>Claim__c.Complete_Claim</members>
-        <members>Contact.MKT_CHK_W_R_TYPE</members>
-        <members>Contact.SET_LAST_NAME</members>
-        <members>Contact.first_name</members>
-        <members>EmailMessage.Update_Last_Replied_Email</members>
-        <members>Lead.Awaiting_Approval</members>
-        <members>Lead.Lead_Rejected</members>
-        <members>Lead.Lead_owner_to_New_Accounts_Team</members>
-        <members>Marketing_Projects__c.AP_CHECKBOX</members>
-        <members>Marketing_Projects__c.AP_SB_PPT_OWNER</members>
-        <members>Marketing_Projects__c.In_Approval_Process</members>
-        <members>Marketing_Projects__c.Mark_project_approved</members>
-        <members>Marketing_Projects__c.Marketing_Project_Record_Type_Switch</members>
-        <members>Marketing_Projects__c.Marketing_Project_Record_Type_Switch_2</members>
-        <members>Marketing_Projects__c.Not_In_Approval_Process</members>
-        <members>Marketing_Projects__c.Project_Request_Rejected</members>
-        <members>Marketing_Projects__c.Submission_Due_Date</members>
-        <members>Marketing_Projects__c.Submitted_to_Creative</members>
-        <members>Marketing_Projects__c.Uncheck_Inapproval_Process</members>
-        <members>Marketing_Projects__c.Update_Submit_to_creative</members>
-        <members>Opportunity.Abandon_Opp</members>
-        <members>Opportunity.In_Approval_Process</members>
-        <members>Opportunity.Lock_Flag_Disabled</members>
-        <members>Opportunity.Lock_Record_Flag_Enabled</members>
-        <members>Opportunity.Not_In_Approval_Process</members>
-        <members>Opportunity.Price_Approval_Completed</members>
-        <members>Opportunity.Set_Opportunity_Close_Date</members>
-        <members>Opportunity.Set_Opportunity_Name</members>
-        <members>Opportunity.Set_Opportunity_Name_2</members>
-        <members>Opportunity.Set_Opportunity_Stage_to_Proposal</members>
-        <members>Opportunity.Set_Opportunity_Stage_to_Qualification</members>
-        <members>Opportunity.Update_Record_Type_to_Government</members>
-        <members>Opportunity.Update_Record_Type_to_Program</members>
-        <members>Opportunity.Update_Record_Type_to_Programs</members>
-        <members>Quote_Request__c.Item_priorvalue</members>
-        <members>Task.Activity_type</members>
-        <members>Task.Set_Subject_for_Task</members>
-        <members>Task.Set_Subject_for_Task_1</members>
-        <members>Task.Set_Summary_to_Short_Description</members>
-        <members>Task.Set_Task_Type_From_Email</members>
-        <members>Task.Update_Task_Type</members>
-        <name>WorkflowFieldUpdate</name>
+        <members>Admin</members>
+        <members>Analytics Cloud Integration User</members>
+        <members>Analytics Cloud Security User</members>
+        <members>BIC API Read Only</members>
+        <members>BIC Executive</members>
+        <members>BIC JIRA Integration</members>
+        <members>BIC Manager - Account Executive</members>
+        <members>BIC Manager - Credit</members>
+        <members>BIC Manager - Customer Service</members>
+        <members>BIC Manager - Field Sales</members>
+        <members>BIC Manager - Inside Sales</members>
+        <members>BIC Manager - Marketing</members>
+        <members>BIC Manager - National Sales</members>
+        <members>BIC Standard User - Account Executive</members>
+        <members>BIC Standard User - Claims</members>
+        <members>BIC Standard User - Credit</members>
+        <members>BIC Standard User - Customer Service</members>
+        <members>BIC Standard User - Field Sales</members>
+        <members>BIC Standard User - Human Resources</members>
+        <members>BIC Standard User - Marketing</members>
+        <members>BIC Standard User - National Account Rep</members>
+        <members>BIC Standard User - Quoting</members>
+        <members>BIC Standard User- Inside Sales Rep</members>
+        <members>Bic API Only</members>
+        <members>CPQ Integration User</members>
+        <members>Care Krew Collaboration Profile</members>
+        <members>Chat Setup Flow Site Profile</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>ContractManager</members>
+        <members>Customer Community User</members>
+        <members>ESW_Agentforce_Chat_1735548895867 Profile</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496 Profile</members>
+        <members>Einstein Agent User</members>
+        <members>Email Survey Response Profile</members>
+        <members>External Apps Login User</members>
+        <members>Guest License User</members>
+        <members>IB - Account Management</members>
+        <members>IB - Sales</members>
+        <members>IB - Syteline Integration</members>
+        <members>Identity User</members>
+        <members>KG Inside Sales</members>
+        <members>Kooziegroup Answers Profile</members>
+        <members>MarketingProfile</members>
+        <members>MarketingProject Profile</members>
+        <members>Minimum Access - API Only Integrations</members>
+        <members>Minimum Access - Salesforce</members>
+        <members>Read Only1</members>
+        <members>Sales Insights Integration User</members>
+        <members>Salesforce API Only System Integrations</members>
+        <members>SalesforceIQ Integration User</members>
+        <members>Service Agent</members>
+        <members>Service Supervisor</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>Website API Only</members>
+        <members>xAnalytics%2FReports Developer</members>
+        <members>xBIC Director - Marketing</members>
+        <members>xBIC Executive - CFO</members>
+        <members>xBIC Executive - CMO</members>
+        <members>xBIC Executive - COO</members>
+        <members>xBIC Executive Manager - Customer Service</members>
+        <members>xBIC IT</members>
+        <members>xBIC Manager - Claims</members>
+        <members>xBIC Manager - Human Resources</members>
+        <members>xBIC Manager - Quoting %26 Pricing</members>
+        <members>xBIC Manager - Special Markets</members>
+        <members>xBIC Standard User - Clarification</members>
+        <members>xBIC Standard User- Temporary Claims</members>
+        <members>xBic Manager - Clarification</members>
+        <members>xRead Only</members>
+        <name>Profile</name>
     </types>
     <version>56.0</version>
 </Package>
