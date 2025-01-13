@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Accounts</members>
-        <name>PermissionSetGroup</name>
+        <members>Care Krew Collaboration.Block_banned_keywords</members>
+        <members>Care Krew Collaboration.Flag_banned</members>
+        <members>Care Krew Collaboration.Freeze_for_frequent_posting</members>
+        <members>Care Krew Collaboration.Replace_banned</members>
+        <members>Care Krew Collaboration.Review_the_first_post</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Block_banned_keywords</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Flag_banned</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Freeze_for_frequent_posting</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Replace_banned</members>
+        <members>ESW_Agentforce_Chat_1735548895867.Review_the_first_post</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Block_banned_keywords</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Flag_banned</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Freeze_for_frequent_posting</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Replace_banned</members>
+        <members>ESW_Koozie_Web_Chat_1735035965496.Review_the_first_post</members>
+        <members>Kooziegroup Answers.Block_banned_keywords</members>
+        <members>Kooziegroup Answers.Flag_banned</members>
+        <members>Kooziegroup Answers.Freeze_for_frequent_posting</members>
+        <members>Kooziegroup Answers.Replace_banned</members>
+        <members>Kooziegroup Answers.Review_the_first_post</members>
+        <name>ModerationRule</name>
     </types>
     <version>56.0</version>
 </Package>
