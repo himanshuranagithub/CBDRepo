@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account_Record_Page</members>
-        <members>Account_Record_Page1</members>
-        <members>Account_Record_Page2</members>
-        <members>Account_Record_Page3</members>
-        <members>Account_Record_Page4</members>
-        <members>ContactCenter_UtilityBar</members>
-        <members>Contact_Record</members>
-        <members>CrisisCenter_UtilityBar</members>
-        <members>ExpressionSetConsole_UtilityBar</members>
-        <members>FlowsApp_UtilityBar</members>
-        <members>LWC_Learning</members>
-        <members>LWC_Learning_11</members>
-        <members>LWC_learning_1</members>
-        <members>LightningSalesConsole_UtilityBar</members>
-        <members>LightningSales_UtilityBar</members>
-        <members>LightningService_UtilityBar</members>
-        <members>Renewal_Reminder</members>
-        <members>RevenueCloudConsole_UtilityBar</members>
-        <members>SFDC_Org_Info_Record_Page1</members>
-        <members>SFDC_Org_Info_Record_Page2</members>
-        <members>SalesCloudMobile_UtilityBar</members>
-        <members>Task_1</members>
-        <members>Task_2</members>
-        <members>Work_Item_Package_Record_Page1</members>
-        <members>Work_Item_Package_Record_Page2</members>
-        <name>FlexiPage</name>
+        <members>Metric.Completion</members>
+        <members>Metric.Progress</members>
+        <name>RecordType</name>
     </types>
     <version>56.0</version>
 </Package>
