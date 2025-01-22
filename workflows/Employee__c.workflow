@@ -11,4 +11,28 @@
         <senderType>CurrentUser</senderType>
         <template>unfiled$public/temp1</template>
     </alerts>
+    <fieldUpdates>
+        <fullName>updated_capital</fullName>
+        <field>Capital__c</field>
+        <literalValue>Patna</literalValue>
+        <name>updated_capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>capital_matching</fullName>
+        <actions>
+            <name>updated_capital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Employee__c.State__c</field>
+            <operation>equals</operation>
+            <value>Bihar</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
 </Workflow>

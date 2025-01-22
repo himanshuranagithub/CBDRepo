@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>companyLogo</members>
-        <members>goaBottom</members>
-        <members>goaSignature</members>
-        <members>logo</members>
-        <members>renewal_reminder</members>
-        <name>StaticResource</name>
+        <members>Employee__c</members>
+        <members>Student__c</members>
+        <name>Workflow</name>
     </types>
     <version>56.0</version>
 </Package>
