@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Create Update Delete Records" icon-name="action:new-lead">
+        <div class="slds-p-around_small slds-size_6-of-12">
+            <lightning-input type="text" name="Customer Name" label="Customer Name" value={customerName} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-p-around_small slds-size_6-of-12">
+            <lightning-input type="email" name="Email" label="Email" value={email} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-p-around_small slds-size_6-of-12">
+            <lightning-input type="phone" name="Mobile" label="Mobile" value={mobile} onchange={handleInputChange}></lightning-input>
+        </div>
+        <div class="slds-p-around_small slds-size_6-of-12">
+            <lightning-combobox name="active" label="Active" value={status} placeholder="Select Status"
+                options={options} onchange={handleStatusChange}></lightning-combobox>
+        </div>
+        <div class="slds-p-around_small slds-size_6-of-12">
+            <p>Selected value is: {status}</p>
+        </div>
+        <div class="slds-p-around_small slds-m-left_large">
+            <lightning-button label="Save" variant="brand" onclick={handleSave}></lightning-button>
+            <lightning-button label="Update" variant="neutral" onclick={handleSave}></lightning-button>
+            <lightning-button label="Delete" variant="destructive" onclick={handleDelete}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

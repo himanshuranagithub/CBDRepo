@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Editable Data Table">
+        <lightning-datatable
+            key-field="Id"
+            data={records}
+            columns={columns}
+            onsave={handleSave}
+            draft-values={draftValues}
+        >
+        </lightning-datatable>
+    </lightning-card>
+</template>

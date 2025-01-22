@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="CSV File Upload" icon-name="custom:custom69">
+        <!-- File Upload Section -->
+        <lightning-input type="file" label="Upload CSV File" onchange={handleFileUpload} accept=".csv">
+        </lightning-input>
+
+        <!-- Show error if file is not CSV -->
+        <template if:true={error}>
+            <div class="slds-text-color_error">{error}</div>
+        </template>
+
+        <!-- Show parsed CSV Data -->
+        <template if:true={parsedData}>
+            <lightning-datatable
+                key-field="id"
+                data={parsedData}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+        <!-- Save button -->
+        <template if:true={parsedData}>
+            <lightning-button label="Save to Salesforce" onclick={handleSave} class="slds-m-top_medium"></lightning-button>
+        </template>
+
+        <!-- Show success or error messages -->
+        <template if:true={saveMessage}>
+            <div class={saveMessageClass}>{saveMessage}</div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,37 @@
+.scheduler-card {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.custom-table th {
+    background-color: #f4f6f9;
+}
+
+.custom-table td {
+    background-color: #ffffff;
+}
+
+.slds-button_brand {
+    background-color: #0070d2;
+}
+
+.slds-button_brand:hover {
+    background-color: #005fa3;
+}
+
+.lightning-input {
+    margin-top: 1rem;
+}

@@ -1,0 +1,8 @@
+<template>
+    <div>
+        <!-- <c-my-component message={childMessage} ></c-my-component> -->
+        <c-my-component  ></c-my-component>
+        <lightning-input label="New Message" value='' onchange={handleNewMessageChange}></lightning-input>
+        <lightning-button onclick={handleUpdateMessage} label="Update Child Message"></lightning-button>
+    </div>
+</template>

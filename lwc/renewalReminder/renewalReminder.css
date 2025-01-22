@@ -1,0 +1,66 @@
+.container {
+    /* max-width: 500px; */
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.message h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.message p {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.action {
+    margin-bottom: 30px;
+}
+
+.renew-button {
+    background-color: #ff0079;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.renew-button:hover {
+    background-color: #e6006b;
+}
+
+
+
+
+.footer {
+    font-size: 14px;
+    color: #999999;
+    margin-top: 20px;
+      border-top: 2px solid #eae5e8; /* Pink line */
+    padding-top: 20px;
+}
+
+.footer a {
+    color: #0077ff;
+    text-decoration: none;
+}
