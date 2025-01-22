@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>accountContacts</members>
-        <members>childComponentC</members>
-        <members>childHelloWord</members>
-        <members>commonParentComponent</members>
-        <members>counterComponent</members>
-        <members>counterPublisher</members>
-        <members>counterSubscriber</members>
-        <members>createUpdateDeleteRecordComponent</members>
-        <members>csvFileUpload</members>
-        <members>deploymentScheduler</members>
-        <members>helloComponentForVFLWC</members>
-        <members>helloWorld</members>
-        <members>inlineEditDataTable</members>
-        <members>lightningRecordEditFormDemo</members>
-        <members>myComponent</members>
-        <members>myFirstLwc</members>
-        <members>parentComponent</members>
-        <members>parentComponentC</members>
-        <members>relatedContactsTiles</members>
-        <members>renewalReminder</members>
-        <members>sampleHelloWorld</members>
-        <members>searchAccountData</members>
-        <members>siblingA</members>
-        <members>siblingB</members>
-        <members>task1</members>
-        <members>task2</members>
-        <name>LightningComponentBundle</name>
+        <members>CEO</members>
+        <members>CFO</members>
+        <members>COO</members>
+        <members>ChannelSalesTeam</members>
+        <members>CustomerSupportInternational</members>
+        <members>CustomerSupportNorthAmerica</members>
+        <members>DirectorChannelSales</members>
+        <members>DirectorDirectSales</members>
+        <members>EasternSalesTeam</members>
+        <members>InstallationRepairServices</members>
+        <members>MarketingTeam</members>
+        <members>SVPCustomerServiceSupport</members>
+        <members>SVPHumanResources</members>
+        <members>SVPSalesMarketing</members>
+        <members>VPInternationalSales</members>
+        <members>VPMarketing</members>
+        <members>VPNorthAmericanSales</members>
+        <members>WesternSalesTeam</members>
+        <name>Role</name>
     </types>
     <version>56.0</version>
 </Package>
