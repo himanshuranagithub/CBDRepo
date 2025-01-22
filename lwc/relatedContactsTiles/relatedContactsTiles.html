@@ -1,0 +1,15 @@
+<template>
+    <template for:each={relatedContactsByAccount} for:item="account">
+        <div key={account.accountId}>
+            <h3 class="slds-section-title">{account.accountName}</h3>
+            <template for:each={account.contacts} for:item="contact">
+                <div key={contact.Id} class="slds-tile">
+                    <p>{contact.Name}</p>
+                    <p>Email: {contact.Email}</p>
+                    <p>Phone: {contact.Phone}</p>
+                    <!-- Add other contact details as needed -->
+                </div>
+            </template>
+        </div>
+    </template>
+</template>

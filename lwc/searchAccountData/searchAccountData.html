@@ -1,0 +1,24 @@
+<template>
+    <div>
+        <button onclick={handleData}>Show Data </button>
+    </div>
+    <div>
+        <lightning-input type="search" placeholder="Search Accounts" onchange={handleChange}></lightning-input>
+    </div>
+    <lightning-card title="Account Data">
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item="accObj">
+                <div key={accObj.Id}>
+                    <div>{accObj.Name}</div>
+                    <div>{accObj.AccountNumber}</div>
+                </div>
+            </template>
+        </template>
+        <template if:true={error}>
+            <div class="slds-text-color_error">{error}</div>
+        </template>
+        <template if:true={isSearching}>
+            <div>Loading...</div>
+        </template>
+    </lightning-card>
+</template>

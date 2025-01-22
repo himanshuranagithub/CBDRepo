@@ -1,0 +1,42 @@
+<template>
+    <template if:true={accountContacts}>
+        <template for:each={accountContacts} for:item="account">
+            <lightning-card key={account.Id} title={account.Name} class="slds-m-around_medium">
+                <div class="slds-p-around_medium">
+                    <p class="slds-text-heading_medium slds-m-bottom_medium"><strong>Account Name:</strong> {account.Name}</p>
+                    <div class="slds-grid slds-wrap">
+                        <template for:each={account.Contacts} for:item="contact">
+                            <article key={contact.Id} class="slds-tile slds-m-around_medium slds-p-around_medium slds-box">
+                                <!-- <div class="slds-tile__detail">
+                                    <p class="slds-text-title_bold">{contact.Name}</p>
+                                    <p><strong>Email:</strong> {contact.Email}</p>
+                                    <p><strong>Phone:</strong> {contact.Phone}</p>
+                                </div> -->
+
+                                <div class="demo-only" style="width:30rem">
+                                    <article class="slds-tile">
+                                    <h3 class="slds-tile__title slds-truncate" title="Salesforce UX">
+                                    <a href="#">{contact.Name}</a>
+                                    </h3>
+                                    <div class="slds-tile__detail">
+                                    <dl class="slds-list_horizontal slds-wrap">
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Email">Email:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="Description for first label">{contact.Email}</dd>
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Phone ">Phone</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="Description for second label">{contact.Phone}</dd>
+                                    </dl>
+                                    </div>
+                                    </article>
+                                </div>
+
+                            </article>
+                        </template>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+    </template>
+    <template if:false={accountContacts}>
+        <p class="slds-text-align_center slds-text-color_weak slds-m-around_medium">No related contacts found.</p>
+    </template>
+</template>

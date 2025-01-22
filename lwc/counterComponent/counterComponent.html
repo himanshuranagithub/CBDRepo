@@ -1,0 +1,8 @@
+<template>
+    <div>
+        <template for:each={students} for:item="student">
+            <p key={student.id}>{student.name}</p>
+        </template>
+        <button onclick={addStudent}>Add Student</button>
+    </div>
+</template>
