@@ -5,6 +5,7 @@
         <members>DemoAccountInsertTest</members>
         <members>DemoGitTest</members>
         <members>Demo_sc</members>
+        <members>demo1</members>
         <members>demoGit</members>
         <members>demo_GIT_R</members>
         <name>ApexClass</name>
