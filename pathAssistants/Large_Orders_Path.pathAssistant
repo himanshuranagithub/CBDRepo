@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Large Orders Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Status</fieldNames>
+        <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b&gt;We got the large order!! &amp;#127942;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;b&gt;THINGS TO DO TODAY&amp;#128195;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;Please promptly make a &amp;quot;&lt;b&gt;Thank you for your order&lt;/b&gt;&amp;quot; call to Customer and follow these points:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Please confirm items, pricing, lead times, shipping methods or dropships.&lt;/li&gt;&lt;li&gt;Does customer needs virtual or Prepro Samples?&lt;/li&gt;&lt;li&gt;Ask probing questions to make sure that nothing is missing from the PO.&lt;/li&gt;&lt;/ol&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Working</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Large_Orders</recordTypeName>
+</PathAssistant>

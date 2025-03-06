@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Marketing_Projects__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Marketing Project: Create</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>Marketing_Project_Name__c</fieldNames>
+        <fieldNames>Due_Date_Project_Submission__c</fieldNames>
+        <fieldNames>First_Draft_Due_Date__c</fieldNames>
+        <picklistValueName>Created</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Create_Marketing_Project</recordTypeName>
+</PathAssistant>

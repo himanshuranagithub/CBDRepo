@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Kare Krew Change/ Service Request</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Level_of_Effort__c</fieldNames>
+        <fieldNames>User_with_Issue__c</fieldNames>
+        <fieldNames>Priority</fieldNames>
+        <fieldNames>Priority_Number__c</fieldNames>
+        <info>&lt;p&gt;Analyze requirements. &lt;/p&gt;</info>
+        <picklistValueName>Analysis</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;If you need additional requirements. &lt;/p&gt;</info>
+        <picklistValueName>Awaiting Business Response</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Closed. &lt;/p&gt;</info>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Development beginning (configuration or code). &lt;/p&gt;</info>
+        <picklistValueName>Development</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Status</fieldNames>
+        <fieldNames>User_with_Issue__c</fieldNames>
+        <info>&lt;p&gt;Verify case and move to analysis. &lt;/p&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Pushed to production, verifying. &lt;/p&gt;</info>
+        <picklistValueName>Pending Close</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Pending push to production. &lt;/p&gt;</info>
+        <picklistValueName>Pending production</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>UAT_Approver__c</fieldNames>
+        <fieldNames>UAT_Feedback__c</fieldNames>
+        <info>&lt;p&gt;UAT in sandbox or production. &lt;/p&gt;</info>
+        <picklistValueName>Unit Testing</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Care_Krew_SF_Request</recordTypeName>
+</PathAssistant>

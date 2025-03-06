@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Check_Credit_Memo_Request__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Check / Credit Memo Request</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Type__c</fieldNames>
+        <fieldNames>Account__c</fieldNames>
+        <fieldNames>Date_Needed__c</fieldNames>
+        <info>&lt;p&gt;This form should be used to request a Credit Memo or Check issuance to a Distributor Account. Please follow the below steps to complete the process:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Indicate the type below. Complete all required fields&lt;/li&gt;&lt;li&gt;Once completed, progress to the next stage. Manager approval will be automatically requested&lt;/li&gt;&lt;li&gt;After manager approval is received, the Marketing Services team will request for the payment to be submitted and processed&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;**REQUESTS MUST BE SUBMITTED BY 11:59 EST ON MONDAY TO BE PROCESSED WITHIN THE SAME WEEK**&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: Calibri, sans-serif; font-size: 11pt;&quot;&gt;NOTE: If requesting &lt;/span&gt;&lt;i style=&quot;font-family: Calibri, sans-serif; font-size: 11pt;&quot;&gt;Tradeshow, EME, or Event credit/check&lt;/i&gt;&lt;span style=&quot;font-family: Calibri, sans-serif; font-size: 11pt;&quot;&gt;; DO NOT use this form. Please complete these requests via the &amp;#39;Campaigns&amp;#39; tab.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Created</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Type__c</fieldNames>
+        <fieldNames>Amount__c</fieldNames>
+        <info>&lt;p&gt;Regional Managers and Sales Leaders: Please review and approve/reject all Credit and Check requests within your territory. Once approved, the request will automatically advance to the next stage and payment requested.&lt;/p&gt;</info>
+        <picklistValueName>In Manager Approval</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Credit_Memo__c</fieldNames>
+        <fieldNames>Credit_Memo_Issued_Date__c</fieldNames>
+        <fieldNames>Check_Number__c</fieldNames>
+        <fieldNames>Check_Issued_Date__c</fieldNames>
+        <info>&lt;p&gt;Marketing Services Team: Please note the Credit Memo/Check number and issue date in the &amp;quot;Accounting Use Only&amp;quot; section once the payment has been processed.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Payment Processed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Amount__c</fieldNames>
+        <fieldNames>Date_Needed__c</fieldNames>
+        <fieldNames>Account__c</fieldNames>
+        <info>&lt;p&gt;Marketing Services Team: Please ensure data is complete and accurate prior to requesting Check or Credit via the necessary channels. In the event of missing data, please contact the requestor(s) immediately.&lt;/p&gt;</info>
+        <picklistValueName>Payment Requested</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

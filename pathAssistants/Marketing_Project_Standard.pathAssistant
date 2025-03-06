@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Marketing_Projects__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Marketing Project: Standard</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Designer_Time_Spent_on_Project__c</fieldNames>
+        <fieldNames>Due_Date_Com__c</fieldNames>
+        <fieldNames>Due_Date_Mailing__c</fieldNames>
+        <fieldNames>Link_to_Final_File__c</fieldNames>
+        <picklistValueName>Complete</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>SharePoint_Review_Complete__c</fieldNames>
+        <fieldNames>Status__c</fieldNames>
+        <fieldNames>Team_Requesting_Project__c</fieldNames>
+        <fieldNames>Product_Type__c</fieldNames>
+        <info>&lt;p&gt;REQUESTORS: Please complete all required fields and complete the Project Overview, Information, and Detail sections to the best of your ability.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;The project is considered to be a draft until you (the requestor) change the status to &amp;quot;PROJECT SUBMITTED&amp;quot;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Please ensure that you have reviewed the Promotional Materials folder in the Sales Resource Library to ensure: (1) There isn’t a Marketing focused flyer that can be used; (2) No prior project can be reused; (3) A flyer template isn’t available to use. A hyperlink to the Marketing Promotional Materials Folder (SharePoint) may be found below:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://bicgraphic.sharepoint.com/:f:/g/departments/Sales/EiX7nCUJ3VRAkCB0Q_xTPnkB2QG9EoA5GYHaUyGQdvPfvw?e=PlUcqa&quot; target=&quot;_blank&quot;&gt;Promotional Materials Folder&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Created</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>First_Draft_Due_Date__c</fieldNames>
+        <fieldNames>First_Draft_Due_to_Creative__c</fieldNames>
+        <fieldNames>First_Draft_Due_to_Route__c</fieldNames>
+        <picklistValueName>First Draft</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Standard_Project</recordTypeName>
+</PathAssistant>

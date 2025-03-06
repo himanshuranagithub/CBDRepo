@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Quote_Request__c</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Non-Calendar Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Assigned_To__c</fieldNames>
+        <fieldNames>Status__c</fieldNames>
+        <fieldNames>RecordTypeId</fieldNames>
+        <info>&lt;p&gt;TBD&lt;/p&gt;</info>
+        <picklistValueName>Request Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Assigned_To__c</fieldNames>
+        <fieldNames>CreatedById</fieldNames>
+        <fieldNames>RecordTypeId</fieldNames>
+        <info>&lt;p&gt;TBD&lt;/p&gt;</info>
+        <picklistValueName>Request Received</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Assigned_To__c</fieldNames>
+        <fieldNames>CreatedById</fieldNames>
+        <fieldNames>RecordTypeId</fieldNames>
+        <picklistValueName>Request Submitted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Assigned_To__c</fieldNames>
+        <fieldNames>CreatedById</fieldNames>
+        <fieldNames>RecordTypeId</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;The &amp;quot;&lt;/span&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Request in Draft&lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&amp;quot; status is defined as the initial creation and/or editing of the quote request and all pertinent information required to be submitted to the Finance/Quoting team. &lt;/span&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Attention: Sales &amp;amp; Service Team&lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;, please ensure all quote products are entered to ensure a seamless transition to the Finance/Quoting team. After review of the quote request and products, change the status to &amp;quot;Request Submitted&amp;quot; to send the quote to the Finance/Quoting team for their review. Thank You&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Request in Draft</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Assigned_To__c</fieldNames>
+        <fieldNames>Status__c</fieldNames>
+        <fieldNames>RecordTypeId</fieldNames>
+        <picklistValueName>Request in Progress</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Non_Calendar</recordTypeName>
+</PathAssistant>

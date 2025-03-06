@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Campaign</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Trade Show</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Status</fieldNames>
+        <fieldNames>Cancellation_Reason__c</fieldNames>
+        <fieldNames>Cancellation_Reason_Detail__c</fieldNames>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>End_User_Count__c</fieldNames>
+        <fieldNames>Supplier_Attendees__c</fieldNames>
+        <fieldNames>Marketing_Giveaways__c</fieldNames>
+        <fieldNames>Overall_Assessment__c</fieldNames>
+        <fieldNames>Photos__c</fieldNames>
+        <picklistValueName>Completed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>BIC_Graphic_Primary_Attendee__c</fieldNames>
+        <fieldNames>Check_Number__c</fieldNames>
+        <fieldNames>Check_Issued_Date__c</fieldNames>
+        <picklistValueName>Payment Processed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Association__c</fieldNames>
+        <fieldNames>Show_Contact__c</fieldNames>
+        <fieldNames>StartDate</fieldNames>
+        <fieldNames>EndDate</fieldNames>
+        <fieldNames>Type</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;BEFORE YOU START:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Make Sure you already created the Association Account Record&lt;/li&gt;&lt;li&gt;Make sure you already created the Asociation Contact Record&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;START IN  PLANNED  STAGE:&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Fill in the Fields in the path&lt;/li&gt;&lt;li&gt;Click Save&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;CLICK SIGN-UP STAGE  to &amp;quot;Submit for Approval&amp;quot; from your Manager&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Be sure your information is correct before submitting as the record will lock for review.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Planned</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Membership_Dues__c</fieldNames>
+        <fieldNames>Additional_Trade_Show_Fees__c</fieldNames>
+        <fieldNames>Total_Amount_Requested__c</fieldNames>
+        <fieldNames>Payment_Method__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;PAYMENT METHOD DEFINITIONS&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Check - Marketing will have to issue the check in order to move to the next stage&lt;/li&gt;&lt;li&gt;Credit Memo - Marketing will have to issue a Credit Memo in order to move to the next stage&lt;/li&gt;&lt;li&gt;Paid on Credit Card - Will automatically allow you to continue&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;NOTE:&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b style=&quot;font-family: Calibri, sans-serif; font-size: 14.6667px;&quot;&gt;&lt;i&gt;Any show request that is handled completely by the rep (including registration and payment) still needs to be created and be approved by your manager in Salesforce.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;</info>
+        <picklistValueName>Request Payment</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Estimated_Number_of_Attendees__c</fieldNames>
+        <fieldNames>Booths_Needed__c</fieldNames>
+        <fieldNames>Tables_Needed__c</fieldNames>
+        <fieldNames>Electricity_Needed__c</fieldNames>
+        <fieldNames>Additional_Needs__c</fieldNames>
+        <picklistValueName>Sign-up</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Trade_Show</recordTypeName>
+</PathAssistant>

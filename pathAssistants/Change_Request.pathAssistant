@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Change_Request__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Change Request</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Resolution__c</fieldNames>
+        <fieldNames>Next_Action__c</fieldNames>
+        <picklistValueName>Completed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Issue_Summary__c</fieldNames>
+        <fieldNames>Next_Action__c</fieldNames>
+        <fieldNames>OwnerId</fieldNames>
+        <fieldNames>Parent_Change_Request__c</fieldNames>
+        <picklistValueName>Prioritized</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>CreatedById</fieldNames>
+        <fieldNames>Issue_Description__c</fieldNames>
+        <fieldNames>Issue_Summary__c</fieldNames>
+        <picklistValueName>Queued</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Proposed_Resolution__c</fieldNames>
+        <fieldNames>Resolution__c</fieldNames>
+        <picklistValueName>Working</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

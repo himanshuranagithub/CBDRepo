@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Inside Sales Case</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Sales_Notes__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Waiting on Response, add Sales Notes&lt;/li&gt;&lt;li&gt;Follow up on Response &amp;quot;Create a Task&amp;quot;&lt;/li&gt;&lt;li&gt;Reply to Customer&lt;/li&gt;&lt;li&gt;Close&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Awaiting Response (Internal)</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>CaseNumber</fieldNames>
+        <fieldNames>Case_Opened_Date__c</fieldNames>
+        <fieldNames>Case_Reason_Type__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Assign to Sales Rep or Self&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>EBS_Account_Number__c</fieldNames>
+        <fieldNames>Sales_Notes__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Send customer New Account Set-up Email&lt;/li&gt;&lt;li&gt;Follow up on Account &amp;quot;Create a Task&amp;quot;&lt;ul&gt;&lt;li&gt;Reminder: add New Account to case &amp;amp; contact record&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Reply to Customer with Welcome Email&lt;/li&gt;&lt;li&gt;Close&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Pending Account Creation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Case_Owner_QUEUE_Name__c</fieldNames>
+        <fieldNames>Comment__c</fieldNames>
+        <fieldNames>ContactEmail</fieldNames>
+        <fieldNames>ContactId</fieldNames>
+        <fieldNames>Sales_Notes__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Review the email&lt;/li&gt;&lt;li&gt;Add Case Reason Type&lt;/li&gt;&lt;li&gt;Verify/Update Contact&lt;/li&gt;&lt;li&gt;Verify/Update Account, if existing account&lt;/li&gt;&lt;li&gt;Merge duplicate open sales case(s)&lt;/li&gt;&lt;li&gt;Reply to Customer or Send Email internally for more details&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Working</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Inside_Sales_Case</recordTypeName>
+</PathAssistant>
