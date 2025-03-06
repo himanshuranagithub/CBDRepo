@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>New Acc Lead</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;ul&gt;&lt;li&gt;Check on the right side of the page for possible matches for account and Contact.&lt;/li&gt;&lt;li&gt;Search the system for the email address for an existing record.&lt;/li&gt;&lt;li&gt;Submit for Approval if the lead seems legit.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Working</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Account_Request</recordTypeName>
+</PathAssistant>

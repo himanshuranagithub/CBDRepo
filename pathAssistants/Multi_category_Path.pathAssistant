@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <entityName>Quote_Request__c</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Multi-category Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>OwnerId</fieldNames>
+        <fieldNames>Opportunity_Stage__c</fieldNames>
+        <info>&lt;p&gt;TBD&lt;/p&gt;</info>
+        <picklistValueName>Request Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Assigned_To__c</fieldNames>
+        <fieldNames>OwnerId</fieldNames>
+        <fieldNames>In_Hands_Date_Event_Date__c</fieldNames>
+        <info>&lt;p&gt;TBD&lt;/p&gt;</info>
+        <picklistValueName>Request Received</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Assigned_To__c</fieldNames>
+        <fieldNames>CreatedById</fieldNames>
+        <fieldNames>In_Hands_Date_Event_Date__c</fieldNames>
+        <info>&lt;p&gt;TBD&lt;/p&gt;</info>
+        <picklistValueName>Request Submitted</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Assigned_To__c</fieldNames>
+        <fieldNames>OwnerId</fieldNames>
+        <fieldNames>Status__c</fieldNames>
+        <info>&lt;p&gt;TBD&lt;/p&gt;</info>
+        <picklistValueName>Request in Progress</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Multi_category</recordTypeName>
+</PathAssistant>
