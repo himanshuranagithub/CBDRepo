@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>EBotR_v3</members>
-        <members>EBotR_v4</members>
-        <members>EBotR_v5</members>
-        <members>EinsteinBotReports</members>
-        <members>EinsteinBotReports_v2</members>
-        <name>ReportFolder</name>
+        <members>Case.Commercial_Loan_Closing_Doc_QCA</members>
+        <members>Case.Commercial_QCA_Key_Fields</members>
+        <members>Case.Master</members>
+        <members>Metric.Completion</members>
+        <members>Metric.Progress</members>
+        <members>Position__c.Master_Position</members>
+        <members>Position__c.Non_Technical_Position</members>
+        <members>Position__c.Technical_Position</members>
+        <name>RecordType</name>
     </types>
     <version>56.0</version>
 </Package>

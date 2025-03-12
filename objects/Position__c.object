@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>Master_Position</fullName>
+        <active>true</active>
+        <description>Default</description>
+        <label>Master Position</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Non_Technical_Position</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>Position_Compact_Layout</compactLayoutAssignment>
+        <label>Non Technical Position</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Technical_Position</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>Position_Compact_Layout</compactLayoutAssignment>
+        <label>Technical Position</label>
+    </recordTypes>
+</CustomObject>
