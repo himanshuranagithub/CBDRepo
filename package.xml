@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AuraInputSelect</members>
-        <members>popUp</members>
-        <members>setExpId</members>
-        <members>setStartUrl</members>
-        <name>AuraDefinitionBundle</name>
+        <members>AccountDuplicateTrigger</members>
+        <members>AccountTrigger</members>
+        <members>CaseAggregateRollupTrigger</members>
+        <members>CaseDay5354Trigger</members>
+        <members>LeadTrigger</members>
+        <members>NullAccount</members>
+        <members>OpportunityTrigger</members>
+        <members>TaskTrigger</members>
+        <members>nullAccD6Tr</members>
+        <members>nullAccTrg</members>
+        <members>nullAcctgr</members>
+        <members>nullOpp53D1Tgr</members>
+        <members>nullOppD5Tr</members>
+        <members>nullPhnocopyAcc</members>
+        <members>nullopp</members>
+        <name>ApexTrigger</name>
     </types>
     <version>56.0</version>
 </Package>
