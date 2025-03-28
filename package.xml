@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>nullopp</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
-        <members>popUp</members>
-        <name>AuraDefinitionBundle</name>
+        <members>Candidate__c.Mobile__c</members>
+        <members>Candidate__c.Visa_Requiered__c</members>
+        <members>Position__c.Functional_Area__c</members>
+        <members>Position__c.Skill_Required__c</members>
+        <name>CustomField</name>
     </types>
     <version>56.0</version>
 </Package>

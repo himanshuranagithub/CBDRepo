@@ -1,21 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <recordTypes>
-        <fullName>Master_Position</fullName>
-        <active>true</active>
-        <description>Default</description>
-        <label>Master Position</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Non_Technical_Position</fullName>
-        <active>true</active>
-        <compactLayoutAssignment>Position_Compact_Layout</compactLayoutAssignment>
-        <label>Non Technical Position</label>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Technical_Position</fullName>
-        <active>true</active>
-        <compactLayoutAssignment>Position_Compact_Layout</compactLayoutAssignment>
-        <label>Technical Position</label>
-    </recordTypes>
+    <fields>
+        <fullName>Functional_Area__c</fullName>
+        <externalId>false</externalId>
+        <label>Functional Area</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Finance</fullName>
+                    <default>false</default>
+                    <label>Finance</label>
+                </value>
+                <value>
+                    <fullName>Human Resource</fullName>
+                    <default>false</default>
+                    <label>Human Resource</label>
+                </value>
+                <value>
+                    <fullName>Information Technology</fullName>
+                    <default>false</default>
+                    <label>Information Technology</label>
+                </value>
+                <value>
+                    <fullName>Miscellanious</fullName>
+                    <default>false</default>
+                    <label>Miscellanious</label>
+                </value>
+                <value>
+                    <fullName>Retail Operations</fullName>
+                    <default>false</default>
+                    <label>Retail Operations</label>
+                </value>
+                <value>
+                    <fullName>Warehousing</fullName>
+                    <default>false</default>
+                    <label>Warehousing</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Skill_Required__c</fullName>
+        <externalId>false</externalId>
+        <label>Skills Required</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Java</fullName>
+                    <default>false</default>
+                    <label>Java</label>
+                </value>
+                <value>
+                    <fullName>C#</fullName>
+                    <default>false</default>
+                    <label>C#</label>
+                </value>
+                <value>
+                    <fullName>Javascript</fullName>
+                    <default>false</default>
+                    <label>Javascript</label>
+                </value>
+                <value>
+                    <fullName>Apex</fullName>
+                    <default>false</default>
+                    <label>Apex</label>
+                </value>
+                <value>
+                    <fullName>PowerPoint</fullName>
+                    <default>false</default>
+                    <label>PowerPoint</label>
+                </value>
+                <value>
+                    <fullName>Word</fullName>
+                    <default>false</default>
+                    <label>Word</label>
+                </value>
+                <value>
+                    <fullName>Team Building</fullName>
+                    <default>false</default>
+                    <label>Team Building</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
 </CustomObject>
