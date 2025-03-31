@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Candidate__c</members>
-        <name>CustomObject</name>
+        <members>Account_Record_Page</members>
+        <name>FlexiPage</name>
     </types>
     <types>
-        <members>Contact.Standard_Contact_Duplicate_Rule</members>
-        <members>Lead.Standard_Lead_Duplicate_Rule</members>
-        <name>DuplicateRule</name>
+        <members>Create_Contact</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Display_name</members>
+        <name>FlowDefinition</name>
     </types>
     <version>56.0</version>
 </Package>
