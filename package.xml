@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>DE Default</members>
-        <name>HomePageLayout</name>
+        <members>Experience_Profile_Manager</members>
+        <name>PermissionSet</name>
     </types>
     <types>
-        <members>Account-Account Layout</members>
-        <name>Layout</name>
+        <members>Standard</members>
+        <name>Profile</name>
     </types>
     <types>
-        <members>lightningProgressIndicator</members>
-        <name>LightningComponentBundle</name>
+        <members>CBD_Test_profilePasswordPolicy1729688749224</members>
+        <name>ProfilePasswordPolicy</name>
+    </types>
+    <types>
+        <members>CBD_Test_profileSessionSetting1729688749315</members>
+        <name>ProfileSessionSetting</name>
     </types>
     <version>56.0</version>
 </Package>
