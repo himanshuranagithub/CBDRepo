@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
-    <validationRules>
-        <fullName>Close_Date_To_Specify_if_Status_is_close</fullName>
-        <active>true</active>
-        <errorConditionFormula>IF(AND( ISBLANK( Close_Date__c),
-      OR(ISPICKVAL( Status__c , &apos;Closed-Filled&apos;), 
-	ISPICKVAL( Status__c , &apos;Closed-Not Filled&apos;),
-          ISPICKVAL( Status__c , &apos;Closed-Not Approved&apos;))),
-   True,False)</errorConditionFormula>
-        <errorMessage>Close Date is not specified</errorMessage>
-    </validationRules>
+    <fieldSets>
+        <fullName>Customer_Support_Fields</fullName>
+        <description>Fields used for case creation on Visualforce pages</description>
+        <displayedFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Close_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Customer Support Fields</label>
+    </fieldSets>
 </CustomObject>
