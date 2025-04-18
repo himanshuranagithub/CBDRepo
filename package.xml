@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>HelloLWCExampleApp</members>
-        <members>test</members>
-        <name>AuraDefinitionBundle</name>
+        <members>AccountCreationDemo</members>
+        <members>AccountCreationDemoTest</members>
+        <members>AccountTable</members>
+        <members>AccountTableTest</members>
+        <members>AccountVipTierUpdateController</members>
+        <members>CsvFileUploadController</members>
+        <members>Demo</members>
+        <members>DemoClass</members>
+        <members>DemoFor</members>
+        <members>DeploymentSchedulerController</members>
+        <members>DynamicFilterFromNaturalLanguage</members>
+        <members>ExternalDataFetcher1</members>
+        <members>MetadataComponentDependency</members>
+        <members>OAuthService</members>
+        <members>RecordControler</members>
+        <members>RecordController</members>
+        <members>RelatedRecordFetcherController</members>
+        <members>RequestAccessTokenTest</members>
+        <members>SK_GenericDataTableCmpController</members>
+        <members>SK_SetUpAuditTrailController</members>
+        <members>SearchAccountController</members>
+        <members>SetupAuditTrailLogger</members>
+        <members>SubscriptionStatusService</members>
+        <members>TestC</members>
+        <members>TestDataFactory</members>
+        <members>TranscriptController</members>
+        <members>TranscriptGradeReportController</members>
+        <members>VFPageRedirect</members>
+        <members>aa</members>
+        <members>publicclasscalculator5</members>
+        <name>ApexClass</name>
     </types>
     <version>56.0</version>
 </Package>
