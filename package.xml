@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>ContactTrigger</members>
-        <name>ApexTrigger</name>
+        <members>Student__c.Scholarship_Approval</members>
+        <members>Student__c.scholarship_app</members>
+        <members>Student__c.scholarship_approvel</members>
+        <name>ApprovalProcess</name>
     </types>
     <version>56.0</version>
 </Package>
