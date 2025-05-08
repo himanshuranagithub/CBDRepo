@@ -1,1 +1,1 @@
-public cdlass DemoClass { public void run() { System.debug("Hello"); } }
+pubvoidlic cdewelass DemoClass { public void run() { System.debug("Hello"); } }
