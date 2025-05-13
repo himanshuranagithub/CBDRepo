@@ -1,0 +1,1 @@
+public class DemoClass { public void run() { System.debug("Hello"); } }
