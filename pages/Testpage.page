@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Hello Visualforce">
+            <apex:pageBlockSection >
+                <apex:outputText value="Hello, this is my first Visualforce page!" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
