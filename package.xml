@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>CBD__Devopps</members>
-        <members>CBD__GenericDataTableCmp</members>
-        <members>CBD__OrgAuthorizationInfo</members>
-        <members>CBD__SetUpAuditTrailApp</members>
-        <members>CBD__SetUpAuditTrailCmp</members>
-        <members>accountListDetailTable</members>
-        <members>accountListTable</members>
-        <name>AuraDefinitionBundle</name>
+        <members>CBD__Org_Add_Msg</members>
+        <members>CBD__Production_Login_URL</members>
+        <members>CBD__Sandbox_Login_URL</members>
+        <members>Welcome_Message</members>
+        <name>CustomLabel</name>
     </types>
     <version>56.0</version>
 </Package>
