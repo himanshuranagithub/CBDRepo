@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account_screen_flow</members>
-        <members>Birthdayscheduletriggerflow</members>
-        <members>CBD__DeploymentEmailAlert</members>
-        <members>CBD__RTF_Restrict_Environment_With_Respect_To_Project_Pipeline</members>
-        <members>CBD__Send_Email_Approval_Submitter</members>
-        <members>Festivalwishescheduletriggerflow</members>
-        <members>ParentPhoneNumberOnStudent</members>
-        <members>Userfestivalmessage</members>
-        <members>autolunchedflow</members>
-        <members>callfestivalemailflow</members>
-        <members>callwelcomeemailflow</members>
-        <members>callwelcomeflow</members>
-        <members>company_phone_record_trigger_flow</members>
-        <members>delete_case_record</members>
-        <members>festivalemailautolunchedflow</members>
-        <members>opportunity_expired</members>
-        <members>parent_phone_trigger_flow</members>
-        <members>record_updatation</members>
-        <members>record_update</members>
-        <members>state_field_update</members>
-        <members>student_flow</members>
-        <members>studentphoneupdate</members>
-        <members>text_123</members>
-        <members>userwelcomemessage</members>
-        <name>Flow</name>
+        <members>CBD__RMA_Admin</members>
+        <members>Experience_Profile_Manager</members>
+        <members>GKNRM__RM_Admin_Permission_set</members>
+        <members>sfdcInternalInt__sfdc_activityplatform</members>
+        <members>sfdcInternalInt__sfdc_scrt2</members>
+        <members>sfdc_chatbot_service_permset</members>
+        <name>PermissionSet</name>
     </types>
     <version>56.0</version>
 </Package>
