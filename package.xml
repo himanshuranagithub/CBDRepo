@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account.Phone_Must_Contain_10_Digits</members>
-        <members>CBD__Work_Item_Package__c.CBD__Project_Validation</members>
-        <members>CBD__Work_Item_Package__c.CBD__Source_Org_Not_Equal_To_Destination_Org</members>
-        <members>Collage_Student__c.test_Validation</members>
-        <members>Contact.First_Name_Not_Blank</members>
-        <members>Oraqosoft_Company_Branch_Employee__c.Restrict_Numeric_Value_in_Name</members>
-        <members>Resource__c.DuplicateMailIdIsNotAllowed</members>
-        <members>Student__c.Mobile_Lenght</members>
-        <members>Trainee_Student__c.Only_Character</members>
-        <name>ValidationRule</name>
+        <members>Case.ChangePriorityToHigh</members>
+        <members>Collage_Student_Family__c.Approved_Scholarship</members>
+        <members>Collage_Student_Family__c.Facility_Field_Update</members>
+        <members>Collage_Student_Family__c.In_Progress</members>
+        <members>Collage_Student_Family__c.Scholarship_Opened</members>
+        <members>Collage_Student_Family__c.Scholarship_Rejected</members>
+        <members>Collage_Student__c.Approved_Scholorship</members>
+        <members>Collage_Student__c.Reject_Scholorship</members>
+        <members>Collage_Student__c.Result_Update</members>
+        <members>Collage_Student__c.Status_Approve</members>
+        <members>Collage_Student__c.Status_In_Progress</members>
+        <members>Collage_Student__c.Status_Opened</members>
+        <members>Employee_Details__c.Approved1</members>
+        <members>Employee_Details__c.Approved11</members>
+        <members>Employee_Details__c.Axpance_Approv</members>
+        <members>Employee_Details__c.Closed1</members>
+        <members>Employee_Details__c.Closed11</members>
+        <members>Employee_Details__c.In_Progress</members>
+        <members>Employee_Details__c.In_Progress1</members>
+        <members>Employee_Details__c.In_Progress11</members>
+        <members>Employee_Details__c.Inprogress</members>
+        <members>Employee_Details__c.Open1</members>
+        <members>Employee_Details__c.Open11</members>
+        <members>Employee_Details__c.Recall_Travel_Expance_Status</members>
+        <members>Employee_Details__c.Reject1</members>
+        <members>Employee_Details__c.Reject11</members>
+        <members>Employee_Details__c.Travel_Expanse_Approved_Data</members>
+        <members>Employee_Details__c.Travel_Expanse_Reject_Data</members>
+        <members>Employee_Details__c.Update_Approved</members>
+        <members>Employee_Details__c.Update_In_Progress</members>
+        <members>Employee_Details__c.Update_Rejected</members>
+        <members>Oraqosoft_Company_Branch_Employee__c.Approved_Medical_Expanse</members>
+        <members>Oraqosoft_Company_Branch_Employee__c.Employe_Type_Fresher</members>
+        <members>Oraqosoft_Company_Branch_Employee__c.Medical_Expense_Pending</members>
+        <members>Oraqosoft_Company_Branch_Employee__c.Reject_Medical_Expanse</members>
+        <members>Student__c.Approved</members>
+        <members>Student__c.In_Progress</members>
+        <members>Student__c.Reject</members>
+        <members>Teacher__c.City_1</members>
+        <members>Teacher__c.City_Jharkhand</members>
+        <members>Trainee_Student__c.Approved_Record</members>
+        <members>Trainee_Student__c.Closed_Record</members>
+        <members>Trainee_Student__c.Open_Record</members>
+        <members>Trainee_Student__c.Process_locked</members>
+        <members>Trainee_Student__c.Reject_Record</members>
+        <members>Trainee_Student__c.Update_Capital_Of_MP</members>
+        <name>WorkflowFieldUpdate</name>
     </types>
     <version>56.0</version>
 </Package>
