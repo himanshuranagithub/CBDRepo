@@ -1,0 +1,11 @@
+.table-container {
+    height: 200px; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.lightning-datatable {
+  text-align: center;
+}
