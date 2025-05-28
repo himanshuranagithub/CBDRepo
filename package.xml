@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>CBD__Work_Item_Package__c.CBD__Project_Validation</members>
-        <members>CBD__Work_Item_Package__c.CBD__Source_Org_Not_Equal_To_Destination_Org</members>
-        <members>CBD__Work_Item_Package__c.Require_Deployment_Approver</members>
-        <members>Parent__c.phone_field_should_not_be_blank</members>
-        <members>college__c.phone_field_should_not_be_blank_or_alph</members>
-        <members>employe__c.mailing_adress_equal_to_billing_adress</members>
-        <members>employe__c.name_field_should_not_be_blank_or_no</members>
-        <members>employe__c.phone_field_should_not_be_blank</members>
-        <members>student__c.Name_field_should_not_be_blank_and_no</members>
-        <members>student__c.Phonefiledvalidationrule</members>
-        <members>student__c.class_filed_should_be_blank</members>
-        <members>student__c.student_field_shoul_not_be_blank_or_numb</members>
-        <name>ValidationRule</name>
+        <members>CBD__Deployment__c</members>
+        <members>Case</members>
+        <members>Parent__c</members>
+        <members>addidas__c</members>
+        <members>employe__c</members>
+        <members>student__c</members>
+        <name>Workflow</name>
     </types>
     <version>56.0</version>
 </Package>
