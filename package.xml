@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AccountAddressMatch</members>
-        <members>CBDDeploymentTrigger</members>
-        <members>CBDWorkItemPackageTrigger</members>
-        <members>CBD__ProjectPipelineTrigger</members>
-        <members>CBD__UpdatePackages</members>
-        <members>CBD__WorkItemPackageTrigger</members>
-        <members>Checkduplicatename</members>
-        <members>Contacttrigger</members>
-        <members>contacttrigger1</members>
-        <members>countaccountcontacts</members>
-        <members>updatebillingadress</members>
-        <name>ApexTrigger</name>
+        <members>CBD__Deployment__c.Deployments_Approval_Processes</members>
+        <members>employe__c.travell_expance_approved</members>
+        <members>employe__c.travell_expance_approvel</members>
+        <members>employe__c.travell_expance_approvel_1</members>
+        <members>student__c.monthely_leave_approvel</members>
+        <name>ApprovalProcess</name>
     </types>
     <version>56.0</version>
 </Package>
