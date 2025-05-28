@@ -1,43 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Adidas_Branch_Phone_Trigger_Flow</members>
-        <members>BirthdayWishScheduleFlow</members>
-        <members>CBD__DeploymentEmailAlert</members>
-        <members>CBD__RTF_Restrict_Environment_With_Respect_To_Project_Pipeline</members>
-        <members>CBD__Send_Email_Approval_Submitter</members>
-        <members>CallFlowWelcomeEmail</members>
-        <members>CollageStudentFamilyContactRecordTrigger</members>
-        <members>CollageStudentResultEmailScheduleFlow</members>
-        <members>CollageStudentScreenFlow</members>
-        <members>Collage_Facility_For_Student</members>
-        <members>Collage_Family_Birthday_Wish</members>
-        <members>Collage_Student_Birthday_Wish_Schedule_Flow</members>
-        <members>Count_Opportunity_On_Account</members>
-        <members>Discount_fee_Field_Update</members>
-        <members>Facility_On_Total_Fee_Submitted</members>
-        <members>Oraqosoft_Company_Branch_Field_Update</members>
-        <members>Oraqosoft_Company_Record_Creation</members>
-        <members>SendBirthdayWish</members>
-        <members>Send_email_to_Overseas_Client</members>
-        <members>StudentFamilyContUpdate</members>
-        <members>StudentResultScheduleFlow</members>
-        <members>Student_Capital_update</members>
-        <members>Teacher_Details_Screen_Flow</members>
-        <members>Teacher_Record_creation</members>
-        <members>Test</members>
-        <members>TestAutolaunchedFlow</members>
-        <members>TestCap</members>
-        <members>Update_Capital_On_Company_Branch</members>
-        <members>Update_Email</members>
-        <members>Update_Facility_Site_and_Contract_Id</members>
-        <members>UserWelcomeMessage</members>
-        <members>User_Welcome_Message</members>
-        <members>WelcomeEmailAutolaunchedFlow</members>
-        <members>WelcomeMessageScreenFlow</members>
-        <members>send_email_to_client</members>
-        <members>send_email_to_tranie_student</members>
-        <name>FlowDefinition</name>
+        <members>Account_CreateAnd_Edit_PS</members>
+        <members>CBD__RMA_Admin</members>
+        <members>Experience_Profile_Manager</members>
+        <members>Extra_Permission_To_Krish</members>
+        <members>sfdcInternalInt__sfdc_scrt2</members>
+        <members>text4454</members>
+        <name>PermissionSet</name>
     </types>
     <version>56.0</version>
 </Package>
