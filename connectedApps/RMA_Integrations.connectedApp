@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
-    <contactEmail>vs945820@gmail.com</contactEmail>
-    <label>RMA Integration</label>
+    <contactEmail>vikas.oraqosoft@gmail.com</contactEmail>
+    <label>RMA Integrations</label>
     <oauthConfig>
-        <callbackUrl>https://semykolontechnologies6-dev-ed.my.salesforce.com/apex/CBD__OauthDemoRedirection</callbackUrl>
-        <consumerKey>3MVG9wt4IL4O5wvIhCzNH.m0Ud60PCgKy154Uf2ECl_6HBd6TRbYGxXyIgpOFSP7ZHwqCP7NivFMEqVDX8efp</consumerKey>
+        <callbackUrl>https://semykolontechnologies6-dev-ed.my.salesforce.com/apex/GKNRM__OauthDemoRedirection</callbackUrl>
+        <consumerKey>3MVG9wt4IL4O5wvIhCzNH.m0Ud8sMxmle7bXR316oOwVR0jctmD68ZQ5TGiwP23Esnat6dZCwR4bBLx5G1igX</consumerKey>
         <isAdminApproved>false</isAdminApproved>
         <isClientCredentialEnabled>false</isClientCredentialEnabled>
         <isConsumerSecretOptional>false</isConsumerSecretOptional>

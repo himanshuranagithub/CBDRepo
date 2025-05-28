@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>GKNRM__Package__c.GKNRM__Custom</members>
-        <name>CompactLayout</name>
+        <members>RMA_Integration</members>
+        <members>RMA_Integrations</members>
+        <name>ConnectedApp</name>
     </types>
     <version>56.0</version>
 </Package>
