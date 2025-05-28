@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>CustomLabels</members>
-        <name>CustomLabels</name>
+        <members>CBD__CBD_GPT</members>
+        <members>CBD__Change_Tracker</members>
+        <members>CBD__Configuration</members>
+        <members>CBD__Deployment_Scheduler</members>
+        <members>CBD__Deployment__c</members>
+        <members>CBD__Exception_Log__c</members>
+        <members>CBD__Pipeline_Configuration</members>
+        <members>CBD__Project__c</members>
+        <members>CBD__SFDC_Org_Info__c</members>
+        <members>CBD__Tech_Debt</members>
+        <members>CBD__Work_Item_Package__c</members>
+        <members>Demo</members>
+        <members>Demo_app_page</members>
+        <members>GKNRM__DevOps</members>
+        <members>Parent__c</members>
+        <members>Teacher__c</members>
+        <members>Timesheet__c</members>
+        <members>addidas__c</members>
+        <members>college__c</members>
+        <members>company__c</members>
+        <members>employe__c</members>
+        <members>relatedaccount</members>
+        <members>student__c</members>
+        <members>student_record</members>
+        <members>student_teacher_junction__c</members>
+        <name>CustomTab</name>
     </types>
     <version>56.0</version>
 </Package>
