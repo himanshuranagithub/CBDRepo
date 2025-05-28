@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>CBD__remotesitesetting</members>
-        <members>GKNRM__remotesitesetting</members>
-        <members>SiteFooter</members>
-        <members>SiteHeader</members>
-        <members>SiteLogin</members>
-        <members>SitePoweredBy</members>
-        <name>ApexComponent</name>
+        <members>apexEmailNotifications</members>
+        <name>ApexEmailNotifications</name>
     </types>
     <version>56.0</version>
 </Package>
