@@ -1,13 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Account_CreateAnd_Edit_PS</members>
-        <members>CBD__RMA_Admin</members>
-        <members>Experience_Profile_Manager</members>
-        <members>Extra_Permission_To_Krish</members>
-        <members>sfdcInternalInt__sfdc_scrt2</members>
-        <members>text4454</members>
-        <name>PermissionSet</name>
+        <members>Account.Update_Record</members>
+        <members>CBD__Deployment__c.Download</members>
+        <members>CBD__Deployment__c.Rollback</members>
+        <members>CBD__SFDC_Org_Info__c.Authorize_Org</members>
+        <members>CBD__SFDC_Org_Info__c.Open_Org</members>
+        <members>CBD__SFDC_Org_Info__c.Sync_With_Git</members>
+        <members>CBD__Work_Item_Package__c.Clone_Package</members>
+        <members>CBD__Work_Item_Package__c.Redeploy_Changes</members>
+        <members>Case.LogACall</members>
+        <members>Case.NewChildCase</members>
+        <members>CollaborationGroup.NewGroupMember</members>
+        <members>CollaborationGroup.NewGroupRecord</members>
+        <members>Collage_Student__c.Create_Collage_Student_Record</members>
+        <members>Collage_Teacher__c.Create_Teacher_Record</members>
+        <members>FeedItem.NewTaskFromFeedItem</members>
+        <members>LogACall</members>
+        <members>LogACall</members>
+        <members>NewAccount</members>
+        <members>NewCase</members>
+        <members>NewCase</members>
+        <members>NewContact</members>
+        <members>NewEvent</members>
+        <members>NewEvent</members>
+        <members>NewGroup</members>
+        <members>NewLead</members>
+        <members>NewNote</members>
+        <members>NewOpportunity</members>
+        <members>NewTask</members>
+        <members>NewTask</members>
+        <members>SendEmail</members>
+        <members>SendEmail</members>
+        <members>Task.Defer</members>
+        <members>Task.EditDescription</members>
+        <members>Task.UpdatePriority</members>
+        <members>Task.UpdateStatus</members>
+        <name>QuickAction</name>
     </types>
     <version>56.0</version>
 </Package>
