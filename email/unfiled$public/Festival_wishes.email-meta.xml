@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Festival wishes</name>
+    <style>none</style>
+    <subject>Holi festival wishing</subject>
+    <textOnly>hi{{!employe__c.Name}} HAPPY HOLI
+
+On the occasion of festival of colours, I am sending my best wishes to you and I hope that you enjoy a vivacious time with your loved ones.
+
+FROM OFFICE TEAM</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
