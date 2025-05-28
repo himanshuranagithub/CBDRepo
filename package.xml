@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>apexEmailNotifications</members>
-        <name>ApexEmailNotifications</name>
+        <members>CBD__ProjectPipelineTrigger</members>
+        <members>CBD__UpdatePackages</members>
+        <members>CBD__WorkItemPackageTrigger</members>
+        <members>ContactTrigger1</members>
+        <members>InstallIntegrationFormTrigger</members>
+        <members>contactUpdateaccount</members>
+        <members>toTotalAmountTrigger</members>
+        <name>ApexTrigger</name>
     </types>
     <version>56.0</version>
 </Package>
