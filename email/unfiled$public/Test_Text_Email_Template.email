@@ -1,0 +1,5 @@
+Hi {!Collage_Student__c.Name},
+
+We are Welcome you. You are from {!Collage_Student__c.City__c}.
+
+Thanks
