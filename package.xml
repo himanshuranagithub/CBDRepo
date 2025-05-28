@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>CBD__RMA_Admin</members>
-        <members>Experience_Profile_Manager</members>
-        <members>GKNRM__RM_Admin_Permission_set</members>
-        <members>sfdcInternalInt__sfdc_activityplatform</members>
-        <members>sfdcInternalInt__sfdc_scrt2</members>
-        <members>sfdc_chatbot_service_permset</members>
-        <name>PermissionSet</name>
+        <members>CBD__Work_Item_Package__c.CBD__Deployment_Using_Commit</members>
+        <members>CBD__Work_Item_Package__c.CBD__Project_Pipeline_Deployment</members>
+        <members>CBD__Work_Item_Package__c.CBD__Salesforce_to_Salesforce_Deployment</members>
+        <members>Metric.Completion</members>
+        <members>Metric.Progress</members>
+        <members>employe__c.Private_employe</members>
+        <members>employe__c.Regular_employe</members>
+        <members>student__c.JUNIOR</members>
+        <members>student__c.SENIOR</members>
+        <name>RecordType</name>
     </types>
     <version>56.0</version>
 </Package>

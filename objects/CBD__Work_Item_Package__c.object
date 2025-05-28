@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <recordTypes>
+        <fullName>CBD__Deployment_Using_Commit</fullName>
+        <active>true</active>
+        <label>Deployment Using Commit</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CBD__Project_Pipeline_Deployment</fullName>
+        <active>true</active>
+        <label>Project Pipeline Deployment</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CBD__Salesforce_to_Salesforce_Deployment</fullName>
+        <active>true</active>
+        <label>Salesforce to Salesforce Deployment</label>
+    </recordTypes>
+</CustomObject>
