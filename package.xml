@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>AnswersHome</members>
-        <members>BandwidthExceeded</members>
-        <members>CBD__OauthDemoRedirection</members>
-        <members>CBD__SetUpAuditTrailVFPage</members>
-        <members>CBD__addInstanceURL</members>
-        <members>ChangePassword</members>
-        <members>CommunitiesLanding</members>
-        <members>CommunitiesLogin</members>
-        <members>CommunitiesSelfReg</members>
-        <members>CommunitiesSelfRegConfirm</members>
-        <members>CommunitiesTemplate</members>
-        <members>Exception</members>
-        <members>FileNotFound</members>
-        <members>ForgotPassword</members>
-        <members>ForgotPasswordConfirm</members>
-        <members>GKNRM__OauthDemoRedirection</members>
-        <members>GKNRM__addInstanceURL</members>
-        <members>IdeasHome</members>
-        <members>InMaintenance</members>
-        <members>MicrobatchSelfReg</members>
-        <members>MyProfilePage</members>
-        <members>SiteLogin</members>
-        <members>SiteRegister</members>
-        <members>SiteRegisterConfirm</members>
-        <members>SiteTemplate</members>
-        <members>StdExceptionTemplate</members>
-        <members>Unauthorized</members>
-        <members>UnderConstruction</members>
-        <name>ApexPage</name>
+        <members>Bot_Metrics_Daily_v6</members>
+        <members>Bot_Metrics_Hourly_v6</members>
+        <members>Bot_Sessions_v6</members>
+        <members>MDF_Claim_Request_Crt</members>
+        <members>empolies_login_report</members>
+        <members>empolyes_report</members>
+        <members>flow_orchestration_log_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_stage_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_step_run_ootb_crt_two_four_eight</members>
+        <members>flow_orchestration_work_item_ootb_crt_two_four_eight</members>
+        <members>prm_partner_fund_request_crt</members>
+        <members>prm_partner_marketing_budget_crt</members>
+        <members>prm_total_portal_login_crt</members>
+        <members>prm_unique_portal_crt</members>
+        <members>screen_flows_prebuilt_crt</members>
+        <members>teachers_reports</members>
+        <members>users_reports</members>
+        <name>ReportType</name>
     </types>
     <version>56.0</version>
 </Package>
