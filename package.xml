@@ -3,11 +3,8 @@
     <types>
         <members>Calculator</members>
         <members>CalculatorTest</members>
+        <members>Timesheet</members>
         <name>ApexClass</name>
-    </types>
-    <types>
-        <members>contacttrigger1</members>
-        <name>ApexTrigger</name>
     </types>
     <version>56.0</version>
 </Package>
