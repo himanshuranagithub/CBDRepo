@@ -1,0 +1,8 @@
+Hi {!Student__c.Name}
+
+This is to bring in your notice that you child have below marks:-
+
+{!Student__c.Chemistry__c}
+{!Student__c.Maths__c}.
+
+Thanks

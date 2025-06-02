@@ -1,0 +1,6 @@
+hi {!Student__c.Name}
+
+This is a testing e-mail templete.
+
+{!Student__c.Exam_Result__c}
+{!Student__c.Name}

@@ -1,0 +1,26 @@
+<template>
+    <lightning-card >
+      <div><strong>Account LWC Component</strong></div>
+      <lightning-button 
+        variant="success"
+        label="Delete" 
+        onclick={deleteMultiple} 
+      ></lightning-button>
+      <lightning-button 
+        variant="success"
+        label="Create Account" 
+        onclick={HandleCreate} 
+      ></lightning-button>
+      <template if:true={istrue}>
+        <lightning-record-form object-api-name="Account"
+      fields={fields} onsuccess={handleSuccess}>
+  </lightning-record-form>
+      </template>
+     <lightning-datatable
+     key-field="id"
+       data={AccCollection}
+       columns={cols}
+       onrowaction={handleRowAction}>
+     ></lightning-datatable>
+    </lightning-card>
+</template>
