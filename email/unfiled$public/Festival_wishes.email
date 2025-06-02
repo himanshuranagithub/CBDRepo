@@ -1,0 +1,10 @@
+<html>
+<body>
+hi{{!employe__c.Name}}
+<h5 style="color:red;">HAPPY HOLI </H5>
+<p style="color:green;">On the occasion of festival of colours, I am sending my best wishes to you and I hope that you enjoy a vivacious time with your loved ones.</p>
+<img src="https://images.pexels.com/photos/3906333/pexels-photo-3906333.jpeg?auto=compress&cs=tinysrgb&w=600" width="60%" height="60%">
+<h5>FROM</H5><hr>
+<h5>OFFICE TEAM</H5>
+</body>
+</html>
