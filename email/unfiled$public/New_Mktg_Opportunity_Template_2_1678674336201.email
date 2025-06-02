@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Hi&nbsp; ,</span></span><br />
+&nbsp;
+<div><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">A new opportunity has been created for you. Please click this link to access the Salesforce record:&nbsp;&nbsp;</span></span><a href="{{{Opportunity.Link}}}">{{{Opportunity.Link}}}</a></div>
+<br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Source:&nbsp;&nbsp;<strong>{{{Opportunity.Source__c}}}</strong><br />
+<br />
+Name: <strong>{{{Opportunity.Name}}}</strong>&nbsp;&nbsp;<br />
+Account:&nbsp;<strong>{{{Opportunity.Template_ACCOUNT_Name__c}}}</strong><br />
+Opportunity Contact:&nbsp;&nbsp;<strong>{{{Opportunity.Contact__c}}}</strong><br />
+Stage:&nbsp;&nbsp;<strong>{{{Opportunity.StageName}}}</strong><br />
+Created On:<strong>&nbsp;&nbsp;{{{Opportunity.CreatedDate}}}</strong><br />
+<br />
+<br />
+Note:&nbsp; For Quote Request opportunities - Please refer to the request-related link on the Opportunity Page, Opportunity Type 'Marketing Opportunity', Source 'Sample Journey'.<br />
+<br />
+Thank you!<br />
+Marketing Cloud Admin</span></span><br />
+&nbsp;</body>
+</html>
