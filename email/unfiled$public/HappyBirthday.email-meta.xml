@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>HappyBirthday</name>
+    <style>none</style>
+    <subject>Wishing you a very Happy Birthday</subject>
+    <textOnly>&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=100% style=&quot;margin-left:0%;background:#f0efef;border: 20px #f0efef;&quot; align=&quot;center&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;
+ &lt;table style= &quot;width:100%;background:rgb(255,255,255);margin-top:0%;margin-bottom:0%;border-radius:0px;&quot; align=&quot;center&quot;&gt;
+  &lt;tr&gt;
+   &lt;td align=&quot;center&quot;&gt;
+		&lt;img src=&quot;https://semykolon4-dev-ed--c.visualforce.com/resource/1660799260000/HappyBirthday&quot; width=100%/&gt;
+		&lt;hr style=&quot;width:100%;margin-left:0%;&quot;/&gt;&lt;br/&gt;
+		&lt;p style=&quot;font-family:&apos;Comic Sans&apos;,cursive;font-size:16px;margin-left:4%;margin:right:4%;text-align:center;&quot;&gt;Dear {!Employee_Details__c.Name},&lt;br/&gt; &lt;br/&gt;
+		 Our whole team is wishing you a very Happy Birthday to You,“May all life’s blessings be yours.We wish you an amazing year that ends with accomplishing all the great goals that you have set!&lt;p/&gt;
+		 &lt;p style=&quot;text-align:center;color:#808080;font-family:&apos;Comic Sans&apos;,cursive;font-size:18px;&quot;&gt;-The Semykolon Family-&lt;p/&gt;
+		 &lt;br/&gt;&lt;br/&gt;
+		&lt;a href=&quot;http://kcloudtechnologies.com&quot; target=&quot;-top&quot;&gt;&lt;p style=&quot;text-align:center;&quot;&gt;www.semykolon.com&lt;/p&gt;&lt;/a&gt;
+	&lt;/td&gt;&lt;/tr&gt;
+	&lt;/table&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+&lt;table&gt;</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
