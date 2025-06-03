@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>mailing_adress_equal_to_billing_adress</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR( billing_address__c  &lt;&gt;  malling_address__c )</errorConditionFormula>
+        <errorMessage>billing adress should be equal to mailing adress.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>name_field_should_not_be_blank_or_no</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR( ISBLANK( Name ) , ( ISNUMBER( Name ) ) )</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>name field should not be blank or no.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>phone_field_should_not_be_blank</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( company_phone_no__c )</errorConditionFormula>
+        <errorDisplayField>company_phone_no__c</errorDisplayField>
+        <errorMessage>phone field is blank</errorMessage>
+    </validationRules>
+</CustomObject>

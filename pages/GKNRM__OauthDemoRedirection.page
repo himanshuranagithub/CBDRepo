@@ -1,0 +1,29 @@
+<apex:page controller="GKNRM.OauthDemoRedirectionCtrl" title="Salesforce org authorization" showHeader="false" sidebar="false"
+    lightningStylesheets="true">
+    <apex:slds />
+    <apex:form >
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Authorization &nbsp;
+                        <apex:outputText rendered="{!isAuthorize}">Success</apex:outputText>
+                        <apex:outputText rendered="{!!isAuthorize}">Failed!</apex:outputText>
+                    </h1>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p class="{!IF(isAuthorize,'slds-text-heading_small','slds-text-heading_small slds-text-color_error')}">{!JSENCODE(msg)}</p>
+                    <div class="slds-p-top_small">
+                        <p class="slds-text-color_destructive">
+                            <strong>Add following URL to remote site settings.</strong>
+                        </p>
+                        <p>{!JSENCODE(instanceURL)}</p>
+                    </div>
+                </div>
+                <div class="{!IF(isAuthorize,'slds-modal__footer slds-modal__footer_directional','slds-hide')}">
+                    <apex:commandButton styleClass="slds-button slds-button_brand" value="Save ORG Detail" action="{!redirectBack}" />
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </apex:form>
+</apex:page>

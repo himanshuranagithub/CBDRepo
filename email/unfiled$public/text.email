@@ -1,0 +1,9 @@
+<html>
+<body>
+<p>
+HII {!employe__c.Name}</BR>
+{!employe__c.employe_post__c}</br>wish you all happy dewali</p>
+<img src="https://images.pexels.com/photos/5872634/pexels-photo-5872634.jpeg?auto=compress&cs=tinysrgb&w=600 "width="60%" height="60%"/>
+<h5>FROM</h5><h5> OFFICE TEAM</h5>
+</body>
+</html>
