@@ -1,5 +1,0 @@
-Hi {!Student__c.Name},
-
-Please submit your fee {!Student__c.Tution_Fee__c} end of the day.
-
-Thanks

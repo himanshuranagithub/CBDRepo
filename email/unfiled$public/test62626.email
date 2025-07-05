@@ -1,6 +1,0 @@
-<messaging:emailTemplate subject="test visualforce" recipientType="Contact" relatedToType="OwnerChangeOptionInfo">
-<messaging:plainTextEmailBody >
-Congratulations!
-This is your new Visualforce Email Template.
-</messaging:plainTextEmailBody>
-</messaging:emailTemplate>
