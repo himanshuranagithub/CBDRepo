@@ -1,30 +1,36 @@
 public class publicclasscalculator5 {
-    public Integer divide (Integer x,Integer y){
-        Integer z = x / y;
+    
+    
+    public Integer cal1(Integer c, Integer x, Integer y){
+        Integer z;
+        if(c==1){
+            z=x+y;
+        }else if(c==1){
+            z=x-y;
+        }else if(c==3){
+            z=x*y;
+        }else if(c==4){
+            z=x/y;
+        }
         return z;
     }
-    public Integer add (Integer x,Integer y){
-        Integer z = x+y;
+    public Integer cal2(Integer c, Integer x, Integer y){
+        Integer z;
+        if(c==1){
+            z=x+y;
+        }if(c==1){
+            z=x-y;
+        }if(c==3){
+            z=x*y;
+        }if(c==4){
+            z=x/y;
+        }
         return z;
-    }
-    public Integer subtract (integer x, integer y){
-        integer z = x-y;
-return z;
     }
     
-    public integer multiply ( integer x, integer y){
-        integer z= x*y;
-        return z;
-    }
     
-    Integer t=2;
-    Integer i=1;
-    public void demo(){
-    for (i=1; i<= 10; i++){
-        
-        System.debug('t *'+i+ '='+ t*i);
-    }
-    }
+    
+    
 
 
 }
